@@ -1,0 +1,13 @@
+-- 附魔设定
+local fire = Enchant("fire", "火")
+fire:setEffect("origin", "BreathOfFireDamage")
+Enchant("rock", "岩")
+Enchant("water", "水")
+Enchant("ice", "冰")
+Enchant("wind", "风")
+Enchant("light", "光")
+Enchant("dark", "暗")
+Enchant("grass", "草")
+Enchant("thunder", "雷")
+Enchant("poison", "毒")
+Enchant("steel", "钢")

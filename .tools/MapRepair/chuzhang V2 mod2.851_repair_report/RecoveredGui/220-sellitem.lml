@@ -1,0 +1,19 @@
+﻿name: sellitem
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventPawnItem)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_sellitem_Func001C())then)
+  - CustomScriptCode (const:set udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=(udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]+R2I(((GetItemLifeBJ(GetSoldItem())*I2R(GetItemCharges(GetSoldItem())))*0.20))))
+  - CustomScriptCode (const:set udg_WOOD[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=(udg_WOOD[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]+R2I((I2R(GetItemLevel(GetSoldItem()))*(0.20*I2R(GetItemCharges(GetSoldItem())))))))
+  - CustomScriptCode (const:call SetPlayerStateBJ(GetOwningPlayer(GetBuyingUnit()),PLAYER_STATE_RESOURCE_GOLD,udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))]))
+  - CustomScriptCode (const:call SetPlayerStateBJ(GetOwningPlayer(GetBuyingUnit()),PLAYER_STATE_RESOURCE_LUMBER,udg_WOOD[GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))]))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:set udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=(udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]+R2I(((GetItemLifeBJ(GetSoldItem())*1.00)*0.20))))
+  - CustomScriptCode (const:call SetPlayerStateBJ(GetOwningPlayer(GetBuyingUnit()),PLAYER_STATE_RESOURCE_GOLD,udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))]))
+  - CustomScriptCode (const:endif)

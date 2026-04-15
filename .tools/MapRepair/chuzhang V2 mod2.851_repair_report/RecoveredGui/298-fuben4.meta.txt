@@ -1,0 +1,8 @@
+﻿Trigger: fuben4
+Mode: gui
+Action Count: 7
+Custom Script Count: 4
+Control Flow Count: 3
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.

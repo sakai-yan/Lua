@@ -1,0 +1,9 @@
+﻿Trigger: join
+Mode: custom-text
+Action Count: 52
+Custom Script Count: 38
+Control Flow Count: 27
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 38 custom-script lines and 27 control-flow markers across 52 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 38 custom-script lines and 27 control-flow markers across 52 actions.

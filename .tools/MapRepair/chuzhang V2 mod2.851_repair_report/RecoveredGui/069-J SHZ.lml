@@ -1,0 +1,18 @@
+﻿name: J SHZ
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_SHZ_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - CustomScriptCode (const:set udg_GROUP=GetUnitsInRangeOfLocMatching(50.00,udg_SP,Condition(function Trig_J_SHZ_Func002002003)))
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP,function Trig_J_SHZ_Func003A))
+  - CustomScriptCode (const:call DestroyGroup(udg_GROUP))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

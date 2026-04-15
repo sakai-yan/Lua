@@ -1,0 +1,6370 @@
+[MHGame_GetMemoryUsage]
+title = "获取当前内存使用量 [MemHack]"
+description = "当前内存使用量"
+comment = "单位是字节"
+category = TC_MEMHACK
+returns = integer
+
+[MHGame_GetMemoryMaxUsage]
+title = "获取最大内存使用量 [MemHack]"
+description = "最大内存使用量"
+comment = "单位是字节"
+category = TC_MEMHACK
+returns = integer
+
+[MHGame_GetGameVersion]
+title = "获取游戏版本 [MemHack]"
+description = "游戏版本"
+comment = ""
+category = TC_MEMHACK
+returns = string
+
+[MHGame_GetPluginVersion]
+title = "获取插件版本 [MemHack]"
+description = "插件版本"
+comment = ""
+category = TC_MEMHACK
+returns = string
+
+[MHGame_GetMapName]
+title = "获取地图名字 [MemHack]"
+description = "地图名字"
+comment = ""
+category = TC_MEMHACK
+returns = string
+
+[MHGame_GetMapDescription]
+title = "获取地图描述 [MemHack]"
+description = "地图描述"
+comment = ""
+category = TC_MEMHACK
+returns = string
+
+[MHGame_GetMapPath]
+title = "获取地图路径 [MemHack]"
+description = "地图路径"
+comment = "相对路径"
+category = TC_MEMHACK
+returns = string
+
+[MHGame_GetOption]
+title = "获取游戏设置 [MemHack]"
+description = "本地游戏的 ${option}"
+comment = "返回值是异步的"
+category = TC_MEMHACK
+returns = integer
+[[.args]]
+type = MHGameOption
+default = "GAME_OPTION_RE_WIDTH"
+
+[MHGame_GetCheatFlag]
+title = "获取作弊标志 [MemHack]"
+description = "作弊标志"
+comment = "BisSet"
+category = TC_MEMHACK
+returns = integer
+
+[MHGame_IsCheatFlag]
+title = "判定作弊标志 [MemHack]"
+description = "${cheat_flag} 作弊码已开启"
+comment = "BisSet"
+category = TC_MEMHACK
+returns = boolean
+[[.args]]
+type = MHCheatFlag
+default = "CHEAT_FLAG_WHOSYOURDADDY"
+
+[MHGame_ExecuteCode]
+title = "执行函数 [MemHack]"
+description = "执行 ${code}"
+comment = "执行一个jass函数，允许带返回值。可异步"
+category = TC_MEMHACK
+returns = integer
+[[.args]]
+type = scriptcode
+default = "function DoNothing"
+
+[MHGame_ExecuteFunc]
+title = "执行函数 [MemHack]"
+description = "执行 ${func_name}"
+comment = "执行一个jass函数，允许带返回值。可异步"
+category = TC_MEMHACK
+returns = integer
+[[.args]]
+type = string
+default = "DoNothing"
+
+[MHGame_CheckInherit]
+title = "检查继承关系 [MemHack]"
+description = "${child_id} 继承自 ${parent_id}"
+comment = "例如 '+w3u'(单位) 继承自 '+w3w'(Widget); 所有的被动技能都继承自 'APas'"
+category = TC_MEMHACK
+returns = boolean
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHGame_GetAxisZ]
+title = "获取Z轴坐标 [MemHack]"
+description = "(${x}, ${y}) 处的Z轴坐标"
+comment = "注意可通行可破坏物会因为当前播放的动画改变所在点Z轴高度，不同客户端之间可破坏物动画不同步。"
+category = TC_MEMHACK
+returns = real
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHGame_IsLan]
+title = "是局域网游戏 [MemHack]"
+description = "是局域网游戏"
+comment = ""
+category = TC_MEMHACK
+returns = boolean
+
+[MHGame_IsReplay]
+title = "是录像模式 [MemHack]"
+description = "是录像模式"
+comment = ""
+category = TC_MEMHACK
+returns = boolean
+
+[MHGame_GetGameStamp]
+title = "游戏时间戳 [MemHack]"
+description = "游戏时间戳"
+comment = "游戏开始到现在经过的时间，单位毫秒。同步的"
+category = TC_MEMHACK
+returns = integer
+
+[MHGame_GetLocalStamp]
+title = "本地时间戳 [MemHack]"
+description = "本地时间戳"
+comment = "异步的时间戳，单位秒"
+category = TC_MEMHACK
+returns = integer
+
+
+
+
+
+
+
+[MHEvent_GetId]
+title = "事件ID [MemHack]"
+description = "事件ID"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHEvent_GetUnit]
+title = "事件单位 [MemHack]"
+description = "事件单位"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHEvent_GetAbility]
+title = "事件技能 [MemHack]"
+description = "事件技能"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = abilcode
+
+[MHEvent_GetItem]
+title = "事件物品 [MemHack]"
+description = "事件物品"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = item
+
+[MHEvent_GetPlayer]
+title = "事件玩家 [MemHack]"
+description = "事件玩家"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = player
+
+[MHEvent_GetMissile]
+title = "事件投射物 [MemHack]"
+description = "事件投射物"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHEvent_GetOrder]
+title = "事件命令 [MemHack]"
+description = "事件命令"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHEvent_GetKey]
+title = "事件按键 [MemHack]"
+description = "事件按键"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHEvent_GetFrame]
+title = "事件Frame [MemHack]"
+description = "事件Frame"
+comment = "仅支持MH的事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHGameTickEvent_GetStamp]
+title = "获取同步帧经过的时间戳 [MemHack]"
+description = "同步帧时间戳"
+comment = "响应 游戏Tick 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHDamagingEvent_IsPhysical]
+title = "是物理伤害 (前伤害事件) [MemHack]"
+description = "[前伤害事件]是物理伤害"
+comment = "响应 任意单位即将受伤 事件。用于判定普攻"
+category = TC_MHEVENT
+returns = boolean
+
+[MHDamagingEvent_GetDamage]
+title = "伤害值 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害值"
+comment = "响应 任意单位即将受伤 事件。此时伤害还未结算为最终伤害"
+category = TC_MHEVENT
+returns = real
+
+[MHDamagingEvent_GetSource]
+title = "伤害来源 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害来源"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHDamagingEvent_GetFlag]
+title = "伤害标志 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害标志"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHDamagingEvent_GetAtkType]
+title = "攻击类型 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害的攻击类型"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+returns = attacktype
+
+[MHDamagingEvent_GetDmgType]
+title = "伤害类型 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害的伤害类型"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+returns = damagetype
+
+[MHDamagingEvent_GetWeapType]
+title = "武器类型 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害的武器类型"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+returns = weapontype
+
+[MHDamagingEvent_GetAtkTypeInt]
+title = "攻击类型 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害的攻击类型"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHDamagingEvent_GetDmgTypeInt]
+title = "伤害类型 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害的伤害类型"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHDamagingEvent_GetWeapTypeInt]
+title = "武器类型 (前伤害事件) [MemHack]"
+description = "[前伤害事件]伤害的武器类型"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHUnit_GetEnumUnit]
+title = "获取选取的单位 [MemHack]"
+description = "选取单位"
+comment = "在MH的选取单位做动作中，指代被选取的单位"
+category = TC_UNIT
+returns = unit
+
+[MHUnit_GetSelectionsSize]
+title = "获取当前选择的单位数量 [MemHack]"
+description = "当前选择的单位数量"
+comment = "每个人选择的单位数量可能不同, 注意不要拿去做同步的逻辑"
+category = TC_UNIT
+returns = integer
+
+[MHUnit_GetEnumAbilityId]
+title = "获取选取的技能 [MemHack]"
+description = "选取技能"
+comment = "指代 选取技能做动作中 被选取的技能"
+category = TC_UNIT
+returns = abilcode
+
+[MHDamageEvent_GetDamage]
+title = "伤害值 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害值"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = real
+
+[MHDamageEvent_GetSource]
+title = "伤害来源 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害来源"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHDamageEvent_IsPhysical]
+title = "是物理伤害 (后伤害事件) [MemHack]"
+description = "[后伤害事件]是物理伤害"
+comment = "响应 任意单位接受伤害 事件。用于判定普攻"
+category = TC_MHEVENT
+returns = boolean
+
+[MHDamageEvent_GetFlag]
+title = "伤害标志 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害标志"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHDamageEvent_GetAtkType]
+title = "攻击类型 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害的攻击类型"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = attacktype
+
+[MHDamageEvent_GetDmgType]
+title = "伤害类型 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害的伤害类型"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = damagetype
+
+[MHDamageEvent_GetWeapType]
+title = "武器类型 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害的武器类型"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = weapontype
+
+[MHDamageEvent_GetAtkTypeInt]
+title = "攻击类型 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害的攻击类型"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHDamageEvent_GetDmgTypeInt]
+title = "伤害类型 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害的伤害类型"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHDamageEvent_GetWeapTypeInt]
+title = "武器类型 (后伤害事件) [MemHack]"
+description = "[后伤害事件]伤害的武器类型"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHNativeDamageEvent_IsPhysical]
+title = "是物理伤害 (YD/原生伤害事件) [MemHack]"
+description = "[YD/原生伤害事件]是物理伤害"
+comment = "响应 YD和原生的伤害事件。用于判定普攻"
+category = TC_MHEVENT
+returns = boolean
+
+[MHNativeDamageEvent_GetFlag]
+title = "伤害标志 (YD/原生伤害事件) [MemHack]"
+description = "[YD/原生伤害事件]伤害标志"
+comment = "响应 YD和原生的伤害事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHNativeDamageEvent_GetAtkType]
+title = "攻击类型 (YD/原生伤害事件) [MemHack]"
+description = "[YD/原生伤害事件]伤害的攻击类型"
+comment = "响应 YD和原生的伤害事件"
+category = TC_MHEVENT
+returns = attacktype
+
+[MHNativeDamageEvent_GetDmgType]
+title = "伤害类型 (YD/原生伤害事件) [MemHack]"
+description = "[YD/原生伤害事件]伤害的伤害类型"
+comment = "响应 YD和原生的伤害事件"
+category = TC_MHEVENT
+returns = damagetype
+
+[MHNativeDamageEvent_GetWeapType]
+title = "武器类型 (YD/原生伤害事件) [MemHack]"
+description = "[YD/原生伤害事件]伤害的武器类型"
+comment = "响应 YD和原生的伤害事件"
+category = TC_MHEVENT
+returns = weapontype
+
+[MHNativeDamageEvent_GetAtkTypeInt]
+title = "攻击类型 (YD/原生伤害事件) [MemHack]"
+description = "[YD/原生伤害事件]伤害的攻击类型"
+comment = "响应 YD和原生的伤害事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHNativeDamageEvent_GetDmgTypeInt]
+title = "伤害类型 (YD/原生伤害事件) [MemHack]"
+description = "[YD/原生伤害事件]伤害的伤害类型"
+comment = "响应 YD和原生的伤害事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHNativeDamageEvent_GetWeapTypeInt]
+title = "武器类型 (YD/原生伤害事件) [MemHack]"
+description = "[YD/原生伤害事件]伤害的武器类型"
+comment = "响应 YD和原生的伤害事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHUnitAttackLaunchEvent_GetTargetUnit]
+title = "获取攻击目标单位 [MemHack]"
+description = "攻击目标单位"
+comment = "响应 任意单位攻击出手 事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHUnitAttackLaunchEvent_GetTargetItem]
+title = "获取攻击目标物品 [MemHack]"
+description = "攻击目标物品"
+comment = "响应 任意单位攻击出手 事件"
+category = TC_MHEVENT
+returns = item
+
+[MHUnitAttackLaunchEvent_GetTargetDest]
+title = "获取攻击目标可破坏物 [MemHack]"
+description = "攻击目标可破坏物"
+comment = "响应 任意单位攻击出手 事件"
+category = TC_MHEVENT
+returns = destructable
+
+[MHUnitAttackLaunchEvent_GetWeapsOn]
+title = "获取攻击索引 [MemHack]"
+description = "攻击索引"
+comment = "响应 任意单位攻击出手 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHUnitSearchTargetEvent_GetTarget]
+title = "获取仇恨目标单位 [MemHack]"
+description = "仇恨目标单位"
+comment = "响应 任意单位切换仇恨目标 事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHUnitRestoreLifeEvent_GetValue]
+title = "获取恢复的生命值 [MemHack]"
+description = "恢复的生命值"
+comment = "响应 任意单位恢复生命值 事件。正数回血负数扣血"
+category = TC_MHEVENT
+returns = real
+
+[MHUnitRestoreManaEvent_GetValue]
+title = "获取恢复的魔法值 [MemHack]"
+description = "恢复的魔法值"
+comment = "响应 任意单位恢复魔法值 事件。正数回蓝负数扣蓝"
+category = TC_MHEVENT
+returns = real
+
+[MHUnitDispelEvent_GetSource]
+title = "获取驱散魔法效果的单位 [MemHack]"
+description = "驱散魔法效果的单位"
+comment = "响应 任意单位被驱散魔法效果 事件。请用 事件单位 来获取被驱散魔法效果的单位"
+category = TC_MHEVENT
+returns = unit
+
+[MHUnitDispelEvent_GetDamage]
+title = "获取驱散魔法效果造成的伤害 [MemHack]"
+description = "驱散魔法效果造成的伤害"
+comment = "响应 任意单位被驱散魔法效果 事件。获取的是对召唤物的伤害"
+category = TC_MHEVENT
+returns = real
+
+[MHUnitHarvestEvent_GetValue]
+title = "获取单位送回的资源量 [MemHack]"
+description = "单位送回的资源量"
+comment = "响应 任意单位送回资源 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHUnitHarvestEvent_IsResourceGold]
+title = "获取单位送回的资源类型 [MemHack]"
+description = "单位送回的资源是黄金"
+comment = "响应 任意单位送回资源 事件"
+category = TC_MHEVENT
+returns = boolean
+
+[MHHeroGetExpEvent_GetValue]
+title = "获取获得的经验值 [MemHack]"
+description = "获得的经验值"
+comment = "响应 任意单位获取经验值 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHPlayerLeaveEvent_GetReason]
+title = "获取离开原因 [MemHack]"
+description = "离开原因"
+comment = "响应 任意玩家离开游戏 事件。0代表正常离开，1代表掉线"
+category = TC_MHEVENT
+returns = integer
+
+[MHPlayerGoldChangeEvent_GetValue]
+title = "获取变动的黄金 [MemHack]"
+description = "变动的黄金"
+comment = "响应 任意玩家黄金变动 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHPlayerGoldChangeEvent_IsTax]
+title = "获取变动的黄金是否计算税率 [MemHack]"
+description = "变动的黄金计算税率"
+comment = "响应 任意玩家黄金变动 事件"
+category = TC_MHEVENT
+returns = boolean
+
+[MHPlayerLumberChangeEvent_GetValue]
+title = "获取变动的木材 [MemHack]"
+description = "变动的木材"
+comment = "响应 任意玩家木材变动 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHPlayerLumberChangeEvent_IsTax]
+title = "获取变动的木材是否计算税率 [MemHack]"
+description = "变动的木材计算税率"
+comment = "响应 任意玩家木材变动 事件"
+category = TC_MHEVENT
+returns = boolean
+
+[MHAbilityRefreshAuraEvent_GetTarget]
+title = "获取光环刷新的目标 [MemHack]"
+description = "光环目标"
+comment = "响应 任意光环技能刷新 事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHAbilityRefreshAuraEvent_GetBuff]
+title = "获取光环刷新的Buff [MemHack]"
+description = "光环Buff"
+comment = "响应 任意光环技能刷新 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHMissileHitEvent_GetTargetUnit]
+title = "获取命中的单位 [MemHack]"
+description = "命中的单位"
+comment = "响应 任意投射物命中 事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHMissileHitEvent_GetTargetItem]
+title = "获取命中的物品 [MemHack]"
+description = "命中的物品"
+comment = "响应 任意投射物命中 事件"
+category = TC_MHEVENT
+returns = item
+
+[MHMissileHitEvent_GetTargetDest]
+title = "获取命中的可破坏物 [MemHack]"
+description = "命中的可破坏物"
+comment = "响应 任意投射物命中 事件"
+category = TC_MHEVENT
+returns = destructable
+
+[MHMissileHitEvent_GetDamage]
+title = "获取命中时的伤害 [MemHack]"
+description = "命中时的伤害"
+comment = "响应 任意投射物命中 事件"
+category = TC_MHEVENT
+returns = destructable
+
+[MHHashtableChangeEvent_GetTable]
+title = "获取变动的哈希表 [MemHack]"
+description = "变动的哈希表"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = hashtable
+
+[MHHashtableChangeEvent_GetParentKey]
+title = "获取变动的哈希表主键 [MemHack]"
+description = "变动的哈希表主键"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHHashtableChangeEvent_GetChildKey]
+title = "获取变动的哈希表子键 [MemHack]"
+description = "变动的哈希表子键"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHHashtableChangeEvent_GetOldValueInt]
+title = "获取变动的整数哈希项旧值 [MemHack]"
+description = "变动的整数哈希项旧值"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHHashtableChangeEvent_GetOldValueReal]
+title = "获取变动的实数哈希项旧值 [MemHack]"
+description = "变动的实数哈希项旧值"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = real
+
+[MHHashtableChangeEvent_GetOldValueBool]
+title = "获取变动的布尔值哈希项旧值 [MemHack]"
+description = "变动的布尔值哈希项旧值"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = boolean
+
+[MHHashtableChangeEvent_GetOldValueStr]
+title = "获取变动的字符串哈希项旧值 [MemHack]"
+description = "变动的字符串哈希项旧值"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = string
+
+[MHHashtableChangeEvent_GetNewValueInt]
+title = "获取变动的整数哈希项新值 [MemHack]"
+description = "变动的整数哈希项新值"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHHashtableChangeEvent_GetNewValueReal]
+title = "获取变动的实数哈希项新值 [MemHack]"
+description = "变动的实数哈希项新值"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = real
+
+[MHHashtableChangeEvent_GetNewValueBool]
+title = "获取变动的布尔值哈希项新值 [MemHack]"
+description = "变动的布尔值哈希项新值"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = boolean
+
+[MHHashtableChangeEvent_GetNewValueStr]
+title = "获取变动的字符串哈希项新值 [MemHack]"
+description = "变动的字符串哈希项新值"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = string
+
+[MHHashtableChangeEvent_GetType]
+title = "获取变动的哈希项类型 [MemHack]"
+description = "变动的哈希项类型"
+comment = "响应 哈希表项变动 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHSyncEvent_GetKey]
+title = "获取被同步的标签 [MemHack]"
+description = "同步标签"
+comment = "响应 数据同步 事件"
+category = TC_MHEVENT
+returns = string
+
+[MHSyncEvent_GetData]
+title = "获取被同步的数据 [MemHack]"
+description = "同步数据"
+comment = "响应 数据同步 事件"
+category = TC_MHEVENT
+returns = string
+
+[MHSyncEvent_GetJsonData]
+title = "获取被同步的数据 (Json) [MemHack]"
+description = "Json格式的同步数据"
+comment = "响应 数据同步 事件。会创建Json对象, 用完记得删除"
+category = TC_MHEVENT
+returns = integer
+
+[MHFrameScrollEvent_GetValue]
+title = "获取滚动值 [MemHack]"
+description = "滚动值"
+comment = "响应 鼠标滚动Frame 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHMsgMouseScrollEvent_GetValue]
+title = "获取滚动值 [MemHack]"
+description = "滚动值"
+comment = "响应 本地玩家鼠标滚动 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHMsgIndicatorEvent_GetAbility]
+title = "获取指示器技能 [MemHack]"
+description = "指示器技能"
+comment = "响应 本地玩家按下目标指示器 事件"
+category = TC_MHEVENT
+returns = abilcode
+
+[MHMsgIndicatorEvent_GetTargetUnit]
+title = "获取指示器目标单位 [MemHack]"
+description = "指示器目标单位"
+comment = "响应 本地玩家按下目标指示器 事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHMsgIndicatorEvent_GetTargetX]
+title = "获取指示器目标点X [MemHack]"
+description = "指示器目标点X"
+comment = "响应 本地玩家按下目标指示器 事件"
+category = TC_MHEVENT
+returns = real
+
+[MHMsgIndicatorEvent_GetTargetY]
+title = "获取指示器目标点Y [MemHack]"
+description = "指示器目标点Y"
+comment = "响应 本地玩家按下目标指示器 事件"
+category = TC_MHEVENT
+returns = real
+
+[MHMsgCallTargetModeEvent_GetAbility]
+title = "获取调起的指示器技能 [MemHack]"
+description = "调起的指示器技能"
+comment = "响应 本地玩家调起指示器 事件"
+category = TC_MHEVENT
+returns = abilcode
+
+[MHMsgCallTargetModeEvent_GetCastType]
+title = "获取调起的指示器释放类型 [MemHack]"
+description = "调起的指示器释放类型"
+comment = "响应 本地玩家调起指示器 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHMsgLocalOrderEvent_GetCastType]
+title = "获取本地命令的释放类型 [MemHack]"
+description = "本地命令的释放类型"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHMsgLocalOrderEvent_GetFlag]
+title = "获取本地命令的标志 [MemHack]"
+description = "本地命令的标志"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHMsgLocalOrderEvent_GetTargetUnit]
+title = "获取本地命令的目标单位 [MemHack]"
+description = "本地命令的目标单位"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+returns = unit
+
+[MHMsgLocalOrderEvent_GetTargetItem]
+title = "获取本地命令的目标物品 [MemHack]"
+description = "本地命令的目标物品"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+returns = item
+
+[MHMsgLocalOrderEvent_GetTargetDest]
+title = "获取本地命令的目标可破坏物 [MemHack]"
+description = "本地命令的目标可破坏物"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+returns = destructable
+
+[MHMsgLocalOrderEvent_GetTargetX]
+title = "获取本地命令的目标点X [MemHack]"
+description = "本地命令的目标点X"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+returns = real
+
+[MHMsgLocalOrderEvent_GetTargetY]
+title = "获取本地命令的目标点Y [MemHack]"
+description = "本地命令的目标点Y"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+returns = real
+
+[MHMsgLocalOrderEvent_GetDropped]
+title = "获取本地命令的被丢弃物品 [MemHack]"
+description = "本地命令的被丢弃物品"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+returns = item
+
+[MHMsgWindowResizeEvent_GetOldWidth]
+title = "获取原窗口宽度 [MemHack]"
+description = "原窗口宽度"
+comment = "响应 本地玩家窗口大小变化 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHMsgWindowResizeEvent_GetOldHeight]
+title = "获取原窗口高度 [MemHack]"
+description = "原窗口高度"
+comment = "响应 本地玩家窗口大小变化 事件"
+category = TC_MHEVENT
+returns = integer
+
+[MHUIHPBarEvent_GetPoint]
+title = "获取血条的锚点 [MemHack]"
+description = "血条的锚点"
+comment = "响应 血条刷新 事件。绝对锚点，固定返回ANCHOR_TOP"
+category = TC_MHEVENT
+returns = integer
+
+[MHUIHPBarEvent_GetX]
+title = "获取血条的X偏移 [MemHack]"
+description = "血条的X偏移"
+comment = "响应 血条刷新 事件。绝对锚点"
+category = TC_MHEVENT
+returns = real
+
+[MHUIHPBarEvent_GetY]
+title = "获取血条的Y偏移 [MemHack]"
+description = "血条的Y偏移"
+comment = "响应 血条刷新 事件。绝对锚点"
+category = TC_MHEVENT
+returns = real
+
+[MHUIRenderEvent_GetOverheadX]
+title = "获取头顶X坐标 [MemHack]"
+description = "${unit} 的头顶屏幕坐标X"
+comment = "响应 渲染 事件"
+category = TC_MHEVENT
+returns = real
+[[.args]]
+type = unit
+
+[MHUIRenderEvent_GetOverheadY]
+title = "获取头顶Y坐标 [MemHack]"
+description = "${unit} 的头顶屏幕坐标Y"
+comment = "响应 渲染 事件"
+category = TC_MHEVENT
+returns = real
+[[.args]]
+type = unit
+
+[MHUIRenderEvent_GetOverheadScale]
+title = "获取头顶缩放 [MemHack]"
+description = "${unit} 的头顶缩放"
+comment = "响应 渲染 事件"
+category = TC_MHEVENT
+returns = real
+[[.args]]
+type = unit
+
+
+
+
+
+
+
+
+
+
+
+
+[MHFrame_Create]
+title = "创建Frame [MemHack]"
+description = "创建Frame: 模板 ${base_frame}, 父级 ${parent_frame}, 优先级 ${priority}, ID ${id}"
+comment = "模板填fdf文件中的模板名称"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = integer
+default = MHUI_GetGameUI
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHFrame_CreateEx]
+title = "创建Frame (按类型) [MemHack]"
+description = "创建Frame: 类型 ${type_name}, 名字 ${name}, 模板 ${base_frame}, 父级 ${parent_frame}, 优先级 ${priority}, ID ${id}"
+comment = "类型填fdf关键字中的类型名。名字可自定义。模板可空"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = string
+default = "BACKDROP"
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = integer
+default = MHUI_GetGameUI
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHFrame_CreateSimple]
+title = "创建SimpleFrame [MemHack]"
+description = "创建SimpleFrame: 模板 ${base_frame}, 父级 ${parent_frame}, ID ${id}"
+comment = "模板填fdf文件中的模板名称"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = integer
+default = MHUI_GetGameUI
+[[.args]]
+type = integer
+default = 0
+
+[MHFrame_CreateCommandButton]
+title = "创建CommandButton [MemHack]"
+description = "创建命令按钮: 父级 ${parent_frame}"
+comment = "原生命令按钮 (物品/技能)"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+default = MHUI_GetCommandBar
+
+[MHFrame_CreatePortrait]
+title = "创建PortraitButton [MemHack]"
+description = "创建肖像Frame: 父级 ${parent_frame}"
+comment = "原生大头像, 可用来显示模型"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+default = MHUI_GetGameUI
+
+[MHFrame_CreateSimpleTexture]
+title = "创建SimpleTexture [MemHack]"
+description = "创建SimpleTexture: 父级 ${parent_frame}"
+comment = "该类型的Frame不能有子级"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+default = MHUI_GetConsoleUI
+
+[MHFrame_CreateSimpleFontString]
+title = "创建SimpleFontString [MemHack]"
+description = "创建SimpleFontString: 父级 ${parent_frame}"
+comment = "该类型的Frame不能有子级"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+default = MHUI_GetConsoleUI
+
+[MHFrame_GetByName]
+title = "获取Frame [MemHack]"
+description = "获取名字为 ${name} ID为 ${id} 的frame"
+comment = "只能搜索fdf文件中的frame"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+default = 0
+
+[MHFrame_GetUnderCursor]
+title = "获取鼠标指向的Frame [MemHack]"
+description = "鼠标指向的Frame"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+
+[MHFrame_GetSimpleUnderCursor]
+title = "获取鼠标指向的SimpleFrame [MemHack]"
+description = "鼠标指向的SimpleFrame"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+
+[MHFrame_GetParent]
+title = "获取父级 [MemHack]"
+description = "${frame} 的父级"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+
+[MHFrame_GetChild]
+title = "获取子级 [MemHack]"
+description = "${frame} 的第 ${index} 个子级"
+comment = "序号从1开始"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHFrame_GetChildCount]
+title = "获取子级数量 [MemHack]"
+description = "${frame} 的子级数量"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+
+[MHFrame_GetName]
+title = "获取名字 [MemHack]"
+description = "${frame} 的名字"
+comment = ""
+category = TC_MHFRAME
+returns = string
+[[.args]]
+type = integer
+
+[MHFrame_IsHidden]
+title = "被隐藏 [MemHack]"
+description = "${frame} 被隐藏"
+comment = ""
+category = TC_MHFRAME
+returns = boolean
+[[.args]]
+type = integer
+
+[MHFrame_GetLayerStyle]
+title = "获取LayerStyle [MemHack]"
+description = "${frame} 的LayerStyle"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+
+[MHFrame_IsLayerStyle]
+title = "判定LayerStyle [MemHack]"
+description = "${frame} 的LayerStyle包含 ${style}"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = MHLayerStyle
+default = "LAYER_STYLE_VIEW_PORT"
+
+[MHFrame_GetPointType]
+title = "获取锚点类型 [MemHack]"
+description = "${frame} 的 ${anchor} 锚点类型"
+comment = "返回0 - 绝对锚点; 返回1 - 相对锚点; 返回2 - 参数错误或无锚点"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+
+[MHFrame_GetRelativeFrame]
+title = "获取相对锚点的Frame [MemHack]"
+description = "${frame} 的 ${anchor} 锚点相对应的Frame"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+
+[MHFrame_GetRelativePoint]
+title = "获取相对锚点 [MemHack]"
+description = "${frame} 的 ${anchor} 锚点相对应的锚点"
+comment = "0~8对应9个锚点"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+
+[MHFrame_GetPointX]
+title = "获取锚点的X轴偏移 [MemHack]"
+description = "${frame} 的 ${anchor} 锚点的X轴偏移"
+comment = "获取现有锚点的X偏移"
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+
+[MHFrame_GetPointY]
+title = "获取锚点的Y轴偏移 [MemHack]"
+description = "${frame} 的 ${anchor} 锚点的Y轴偏移"
+comment = "获取现有锚点的Y偏移"
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+
+[MHFrame_InFrame]
+title = "点在frame内 [MemHack]"
+description = "(${x}, ${y}) 在 ${frame} 内"
+comment = "屏幕坐标"
+category = TC_MHFRAME
+returns = boolean
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = integer
+
+[MHFrame_GetBorderBottom]
+title = "获取下边界坐标 [MemHack]"
+description = "${frame} 的下边界坐标"
+comment = ""
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetBorderLeft]
+title = "获取左边界坐标 [MemHack]"
+description = "${frame} 的左边界坐标"
+comment = ""
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetBorderTop]
+title = "获取上边界坐标 [MemHack]"
+description = "${frame} 的上边界坐标"
+comment = ""
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetBorderRight]
+title = "获取右边界坐标 [MemHack]"
+description = "${frame} 的右边界坐标"
+comment = ""
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetWidth]
+title = "获取宽度 [MemHack]"
+description = "${frame} 的宽度"
+comment = ""
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetHeight]
+title = "获取高度 [MemHack]"
+description = "${frame} 的高度"
+comment = ""
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetText]
+title = "获取文本 [MemHack]"
+description = "${frame} 的文本"
+comment = "仅支持CEditBox, CSimpleFontString, CTextArea和CTextFrame"
+category = TC_MHFRAME
+returns = string
+[[.args]]
+type = integer
+
+[MHFrame_GetTextLimit]
+title = "获取文本限制 [MemHack]"
+description = "${frame} 的文本字数限制"
+comment = "仅支持CEditBox和CSimpleFontString"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+
+[MHFrame_GetTextColor]
+title = "获取文本颜色 [MemHack]"
+description = "${frame} 的 ${}"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = MHFrameTextColor
+default = "TEXT_COLOR_NORMAL"
+
+[MHFrame_GetTextFlag]
+title = "获取文本标志 [MemHack]"
+description = "${frame} 的文本标志"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+
+[MHFrame_GetTextStyle]
+title = "获取文本样式 [MemHack]"
+description = "${frame} 的文本样式"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+
+[MHFrame_GetValue]
+title = "获取数值 [MemHack]"
+description = "${frame} 的数值"
+comment = "仅支持CSlider, CSimpleStatusBar和CStatBar"
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetSimpleButtonTexture]
+title = "获取贴图 (CSimpleButton) [MemHack]"
+description = "${button_frame} ${state} 状态下的贴图"
+comment = "返回一个CSimpleTexture"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = MHCSimpleButtonState
+default = "SIMPLEBUTTON_STATE_ENABLE"
+
+[MHFrame_GetSimpleButtonAdditiveFrame]
+title = "获取附加显示物 (CSimpleButton) [MemHack]"
+description = "${button_frame} 的附加显示物"
+comment = "指鼠标指向按钮时附加显示的frame。例如鼠标指向顶部按钮时会显示其高光贴图"
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+
+[MHFrame_GetSimpleTextureBlendModeInt]
+title = "获取混合模式 (CSimpleTexture) [MemHack]"
+description = "${texture_frame} 的混合模式"
+comment = ""
+category = TC_MHFRAME
+returns = integer
+[[.args]]
+type = integer
+
+[MHFrame_GetSpriteX]
+title = "获取X坐标 (CSpriteFrame) [MemHack]"
+description = "${sprite_frame} 的X坐标"
+comment = "仅对CSpriteFrame和CPortraitButton有效"
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetSpriteY]
+title = "获取Y坐标 (CSpriteFrame) [MemHack]"
+description = "${sprite_frame} 的Y坐标"
+comment = "仅对CSpriteFrame和CPortraitButton有效"
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetSpriteZ]
+title = "获取Z坐标 (CSpriteFrame) [MemHack]"
+description = "${sprite_frame} 的Z坐标"
+comment = "仅对CSpriteFrame和CPortraitButton有效"
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+[MHFrame_GetSpriteAnimationProgress]
+title = "获取动画进度 (CSpriteFrame) [MemHack]"
+description = "${sprite_frame} 的当前动画进度"
+comment = "仅对CSpriteFrame和CPortraitButton有效。0~1"
+category = TC_MHFRAME
+returns = real
+[[.args]]
+type = integer
+
+
+
+
+
+
+
+
+
+
+
+[MHUI_GetGameUI]
+title = "获取游戏UI [MemHack]"
+description = "游戏UI"
+comment = ""
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetConsoleUI]
+title = "获取控制台UI [MemHack]"
+description = "控制台UI"
+comment = ""
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetConsoleTexture]
+title = "获取控制台贴图 [MemHack]"
+description = "控制台UI的第 ${index} 个贴图"
+comment = "序号1~9。实际上是一个CSimpleTexture"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetResourceBarCover]
+title = "获取资源栏Cover [MemHack]"
+description = "资源栏的第 ${index} 个Cover"
+comment = "序号1~4"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetResourceBarTexture]
+title = "获取资源栏贴图 [MemHack]"
+description = "资源栏的第 ${index} 个贴图"
+comment = "序号1~3。实际上是一个CSimpleTexture"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetAllianceDialogLumberText]
+title = "获取联盟对话框木材文本 [MemHack]"
+description = "联盟对话框中第 ${index} 个玩家槽的木材文本"
+comment = "序号1~12对应12个玩家槽"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetFpsFrame]
+title = "获取fps控件 [MemHack]"
+description = "fps控件"
+comment = "实际上是一个CSimpleFontString"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetFps]
+title = "获取fps [MemHack]"
+description = "fps"
+comment = ""
+category = TC_MHUI
+returns = real
+
+[MHUI_GetInventoryText]
+title = "获取物品栏文本 [MemHack]"
+description = "物品栏文本"
+comment = "物品栏那三个字。实际上是一个CSimpleFontString"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetInventoryCover]
+title = "获取物品栏遮罩 [MemHack]"
+description = "物品栏遮罩"
+comment = "对于没有物品栏的单位就会显示遮罩而非物品栏。实际上是一个CSimpleFrame"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetUberToolTip]
+title = "获取提示工具 [MemHack]"
+description = "提示工具"
+comment = "实际上是控制台倒数第二个子级。其右下锚点跟随控制台的右下锚点偏移 (0, 0.1625)"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetUberToolTipTarget]
+title = "获取提示工具对应的Frame [MemHack]"
+description = "提示工具对应的Frame"
+comment = "指代提示工具对应的Frame"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetUberToolTipIcon]
+title = "获取提示工具图标 [MemHack]"
+description = "提示工具的第 ${index} 个图标"
+comment = "指代提示工具对应的按钮"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetUnitTip]
+title = "获取物体头顶提示 [MemHack]"
+description = "物体头顶提示"
+comment = "实际上是控制台最后一个子级。其底部锚点跟随单位血条的顶部锚点偏移 (0, 0.002)"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetInventoryTexture]
+title = "获取物品栏遮罩贴图 [MemHack]"
+description = "物品栏遮罩贴图"
+comment = "实际上是一个CSimpleTexture"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetBuffBar]
+title = "获取状态栏 [MemHack]"
+description = "状态栏"
+comment = "该Frame的8个子级即为魔法效果图标"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetBuffBarText]
+title = "获取状态栏文本 [MemHack]"
+description = "状态栏文本"
+comment = "实际上是一个CSimpleFontString"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetBuffIndicator]
+title = "获取状态栏指示器 [MemHack]"
+description = "状态栏中序号为 ${index} 的状态指示器"
+comment = "即魔法效果图标"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetUpperButtonBar]
+title = "获取顶部按钮栏 [MemHack]"
+description = "顶部按钮栏"
+comment = "该Frame的4个子级即为4个顶部按钮"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetWorldFrameWar3]
+title = "获取CWordlFrameWar3 [MemHack]"
+description = "CWordlFrameWar3"
+comment = ""
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetBuildFrame]
+title = "获取建造指示器 [MemHack]"
+description = "建造指示器"
+comment = ""
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetTimeIndicator]
+title = "获取时钟 [MemHack]"
+description = "时钟"
+comment = "实际上是一个CSpriteFrame"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetMiniMap]
+title = "获取小地图 [MemHack]"
+description = "小地图"
+comment = ""
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetMiniMapSignalButton]
+title = "获取小地图信号按钮 [MemHack]"
+description = "小地图信号按钮"
+comment = "实际上是一个CSimpleButton"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetMiniMapTerrainButton]
+title = "获取小地图地形按钮 [MemHack]"
+description = "小地图信号按钮"
+comment = "实际上是一个CSimpleButton"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetMiniMapColorButton]
+title = "获取小地图队伍颜色按钮 [MemHack]"
+description = "小地图队伍颜色按钮"
+comment = "实际上是一个CSimpleButton"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetMiniMapCreepButton]
+title = "获取小地图生物营地按钮 [MemHack]"
+description = "小地图生物营地按钮"
+comment = "实际上是一个CSimpleButton"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetMiniMapFormationButton]
+title = "获取小地图队形按钮 [MemHack]"
+description = "小地图队形按钮"
+comment = "实际上是一个CSimpleButton"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetGroupPanel]
+title = "获取框选面板 [MemHack]"
+description = "框选面板"
+comment = ""
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetCommandBar]
+title = "获取命令按钮栏 [MemHack]"
+description = "命令按钮栏"
+comment = "包括物品栏和技能栏"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetSkillBarCover]
+title = "获取技能栏遮罩 [MemHack]"
+description = "技能栏遮罩"
+comment = "是个CSimpleButton, 导致右下角其他ui事件失灵的罪魁祸首"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetSkillBarButton]
+title = "获取技能栏按钮 [MemHack]"
+description = "技能栏中序号为 ${index} 的按钮"
+comment = "序号取值1~12"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetSkillBarButtonEx]
+title = "获取技能栏按钮Ex [MemHack]"
+description = "技能栏中坐标为 (${x}, ${y}) 的按钮"
+comment = "坐标取值范围与物编一致"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHUI_GetItemBarButton]
+title = "获取物品栏的按钮 [MemHack]"
+description = "物品栏中序号为 ${index} 的按钮"
+comment = "序号取值1~6"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetHeroBar]
+title = "获取英雄按钮栏 [MemHack]"
+description = "英雄按钮栏"
+comment = ""
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetHeroBarButton]
+title = "获取英雄按钮栏按钮 [MemHack]"
+description = "英雄按钮栏中序号为 ${index} 的按钮"
+comment = "序号取值范围1~7。实际上是一个命令按钮"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetHeroButtonHPBar]
+title = "获取英雄按钮血条 [MemHack]"
+description = "${button} 的血条"
+comment = "实际上是一个CStatBar"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+
+[MHUI_GetHeroButtonMPBar]
+title = "获取英雄按钮蓝条 [MemHack]"
+description = "${button} 的蓝条"
+comment = "实际上是一个CStatBar"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+
+[MHUI_GetHeroButtonSubscriptFrame]
+title = "获取英雄按钮下标方框 [MemHack]"
+description = "${button} 的下标方框"
+comment = "实际上是一个CSimpleFrame"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+
+[MHUI_GetHeroButtonSubscriptText]
+title = "获取英雄按钮下标文本 [MemHack]"
+description = "${button} 的下标文本"
+comment = "实际上是一个CSimpleFontString"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+
+[MHUI_GetHeroButtonStreamer]
+title = "获取英雄按钮流光模型 [MemHack]"
+description = "${button} 的流光模型"
+comment = "实际上是一个CSpriteFrame"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+
+[MHUI_GetPeonBar]
+title = "获取闲置农民按钮栏 [MemHack]"
+description = "闲置农民按钮栏"
+comment = ""
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetPeonBarButton]
+title = "获取闲置农民按钮栏按钮 [MemHack]"
+description = "闲置农民按钮"
+comment = "实际上是一个命令按钮"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetPortraitButton]
+title = "获取肖像 [MemHack]"
+description = "肖像"
+comment = "CPortraitButton"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetPortraitButtonUnit]
+title = "获取肖像单位 [MemHack]"
+description = "肖像单位"
+comment = ""
+category = TC_MHUI
+returns = unit
+
+[MHUI_GetPortraitButtonHPText]
+title = "获取肖像的血量文本 [MemHack]"
+description = "肖像的血量文本"
+comment = "实际上是一个CSimpleFontString"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetPortraitButtonMPText]
+title = "获取肖像的蓝量文本 [MemHack]"
+description = "肖像的蓝量文本"
+comment = "实际上是一个CSimpleFontString"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetCursorFrame]
+title = "获取鼠标Frame [MemHack]"
+description = "鼠标Frame"
+comment = "实际上是一个CSpriteFrame"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetChatEditBar]
+title = "获取聊天栏 [MemHack]"
+description = "聊天栏"
+comment = "CChatEditBar"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetChatEditBox]
+title = "获取聊天框 [MemHack]"
+description = "聊天框"
+comment = "聊天栏的CEditBox，可通过读写该控件的文本来读写聊天框里的内容"
+category = TC_MHUI
+returns = integer
+
+[MHUI_IsChatEditBarOn]
+title = "聊天栏打开 [MemHack]"
+description = "聊天栏打开"
+comment = ""
+category = TC_MHUI
+returns = boolean
+
+[MHUI_GetErrorMessageFrame]
+title = "获取错误信息栏 [MemHack]"
+description = "错误信息栏"
+comment = "返回CSimpleMessageFrame"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetTextMessageFrame]
+title = "获取游戏信息栏 [MemHack]"
+description = "游戏信息栏"
+comment = "返回CSimpleMessageFrame"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetChatMessageFrame]
+title = "获取聊天信息栏 [MemHack]"
+description = "聊天信息栏"
+comment = "返回CSimpleMessageFrame"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetUpKeepMessageFrame]
+title = "获取维修信息栏 [MemHack]"
+description = "维修信息栏"
+comment = "返回CSimpleMessageFrame"
+category = TC_MHUI
+returns = integer
+
+[MHUI_GetTimerDialog]
+title = "获取计时器窗口 [MemHack]"
+description = "${dialog} 的计时器窗口"
+comment = "返回CTimerDialog"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = timerdialog
+
+[MHUI_GetTimerDialogBackdrop]
+title = "获取计时器窗口背景 [MemHack]"
+description = "${dialog} 的计时器窗口背景"
+comment = "返回CBackdropFrame"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = timerdialog
+
+[MHUI_GetCooldownText]
+title = "获取冷却显示文本 [MemHack]"
+description = "冷却显示中第 ${index} 个文本"
+comment = "指代 开启冷却显示 中对应的文本Frame。序号1~12代表技能栏文本, 13~18代表物品栏文本。返回CSimpleFontString"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetHotkeyOverlay]
+title = "获取热键显示背景 [MemHack]"
+description = "热键显示中第 ${index} 个背景"
+comment = "指代 开启热键显示 中对应的背景Frame。序号1~12代表技能栏背景, 13~18代表物品栏背景。返回CSimpleTexture"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUI_GetHotkeyText]
+title = "获取热键显示文本 [MemHack]"
+description = "热键显示中第 ${index} 个文本"
+comment = "指代 开启热键显示 中对应的文本Frame。序号1~12代表技能栏文本, 13~18代表物品栏文本。返回CTextFrame"
+category = TC_MHUI
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+
+
+
+
+
+
+[MHUIData_GetBuffIndicatorBuff]
+title = "获取状态指示器的Buff [MemHack]"
+description = "序号为 ${index} 的状态指示器的Buff"
+comment = "序号1~8"
+category = TC_MHUIDATA
+returns = buffcode
+[[.args]]
+type = integer
+default = 1
+
+[MHUIData_GetBuffIndicatorBuffInt]
+title = "获取状态指示器的Buff [MemHack]"
+description = "序号为 ${index} 的状态指示器的Buff"
+comment = "序号1~8"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHUIData_GetTargetModeAbility]
+title = "获取CTargetMode的技能 [MemHack]"
+description = "CTargetMode的技能"
+comment = "选择目标的时候该结构中会存储技能id"
+category = TC_MHUIDATA
+returns = abilcode
+
+[MHUIData_GetTargetModeOrder]
+title = "获取CTargetMode的命令 [MemHack]"
+description = "CTargetMode的命令"
+comment = "选择目标的时候该结构中会存储命令id"
+category = TC_MHUIDATA
+returns = integer
+
+[MHUIData_GetTargetModeUnit]
+title = "获取CTargetMode的目标单位 [MemHack]"
+description = "CTargetMode的目标单位"
+comment = "选择目标的时候该结构中会存储目标单位"
+category = TC_MHUIDATA
+returns = unit
+
+[MHUIData_GetTargetModeItem]
+title = "获取CTargetMode的目标物品 [MemHack]"
+description = "CTargetMode的目标物品"
+comment = "选择目标的时候该结构中会存储目标物品"
+category = TC_MHUIDATA
+returns = item
+
+[MHUIData_GetTargetModeDest]
+title = "获取CTargetMode的目标可破坏物 [MemHack]"
+description = "CTargetMode的目标可破坏物"
+comment = "选择目标的时候该结构中会存储目标可破坏物"
+category = TC_MHUIDATA
+returns = destructable
+
+[MHUIData_GetTargetModeCastType]
+title = "获取CTargetMode的释放类型 [MemHack]"
+description = "CTargetMode的释放类型"
+comment = "选取目标的时候该结构中会存储释放类型"
+category = TC_MHUIDATA
+returns = integer
+
+[MHUIData_GetSelectModeUnit]
+title = "获取CSelectMode的目标单位 [MemHack]"
+description = "CSelectMode的目标单位"
+comment = "选择目标的时候该结构中会存储目标单位"
+category = TC_MHUIDATA
+returns = unit
+
+[MHUIData_GetSelectModeItem]
+title = "获取CSelectMode的目标物品 [MemHack]"
+description = "CSelectMode的目标物品"
+comment = "选择目标的时候该结构中会存储目标物品"
+category = TC_MHUIDATA
+returns = item
+
+[MHUIData_GetSelectModeDest]
+title = "获取CSelectMode的目标可破坏物 [MemHack]"
+description = "CSelectMode的目标可破坏物"
+comment = "选择目标的时候该结构中会存储目标可破坏物"
+category = TC_MHUIDATA
+returns = destructable
+
+[MHUIData_GetBuildFrameUnitId]
+title = "获取CBuildFrame的单位类型 [MemHack]"
+description = "CBuildFrame的单位类型"
+comment = "选择建造位置的时候该结构中会存储建筑的单位类型"
+category = TC_MHUIDATA
+returns = unitcode
+
+[MHUIData_GetBuildFrameSpriteX]
+title = "获取CBuildFrame的模型坐标X [MemHack]"
+description = "CBuildFrame的模型坐标X"
+comment = "选择建造位置的时候该结构中会存储建筑的模型坐标点X"
+category = TC_MHUIDATA
+returns = real
+
+[MHUIData_GetBuildFrameSpriteY]
+title = "获取CBuildFrame的模型坐标Y [MemHack]"
+description = "CBuildFrame的模型坐标Y"
+comment = "选择建造位置的时候该结构中会存储建筑的模型坐标点Y"
+category = TC_MHUIDATA
+returns = real
+
+[MHUIData_GetBuildFrameBuilder]
+title = "获取CBuildFrame的建造者 [MemHack]"
+description = "CBuildFrame的建造者"
+comment = "选择建造位置的时候该结构中会存储建筑的建造者"
+category = TC_MHUIDATA
+returns = unit
+
+[MHUIData_GetBuildFrameBuildAbility]
+title = "获取CBuildFrame的建造技能 [MemHack]"
+description = "CBuildFrame的建造技能"
+comment = "选择建造位置的时候该结构中会存储建造者的建造技能"
+category = TC_MHUIDATA
+returns = abilcode
+
+[MHUIData_GetCommandButtonSubscriptFrame]
+title = "获取命令按钮的下标控件 [MemHack]"
+description = "${button} 的下标控件"
+comment = "指的技能栏/物品栏中的按钮。返回一个CSimpleFrame"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonSubscriptText]
+title = "获取命令按钮的下标文本 [MemHack]"
+description = "${button} 的下标文本"
+comment = "指的技能栏/物品栏中的按钮。返回一个CSimpleFontString"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonCooldownFrame]
+title = "获取命令按钮的冷却模型 [MemHack]"
+description = "${button} 的冷却模型"
+comment = "指的技能栏/物品栏中的按钮。返回一个CSpriteFrame"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonStreamFrame]
+title = "获取命令按钮的流光模型 [MemHack]"
+description = "${button} 的流光模型"
+comment = "指的技能栏/物品栏中的按钮。返回一个CSpriteFrame"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonAbility]
+title = "获取命令按钮的技能ID [MemHack]"
+description = "${button} 的技能ID"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = abilcode
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonOrderId]
+title = "获取命令按钮的命令ID [MemHack]"
+description = "${button} 的命令ID"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonCastType]
+title = "获取命令按钮的释放类型 [MemHack]"
+description = "${button} 的释放类型"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonItem]
+title = "获取命令按钮的物品 [MemHack]"
+description = "${button} 的物品"
+comment = "指的物品栏中的按钮"
+category = TC_MHUIDATA
+returns = item
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonTip]
+title = "获取命令按钮的提示 [MemHack]"
+description = "${button} 的提示"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = string
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonUbertip]
+title = "获取命令按钮的扩展提示 [MemHack]"
+description = "${button} 的扩展提示"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = string
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonGoldCost]
+title = "获取命令按钮的黄金消耗 [MemHack]"
+description = "${button} 的黄金消耗"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonLumberCost]
+title = "获取命令按钮的木材消耗 [MemHack]"
+description = "${button} 的木材消耗"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonManaCost]
+title = "获取命令按钮的魔法消耗 [MemHack]"
+description = "${button} 的魔法消耗"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonFoodCost]
+title = "获取命令按钮的人口消耗 [MemHack]"
+description = "${button} 的人口消耗"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonHotkey]
+title = "获取命令按钮的快捷键 [MemHack]"
+description = "${button} 的快捷键"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonX]
+title = "获取命令按钮的X坐标 [MemHack]"
+description = "${button} 的X坐标"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonY]
+title = "获取命令按钮的Y坐标 [MemHack]"
+description = "${button} 的Y坐标"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = integer
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonTexture]
+title = "获取命令按钮的贴图路径 [MemHack]"
+description = "${button} 的贴图路径"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = string
+[[.args]]
+type = integer
+
+[MHUIData_GetCommandButtonCooldown]
+title = "获取命令按钮的当前冷却时间 [MemHack]"
+description = "${button} 的当前冷却时间"
+comment = "指的技能栏/物品栏中的按钮"
+category = TC_MHUIDATA
+returns = real
+[[.args]]
+type = integer
+
+
+
+
+
+
+
+
+
+[MHMsg_GetWindowWidth]
+title = "获取窗口宽度 [MemHack]"
+description = "魔兽窗口的宽度"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = integer
+
+[MHMsg_GetWindowHeight]
+title = "获取窗口高度 [MemHack]"
+description = "魔兽窗口的高度"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = integer
+
+[MHMsg_GetClientWidth]
+title = "获取客户区宽度 [MemHack]"
+description = "窗口客户区的宽度"
+comment = "异步函数。指不含边框和滚动条等的窗口宽度"
+category = TC_MHMESSAGE
+returns = integer
+
+[MHMsg_GetClientHeight]
+title = "获取客户区高度 [MemHack]"
+description = "窗口客户区的高度"
+comment = "异步函数。指不含边框和滚动条等的窗口高度"
+category = TC_MHMESSAGE
+returns = integer
+
+[MHMsg_GetResolutionWidth]
+title = "获取分辨率宽度 [MemHack]"
+description = "桌面分辨率的宽度"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = integer
+
+[MHMsg_GetResolutionHeight]
+title = "获取分辨率高度 [MemHack]"
+description = "桌面分辨率的高度"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = integer
+
+[MHMsg_GetCursorX]
+title = "获取鼠标的屏幕坐标X [MemHack]"
+description = "鼠标的屏幕坐标X"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+
+[MHMsg_GetCursorY]
+title = "获取鼠标的屏幕坐标Y [MemHack]"
+description = "鼠标的屏幕坐标Y"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+
+[MHMsg_GetMouseX]
+title = "获取鼠标的世界坐标X [MemHack]"
+description = "鼠标的世界坐标X"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+
+[MHMsg_GetMouseY]
+title = "获取鼠标的世界坐标Y [MemHack]"
+description = "鼠标的世界坐标Y"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+
+[MHMsg_GetMouseZ]
+title = "获取鼠标的世界坐标Z [MemHack]"
+description = "鼠标的世界坐标Z"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+
+[MHMsg_IsKeyDown]
+title = "按键状态判断 [MemHack]"
+description = "${key} 是按下的"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = boolean
+[[.args]]
+type = integer
+
+[MHMsg_WorldToScreenX]
+title = "世界坐标转屏幕坐标X [MemHack]"
+description = "世界坐标 (${x}, ${y}, ${z}) 所对应的屏幕坐标X"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+
+[MHMsg_WorldToScreenY]
+title = "世界坐标转屏幕坐标Y [MemHack]"
+description = "世界坐标 (${x}, ${y}, ${z}) 所对应的屏幕坐标Y"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+
+[MHMsg_WorldToScreenScale]
+title = "世界坐标转屏幕缩放值 [MemHack]"
+description = "世界坐标 (${x}, ${y}, ${z}) 所对应的屏幕缩放值"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+
+[MHMsg_ScreenToWorldX]
+title = "屏幕坐标转世界坐标X [MemHack]"
+description = "屏幕坐标 (${x}, ${y}) 所对应的世界坐标X"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHMsg_ScreenToWorldY]
+title = "屏幕坐标转世界坐标Y [MemHack]"
+description = "屏幕坐标 (${x}, ${y}) 所对应的世界坐标Y"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHMsg_WorldToMinimapX]
+title = "世界坐标转小地图坐标X [MemHack]"
+description = "世界坐标 ${x} 所对应的小地图坐标X"
+comment = "异步函数。获取的结果是相对于小地图UI左下锚点的相对偏移"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 114
+
+[MHMsg_WorldToMinimapY]
+title = "世界坐标转小地图坐标Y [MemHack]"
+description = "世界坐标 ${y} 所对应的小地图坐标Y"
+comment = "异步函数。获取的结果是相对于小地图UI左下锚点的相对偏移"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 514
+
+[MHMsg_MinimapToWorldX]
+title = "小地图坐标转世界坐标X [MemHack]"
+description = "小地图坐标 ${x} 所对应的世界坐标X"
+comment = "异步函数。填入的参数是相对于小地图UI左下锚点的相对偏移"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 0.114
+
+[MHMsg_MinimapToWorldY]
+title = "小地图坐标转世界坐标Y [MemHack]"
+description = "小地图坐标 ${y} 所对应的世界坐标Y"
+comment = "异步函数。填入的参数是相对于小地图UI左下锚点的相对偏移"
+category = TC_MHMESSAGE
+returns = real
+[[.args]]
+type = real
+default = 0.514
+
+[MHMsg_InScreen]
+title = "在屏幕内 [MemHack]"
+description = "世界坐标 (${x}, ${y}) 在屏幕内"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = boolean
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHMsg_IsIndicatorOn]
+title = "指示器被激活 [MemHack]"
+description = "${} 被激活"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = boolean
+[[.args]]
+type = MHIndicatorType
+default = "INDICATOR_TYPE_TARGET_MODE"
+
+[MHMsg_GetCursorUnit]
+title = "获取鼠标指向的单位 [MemHack]"
+description = "鼠标指向的单位"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = unit
+
+[MHMsg_GetCursorItem]
+title = "获取鼠标指向的物品 [MemHack]"
+description = "鼠标指向的物品"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = item
+
+[MHMsg_IsWindowedLaunch]
+title = "是宽屏启动 [MemHack]"
+description = "是宽屏启动"
+comment = "异步函数"
+category = TC_MHMESSAGE
+returns = boolean
+
+
+
+
+
+
+
+
+
+[MHDamage_DamageUnit]
+title = "伤害目标"
+description = "命令 ${unit} 对 ${target} 造成 ${damage} 点伤害。攻击类型 ${atk_type}, 伤害类型 ${dmg_type}, 是物理伤害 ${is_physical}, 伤害标志 ${flag}"
+comment = "等同于 单位-伤害目标 函数，只是开放了设置物理伤害和伤害标志的接口。返回实际造成的伤害"
+category = TC_MHDAMAGE
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = real
+default = 114514
+[[.args]]
+type = attacktype
+default = "AttackTypeNormal"
+[[.args]]
+type = damagetype
+default = "DamageTypeNormal"
+[[.args]]
+type = boolean
+default = "false"
+[[.args]]
+type = integer
+default = 0
+
+
+
+
+
+
+[MHAbility_GetHeroAll]
+title = "遍历英雄技能 [MemHack]"
+description = "遍历 ${unit} 的所有英雄技能并存储到 ${hash_table} 中"
+comment = "返回值为技能数量"
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = hashtable
+default = "bj_lastCreatedHashtable"
+
+[MHAbility_GetBaseId]
+title = "获取基础ID [MemHack]"
+description = "${unit} 的 ${aid} 技能的基础ID"
+comment = "主要用于检查继承"
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetOrder]
+title = "获取技能命令 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的 ${order_flag} 命令"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityOrderFlag
+default = "ABILITY_ORDER_FLAG_CAST"
+
+[MHAbility_GetCastType]
+title = "获取释放类型 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的释放类型"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetTargetAllow]
+title = "获取目标允许 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的当前目标允许"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_IsFlag]
+title = "判定技能标志 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能包含 ${flag}"
+comment = ""
+category = TC_MHABILITY
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityFlag
+default = "ABILITY_FLAG1_ON_COOLDOWN"
+
+[MHAbility_IsPassive]
+title = "是被动技能 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能是被动技能"
+comment = ""
+category = TC_MHABILITY
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_IsOnCooldown]
+title = "在冷却中 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能正在冷却中"
+comment = ""
+category = TC_MHABILITY
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetCooldown]
+title = "获取冷却时间 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的当前冷却时间"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetMaxCooldown]
+title = "获取最大冷却时间 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的当前最大冷却时间"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetSpellRemain]
+title = "获取持续时间 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的剩余持续时间"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHbz'
+
+[MHAbility_GetTargetUnit]
+title = "获取当前目标 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的当前目标单位"
+comment = ""
+category = TC_MHABILITY
+returns = unit
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetTargetX]
+title = "获取当前目标点X [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的当前目标点X"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetTargetY]
+title = "获取当前目标点Y [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的当前目标点Y"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetHideCount]
+title = "获取隐藏计数 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的隐藏计数"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_IsHideEx]
+title = "被隐藏Ex [MemHack]"
+description = "${unit} 的 ${ability_id} 技能被隐藏Ex"
+comment = ""
+category = TC_MHABILITY
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetDisableCount]
+title = "获取禁用计数 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的禁用计数"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetDisableExCount]
+title = "获取禁用计数 (Ex) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的禁用Ex计数"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_IsPolarity]
+title = "极性判定 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能是 ${polarity}"
+comment = ""
+category = TC_MHABILITY
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityPolarity
+default = "ABILITY_POLARITY_AURA"
+
+[MHAbility_GetCastpoint]
+title = "获取技能前摇 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的前摇"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetBackswing]
+title = "获取技能后摇 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能的后摇"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetSourceItem]
+title = "获取来源物品 [MemHack]"
+description = "为 ${unit} 添加 ${ability_id} 技能的物品"
+comment = ""
+category = TC_MHABILITY
+returns = item
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetChargeCount]
+title = "获取下标数值 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能下标数值"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetChargeText]
+title = "获取下标文本 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能下标文本"
+comment = ""
+category = TC_MHABILITY
+returns = string
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetChargeState]
+title = "获取下标状态 [MemHack]"
+description = "${unit} 的 ${ability_id} 技能下标已启用"
+comment = ""
+category = TC_MHABILITY
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetHookOrder]
+title = "获取已设置的命令ID [MemHack]"
+description = "${ability_id} 技能已设置的命令ID"
+comment = "命令ID可自定义。获取到的是 设置命令ID 动作设置的命令ID"
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_GetDefDataInt]
+title = "获取物编数据 (整数) [MemHack]"
+description = "${ability_id} 在物编中的 ${def_data}"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataInt
+default = "ABILITY_DEF_DATA_BASE_ID"
+
+[MHAbility_GetDefDataReal]
+title = "获取物编数据 (实数) [MemHack]"
+description = "${ability_id} 在物编中的 ${def_data}"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataReal
+default = "ABILITY_DEF_DATA_MISSILE_SPEED"
+
+[MHAbility_GetDefDataBool]
+title = "获取物编数据 (布尔值) [MemHack]"
+description = "${ability_id} 在物编中的 ${def_data}"
+comment = ""
+category = TC_MHABILITY
+returns = boolean
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataBool
+default = "ABILITY_DEF_DATA_MISSILE_HOMING"
+
+[MHAbility_GetDefDataStr]
+title = "获取物编数据 (字符串) [MemHack]"
+description = "${ability_id} 在物编中的 ${def_data}"
+comment = ""
+category = TC_MHABILITY
+returns = string
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataStr
+default = "ABILITY_DEF_DATA_NAME"
+
+[MHAbility_GetLevelDefDataInt]
+title = "获取物编等级数据 (整数) [MemHack]"
+description = "${ability_id} 在物编中等级 ${level} 的 ${def_data}"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataInt
+default = "ABILITY_LEVEL_DEF_DATA_MANA_COST"
+
+[MHAbility_GetLevelDefDataReal]
+title = "获取物编等级数据 (实数) [MemHack]"
+description = "${ability_id} 在物编中等级 ${level} 的 ${def_data}"
+comment = ""
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataReal
+default = "ABILITY_LEVEL_DEF_DATA_COOLDOWN"
+
+[MHAbility_GetLevelDefDataStr]
+title = "获取物编等级数据 (字符串) [MemHack]"
+description = "${ability_id} 在物编中等级 ${level} 的 ${def_data}"
+comment = ""
+category = TC_MHABILITY
+returns = string
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataStr
+default = "ABILITY_LEVEL_DEF_DATA_TIP"
+
+[MHAbility_GetCustomDataInt]
+title = "获取自定义物编数据 (整数) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能在物编中的 ${def_data}"
+comment = "该函数获取的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataInt
+default = "ABILITY_DEF_DATA_BUTTON_X"
+
+[MHAbility_GetCustomDataReal]
+title = "获取自定义物编数据 (实数) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能在物编中的 ${def_data}"
+comment = "该函数获取的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataReal
+default = "ABILITY_DEF_DATA_MISSILE_SPEED"
+
+[MHAbility_GetCustomDataBool]
+title = "获取自定义物编数据 (布尔值) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能在物编中的 ${def_data}"
+comment = "该函数获取的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataBool
+default = "ABILITY_DEF_DATA_MISSILE_HOMING"
+
+[MHAbility_GetCustomDataStr]
+title = "获取自定义物编数据 (字符串) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能在物编中的 ${def_data}"
+comment = "该函数获取的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+returns = string
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataStr
+default = "ABILITY_DEF_DATA_NAME"
+
+[MHAbility_GetCustomLevelDataInt]
+title = "获取自定义物编等级数据 (整数) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能在物编中等级 ${level} 的 ${def_data}"
+comment = "该函数获取的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataInt
+default = "ABILITY_LEVEL_DEF_DATA_MANA_COST"
+
+[MHAbility_GetCustomLevelDataReal]
+title = "获取自定义物编等级数据 (实数) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能在物编中等级 ${level} 的 ${def_data}"
+comment = "该函数获取的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataReal
+default = "ABILITY_LEVEL_DEF_DATA_COOLDOWN"
+
+[MHAbility_GetCustomLevelDataStr]
+title = "获取自定义物编等级数据 (字符串) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能在物编中等级 ${level} 的 ${def_data}"
+comment = "该函数获取的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+returns = string
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataStr
+default = "ABILITY_LEVEL_DEF_DATA_TIP"
+
+[MHAbility_GetExtraLevelDataInt]
+title = "获取额外等级数据 (整数) [MemHack]"
+description = "${unit} 的 ${ability_id} 技能等级 ${level} 的 ${def_data}"
+comment = ""
+category = TC_MHABILITY
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelExtraDataInt
+default = "ABILITY_LEVEL_EXTRA_DATA_GOLD_COST"
+
+
+
+
+
+
+[MHBuff_GetLevel]
+title = "获取等级 [MemHack]"
+description = "${unit} 的 ${buff_id} 魔法效果等级"
+comment = ""
+category = TC_MHBUFF
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = buffcode
+default = 'Bcri'
+
+[MHBuff_GetLevelInt]
+title = "获取等级 (整数) [MemHack]"
+description = "${unit} 的 ${buff_id} 魔法效果等级"
+comment = ""
+category = TC_MHBUFF
+script_name = MHBuff_GetLevel
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "'Bcri'"
+
+[MHBuff_GetBaseID]
+title = "获取基础ID [MemHack]"
+description = "${unit} 的 ${buff_id} 魔法效果的基础ID"
+comment = "主要用于检查继承"
+category = TC_MHBUFF
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = buffcode
+default = 'Bcri'
+
+[MHBuff_GetBaseIDInt]
+title = "获取基础ID (整数) [MemHack]"
+description = "${unit} 的 ${buff_id} 魔法效果的基础ID"
+comment = "主要用于检查继承"
+category = TC_MHBUFF
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "'Bcri'"
+
+[MHBuff_GetRemain]
+title = "获取剩余持续时间 [MemHack]"
+description = "${unit} 的 ${buff_id} 魔法效果剩余持续时间"
+comment = ""
+category = TC_MHBUFF
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = buffcode
+default = 'Bcri'
+
+[MHBuff_GetRemainInt]
+title = "获取剩余持续时间 (整数) [MemHack]"
+description = "${unit} 的 ${buff_id} 魔法效果剩余持续时间"
+comment = ""
+script_name = "MHBuff_GetRemain"
+category = TC_MHBUFF
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "'Bcri'"
+
+[MHBuff_IsPolarity]
+title = "极性判定 [MemHack]"
+description = "${unit} 的 ${buff_id} 魔法效果是 ${polarity} 效果"
+comment = ""
+category = TC_MHBUFF
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = buffcode
+default = 'Bcri'
+[[.args]]
+type = MHBuffPolarity
+default = "BUFF_POLARITY_POSITIVE"
+
+[MHBuff_IsPolarityInt]
+title = "极性判定 (整数) [MemHack]"
+description = "${unit} 的 ${buff_id} 魔法效果是 ${polarity} 效果"
+comment = ""
+category = TC_MHBUFF
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "'Bcri'"
+[[.args]]
+type = MHBuffPolarity
+default = "BUFF_POLARITY_POSITIVE"
+
+
+
+
+
+
+
+[MHJson_Create]
+title = "创建JSON [MemHack]"
+description = "创建JSON对象"
+comment = "用完需要删除，不然会泄露"
+category = TC_MHJSON
+returns = integer
+
+[MHJson_Dump]
+title = "导出字符串 [MemHack]"
+description = "从JSON对象 ${id} 中导出字符串"
+comment = "将json对象导出为字符串"
+category = TC_MHJSON
+returns = string
+[[.args]]
+type = integer
+
+[MHJson_ReadInt]
+title = "读取整数 [MemHack]"
+description = "从JSON对象 ${id} 键 ${key} 上读取整数"
+comment = ""
+category = TC_MHJSON
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = string
+
+[MHJson_ReadReal]
+title = "读取实数 [MemHack]"
+description = "从JSON对象 ${id} 键 ${key} 上读取实数"
+comment = ""
+category = TC_MHJSON
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = string
+
+[MHJson_ReadBool]
+title = "读取布尔值 [MemHack]"
+description = "从JSON对象 ${id} 键 ${key} 上读取布尔值"
+comment = ""
+category = TC_MHJSON
+returns = boolean
+[[.args]]
+type = integer
+[[.args]]
+type = string
+
+[MHJson_ReadStr]
+title = "读取字符串 [MemHack]"
+description = "从JSON对象 ${id} 键 ${key} 上读取字符串"
+comment = ""
+category = TC_MHJSON
+returns = string
+[[.args]]
+type = integer
+[[.args]]
+type = string
+
+[MHJson_ReadArrayInt]
+title = "读取整数 (数组) [MemHack]"
+description = "从JSON对象 ${id} 键 ${key} 索引 ${index} 上读取整数"
+comment = ""
+category = TC_MHJSON
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+
+[MHJson_ReadArrayReal]
+title = "读取实数 (数组) [MemHack]"
+description = "从JSON对象 ${id} 键 ${key} 索引 ${index} 上读取实数"
+comment = ""
+category = TC_MHJSON
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+
+[MHJson_ReadArrayBool]
+title = "读取布尔值 (数组) [MemHack]"
+description = "从JSON对象 ${id} 键 ${key} 索引 ${index} 上读取布尔值"
+comment = ""
+category = TC_MHJSON
+returns = boolean
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+
+[MHJson_ReadArrayStr]
+title = "读取字符串 (数组) [MemHack]"
+description = "从JSON对象 ${id} 键 ${key} 索引 ${index} 上读取字符串"
+comment = ""
+category = TC_MHJSON
+returns = string
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+
+[MHJson_GetArraySize]
+title = "获取数组长度 [MemHack]"
+description = "获取JSON对象 ${id} 键 ${key} 的数组长度"
+comment = ""
+category = TC_MHJSON
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = string
+
+
+
+
+
+
+
+
+
+[MHEffect_GetEnumEffect]
+title = "获取选取的特效 [MemHack]"
+description = "选取特效"
+comment = "在选取特效做动作中，指代被选取的特效"
+category = TC_SPECIALEFFECT
+returns = effect
+
+[MHEffect_GetX]
+title = "获取X坐标 [MemHack]"
+description = "${effect} 的X坐标"
+comment = ""
+category = TC_SPECIALEFFECT
+returns = real
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_GetY]
+title = "获取Y坐标 [MemHack]"
+description = "${effect} 的Y坐标"
+comment = ""
+category = TC_SPECIALEFFECT
+returns = real
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_GetZ]
+title = "获取Z坐标 [MemHack]"
+description = "${effect} 的Z坐标"
+comment = ""
+category = TC_SPECIALEFFECT
+returns = real
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_Rotation]
+title = "获取自转角 [MemHack]"
+description = "${effect} 的自转角"
+comment = ""
+category = TC_SPECIALEFFECT
+returns = real
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_GetVectorX]
+title = "获取方向向量X坐标 [MemHack]"
+description = "${effect} 方向向量的X坐标"
+comment = "向量形式。(1, 0, 0) 表示初始方向 (正东)。已归一化"
+category = TC_SPECIALEFFECT
+returns = real
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_GetVectorY]
+title = "获取方向向量Y坐标 [MemHack]"
+description = "${effect} 方向向量的Y坐标"
+comment = "向量形式。(1, 0, 0) 表示初始方向 (正东)。已归一化"
+category = TC_SPECIALEFFECT
+returns = real
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_GetVectorZ]
+title = "获取方向向量Z坐标 [MemHack]"
+description = "${effect} 方向向量的Z坐标"
+comment = "向量形式。(1, 0, 0) 表示初始方向 (正东)。已归一化"
+category = TC_SPECIALEFFECT
+returns = real
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_IsHidden]
+title = "被隐藏 [MemHack]"
+description = "${effect} 是隐藏的"
+comment = ""
+category = TC_SPECIALEFFECT
+returns = boolean
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_GetAnimationProgress]
+title = "获取动画进度 [MemHack]"
+description = "${effect} 当前动画的进度"
+comment = "0~1"
+category = TC_SPECIALEFFECT
+returns = real
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+
+
+
+
+
+
+
+
+[MHGroup_GetSize]
+title = "获取单位数量 [MemHack]"
+description = "${group} 中的单位数量"
+comment = ""
+category = TC_UNITGROUP
+returns = integer
+[[.args]]
+type = group
+
+[MHGroup_GetSizeEx]
+title = "获取有效单位数量 [MemHack]"
+description = "${group} 中的有效单位数量"
+comment = "效率更低但会排除已被删除的单位"
+category = TC_UNITGROUP
+returns = integer
+[[.args]]
+type = group
+
+[MHGroup_ContainsUnit]
+title = "包含单位 [MemHack]"
+description = "${group} 包含 ${unit}"
+comment = ""
+category = TC_UNITGROUP
+returns = boolean
+[[.args]]
+type = group
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHGroup_GetUnit]
+title = "获取指定序号的单位 [MemHack]"
+description = "${group} 中第 ${index} 个单位"
+comment = "序号从1开始"
+category = TC_UNITGROUP
+returns = unit
+[[.args]]
+type = group
+[[.args]]
+type = integer
+default = 1
+
+[MHGroup_GetRandomUnit]
+title = "获取随机单位 [MemHack]"
+description = "${group} 中随机抽取一个单位"
+comment = "不会选择到无效单位, 会调用随机数, 不要异步使用"
+category = TC_UNITGROUP
+returns = unit
+[[.args]]
+type = group
+
+
+
+
+
+
+[MHSlk_ReadInt]
+title = "获取物体整数数据"
+description = "获取 ${table} 物编中ID为 ${id} 的 ${field}"
+comment = "通过读取slk表格获取物体编辑器中的数据。同ydlua的slk库"
+category = TC_MHSLK
+returns = integer
+[[.args]]
+type = MHSlkTable
+default = "SLK_TABLE_ABILITY"
+[[.args]]
+type = integer
+default = "'AHtb'"
+[[.args]]
+type = string
+default = "Cost1"
+
+[MHSlk_ReadReal]
+title = "获取物体实数数据"
+description = "获取 ${table} 物编中ID为 ${id} 的 ${field}"
+comment = "通过读取slk表格获取物体编辑器中的数据。同ydlua的slk库"
+category = TC_MHSLK
+returns = real
+[[.args]]
+type = MHSlkTable
+default = "SLK_TABLE_ABILITY"
+[[.args]]
+type = integer
+default = "'AHtb'"
+[[.args]]
+type = string
+default = "DataA1"
+
+[MHSlk_ReadBool]
+title = "获取物体布尔值数据"
+description = "获取 ${table} 物编中ID为 ${id} 的 ${field}"
+comment = "通过读取slk表格获取物体编辑器中的数据。同ydlua的slk库"
+category = TC_MHSLK
+returns = boolean
+[[.args]]
+type = MHSlkTable
+default = "SLK_TABLE_ABILITY"
+[[.args]]
+type = integer
+default = "'AHtb'"
+[[.args]]
+type = string
+default = "hero"
+
+[MHSlk_ReadStr]
+title = "获取物体字符串数据"
+description = "获取 ${table} 物编中ID为 ${id} 的 ${field}"
+comment = "通过读取slk表格获取物体编辑器中的数据。同ydlua的slk库"
+category = TC_MHSLK
+returns = string
+[[.args]]
+type = MHSlkTable
+default = "SLK_TABLE_ABILITY"
+[[.args]]
+type = integer
+default = "'AHtb'"
+[[.args]]
+type = string
+default = "Name"
+
+
+
+
+
+
+[MHMath_GetLocalRandomInt]
+title = "异步随机整数 [MemHack]"
+description = "${lower_bound} 与 ${upper_bound} 之间的异步随机整数"
+comment = "返回值完全异步, 不要用于同步的逻辑"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 114
+[[.args]]
+type = integer
+default = 514
+
+[MHMath_GetLocalRandomReal]
+title = "异步随机实数 [MemHack]"
+description = "${lower_bound} 与 ${upper_bound} 之间的异步随机实数"
+comment = "返回值完全异步, 不要用于同步的逻辑"
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHMath_IsBitSet]
+title = "包含Bit [MemHack]"
+description = "${flag} 包含 ${bit}"
+comment = "操作某些标志的时候用到。例如0x6包含0x4和0x2。百度搜索bitset"
+category = TC_MATH
+returns = boolean
+[[.args]]
+type = integer
+default = "0x114514"
+[[.args]]
+type = integer
+default = "0x1919"
+
+[MHMath_AddBit]
+title = "添加bit [MemHack]"
+description = "为 ${flag} 添加 ${bit}"
+comment = "操作某些标志的时候用到。例如为0x6添加0x3结果为0x7。百度搜索bitset"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = "0x114514"
+[[.args]]
+type = integer
+default = "0x1919"
+
+[MHMath_RemoveBit]
+title = "删除bit [MemHack]"
+description = "为 ${flag} 删除 ${bit}"
+comment = "操作某些标志的时候用到。例如为0x6删除0x3结果为0x4。百度搜索bitset"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = "0x114514"
+[[.args]]
+type = integer
+default = "0x1919"
+
+[MHMath_Xor]
+title = "逻辑异或 [MemHack]"
+description = "${op1} Xor ${op2}"
+comment = "相同为假，不同为真"
+category = TC_MATH
+returns = boolean
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHMath_BitwiseAnd]
+title = "按位与 [MemHack]"
+description = "${op1} and ${op2}"
+comment = "位运算"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHMath_BitwiseOr]
+title = "按位或 [MemHack]"
+description = "${op1} or ${op2}"
+comment = "位运算"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHMath_BitwiseXor]
+title = "按位异或 [MemHack]"
+description = "${op1} xor ${op2}"
+comment = "位运算"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHMath_BitwiseNot]
+title = "按位取反 [MemHack]"
+description = "not ${op1}"
+comment = "位运算"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 0
+
+[MHMath_LShift]
+title = "左移位 [MemHack]"
+description = "${op1} << ${op2}"
+comment = "移位运算"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = integer
+default = 0
+
+[MHMath_RShift]
+title = "右移位 [MemHack]"
+description = "${op1} >> ${op2}"
+comment = "移位运算"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 1
+
+[MHMath_Log2]
+title = "对数 (底数2) [MemHack]"
+description = "Log2(${op1})"
+comment = "整数对数运算"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 2
+
+[MHMath_ModI]
+title = "取余 [MemHack]"
+description = "${dividend} mod ${modulus}"
+comment = ""
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+default = 114
+[[.args]]
+type = integer
+default = 514
+
+[MHMath_ModF]
+title = "取余 [MemHack]"
+description = "${dividend} mod ${modulus}"
+comment = ""
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHMath_Get4Bytes]
+title = "合成4Bytes [MemHack]"
+description = "${byte_1} + ${byte_2} + ${byte_3} + ${byte_4}"
+comment = "例如0x11 + 0x45 + 0x14 + 0x19 --> 0x11451419"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHMath_ToHex]
+title = "转换整数为16进制字符串 [MemHack]"
+description = "转换 ${Dec} 为16进制字符串"
+comment = ""
+category = TC_MATH
+returns = string
+[[.args]]
+type = integer
+
+[MHMath_ToDec]
+title = "转换16进制字符串为整数 [MemHack]"
+description = "转换 ${Hex} 为十进制整数"
+comment = "仅支持DWORD"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = string
+default = "FFFFFFFF"
+
+[MHMath_Bezier2]
+title = "二阶贝塞尔 [MemHack]"
+description = "获取起始点 ${start} 控制点 ${control} 结束点 ${end} 所构成的二阶贝塞尔曲线在进度为 ${progress} 时的坐标"
+comment = "起始点时进度为0，终止点时进度为1"
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMath_Bezier3]
+title = "三阶贝塞尔 [MemHack]"
+description = "获取起始点 ${start} 控制点1 ${control1} 控制点2 ${control2} 结束点 ${end} 所构成的三阶贝塞尔曲线在进度为 ${progress} 时的坐标"
+comment = "起始点时进度为0，终止点时进度为1"
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMath_Distance]
+title = "获取两坐标间距离 [MemHack]"
+description = "起始点 (${x1}, ${y1}) 到目标点 (${x2}, ${y2}) 的距离"
+comment = ""
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMath_Orientation]
+title = "获取两坐标间方向 [MemHack]"
+description = "起始点 (${x1}, ${y1}) 到目标点 (${x2}, ${y2}) 的方向"
+comment = "返回值为角度值"
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMath_PointOffsetX]
+title = "获取位移点的X坐标 [MemHack]"
+description = "${x} 向 ${orientation} 方向位移 ${distance} 处的X坐标"
+comment = ""
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMath_PointOffsetY]
+title = "获取位移点的Y坐标 [MemHack]"
+description = "${y} 向 ${orientation} 方向位移 ${distance} 处的Y坐标"
+comment = ""
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMath_UnitOffsetX]
+title = "获取单位位移点的X坐标 [MemHack]"
+description = "以 ${unit} 所在位置向 ${orientation} 方向位移 ${distance} 处的X坐标"
+comment = ""
+category = TC_MATH
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMath_UnitOffsetY]
+title = "获取单位位移点的Y坐标 [MemHack]"
+description = "以 ${unit} 所在位置向 ${orientation} 方向位移 ${distance} 处的Y坐标"
+comment = ""
+category = TC_MATH
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMath_CreateIntegerPool]
+title = "创建整数池 [MemHack]"
+description = "创建整数池"
+comment = ""
+category = TC_MATH
+returns = integer
+
+[MHMath_IntegerPoolGetWeight]
+title = "整数池获取权重 [MemHack]"
+description = "${pool} 中整数 ${value} 所对应的权重"
+comment = ""
+category = TC_MATH
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHMath_IntegerPoolGetSize]
+title = "整数池数量 [MemHack]"
+description = "${pool} 中整数数量"
+comment = ""
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+
+[MHMath_IntegerPoolContains]
+title = "整数池包含整数 [MemHack]"
+description = "${pool} 包含 ${value}"
+comment = ""
+category = TC_MATH
+returns = boolean
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHMath_IntegerPoolSample]
+title = "整数池采样 [MemHack]"
+description = "从 ${pool} 中随机获取一个整数"
+comment = "结果是同步的，只能在同步环境下使用"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+
+[MHMath_IntegerPoolAsyncSample]
+title = "整数池采样 (异步) [MemHack]"
+description = "从 ${pool} 中异步随机获取一个整数"
+comment = "结果是异步的，不要用于同步逻辑"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+
+[MHMath_IntegerPoolSampleEx]
+title = "整数池采样Ex [MemHack]"
+description = "从 ${pool} 中随机获取一个整数并移除 ${erase}, 是否异步: ${async}"
+comment = "结果是异步的，不要用于同步逻辑"
+category = TC_MATH
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = boolean
+default = "false"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHMath_IntegerPoolGetEnumValue]
+title = "整数池获取选取的整数 [MemHack]"
+description = "整数池中选取的整数"
+comment = "指代 选取整数池做动作 中被选取的整数"
+category = TC_MATH
+returns = integer
+
+[MHMath_IntegerPoolGetEnumWeight]
+title = "整数池获取选取的权重 [MemHack]"
+description = "整数池中选取的权重"
+comment = "指代 选取整数池做动作 中被选取的整数对应的权重"
+category = TC_MATH
+returns = real
+
+
+
+
+
+
+
+
+
+
+
+
+[MHUnit_CreateBuilding]
+title = "创建建筑 [MemHack]"
+description = "为 ${player} 创建 ${building} 在 (${x}, ${y})。创建出的建筑自动建造 ${auto_build}, 能被工人同时建造 ${can_assist}"
+comment = ""
+category = TC_UNIT
+returns = unit
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = unitcode
+default = 'htow'
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_CreateIllusion]
+title = "创建幻象 [MemHack]"
+description = "为 ${player} 创建 ${unit} 的幻象在 (${x}, ${y})"
+comment = ""
+category = TC_UNIT
+returns = unit
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHUnit_GetAbilityCount]
+title = "获取技能数量 [MemHack]"
+description = "${unit} 拥有的技能数量"
+comment = "包括魔法效果"
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAbilityByIndex]
+title = "获取指定序号的技能 [MemHack]"
+description = "${unit} 的第 ${index} 个技能"
+comment = "包括魔法效果"
+category = TC_UNIT
+returns = abilcode
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = 1
+
+[MHUnit_GetData]
+title = "获取数据 [MemHack]"
+description = "${unit} 的 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHUnitData
+default = "UNIT_DATA_MAX_LIFE"
+
+[MHUnit_GetArmourType]
+title = "获取护甲类型 [MemHack]"
+description = "${unit} 的护甲类型"
+comment = ""
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAtkDataInt]
+title = "获取攻击数据 (整数) [MemHack]"
+description = "${unit} 的 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHUnitAtkDataInt
+default = "UNIT_ATK_DATA_BASE_DAMAGE1"
+
+[MHUnit_GetAtkDataReal]
+title = "获取攻击数据 (实数) [MemHack]"
+description = "${unit} 的 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHUnitAtkDataReal
+default = "UNIT_ATK_DATA_ATTACK_SPEED"
+
+[MHUnit_GetAttackTargetUnit]
+title = "获取攻击目标单位 [MemHack]"
+description = "${unit} 当前的攻击目标单位"
+comment = ""
+category = TC_UNIT
+returns = unit
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAttackTargetItem]
+title = "获取攻击目标物品 [MemHack]"
+description = "${unit} 当前的攻击目标物品"
+comment = ""
+category = TC_UNIT
+returns = item
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAttackTargetDest]
+title = "获取攻击目标可破坏物 [MemHack]"
+description = "${unit} 当前的攻击目标可破坏物"
+comment = ""
+category = TC_UNIT
+returns = destructable
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAttackTargetX]
+title = "获取攻击目标点X [MemHack]"
+description = "${unit} 当前的攻击目标点X"
+comment = ""
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAttackTargetY]
+title = "获取攻击目标点Y [MemHack]"
+description = "${unit} 当前的攻击目标点Y"
+comment = ""
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAttackTimerRemain]
+title = "获取攻击计时器剩余时间 [MemHack]"
+description = "${unit} 当前攻击计时器剩余时间"
+comment = "到下一次攻击开始所需时间。移动、右键移动会启动一个0.5s的该计时器"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAttackPointTimerRemain]
+title = "获取前摇计时器剩余时间 [MemHack]"
+description = "${unit} 当前前摇计时器剩余时间"
+comment = "攻击前摇"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetBackswingTimerRemain]
+title = "获取后摇计时器剩余时间 [MemHack]"
+description = "${unit} 当前后摇计时器剩余时间"
+comment = "攻击后摇"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetTimedLifeRemain]
+title = "获取生命周期剩余时间 [MemHack]"
+description = "${unit} 当前生命周期剩余时间"
+comment = ""
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_IsInvulnerable]
+title = "单位无敌 [MemHack]"
+description = "${unit} 是无敌的"
+comment = "相当于单位的标志1包含无敌"
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAsTarget]
+title = "获取作为目标 [MemHack]"
+description = "${unit} 的作为目标"
+comment = "返回的是单位的真实作为目标"
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAsTargetType]
+title = "获取作为目标类型 [MemHack]"
+description = "${unit} 的作为目标类型"
+comment = "返回的是物编中 战斗-作为目标类型"
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_CheckTargetAllow]
+title = "判定目标允许 [MemHack]"
+description = "${unit} 能够对 ${target} 进行目标允许为 ${target_allow} 的行为"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = integer
+
+[MHUnit_IsFlag1]
+title = "判定标志1 [MemHack]"
+description = "${unit} 的标志1包含 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHUnitFlag1
+default = "UNIT_FLAG1_INVULNERABLE"
+
+[MHUnit_IsFlag2]
+title = "判定标志2 [MemHack]"
+description = "${unit} 的标志2包含 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHUnitFlag2
+default = "UNIT_FLAG2_ILLUSION"
+
+[MHUnit_IsFlag3]
+title = "判定标志3 [MemHack]"
+description = "${unit} 的标志3包含 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHUnitFlag3
+default = "UNIT_FLAG3_MECHANICAL_CRITTER"
+
+[MHUnit_IsFlagType]
+title = "判定种类 [MemHack]"
+description = "${unit} 的种类包含 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHUnitFlagType
+default = "UNIT_FLAG_TYPE_WARD"
+
+[MHUnit_IsPolymorphed]
+title = "单位被变形 [MemHack]"
+description = "${unit} 被变形"
+comment = "判定是否被妖术之类的技能变形"
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetStunCount]
+title = "获取眩晕计数 [MemHack]"
+description = "${unit} 的当前眩晕计数"
+comment = ""
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetKiller]
+title = "获取凶手单位 [MemHack]"
+description = "杀死 ${unit} 的凶手单位"
+comment = "没有事件的限制，在任何时候都可以对死亡单位使用"
+category = TC_UNIT
+returns = unit
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_IsState]
+title = "判定状态 [MemHack]"
+description = "${unit} 的当前状态为 ${state}"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHUnitState
+default = "UNIT_STATE_HARVEST"
+
+[MHUnit_GetDisableAutoAttackCount]
+title = "获取禁用自动攻击计数 [MemHack]"
+description = "${unit} 的禁用自动攻击计数"
+comment = "大于0表示被禁用"
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_CheckPosition]
+title = "判定可通行性 [MemHack]"
+description = "${unit} 允许通过坐标点 (${x}, ${y})"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHUnit_ModifyPositionX]
+title = "修正X坐标 [MemHack]"
+description = "${unit} 通过坐标点 (${x}, ${y}) 修正后的X坐标"
+comment = "若单位要移动到坐标(x, y)，获取通行性判定修正后的x坐标"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHUnit_ModifyPositionY]
+title = "修正Y坐标 [MemHack]"
+description = "${unit} 通过坐标点 (${x}, ${y}) 修正后的Y坐标"
+comment = "若单位要移动到坐标(x, y)，获取通行性判定修正后的y坐标"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHUnit_GetIllusionDamageDeal]
+title = "获取幻象造成伤害 [MemHack]"
+description = "${unit} 的予伤系数"
+comment = "仅对幻象有效"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetIllusionDamageReceive]
+title = "获取幻象接受伤害 [MemHack]"
+description = "${unit} 的承伤系数"
+comment = "仅对幻象有效"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAnimationProgress]
+title = "获取动画进度 [MemHack]"
+description = "${unit} 的当前动画进度"
+comment = "0~1"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetTrainId]
+title = "获取训练列表中的ID [MemHack]"
+description = "${unit} 当前训练列表中第 ${index} 个ID"
+comment = "仅对正在训练/研究的单位起效。取值范围1~7"
+category = TC_UNIT
+returns = unitcode
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = 1
+
+[MHUnit_GetShopTarget]
+title = "获取商店目标单位 [MemHack]"
+description = "商店 ${unit} 对玩家 ${player} 的目标单位"
+comment = "同步的接口"
+category = TC_UNIT
+returns = unit
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = player
+default = "Player00"
+
+[MHUnit_GetProgressSpeed]
+title = "获取进度计时器的速度 [MemHack]"
+description = "${unit} 当前进度计时器的速度"
+comment = "包括训练、研究、建造和升级。默认速度为1"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetProgress]
+title = "获取进度计时器的进度 [MemHack]"
+description = "${unit} 当前进度计时器的进度"
+comment = "包括训练、研究、建造和升级。返回一个0~1之间的值"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetHPBar]
+title = "获取单位血条 [MemHack]"
+description = "${unit} 的血条UI"
+comment = "返回一个CStatBar（继承自CSimpleStatusBar）"
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetOrderPlayer]
+title = "获取发布命令的玩家 [MemHack]"
+description = "对 ${unit} 发布命令的玩家"
+comment = "当前有命令时才会返回。触发发布的命令返回玩家1"
+category = TC_UNIT
+returns = player
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_IsDisableOrder]
+title = "被禁止接收玩家命令 [MemHack]"
+description = "${unit} 已被禁止接收来自 ${player} 的命令"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = player
+default = "Player00"
+
+[MHUnit_IsDisableControl]
+title = "已失控 [MemHack]"
+description = "${unit} 已被禁止接收来自任何玩家的命令"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetAttackSpeedLimit]
+title = "获取攻速上限 [MemHack]"
+description = "${unit} 的攻速上限"
+comment = "默认为平衡常数中设置的上限"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetMoveSpeedLimit]
+title = "获取移速上限 [MemHack]"
+description = "${unit} 的移速上限"
+comment = "默认为平衡常数中设置的上限"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetMoveType]
+title = "获取移动类型 [MemHack]"
+description = "${unit} 的移动类型"
+comment = ""
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetSpellRange]
+title = "获取额外施法距离 [MemHack]"
+description = "${unit} 的额外施法距离"
+comment = "指代 单位-增加施法距离 中增加的施法距离"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetInfoName]
+title = "获取名称信息 [MemHack]"
+description = "${unit} 的名称信息"
+comment = "指动作 [MemHack] - 设置名称信息 中设置的单位名称"
+category = TC_UNIT
+returns = string
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_GetInfoClass]
+title = "获取种类信息 [MemHack]"
+description = "${unit} 的种类信息"
+comment = "指动作 [MemHack] - 设置种类信息 中设置的单位种类"
+category = TC_UNIT
+returns = string
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHUnit_IsEnableViewSkill]
+title = "已强制技能显示 [MemHack]"
+description = "已强制显示 ${unit} 的技能给 ${player}"
+comment = "指动作 [MemHack] - 设置种类 设置的单位种类"
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = player
+default = "Player00"
+
+[MHUnit_GetDefDataInt]
+title = "获取物编数据 (整数) [MemHack]"
+description = "${uid} 在物编中的 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitDefDataInt
+default = "UNIT_DEF_DATA_GOLD_COST"
+
+[MHUnit_GetDefDataReal]
+title = "获取物编数据 (实数) [MemHack]"
+description = "${uid} 在物编中的 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitDefDataReal
+default = "UNIT_DEF_DATA_COLLISION"
+
+[MHUnit_GetDefDataBool]
+title = "获取物编数据 (布尔值) [MemHack]"
+description = "${uid} 在物编中的 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = boolean
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitDefDataBool
+default = "UNIT_DEF_DATA_SHOW_UI1"
+
+[MHUnit_GetDefDataStr]
+title = "获取物编数据 (字符串) [MemHack]"
+description = "${uid} 在物编中的 ${flag}"
+comment = ""
+category = TC_UNIT
+returns = string
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitDefDataStr
+default = "UNIT_DEF_DATA_NAME"
+
+[MHUnit_GetLevelDefDataInt]
+title = "获取物编等级数据 (整数) [MemHack]"
+description = "${uid} 在物编中 ${flag} 的第 ${level} 项"
+comment = "并非等级而是序号"
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitLevelDefDataInt
+default = "UNIT_LEVEL_DATA_ABILITY"
+[[.args]]
+type = integer
+default = 1
+
+[MHUnit_GetLevelDefDataStr]
+title = "获取物编等级数据 (字符串) [MemHack]"
+description = "${uid} 在物编中 ${flag} 的第 ${level} 项"
+comment = "并非等级而是序号"
+category = TC_UNIT
+returns = string
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitLevelDefDataStr
+default = "UNIT_LEVEL_DATA_PROPER_NAME"
+[[.args]]
+type = integer
+default = 1
+
+[MHUnit_GetLevelDataSize]
+title = "获取物编等级数据最大等级 [MemHack]"
+description = "${uid} 在物编中 ${flag} 的最大等级"
+comment = "并非等级而是数量"
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitLevelDefDataStr
+default = "UNIT_LEVEL_DEF_DATA_PROPER_NAME"
+
+
+
+
+
+
+
+
+
+
+
+
+[MHHero_GetMaxExp]
+title = "获取最大经验值 [MemHack]"
+description = "${unit} 从1级升级到 ${level} 所需经验值"
+comment = ""
+category = TC_HERO
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = 10
+
+[MHHero_GetNeededExp]
+title = "获取需求经验值 [MemHack]"
+description = "${unit} 升级到 ${level} 所需经验值"
+comment = ""
+category = TC_HERO
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = 10
+
+[MHHero_GetPrimaryAttr]
+title = "获取主属性 [MemHack]"
+description = "${unit} 的主属性"
+comment = "1 = 力量; 2 = 智力; 3 = 敏捷"
+category = TC_HERO
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[MHHero_GetPrimaryAttrValue]
+title = "获取主属性数值 [MemHack]"
+description = "${unit} 的主属性数值。包括加成 ${include_bonus}"
+comment = ""
+category = TC_HERO
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = boolean
+default = "true"
+
+[MHHero_GetAttrPlus]
+title = "获取属性成长 [MemHack]"
+description = "${unit} 的 ${attr} 成长"
+comment = ""
+category = TC_HERO
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = MHHeroAttribute
+default = "HERO_ATTR_STR"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MHPlayer_FirstValid]
+title = "获取第一个有效玩家 [MemHack]"
+description = "第一个有效玩家"
+comment = "第一个正在游玩的用户玩家"
+category = TC_PLAYER
+returns = player
+
+[MHPlayer_GetSelectUnit]
+title = "获取选择的单位 [MemHack]"
+description = "本地玩家选择的单位"
+comment = ""
+category = TC_PLAYER
+returns = unit
+
+[MHPlayer_GetSelectItem]
+title = "获取选择的物品 [MemHack]"
+description = "本地玩家选择的物品"
+comment = ""
+category = TC_PLAYER
+returns = item
+
+[MHPlayer_CheckUnitAvailable]
+title = "检查单位可用性 [MemHack]"
+description = "${player} 的 ${unit_id}是可用的"
+comment = "检查科技树 - 需求"
+category = TC_PLAYER
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = unitcode
+default = 'Hmkg'
+
+[MHPlayer_CheckAbilAvailable]
+title = "检查技能可用性 [MemHack]"
+description = "${player} 的 ${ability_id}是可用的"
+comment = "检查科技树 - 需求"
+category = TC_PLAYER
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHPlayer_CheckItemAvailable]
+title = "检查物品可用性 [MemHack]"
+description = "${player} 的 ${item_id}是可用的"
+comment = "检查科技树 - 需求"
+category = TC_PLAYER
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = itemcode
+default = "texp"
+
+[MHPlayer_CheckTechAvailable]
+title = "检查科技可用性 [MemHack]"
+description = "${player} 的 ${tech_id}是可用的"
+comment = "检查科技树 - 需求"
+category = TC_PLAYER
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = techcode
+default = "Rhde"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MHItem_GetEnumItem]
+title = "获取选取的物品 [MemHack]"
+description = "选取物品"
+comment = "指代 选取范围内的物品 做动作中被选取的物品"
+category = TC_ITEM
+returns = item
+
+[MHItem_GetOwner]
+title = "获取持有者 [MemHack]"
+description = "${item} 的持有者"
+comment = ""
+category = TC_ITEM
+returns = unit
+[[.args]]
+type = item
+
+[MHItem_GetAbilityCount]
+title = "获取技能数量 [MemHack]"
+description = "${item} 的技能数量"
+comment = ""
+category = TC_ITEM
+returns = integer
+[[.args]]
+type = item
+
+[MHItem_GetAbilityId]
+title = "获取技能 [MemHack]"
+description = "${item} 的第 ${index} 个技能"
+comment = "1~5。当物品被持有的时候才会有技能，技能是添加到单位身上的因此可以用[单位技能]库里的函数操作"
+category = TC_ITEM
+returns = integer
+[[.args]]
+type = item
+[[.args]]
+type = integer
+default = 1
+
+[MHItem_GetDefDataInt]
+title = "获取物编数据 (整数) [MemHack]"
+description = "${item} 在物编中的 ${flag}"
+comment = ""
+category = TC_ITEM
+returns = integer
+[[.args]]
+type = itemcode
+default = "texp"
+[[.args]]
+type = MHItemDefDataInt
+default = "ITEM_DEF_DATA_GOLD_COST"
+
+[MHItem_GetDefDataBool]
+title = "获取物编数据 (布尔值) [MemHack]"
+description = "${item} 在物编中的 ${flag}"
+comment = ""
+category = TC_ITEM
+returns = boolean
+[[.args]]
+type = itemcode
+default = "texp"
+[[.args]]
+type = MHItemDefDataBool
+default = "ITEM_DEF_DATA_DROP_ON_DEATH"
+
+[MHItem_GetDefDataStr]
+title = "获取物编数据 (字符串) [MemHack]"
+description = "${item} 在物编中的 ${flag}"
+comment = ""
+category = TC_ITEM
+returns = string
+[[.args]]
+type = itemcode
+default = "texp"
+[[.args]]
+type = MHItemDefDataStr
+default = "ITEM_DEF_DATA_TIP"
+
+[MHItem_GetHookIcon]
+title = "获取图标 [MemHack]"
+description = "${item} 的图标"
+comment = "可获取到被 设置图标 修改过的物品图标"
+category = TC_ITEM
+returns = string
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+[MHItem_GetHookName]
+title = "获取名称 [MemHack]"
+description = "${item} 的名称"
+comment = "可获取到被 设置名称 修改过的物品名称"
+category = TC_ITEM
+returns = string
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+[MHItem_GetHookTip]
+title = "获取提示工具 - 普通 [MemHack]"
+description = "${item} 的提示工具 - 普通"
+comment = "可获取到被 设置提示工具 - 普通 修改过的物品提示工具 - 普通"
+category = TC_ITEM
+returns = string
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+[MHItem_GetHookUbertip]
+title = "获取提示工具 - 扩展 [MemHack]"
+description = "${item} 的提示工具 - 扩展"
+comment = "可获取到被 设置提示工具 - 扩展 修改过的物品提示工具 - 扩展"
+category = TC_ITEM
+returns = string
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+
+
+
+
+
+
+
+[MHMissile_IsHidden]
+title = "被隐藏 [MemHack]"
+description = "${missile} 被隐藏"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = boolean
+[[.args]]
+type = integer
+
+[MHMissile_GetX]
+title = "获取X坐标 [MemHack]"
+description = "${missile} 的X坐标"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = real
+[[.args]]
+type = integer
+
+[MHMissile_GetY]
+title = "获取Y坐标 [MemHack]"
+description = "${missile} 的Y坐标"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = real
+[[.args]]
+type = integer
+
+[MHMissile_GetZ]
+title = "获取Z坐标 [MemHack]"
+description = "${missile} 的Z坐标"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = real
+[[.args]]
+type = integer
+
+[MHMissile_GetSource]
+title = "投射物来源 [MemHack]"
+description = "${missile} 的来源"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = unit
+[[.args]]
+type = integer
+
+[MHMissile_GetTargetUnit]
+title = "投射物目标 [MemHack]"
+description = "${missile} 的目标"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = unit
+[[.args]]
+type = integer
+
+[MHMissile_GetAbility]
+title = "投射物技能 [MemHack]"
+description = "${missile} 的技能"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = abilcode
+[[.args]]
+type = integer
+
+[MHMissile_GetDataInt]
+title = "投射物数据 (整数) [MemHack]"
+description = "${missile} 的 ${flag}"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = MHMissileDataInt
+default = "MISSILE_DATA_BASE_ID"
+
+[MHMissile_GetDataReal]
+title = "投射物数据 (实数) [MemHack]"
+description = "${missile} 的 ${flag}"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = MHMissileDataReal
+default = "MISSILE_DATA_DAMAGE"
+
+[MHMissile_GetEnumMissile]
+title = "获取选取的投射物 [MemHack]"
+description = "选取投射物"
+comment = "在选取投射物做动作中，指代被选取的投射物"
+category = TC_MHMISSILE
+returns = integer
+
+
+
+
+
+
+[MHTool_GetHandleIdType]
+title = "获取Handle类型 [MemHack]"
+description = "${hid} 的类型"
+comment = "填入HandleId。例如单位返回'+w3u'"
+category = TC_MHTOOL
+returns = integer
+[[.args]]
+type = integer
+
+[MHTool_GetLocalTime]
+title = "获取系统时间 [MemHack]"
+description = "当前时间: ${flag}"
+comment = ""
+category = TC_MHTOOL
+returns = integer
+[[.args]]
+type = MHSystemTime
+default = "SYSTEM_TIME_YEAR"
+
+[MHTool_Clock]
+title = "获取计时 [MemHack]"
+description = "计时结果"
+comment = "clock()。可用于函数运行效率测试 (ms)"
+category = TC_MHTOOL
+returns = integer
+
+[MHTool_ReadClipboard]
+title = "读取剪贴板 [MemHack]"
+description = "剪贴板中的内容"
+comment = ""
+category = TC_MHTOOL
+returns = string
+
+
+
+
+
+
+[MHHashtable_GetEnumHashtable]
+title = "当前哈希表 [MemHack]"
+description = "当前哈希表"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表"
+category = TC_HASHTABLE
+returns = hashtable
+
+[MHHashtable_GetEnumParentKey]
+title = "当前哈希表主键 [MemHack]"
+description = "当前哈希表主键"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表主键"
+category = TC_HASHTABLE
+returns = integer
+
+[MHHashtable_GetEnumChildKey]
+title = "当前哈希表子键 [MemHack]"
+description = "当前哈希表子键"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表子键"
+category = TC_HASHTABLE
+returns = integer
+
+[MHHashtable_GetEnumInteger]
+title = "当前整数哈希项 [MemHack]"
+description = "当前整数哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = integer
+
+[MHHashtable_GetEnumReal]
+title = "当前实数哈希项 [MemHack]"
+description = "当前实数哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = real
+
+[MHHashtable_GetEnumBoolean]
+title = "当前布尔值哈希项 [MemHack]"
+description = "当前布尔值哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = boolean
+
+[MHHashtable_GetEnumStr]
+title = "当前字符串哈希项 [MemHack]"
+description = "当前字符串哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = string
+
+[MHHashtable_GetEnumUnit]
+title = "当前单位哈希项 [MemHack]"
+description = "当前单位哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = unit
+
+[MHHashtable_GetEnumItem]
+title = "当前物品哈希项 [MemHack]"
+description = "当前物品哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = item
+
+[MHHashtable_GetEnumTimer]
+title = "当前计时器哈希项 [MemHack]"
+description = "当前计时器哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = timer
+
+[MHHashtable_GetEnumGroup]
+title = "当前单位组哈希项 [MemHack]"
+description = "当前单位组哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = group
+
+[MHHashtable_GetEnumForce]
+title = "当前玩家组哈希项 [MemHack]"
+description = "当前玩家组哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = force
+
+[MHHashtable_GetEnumPlayer]
+title = "当前玩家哈希项 [MemHack]"
+description = "当前玩家哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = player
+
+[MHHashtable_GetEnumEffect]
+title = "当前特效哈希项 [MemHack]"
+description = "当前特效哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = effect
+
+[MHHashtable_GetEnumTrigger]
+title = "当前触发器哈希项 [MemHack]"
+description = "当前触发器哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = trigger
+
+[MHHashtable_GetEnumLocation]
+title = "当前点哈希项 [MemHack]"
+description = "当前点哈希项"
+comment = "指代 选取哈希表中元素 做动作中当前遍历的哈希表项"
+category = TC_HASHTABLE
+returns = location
+
+
+
+
+
+
+
+
+[MHTextTag_GetText]
+title = "漂浮文字文本 [MemHack]"
+description = "${texttag} 的文本"
+comment = ""
+category = TC_TEXTTAG
+returns = string
+[[.args]]
+type = texttag
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MHDebug_GetHandleCount]
+title = "获取句柄数量 [MemHack]"
+description = "当前句柄数量"
+comment = ""
+category = TC_MHDEBUG
+returns = integer
+
+[MHDebug_GetHandleMaxCount]
+title = "获取最大句柄数量 [MemHack]"
+description = "最大句柄数量"
+comment = ""
+category = TC_MHDEBUG
+returns = integer
+
+
+
+
+
+
+
+[MHString_FromId]
+title = "转换ID为字符串 [MemHack]"
+description = "转换 ${id} 为字符串"
+comment = "例如将'AHtb'这样的整数转为字符串"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = integer
+default = "'AHtb'"
+
+[MHString_ToId]
+title = "转换字符串为ID [MemHack]"
+description = "转换 ${id} 为ID"
+comment = "例如将字符串转为'AHtb'这样的整数"
+category = TC_MHSTRING
+returns = integer
+[[.args]]
+type = string
+default = "AHtb"
+
+[MHString_Find]
+title = "查找字符串 [MemHack]"
+description = "查找 ${str} 中 ${target} 第一次出现的位置。起始搜索位置 ${start}"
+comment = "字符串起始位置为0。返回-1说明未搜索到"
+category = TC_MHSTRING
+returns = integer
+[[.args]]
+type = string
+default = "114514"
+[[.args]]
+type = string
+default = "114"
+[[.args]]
+type = integer
+default = 0
+
+[MHString_Reverse]
+title = "反转字符串 [MemHack]"
+description = "反转 ${str}"
+comment = "不支持中文"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = "114514"
+
+[MHString_Trim]
+title = "裁剪字符串 [MemHack]"
+description = "裁剪 ${str}"
+comment = "去掉两边的空格"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = "    114514    "
+
+[MHString_LTrim]
+title = "裁剪字符串的左侧 [MemHack]"
+description = "裁剪 ${str} 的左侧"
+comment = "去掉左侧的空格"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = "    114514"
+
+[MHString_RTrim]
+title = "裁剪字符串的右侧 [MemHack]"
+description = "裁剪 ${str} 的右侧"
+comment = "去掉右侧的空格"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = "114514    "
+
+[MHString_Contain]
+title = "包含字符串 [MemHack]"
+description = "${str} 包含 ${target}"
+comment = ""
+category = TC_MHSTRING
+returns = boolean
+[[.args]]
+type = string
+default = "114514"
+[[.args]]
+type = string
+default = "114"
+
+[MHString_GetCount]
+title = "包含的字符串数量 [MemHack]"
+description = "${str} 包含的 ${target} 数量"
+comment = ""
+category = TC_MHSTRING
+returns = integer
+[[.args]]
+type = string
+default = "1919810"
+[[.args]]
+type = string
+default = "19"
+
+[MHString_Sub]
+title = "截取字符串 [MemHack]"
+description = "截取 ${str} 起始位置 ${start} 长度 ${length}"
+comment = "字符串起始位置为0。长度填入-1则截取起始位置到字符串结束位置的所有字符"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = "1919810"
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHString_Replace]
+title = "替换字符串 [MemHack]"
+description = "将 ${str} 中的所有 ${old_str} 替换为 ${new_str}"
+comment = ""
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = "1919810"
+[[.args]]
+type = string
+default = "19"
+[[.args]]
+type = string
+default = "114"
+
+[MHString_Split]
+title = "分割字符串 [MemHack]"
+description = "获取 ${str} 中被 ${delimiter} 分割的第 ${index} 段字符串"
+comment = "index从1开始"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = "1919810"
+[[.args]]
+type = string
+default = "1"
+[[.args]]
+type = integer
+default = 1
+
+[MHString_RegexMatch]
+title = "正则匹配 [MemHack]"
+description = "${str} 完全匹配正则表达式 ${regex}"
+comment = ""
+category = TC_MHSTRING
+returns = boolean
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+[MHString_RegexSearch]
+title = "正则搜索 [MemHack]"
+description = "${str} 中匹配正则表达式 ${regex} 的第 ${index} 个字符串的第 ${capture} 个捕获组"
+comment = "序号从1开始，捕获组为0时返回整个匹配字符串"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+[[.args]]
+type = string
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = integer
+default = "0"
+
+[MHString_RegexReplace]
+title = "正则替换 [MemHack]"
+description = "将 ${str} 中所有匹配正则表达式 ${regex} 的字符串替换为 ${new_val}"
+comment = ""
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+[MHString_Str2TargetAllow]
+title = "转换字符串为目标允许 [MemHack]"
+description = "转换字符串 ${input} 为目标允许"
+comment = "参考物编里的目标允许编写格式"
+category = TC_MHSTRING
+returns = integer
+[[.args]]
+type = string
+
+[MHString_TargetAllow2Str]
+title = "转换目标允许为字符串 [MemHack]"
+description = "转换目标允许 ${input} 为字符串"
+comment = ""
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = integer
+
+[MHString_GetEnumU8Char]
+title = "获取选取的UTF8字符 [MemHack]"
+description = "选取的UTF8字符"
+comment = "指代 选取UTF8字符做动作 中被选取的UTF8字符"
+category = TC_MHSTRING
+returns = string
+
+[MHString_GetRandomU8Char]
+title = "获取随机UTF8字符 [MemHack]"
+description = "随机UTF8字符, 允许乱码: ${enable_garbled}"
+comment = "使用了魔兽的随机数, 不要在异步的逻辑中使用"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = boolean
+default = "false"
+
+[MHString_GetLocalRandomU8Char]
+title = "获取异步随机UTF8字符 [MemHack]"
+description = "异步随机UTF8字符, 允许乱码: ${enable_garbled}"
+comment = "返回值是纯异步的, 不要用于同步的逻辑"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = boolean
+default = "false"
+
+[MHString_GetU8Size]
+title = "获取字符串的UTF8长度 [MemHack]"
+description = "${str} 的UTF8长度"
+comment = "例如`你好我是丁真`会返回6而不是18"
+category = TC_MHSTRING
+returns = integer
+[[.args]]
+type = string
+
+[MHString_Concat3]
+title = "连接字符串lv3 [MemHack]"
+description = "${str0} + ${str1} + ${str2}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat4]
+title = "连接字符串lv4 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat5]
+title = "连接字符串lv5 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat6]
+title = "连接字符串lv6 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat7]
+title = "连接字符串lv7 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat8]
+title = "连接字符串lv8 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat9]
+title = "连接字符串lv9 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7} + ${str8}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat10]
+title = "连接字符串lv10 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7} + ${str8} + ${str9}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat11]
+title = "连接字符串lv11 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7} + ${str8} + ${str9} + ${str10}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat12]
+title = "连接字符串lv12 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7} + ${str8} + ${str9} + ${str10} + ${str11}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat13]
+title = "连接字符串lv13 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7} + ${str8} + ${str9} + ${str10} + ${str11} + ${str12}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat14]
+title = "连接字符串lv14 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7} + ${str8} + ${str9} + ${str10} + ${str11} + ${str12} + ${str13}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat15]
+title = "连接字符串lv15 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7} + ${str8} + ${str9} + ${str10} + ${str11} + ${str12} + ${str13} + ${str14}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_Concat16]
+title = "连接字符串lv16 [MemHack]"
+description = "${str0} + ${str1} + ${str2} + ${str3} + ${str4} + ${str5} + ${str6} + ${str7} + ${str8} + ${str9} + ${str10} + ${str11} + ${str12} + ${str13} + ${str14} + ${str15}"
+comment = "可减少连接字符串带来的字符串泄漏"
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MHString_ConcatFromVar]
+title = "连接字符串 [MemHack]"
+description = "连接全局字符串数组 ${v_name} 的 ${begin} 到 ${end} 元素"
+comment = ""
+category = TC_MHSTRING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+
+
+
+
+[MHConvertEventID]
+title = "转换事件ID为整数 [MemHack]"
+description = "${event_id}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHEventID
+default = "EVENT_ID_UNIT_REMOVE"
+
+[MHConvertGameOption]
+title = "转换游戏设置为整数 [MemHack]"
+description = "${game_option}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHGameOption
+default = "GAME_OPTION_FORMATIONS"
+
+[MHConvertTargetAllow]
+title = "转换目标允许为整数 [MemHack]"
+description = "${target_allow}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHTargetAllow
+default = "TARGET_ALLOW_TERRAIN"
+
+[MHConvertArmourType]
+title = "转换护甲类型为整数 [MemHack]"
+description = "${armour_type}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHArmourType
+default = "UNIT_ARMOUR_TYPE_LIGHT"
+
+[MHConvertCheatFlag]
+title = "转换作弊标志为整数 [MemHack]"
+description = "${cheat_flag}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHCheatFlag
+default = "CHEAT_FLAG_WHOSYOURDADDY"
+
+[MHConvertCollisionType]
+title = "转换碰撞类型为整数 [MemHack]"
+description = "${collision_type}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHUnitCollisionType
+default = "UNIT_COLLISION_TYPE_FOOT"
+
+[MHConvertCastType]
+title = "转换释放类型为整数 [MemHack]"
+description = "${cast_type}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHAbilityCastType
+default = "ABILITY_CAST_TYPE_TARGET"
+
+[MHHashtableChangeType]
+title = "转换哈希项变动类型为整数 [MemHack]"
+description = "${hashtable_change_type}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHHashtableChangeType
+default = "HASHTABLE_CHANGE_INT"
+
+[MHConvertLocalOrderFlag]
+title = "转换命令标志为整数 [MemHack]"
+description = "${order_flag}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHLocalOrderFlag
+default = "LOCAL_ORDER_FLAG_NORMAL"
+
+[MHConvertLayerStyle]
+title = "转换layer样式为整数 [MemHack]"
+description = "${layer_style}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHLayerStyle
+default = "LAYER_STYLE_VIEW_PORT"
+
+[MHConvertTextFlag]
+title = "转换文本标志为整数 [MemHack]"
+description = "${flag}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHFrameTextFlag
+default = "TEXT_FLAG_MONOSPACED"
+
+[MHConvertTextStyle]
+title = "转换文本样式为整数 [MemHack]"
+description = "${flag}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHFrameTextStyle
+default = "TEXT_STYLE_SHADOW"
+
+[MHConvertBorderFlag]
+title = "转换边框标志为整数 [MemHack]"
+description = "${flag}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHFrameBorderFlag
+default = "BORDER_FLAG_LEFT"
+
+[MHConvertVirtualKey]
+title = "转换虚拟键码为整数 [MemHack]"
+description = "${flag}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHVirtualKey
+default = "MEMHACK_VK_LBUTTON"
+
+[MHConvertAttackType]
+title = "转换整数为攻击类型 [MemHack]"
+description = "${attack_type} 对应的攻击类型"
+comment = "cj函数ConvertAttackType"
+category = TC_CONV
+returns = attacktype
+[[.args]]
+type = integer
+
+[MHConvertDamageType]
+title = "转换整数为伤害类型 [MemHack]"
+description = "${damage_type} 对应的伤害类型"
+comment = "cj函数ConvertDamageType"
+category = TC_CONV
+returns = damagetype
+[[.args]]
+type = integer
+
+[MHConvertWeaponType]
+title = "转换整数为武器类型 [MemHack]"
+description = "${weapon_type} 对应的武器类型"
+comment = "cj函数ConvertWeaponType"
+category = TC_CONV
+returns = weapontype
+[[.args]]
+type = integer
+
+
+
+
+
+[MHCompareAttackType]
+title = "攻击类型判定 [MemHack]"
+description = "${type1} 等于 ${type2}"
+comment = ""
+category = TC_MEMHACK
+returns = boolean
+[[.args]]
+type = attacktype
+[[.args]]
+type = attacktype
+
+[MHCompareDamageType]
+title = "伤害类型判定 [MemHack]"
+description = "${type1} 等于 ${type2}"
+comment = ""
+category = TC_MEMHACK
+returns = boolean
+[[.args]]
+type = damagetype
+[[.args]]
+type = damagetype
+
+[MHCompareWeaponType]
+title = "武器类型判定 [MemHack]"
+description = "${type1} 等于 ${type2}"
+comment = ""
+category = TC_MEMHACK
+returns = boolean
+[[.args]]
+type = weapontype
+[[.args]]
+type = weapontype
+
+
+
+
+
+
+[MHGroup_CreateIterator]
+title = "新建迭代器 [MemHack]"
+description = "为 ${group} 新建迭代器"
+comment = "已废弃"
+category = TC_MHOLD
+returns = integer
+[[.args]]
+type = group
+
+[MHGroup_SteppingIterator]
+title = "步进迭代器 [MemHack]"
+description = "步进 ${iterator}"
+comment = "已废弃"
+category = TC_MHOLD
+returns = integer
+[[.args]]
+type = integer
+
+[MHGroup_GetIteratorUnit]
+title = "获取迭代器单位 [MemHack]"
+description = "${iterator} 的单位"
+comment = "已废弃"
+category = TC_MHOLD
+returns = unit
+[[.args]]
+type = integer
+
+[MHGroup_IteratorInvalid]
+title = "迭代器失效 [MemHack]"
+description = "${iterator} 已失效"
+comment = "已废弃"
+category = TC_MHOLD
+returns = boolean
+[[.args]]
+type = integer
+
+
+
+[MHMsgSelectorEvent_GetAbility]
+title = "获取选择器技能 [MemHack]"
+description = "选择器技能"
+comment = "已废弃"
+category = TC_MHOLD
+returns = abilcode
+
+[MHMsgSelectorEvent_GetTargetX]
+title = "获取选择器目标点X [MemHack]"
+description = "选择器目标点X"
+comment = "已废弃"
+category = TC_MHOLD
+returns = real
+
+[MHMsgSelectorEvent_GetTargetY]
+title = "获取选择器目标点Y [MemHack]"
+description = "选择器目标点Y"
+comment = "已废弃"
+category = TC_MHOLD
+returns = real
+
+[MHAbility_GetAll]
+title = "遍历单位技能 [MemHack]"
+description = "遍历 ${unit} 的所有技能并存储到 ${hash_table} 中"
+comment = "已废弃"
+category = TC_MHOLD
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = hashtable
+default = "bj_lastCreatedHashtable"
+
+
+
+
+
+[MHSlk_GetInt]
+title = "获取物体整数数据 [MemHack]"
+description = "获取 ${table} 物编中ID为 ${id} 的 ${field}"
+comment = "已废弃"
+category = TC_MHOLD
+returns = integer
+[[.args]]
+type = MHSlkTable
+default = "SLK_TABLE_ABILITY"
+[[.args]]
+type = integer
+default = "'AHtb'"
+[[.args]]
+type = string
+default = "Cost1"
+
+[MHSlk_GetReal]
+title = "获取物体实数数据 [MemHack]"
+description = "获取 ${table} 物编中ID为 ${id} 的 ${field}"
+comment = "已废弃"
+category = TC_MHOLD
+returns = real
+[[.args]]
+type = MHSlkTable
+default = "SLK_TABLE_ABILITY"
+[[.args]]
+type = integer
+default = "'AHtb'"
+[[.args]]
+type = string
+default = "DataA1"
+
+[MHSlk_GetBool]
+title = "获取物体布尔值数据 [MemHack]"
+description = "获取 ${table} 物编中ID为 ${id} 的 ${field}"
+comment = "已废弃"
+category = TC_MHOLD
+returns = boolean
+[[.args]]
+type = MHSlkTable
+default = "SLK_TABLE_ABILITY"
+[[.args]]
+type = integer
+default = "'AHtb'"
+[[.args]]
+type = string
+default = "hero"
+
+[MHSlk_GetStr]
+title = "获取物体字符串数据 [MemHack]"
+description = "获取 ${table} 物编中ID为 ${id} 的 ${field}"
+comment = "已废弃"
+category = TC_MHOLD
+returns = string
+[[.args]]
+type = MHSlkTable
+default = "SLK_TABLE_ABILITY"
+[[.args]]
+type = integer
+default = "'AHtb'"
+[[.args]]
+type = string
+default = "Name"
+
+[MHDrawCooldown_GetText]
+title = "获取冷却显示的文本 [MemHack]"
+description = "冷却显示中第 ${index} 个文本"
+comment = "已废弃"
+category = TC_MHOLD
+returns = integer
+[[.args]]
+type = integer
+default = 1
+
+[MHFrame_GetAbsolutePointX]
+title = "获取绝对锚点的X轴偏移 [MemHack]"
+description = "${frame} 的 ${anchor} 锚点的X轴绝对偏移"
+comment = "已废弃"
+category = TC_MHOLD
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+
+[MHFrame_GetAbsolutePointY]
+title = "获取绝对锚点的Y轴偏移 [MemHack]"
+description = "${frame} 的 ${anchor} 锚点的Y轴绝对偏移"
+comment = "已废弃"
+category = TC_MHOLD
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+
+[MHFrame_GetRelativePointX]
+title = "获取相对锚点的X轴偏移 [MemHack]"
+description = "${frame} 的 ${anchor} 锚点的X轴相对偏移"
+comment = "已废弃"
+category = TC_MHOLD
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+
+[MHFrame_GetRelativePointY]
+title = "获取相对锚点的Y轴偏移 [MemHack]"
+description = "${frame} 的 ${anchor} 锚点的Y轴相对偏移"
+comment = "已废弃"
+category = TC_MHOLD
+returns = real
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"

@@ -1,0 +1,10 @@
+﻿Trigger: BD dead
+Mode: custom-text
+Action Count: 177
+Custom Script Count: 97
+Control Flow Count: 96
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still expanded into 177 flat actions, including 97 custom-script lines and 96 control-flow custom-script markers.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still expanded into 177 flat actions, including 97 custom-script lines and 96 control-flow custom-script markers.

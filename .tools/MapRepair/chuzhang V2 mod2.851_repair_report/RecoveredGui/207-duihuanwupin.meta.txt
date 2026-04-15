@@ -1,0 +1,10 @@
+﻿Trigger: duihuanwupin
+Mode: custom-text
+Action Count: 668
+Custom Script Count: 585
+Control Flow Count: 336
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger expanded into 668 flat actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger expanded into 668 flat actions.

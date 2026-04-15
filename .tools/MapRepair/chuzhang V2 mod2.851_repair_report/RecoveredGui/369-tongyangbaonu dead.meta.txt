@@ -1,0 +1,10 @@
+﻿Trigger: tongyangbaonu dead
+Mode: custom-text
+Action Count: 27
+Custom Script Count: 22
+Control Flow Count: 15
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 22 custom-script lines and 15 control-flow markers across 27 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 22 custom-script lines and 15 control-flow markers across 27 actions.

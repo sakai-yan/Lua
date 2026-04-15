@@ -1,0 +1,11 @@
+﻿name: everytime
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:30.00)
+conditions:
+  -
+actions:
+  - TriggerExecute (var:gg_trg_save)

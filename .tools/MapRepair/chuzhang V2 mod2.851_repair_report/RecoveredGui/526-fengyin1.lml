@@ -1,0 +1,33 @@
+﻿name: fengyin1
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventHeroPickUpItem)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_fengyin1_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:if(Trig_fengyin1_Func001C())then)
+  - CustomScriptCode (const:if(Trig_fengyin1_Func001Func004C())then)
+  - SetVariable (var:udg_fengyin1, preset:true)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - PlaySoundAtPointBJ (var:gg_snd_QuestNew, const:100, var:udg_SP, const:0)
+  - DisplayTextToForce (call:GetPlayersAll, const:|cFFFF6600接|r|cFFFF8C26受|r|cFFFFB24C任|r|cFFFFD973务|r|cFFFFFF99：|r|cFF00FFFF封印
+|r|cFFFF6600任|r|cFFFF8C26务|r|cFFFFB24C要|r|cFFFFD973求|r|cFFFFFF99：|r|cFF00FF00护送司徒西风到达封印地 |r|cFFFFCC00司徒西风：|r|cFFCCFFCC幸得几位赶到，事不宜迟！我们马动身吧！|r)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - SetVariable (var:udg_SP, call:GetRectCenter)
+  - PingMinimapLocForForce (call:GetPlayersAll, var:udg_SP, const:30.00)
+  - IssuePointOrderLoc (var:gg_unit_nfpl_0606, const:attack, var:udg_SP)
+  - UnitRemoveAbilityBJ (const:Ane2, var:gg_unit_nfpl_0606)
+  - UnitRemoveAbilityBJ (const:Apit, var:gg_unit_nfpl_0606)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:else)
+  - AddItemToStockBJ (const:hslv, var:gg_unit_nfpl_0606, const:1, const:1)
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()),0,0,"|cFFFF0000条件不符|r"))
+  - CustomScriptCode (const:endif)

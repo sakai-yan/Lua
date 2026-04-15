@@ -1,0 +1,10 @@
+﻿Trigger: MZYY 2
+Mode: custom-text
+Action Count: 99
+Custom Script Count: 99
+Control Flow Count: 48
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still expanded into 99 flat actions, including 99 custom-script lines and 48 control-flow custom-script markers.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still expanded into 99 flat actions, including 99 custom-script lines and 48 control-flow custom-script markers.

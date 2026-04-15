@@ -1,0 +1,16 @@
+﻿name: J WDSXXRH x
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:0.60)
+conditions:
+  -
+actions:
+  - SetVariable (var:udg_WDSX, const:1)
+  - CustomScriptCode (const:loop)
+  - CustomScriptCode (const:exitwhen udg_WDSX>12)
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP_poison_big[udg_WDSX],function Trig_J_WDSXXRH_x_Func001Func001A))
+  - SetVariable (var:udg_WDSX, var:udg_WDSX+1)
+  - CustomScriptCode (const:endloop)

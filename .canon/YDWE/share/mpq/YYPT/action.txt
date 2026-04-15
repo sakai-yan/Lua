@@ -1,0 +1,5 @@
+[YDWECheckIsYYHighLadder]
+title = "辅助 - 判断是否为11平台天梯房 [JAPI]"
+description ="判断是否为11平台天梯房"
+comment = "YDWECheckIsYYHighLadder() 判断是否为11平台天梯房 true-是，false-否"
+category = TC_YYPT

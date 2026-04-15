@@ -1,0 +1,10 @@
+﻿Trigger: fall
+Mode: custom-text
+Action Count: 36
+Custom Script Count: 36
+Control Flow Count: 21
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed almost entirely custom-script with 36 custom-script lines across 36 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger stayed almost entirely custom-script with 36 custom-script lines across 36 actions.

@@ -1,0 +1,10 @@
+﻿Trigger: FX
+Mode: custom-text
+Action Count: 111
+Custom Script Count: 111
+Control Flow Count: 57
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still expanded into 111 flat actions, including 111 custom-script lines and 57 control-flow custom-script markers.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still expanded into 111 flat actions, including 111 custom-script lines and 57 control-flow custom-script markers.

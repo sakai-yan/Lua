@@ -1,0 +1,192 @@
+[IssueTargetOrderBJ]
+title = "对单位发布目标命令[BJ]"
+description = "对 ${单位} 发布 ${命令} 目标 ${目标}"
+comment = "雪月补充"
+category = TC_UNIT
+
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = unitorderutarg
+default = "UnitOrderAttackUnit"
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[IssuePointOrderLocBJ]
+title = "对单位发布点命令[BJ]"
+description = "对 ${单位} 发布 ${命令} 目标点 ${目标}"
+comment = "雪月补充"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = unitorderptarg
+default = "UnitOrderMove"
+[[.args]]
+type = location
+default = "GetRectCenter"
+
+[IssueImmediateOrderBJ]
+title = "对单位发布无目标命令[BJ]"
+description = "对 ${单位} 发布 ${命令}"
+comment = "雪月补充"
+category = TC_UNIT
+
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = unitordernotarg
+default = "UnitOrderStop"
+
+
+[EXSetUnitArrayString]
+title = "设置单位[字符串] [数组] [JAPI]"
+description = "设置 ${单位}  的 ${类型}[${索引}] 为 ${Value}"
+comment = "雪月补充 10名称 61称谓"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "0"
+[[.args]]
+type = integer
+default = "0"
+[[.args]]
+type = string
+default = "____"
+
+[EXSetUnitString]
+title = "设置单位[字符串] [JAPI]"
+description = "设置 ${单位}  的 ${类型} 为 ${Value}"
+comment = "雪月补充"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "0"
+[[.args]]
+type = string
+default = "____"
+
+[EXSetUnitReal]
+title = "设置单位[实数] [JAPI]"
+description = "设置 ${单位}  的 ${类型} 为 ${Value}"
+comment = "雪月补充"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "0"
+[[.args]]
+type = real
+default = "0.00"
+
+[EXSetUnitInteger]
+title = "设置单位[整数] [JAPI]"
+description = "设置 ${单位}  的 ${类型} 为 ${Value}"
+comment = "雪月补充"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "0"
+[[.args]]
+type = integer
+default = "0"
+
+[RemoveSavedBoolean]
+title = "<1.24> 删除保存的布尔值 [C]"
+description = "删除在 ${Hashtable} 的主索引 ${Value} 子索引 ${Value}保存的布尔值"
+comment = "雪月系统: 是值删除该索引下的项目而不是简单的设置成初始值"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+default = "GetLastCreatedHashtableBJ"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[RemoveSavedHandle]
+title = "<1.24> 删除保存的对象值 [C]"
+description = "删除在 ${Hashtable} 的主索引 ${Value} 子索引 ${Value}保存的对象"
+comment = "雪月系统: 是值删除该索引下的项目而不是简单的设置成初始值，对象包括单位、物品、单位组、玩家组等等"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+default = "GetLastCreatedHashtableBJ"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[RemoveSavedInteger]
+title = "<1.24> 删除保存的整数值 [C]"
+description = "删除在 ${Hashtable} 的主索引 ${Value} 子索引 ${Value}保存的整数"
+comment = "雪月系统: 是值删除该索引下的项目而不是简单的设置成初始值"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+default = "GetLastCreatedHashtableBJ"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[RemoveSavedReal]
+title = "<1.24> 删除保存的实数值 [C]"
+description = "删除在 ${Hashtable} 的主索引 ${Value} 子索引 ${Value}保存的实数"
+comment = "雪月系统: 是值删除该索引下的项目而不是简单的设置成初始值"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+default = "GetLastCreatedHashtableBJ"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[RemoveSavedString]
+title = "<1.24> 删除保存的字符串值 [C]"
+description = "删除在 ${Hashtable} 的主索引 ${Value} 子索引 ${Value}保存的字符串"
+comment = "雪月系统: 是值删除该索引下的项目而不是简单的设置成初始值"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+default = "GetLastCreatedHashtableBJ"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+
+[RemoveYDTimer]
+title = "清除指定 逆天[计时器]"
+description = "删除逆天计时器： ${计时器} "
+comment = "雪月系统: 会连同数据一起清除"
+category = TC_YDBF
+[[.args]]
+type = timer
+default = "YDWEGetAnyTypeLocalVariable"
+
+[RemoveYDTrigger]
+title = "清除指定 逆天[触发器]"
+description = "删除逆天触发器： ${触发器} "
+comment = "雪月系统: 会连同数据一起清除"
+category = TC_YDBF
+[[.args]]
+type = trigger
+default = "YDWEGetAnyTypeLocalVariable"
+

@@ -1,0 +1,10 @@
+﻿Trigger: hecheng C2
+Mode: custom-text
+Action Count: 125
+Custom Script Count: 93
+Control Flow Count: 33
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still expanded into 125 flat actions, including 93 custom-script lines and 33 control-flow custom-script markers.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still expanded into 125 flat actions, including 93 custom-script lines and 33 control-flow custom-script markers.

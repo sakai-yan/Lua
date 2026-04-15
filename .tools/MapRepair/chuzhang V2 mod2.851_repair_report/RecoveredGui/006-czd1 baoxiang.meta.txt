@@ -1,0 +1,8 @@
+﻿Trigger: czd1 baoxiang
+Mode: gui
+Action Count: 5
+Custom Script Count: 4
+Control Flow Count: 3
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.

@@ -1,0 +1,10 @@
+﻿Trigger: quntijitui
+Mode: custom-text
+Action Count: 14
+Custom Script Count: 9
+Control Flow Count: 3
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still combined 3 control-flow marker(s) with 6 custom-script body line(s) in the 12-19 action stability band.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still combined 3 control-flow marker(s) with 6 custom-script body line(s) in the 12-19 action stability band.

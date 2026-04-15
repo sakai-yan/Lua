@@ -1,0 +1,19 @@
+﻿name: zhengjiuxiaotong4
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterUnitInRangeSimple (const:256, var:gg_unit_ncg1_0205)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_zhengjiuxiaotong4_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_R_ZJ_xiaotong2, preset:true)
+  - RemoveUnit (call:GetTriggerUnit)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - CustomScriptCode (const:call ForForce(GetPlayersAll(),function Trig_zhengjiuxiaotong4_Func005A))
+  - PlaySoundFromOffsetBJ (var:gg_snd_SecretFound, const:100, const:0)

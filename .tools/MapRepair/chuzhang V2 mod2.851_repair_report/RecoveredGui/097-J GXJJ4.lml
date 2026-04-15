@@ -1,0 +1,14 @@
+﻿name: J GXJJ4
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventDeath)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_GXJJ4_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - RemoveUnit (call:GetTriggerUnit)

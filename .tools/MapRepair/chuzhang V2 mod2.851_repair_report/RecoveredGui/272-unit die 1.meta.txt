@@ -1,0 +1,9 @@
+﻿Trigger: unit die 1
+Mode: custom-text
+Action Count: 59
+Custom Script Count: 59
+Control Flow Count: 0
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed almost entirely custom-script with 59 custom-script lines across 59 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger stayed almost entirely custom-script with 59 custom-script lines across 59 actions.

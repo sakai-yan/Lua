@@ -1,0 +1,9 @@
+﻿Trigger: zidongheyao2
+Mode: custom-text
+Action Count: 13
+Custom Script Count: 9
+Control Flow Count: 9
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still combined 9 control-flow marker(s) with 9 custom-script body line(s) in the 12-19 action stability band.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still combined 9 control-flow marker(s) with 9 custom-script body line(s) in the 12-19 action stability band.

@@ -1,0 +1,11 @@
+#ifndef RandomPoolConstantIncluded
+#define RandomPoolConstantIncluded
+# //
+
+# // ================ hInstance =================
+
+#define RandomPool_ElementCount_ALL				    -1024		//比重大于0的元素
+#define RandomPool_ElementCount_Normal				-1025		//比重大于0的元素
+
+
+#endif

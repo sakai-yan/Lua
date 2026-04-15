@@ -1,0 +1,9 @@
+﻿Trigger: J CYHJ2
+Mode: custom-text
+Action Count: 40
+Custom Script Count: 24
+Control Flow Count: 15
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 24 custom-script lines and 15 control-flow markers across 40 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 24 custom-script lines and 15 control-flow markers across 40 actions.

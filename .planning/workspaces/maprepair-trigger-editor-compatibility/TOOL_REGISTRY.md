@@ -1,0 +1,101 @@
+# Tool Registry
+
+## Project-Local Tools
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_runner`
+  - Purpose: generate repaired map outputs and report directories with the current local `MapRepair` code
+  - Invocation: `dotnet run --project .planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_runner/MapRepair.Run.csproj -- <input-map> <output-map> <report-dir>`
+  - When to use: after any `MapRepair` code change that should produce a new repaired-map artifact
+  - Limits / Safety notes: proves the repair pipeline runs, not that the Warcraft editor accepts every reconstructed binary
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_name_probe`
+  - Purpose: prove whether editor-facing names exist in embedded SLKs, archive text overlays, or metadata mappings
+  - Invocation: `dotnet run --project .planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_name_probe/MapRepair.NameProbe.csproj`
+  - When to use: when tracing where a missing name should have come from
+  - Limits / Safety notes: diagnostic only; does not write repaired artifacts
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_object_dump`
+  - Purpose: inspect exact rawcodes and serialized values inside rebuilt `war3map.w3u`, `war3map.w3a`, and `war3map.w3q`
+  - Invocation: `dotnet run --no-build --project .planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_object_dump/MapRepair.ObjectDump.csproj -- <map> <entry> <ids> <rawcodes> <includeLevelAndPointer>`
+  - When to use: after a rebuild when you need proof that a specific field such as `unam`, `anam`, or `gnam` was written
+  - Limits / Safety notes: argument positions matter; pass a real rawcode list when `includeLevelAndPointer` is the fifth argument so PowerShell does not collapse the empty placeholder
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_archive_probe`
+  - Purpose: probe whether exact archive paths exist and are readable in the source or repaired map
+  - Invocation: `dotnet run --no-build --project .planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_archive_probe/MapRepair.ArchiveProbe.csproj -- <map> <path1> [path2] [...]`
+  - When to use: when verifying whether a suspected missing import path actually resolves in the MPQ under a specific name
+  - Limits / Safety notes: path matching is exact; if a path probe fails you may still need to test transformed candidates such as `.mdl/.mdx` or `war3mapImported\...`
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_entry_strings`
+  - Purpose: extract printable strings from a specific map entry so malformed `w3d/w3b/...` payloads can still reveal referenced paths
+  - Invocation: `dotnet run --no-build --project .planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_entry_strings/MapRepair.EntryStrings.csproj -- <map> <entry> [pattern]`
+  - When to use: when structured object-data parsing fails but you still need to inspect candidate model/icon paths embedded in the raw bytes
+  - Limits / Safety notes: raw string extraction is heuristic and can include false positives; use it as evidence for candidate generation rather than as a final source of truth
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_wtg_inspect`
+  - Purpose: inspect reconstructed `war3map.wtg/wct` outputs for trigger counts, node histograms, and extension-only trigger vocabulary drift
+  - Invocation: `dotnet run --project .planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_wtg_inspect/MapRepair.WtgInspect.csproj -- <repo-root> <wtg-path> <wct-path>`
+  - When to use: when a repaired map passes binary validators but still looks suspicious in editor-side trigger loading
+  - Limits / Safety notes: it is a structural audit tool, not a real editor emulator; treat `extensionNodes = []` as strong evidence, not as final in-editor proof
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_smoke_w2l_probe`
+  - Purpose: reproduce the synthetic smoke `w2l` scene outside the auto-cleaned smoke temp root and capture staged official `w3x2lni` failures with preserved artifacts
+  - Invocation: `dotnet run --project .planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_smoke_w2l_probe/MapRepair.SmokeW2lProbe.csproj -- --repo-root=<repo-root> [--output-root=<dir>]`
+  - When to use: when `MapRepair.Smoke` and official staged `w2l.exe` disagree and the root cause needs to be pinned to the synthetic map inputs or staged runtime behavior
+  - Limits / Safety notes: this is a task-local reproduction tool; it mirrors the smoke `w2l` scene and helps preserve artifacts, but it is not part of the shipped product path
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/editor_open_probe.ps1`
+  - Purpose: run a real 15-second editor-open survival check against the shell-associated Warcraft editor and archive the observed log snapshot
+  - Invocation: `powershell -NoProfile -ExecutionPolicy Bypass -File .planning/workspaces/maprepair-trigger-editor-compatibility/tools/editor_open_probe.ps1 -MapPath <map> -EditorRoot <ydwe-root> [-TimeoutSeconds 15]`
+  - When to use: when a repaired or diagnostic map must be judged by "still alive after 15 seconds" rather than by `-loadfile` exit heuristics
+  - Limits / Safety notes: the script enforces a minimum `15`-second window and kills only editor processes launched after its own snapshot; stale `kkwe.log` lines are archived but treated as advisory if they were not updated by the current run
+- Name:
+  - Path: `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/trigger_restore_walk.ps1`
+  - Purpose: generate prefix-restore trigger-shell variants from a repaired source map, run 15-second editor-open probes in ordinal order, and freeze the first-fail diagnostic package
+  - Invocation: `powershell -NoProfile -ExecutionPolicy Bypass -File .planning/workspaces/maprepair-trigger-editor-compatibility/tools/trigger_restore_walk.ps1 -SourceMap <map> -IndexJson <index.json> -OutputRoot <dir> [-StartOrdinal 1] [-EndOrdinal 569] [-TimeoutSeconds 15]`
+  - When to use: when we need a resumable "restore 001..n, shell n+1..569" walk from a safe all-shell control toward the first failing restored prefix
+  - Limits / Safety notes: it enforces a minimum `15`-second probe window, depends on the current shell-associated editor process staying discoverable, and its canon chain-audit substep still uses the existing `.canon/YDWE` `-loadfile` evidence as a structural side signal rather than as the final acceptance gate
+- Name:
+  - Path: `.tools/MapRepair/src/MapRepair.Diag`
+  - Purpose: generate diagnostic maps that keep only selected rebuilt object-data families so editor crash sources can be isolated quickly
+  - Invocation: `dotnet run --project .tools/MapRepair/src/MapRepair.Diag/MapRepair.Diag.csproj -- <map> <output-root>`
+  - When to use: when a repaired map crashes in the editor and you need to determine whether `w3u`, `w3a`, `w3q`, or another object family is responsible
+  - Limits / Safety notes: still requires manual editor validation; it narrows the suspect set but does not prove the exact malformed field by itself
+
+## Shared or External Tools
+- Name:
+  - Source: `rg`
+  - Purpose: repo-wide search, bootstrap tracing, and hotspot discovery
+  - Invocation: `rg -n <pattern> <paths>`
+  - When to use: static analysis and cross-file contract tracing
+  - Limits / Safety notes: search hits are evidence of structure, not proof of runtime behavior
+- Name:
+  - Source: `planning-os/scripts/bootstrap_planning_bundle.py`
+  - Purpose: create project-local planning workspaces
+  - Invocation: `python .../bootstrap_planning_bundle.py --target <project-root> --profile standard --task-slug maprepair-trigger-editor-compatibility`
+  - When to use: start or refresh local planning memory
+  - Limits / Safety notes: creates files only; does not fill the plan content
+- Name:
+  - Source: `planning-os/scripts/validate_planning_bundle.py`
+  - Purpose: validate bundle structure before handoff
+  - Invocation: `python .../validate_planning_bundle.py --target <project-root> --profile standard --task-slug maprepair-trigger-editor-compatibility`
+  - When to use: before claiming the audit workspace is ready
+  - Limits / Safety notes: checks structure and headings, not report quality
+
+## Usage Notes
+- Use `rg` first for discovery, then use the probe or dump tools for source-vs-serialization proof.
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_runner` as the current repeatable repaired-output path.
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_name_probe` to answer "where should this name have come from?"
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_object_dump` to answer "did we actually write the rawcode or value pair into the rebuilt file?"
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_archive_probe` to answer "does this exact path exist in the archive under this exact name?"
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_entry_strings` when malformed object-data binaries still need to be mined for path strings.
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_wtg_inspect` when the next question is "does this WTG still contain extension-only trigger nodes that the target editor may not understand?"
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/maprepair_smoke_w2l_probe` when the next question is "why does the synthetic smoke map behave differently from the real repaired map under official staged w2l?"
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/editor_open_probe.ps1` when the next question is "does this map keep the real editor process alive for a full 15 seconds?"
+- Use `.planning/workspaces/maprepair-trigger-editor-compatibility/tools/trigger_restore_walk.ps1` when the next question is "which restored trigger prefix is the first one that makes the editor die?"
+- Use `MapRepair.Diag` when the next question is "which rebuilt object-data file is making the editor crash?"
+
+## Gaps
+- No existing tool performs direct in-window UI automation for Warcraft object panels after the map is open.
+- No existing tool compares the map's upgrade overlay strings directly against stock upgrade profile text.
+- No existing tool runs a real in-editor validation pass for Buff, destructable, or doodad panels.

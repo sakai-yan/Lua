@@ -1,0 +1,18 @@
+﻿name: Bxxfz22
+type: gui
+category: 0
+enabled: false
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:0.05)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_QQxf33[1], PolarProjectionBJ(GetUnitLoc(udg_Bxf22), DistanceBetweenPoints(GetUnitLoc(udg_QQxf33[1]), GetUnitLoc(udg_Bxf22)), ( AngleBetweenPoints(GetUnitLoc(udg_QQxf33[1]), GetUnitLoc(udg_Bxf22)) + 3.00 ))))
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_QQxf33[2], PolarProjectionBJ(GetUnitLoc(udg_Bxf22), DistanceBetweenPoints(GetUnitLoc(udg_QQxf33[2]), GetUnitLoc(udg_Bxf22)), ( AngleBetweenPoints(GetUnitLoc(udg_QQxf33[2]), GetUnitLoc(udg_Bxf22)) + 3.00 ))))
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_QQxf33[3], PolarProjectionBJ(GetUnitLoc(udg_Bxf22), DistanceBetweenPoints(GetUnitLoc(udg_QQxf33[3]), GetUnitLoc(udg_Bxf22)), ( AngleBetweenPoints(GetUnitLoc(udg_QQxf33[3]), GetUnitLoc(udg_Bxf22)) + 3.00 ))))
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_QQxf33[4], PolarProjectionBJ(GetUnitLoc(udg_Bxf22), DistanceBetweenPoints(GetUnitLoc(udg_QQxf33[4]), GetUnitLoc(udg_Bxf22)), ( AngleBetweenPoints(GetUnitLoc(udg_QQxf33[4]), GetUnitLoc(udg_Bxf22)) + 3.00 ))))
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_QQxf33[5], PolarProjectionBJ(GetUnitLoc(udg_Bxf22), DistanceBetweenPoints(GetUnitLoc(udg_QQxf33[5]), GetUnitLoc(udg_Bxf22)), ( AngleBetweenPoints(GetUnitLoc(udg_QQxf33[5]), GetUnitLoc(udg_Bxf22)) + 3.00 ))))
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_QQxf33[6], PolarProjectionBJ(GetUnitLoc(udg_Bxf22), DistanceBetweenPoints(GetUnitLoc(udg_QQxf33[6]), GetUnitLoc(udg_Bxf22)), ( AngleBetweenPoints(GetUnitLoc(udg_QQxf33[6]), GetUnitLoc(udg_Bxf22)) + 3.00 ))))
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_QQxf33[7], PolarProjectionBJ(GetUnitLoc(udg_Bxf22), DistanceBetweenPoints(GetUnitLoc(udg_QQxf33[7]), GetUnitLoc(udg_Bxf22)), ( AngleBetweenPoints(GetUnitLoc(udg_QQxf33[7]), GetUnitLoc(udg_Bxf22)) + 3.00 ))))
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_QQxf33[8], PolarProjectionBJ(GetUnitLoc(udg_Bxf22), DistanceBetweenPoints(GetUnitLoc(udg_QQxf33[8]), GetUnitLoc(udg_Bxf22)), ( AngleBetweenPoints(GetUnitLoc(udg_QQxf33[8]), GetUnitLoc(udg_Bxf22)) + 3.00 ))))

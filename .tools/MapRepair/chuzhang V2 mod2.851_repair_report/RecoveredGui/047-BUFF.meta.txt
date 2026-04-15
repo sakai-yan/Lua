@@ -1,0 +1,9 @@
+﻿Trigger: BUFF
+Mode: custom-text
+Action Count: 27
+Custom Script Count: 20
+Control Flow Count: 12
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 20 custom-script lines and 12 control-flow markers across 27 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 20 custom-script lines and 12 control-flow markers across 27 actions.

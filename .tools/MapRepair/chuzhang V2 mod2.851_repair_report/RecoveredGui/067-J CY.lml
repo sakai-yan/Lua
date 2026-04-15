@@ -1,0 +1,21 @@
+﻿name: J CY
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_CY_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - PlaySoundBJ (var:gg_snd_FireBallMissileDeath)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - CustomScriptCode (const:set udg_GROUP=GetUnitsInRangeOfLocMatching(180.00,udg_SP,Condition(function Trig_J_CY_Func003002003)))
+  - AddSpecialEffectTargetUnitBJ (const:overhead, call:GetSpellTargetUnit, const:FlameBomb.mdx)
+  - CustomScriptCode (const:call DestroyEffect(GetLastCreatedEffectBJ()))
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP,function Trig_J_CY_Func006A))
+  - CustomScriptCode (const:call DestroyGroup(udg_GROUP))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

@@ -1,0 +1,53 @@
+[TriggerCategories]
+TC_MHADDON_OLD=[已废弃],ReplaceableTextures\CommandButtons\BTNCancel.blp
+TC_MHADDON_MEMHACK=[MemHack],ReplaceableTextures\CommandButtons\BTNImmolationOn.blp
+TC_MHADDON_MPQ=[MPQ],ReplaceableTextures\CommandButtons\BTNImmolationOn.blp
+TC_MHADDON_AUDIO=[音频],ReplaceableTextures\CommandButtons\BTNImmolationOn.blp
+TC_MHADDON_HTTP=[HTTP],ReplaceableTextures\CommandButtons\BTNImmolationOn.blp
+TC_MHADDON_WEBSOCKET=[WebSocket],ReplaceableTextures\CommandButtons\BTNImmolationOn.blp
+
+
+
+[TriggerTypes]
+MHWebSocketClientEvent=0,0,0,WebSocket客户端事件,integer
+MHAudioType=0,0,0,音频类型,integer
+MHAudioAttenuation=0,0,0,音频衰减类型,integer
+MHHttpError=0,0,0,Http/Https错误码,integer
+
+
+
+[TriggerParams]
+WS_CLIENT_EVENT_ID_WS_CLIENT_OPEN=0		    ,MHWebSocketClientEvent,"EVENT_ID_WS_CLIENT_OPEN",建立连接
+WS_CLIENT_EVENT_ID_WS_CLIENT_CLOSE=0		,MHWebSocketClientEvent,"EVENT_ID_WS_CLIENT_CLOSE",断开连接
+WS_CLIENT_EVENT_ID_WS_CLIENT_FAIL=0		    ,MHWebSocketClientEvent,"EVENT_ID_WS_CLIENT_FAIL",连接失败
+WS_CLIENT_EVENT_ID_WS_CLIENT_RECONNECT=0    ,MHWebSocketClientEvent,"EVENT_ID_WS_CLIENT_RECONNECT",尝试重连
+WS_CLIENT_EVENT_ID_WS_CLIENT_RECONNECTING=0 ,MHWebSocketClientEvent,"EVENT_ID_WS_CLIENT_RECONNECTING",正在重连
+WS_CLIENT_EVENT_ID_WS_CLIENT_OPEN_SOCKET=0  ,MHWebSocketClientEvent,"EVENT_ID_WS_CLIENT_OPEN_SOCKET",建立Socket连接
+WS_CLIENT_EVENT_ID_WS_CLIENT_CLOSE_SOCKET=0 ,MHWebSocketClientEvent,"EVENT_ID_WS_CLIENT_CLOSE_SOCKET",断开Socket连接
+
+
+
+AUDIO_TYPE_AUDIO=0,MHAudioType,"AUDIO_TYPE_AUDIO",音效
+AUDIO_TYPE_MUSIC=0,MHAudioType,"AUDIO_TYPE_MUSIC",音乐
+
+AUDIO_ATTENUATION_NONE=0,MHAudioAttenuation,"AUDIO_ATTENUATION_NONE",无衰减
+AUDIO_ATTENUATION_INVERSE=0,MHAudioAttenuation,"AUDIO_ATTENUATION_INVERSE",反比例衰减
+AUDIO_ATTENUATION_LINEAR=0,MHAudioAttenuation,"AUDIO_ATTENUATION_LINEAR",线性衰减
+AUDIO_ATTENUATION_EXPONENTIAL=0,MHAudioAttenuation,"AUDIO_ATTENUATION_EXPONENTIAL",指数衰减
+
+HTTP_ERROR_SUCCESS=0                            ,MHHttpError,"HTTP_ERROR_SUCCESS",成功
+HTTP_ERROR_UNKNOWN=0                            ,MHHttpError,"HTTP_ERROR_UNKNOWN",未知
+HTTP_ERROR_CONNECTION=0                         ,MHHttpError,"HTTP_ERROR_CONNECTION",连接失败
+HTTP_ERROR_BINDIPADDRESS=0                      ,MHHttpError,"HTTP_ERROR_BINDIPADDRESS",绑定IP地址失败
+HTTP_ERROR_READ=0                               ,MHHttpError,"HTTP_ERROR_READ",连接读取失败
+HTTP_ERROR_WRITE=0                              ,MHHttpError,"HTTP_ERROR_WRITE",连接写入失败
+HTTP_ERROR_EXCEEDREDIRECTCOUNT=0                ,MHHttpError,"HTTP_ERROR_EXCEEDREDIRECTCOUNT",超过最大重定向次数
+HTTP_ERROR_CANCELED=0                           ,MHHttpError,"HTTP_ERROR_CANCELED",连接取消
+HTTP_ERROR_SSLCONNECTION=0                      ,MHHttpError,"HTTP_ERROR_SSLCONNECTION",SSL连接失败
+HTTP_ERROR_SSLLOADINGCERTS=0                    ,MHHttpError,"HTTP_ERROR_SSLLOADINGCERTS",SSL证书加载失败
+HTTP_ERROR_SSLSERVERVERIFICATION=0              ,MHHttpError,"HTTP_ERROR_SSLSERVERVERIFICATION",SSL服务器验证失败
+HTTP_ERROR_SSLSERVERHOSTNAMEVERIFICATION=0      ,MHHttpError,"HTTP_ERROR_SSLSERVERHOSTNAMEVERIFICATION",SSL主机名验证失败
+HTTP_ERROR_UNSUPPORTEDMULTIPARTBOUNDARYCHARS=0  ,MHHttpError,"HTTP_ERROR_UNSUPPORTEDMULTIPARTBOUNDARYCHARS",不支持的多部分边界字符
+HTTP_ERROR_COMPRESSION=0                        ,MHHttpError,"HTTP_ERROR_COMPRESSION",压缩失败
+HTTP_ERROR_CONNECTIONTIMEOUT=0                  ,MHHttpError,"HTTP_ERROR_CONNECTIONTIMEOUT",连接超时
+HTTP_ERROR_PROXYCONNECTION=0                    ,MHHttpError,"HTTP_ERROR_PROXYCONNECTION",代理连接失败

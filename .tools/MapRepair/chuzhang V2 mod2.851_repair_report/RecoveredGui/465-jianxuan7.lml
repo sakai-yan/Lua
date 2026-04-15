@@ -1,0 +1,42 @@
+﻿name: jianxuan7
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerExpireEventBJ (var:udg_MP_jianxuan_time)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call PauseTimer(udg_MP_jianxuan_time))
+  - CustomScriptCode (const:call DestroyTimerDialog(udg_MP_jianxuan_win))
+  - CustomScriptCode (const:if(Trig_jianxuan7_Func003C())then)
+  - PauseUnitBJ (preset:PauseUnpauseOptionPause, var:gg_unit_ndqn_0615)
+  - PolledWait (const:1.00)
+  - SetUnitPositionLoc (var:gg_unit_nfor_0612, call:GetUnitLoc)
+  - ShowUnitShow (var:gg_unit_nfor_0612)
+  - SetUnitAnimation (var:gg_unit_nfor_0612, const:attack)
+  - SetUnitAnimation (var:gg_unit_ndqn_0615, const:death)
+  - PolledWait (const:2.00)
+  - CreateTextTagUnitBJ (const:|cFFFFFF99没有足够的能力，等待你的将会是无尽的后悔！|r, var:gg_unit_nfor_0612, const:80.00, const:10, const:100.00, const:100.00, const:100.00, const:0)
+  - CustomScriptCode (const:call SetTextTagPermanent(GetLastCreatedTextTag(),false))
+  - CustomScriptCode (const:call SetTextTagLifespan(GetLastCreatedTextTag(),4.00))
+  - SetTextTagVelocityBJ (call:GetLastCreatedTextTag, const:64, const:90)
+  - CustomScriptCode (const:call SetTextTagFadepoint(GetLastCreatedTextTag(),1.00))
+  - CustomScriptCode (const:set udg_MP_jianxuan7[GetConvertedPlayerId(GetOwningPlayer(udg_MP_jianxuan_unit))]=true)
+  - PolledWait (const:3.00)
+  - ShowUnitHide (var:gg_unit_ndqn_0615)
+  - SetUnitPositionLoc (var:gg_unit_ndqn_0615, call:GetRectCenter)
+  - PolledWait (const:8.00)
+  - CreateTextTagUnitBJ (const:|cFFFFFF99坚持你的执着走下去吧！后会有期！|r, var:gg_unit_nfor_0612, const:80.00, const:10, const:100.00, const:100.00, const:100.00, const:0)
+  - CustomScriptCode (const:call SetTextTagPermanent(GetLastCreatedTextTag(),false))
+  - CustomScriptCode (const:call SetTextTagLifespan(GetLastCreatedTextTag(),4.00))
+  - SetTextTagVelocityBJ (call:GetLastCreatedTextTag, const:64, const:90)
+  - CustomScriptCode (const:call SetTextTagFadepoint(GetLastCreatedTextTag(),1.00))
+  - PolledWait (const:2.00)
+  - SetUnitPositionLocFacingBJ (var:gg_unit_nfor_0612, call:GetRectCenter, preset:RealUnitFacing)
+  - DisableTrigger (var:gg_trg_jianxuannpc)
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetOwningPlayer(udg_MP_jianxuan_unit),0,0,"|cFFFF6600任|r|cFFFF8C26务|r|cFFFFB24C提|r|cFFFFD973示|r|cFFFFFF99：|r|cFFCCFFCC你感到迷惑，还是回太虚门找岩青吧！|r"))
+  - SetVariable (var:udg_MP_jianxuan_unit, preset:null)
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)

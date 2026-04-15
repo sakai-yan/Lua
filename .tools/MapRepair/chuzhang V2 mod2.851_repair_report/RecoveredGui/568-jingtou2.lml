@@ -1,0 +1,30 @@
+﻿name: jingtou2
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerChatEvent (preset:Player00, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player01, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player02, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player03, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player04, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player05, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player06, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player07, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player08, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player09, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player10, const:英雄模式, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player11, const:英雄模式, preset:ChatMatchTypeExact)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call RemoveUnit(udg_CCC[GetConvertedPlayerId(GetTriggerPlayer())]))
+  - CustomScriptCode (const:set udg_CCC[GetConvertedPlayerId(GetTriggerPlayer())]=udg_HERO[GetConvertedPlayerId(GetTriggerPlayer())])
+  - CustomScriptCode (const:if(Trig_jingtou2_Func003C())then)
+  - CustomScriptCode (const:call SetCameraTargetControllerNoZForPlayer(GetTriggerPlayer(),udg_CCC[GetConvertedPlayerId(GetTriggerPlayer())],0,0,false))
+  - CustomScriptCode (const:set udg_camera_T[GetConvertedPlayerId(GetTriggerPlayer())]=true)
+  - CustomScriptCode (const:else)
+  - ResetToGameCameraForPlayer (call:GetTriggerPlayer, const:0)
+  - CustomScriptCode (const:set udg_camera_T[GetConvertedPlayerId(GetTriggerPlayer())]=false)
+  - CustomScriptCode (const:endif)

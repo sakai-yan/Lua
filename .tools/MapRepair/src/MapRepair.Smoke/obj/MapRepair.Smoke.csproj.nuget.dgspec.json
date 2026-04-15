@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Smoke\\MapRepair.Smoke.csproj": {}
+  },
+  "projects": {
+    "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Core\\MapRepair.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Core\\MapRepair.Core.csproj",
+        "projectName": "MapRepair.Core",
+        "projectPath": "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Core\\MapRepair.Core.csproj",
+        "packagesPath": "C:\\Users\\DCY1\\.nuget\\packages\\",
+        "outputPath": "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DCY1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Smoke\\MapRepair.Smoke.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Smoke\\MapRepair.Smoke.csproj",
+        "projectName": "MapRepair.Smoke",
+        "projectPath": "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Smoke\\MapRepair.Smoke.csproj",
+        "packagesPath": "C:\\Users\\DCY1\\.nuget\\packages\\",
+        "outputPath": "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Smoke\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DCY1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Core\\MapRepair.Core.csproj": {
+                "projectPath": "D:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Core\\MapRepair.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

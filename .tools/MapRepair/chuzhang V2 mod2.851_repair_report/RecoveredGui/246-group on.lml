@@ -1,0 +1,23 @@
+﻿name: group on
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerChatEvent (preset:Player00, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player01, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player02, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player03, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player04, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player05, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player06, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player07, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player08, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player09, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player10, const:+gon, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player11, const:+gon, preset:ChatMatchTypeExact)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:set udg_group_off[GetConvertedPlayerId(GetTriggerPlayer())]=false)
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetTriggerPlayer(),0,0,("|cFFFF0000系统信息：|r"+"你现在可以接受任何人的邀请，如果需要拒绝邀请，请输入“+goff”")))

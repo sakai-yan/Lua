@@ -1,0 +1,9 @@
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\bin\Release\net8.0\Packer.Core.deps.json
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\bin\Release\net8.0\Packer.Core.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\obj\Release\net8.0\Packer.Core.GeneratedMSBuildEditorConfig.editorconfig
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\obj\Release\net8.0\Packer.Core.AssemblyInfoInputs.cache
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\obj\Release\net8.0\Packer.Core.AssemblyInfo.cs
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\obj\Release\net8.0\Packer.Core.csproj.CoreCompileInputs.cache
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\obj\Release\net8.0\Packer.Core.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\obj\Release\net8.0\refint\Packer.Core.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\src\Packer.Core\obj\Release\net8.0\ref\Packer.Core.dll

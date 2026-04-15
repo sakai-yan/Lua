@@ -1,0 +1,10 @@
+﻿Trigger: shudao8
+Mode: custom-text
+Action Count: 30
+Custom Script Count: 23
+Control Flow Count: 12
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 23 custom-script lines and 12 control-flow markers across 30 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 23 custom-script lines and 12 control-flow markers across 30 actions.

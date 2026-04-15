@@ -1,0 +1,18 @@
+﻿name: QUNTI
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_QUNTI_Func001C())then)
+  - SetVariable (var:udg_SP, call:GetSpellTargetLoc)
+  - CustomScriptCode (const:set udg_GROUP=GetUnitsInRangeOfLocMatching(250.00,udg_SP,Condition(function Trig_QUNTI_Func001Func002002003)))
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP,function Trig_QUNTI_Func001Func003A))
+  - CustomScriptCode (const:call DestroyGroup(udg_GROUP))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)

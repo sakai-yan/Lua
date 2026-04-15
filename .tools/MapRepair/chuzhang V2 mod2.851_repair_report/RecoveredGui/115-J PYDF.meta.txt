@@ -1,0 +1,10 @@
+﻿Trigger: J PYDF
+Mode: custom-text
+Action Count: 42
+Custom Script Count: 39
+Control Flow Count: 27
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 39 custom-script lines and 27 control-flow markers across 42 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 39 custom-script lines and 27 control-flow markers across 42 actions.

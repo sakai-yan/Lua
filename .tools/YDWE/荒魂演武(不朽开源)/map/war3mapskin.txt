@@ -1,0 +1,29 @@
+[CustomSkin]
+ChatFont=fonts\fonts.ttf
+EscMenuTextFont=fonts\fonts.ttf
+InfoPanelTextFont=fonts\fonts.ttf
+InventoryFullSound=InGameChatWhat
+LumberIcon=UITBzh.blp
+MasterFont=fonts\fonts.ttf
+MessageFont=fonts\fonts.ttf
+MinimapHeroTexture=UI_yxtb.blp
+TextTagFont=fonts\fonts.ttf
+ToolTipLumberIcon=UITBzh2.blp
+[Errors]
+Inventoryfull=前往装入背包
+Nolumber=战魂不够。
+[FrameDef]
+BONUS_ATTACK_SPEED=  - 每点增加0.1%攻击速度
+BONUS_HITPOINTS= - 每点增加%d的生命值|n - 每333点增加1%物理暴击|n - 每50点增加1%物理暴击效果
+BONUS_MANAREGEN=  - 每点增加魔法恢复速度|n  - 每点增加1.5点法术攻击|n  - 每333点增加1%法术暴击
+COLON_LUMBER=战魂：
+KEY_QUESTS=说明 (|Cfffed312F9|R)
+QUESTSOPTIONAL=说明
+RESOURCE_UBERTIP_GOLD=黄金通过击杀敌人获得。
+RESOURCE_UBERTIP_LUMBER=战魂通过击杀强敌获得。
+RESOURCE_UBERTIP_SUPPLY=人口占用
+RESOURCE_UBERTIP_UPKEEP=欢迎大家加入地图群：543258045
+RESOURCE_UBERTIP_UPKEEP_INFO_WOOD=|N%d-%d 人口：%s|R (%d%% G，%d%% L)
+UPKEEP_HIGH= 
+UPKEEP_LOW= 
+UPKEEP_NONE=|Cff00ff00荒魂演武

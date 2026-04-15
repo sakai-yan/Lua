@@ -1,0 +1,9 @@
+﻿Trigger: J SFJZ2
+Mode: custom-text
+Action Count: 47
+Custom Script Count: 35
+Control Flow Count: 21
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 35 custom-script lines and 21 control-flow markers across 47 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 35 custom-script lines and 21 control-flow markers across 47 actions.

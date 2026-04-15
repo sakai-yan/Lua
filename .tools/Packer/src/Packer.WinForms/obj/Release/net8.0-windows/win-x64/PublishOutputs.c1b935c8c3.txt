@@ -1,0 +1,6 @@
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\publish\win-x64\D3DCompiler_47_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\publish\win-x64\PenImc_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\publish\win-x64\PresentationNative_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\publish\win-x64\vcruntime140_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\publish\win-x64\wpfgfx_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\Packer\publish\win-x64\Packer.exe

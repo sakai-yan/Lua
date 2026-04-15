@@ -1,0 +1,14 @@
+﻿name: gattack bsk
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventAttacked)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:set gg_trg_bsk=CreateTrigger())
+  - CustomScriptCode (const:call TriggerAddCondition(gg_trg_bsk,Condition(function Trig_bsk_Conditions)))
+  - CustomScriptCode (const:call TriggerAddAction(gg_trg_bsk,function Trig_bsk_Actions))
+  - CustomScriptCode (const:call TriggerRegisterUnitEvent(gg_trg_bsk,GetAttackedUnitBJ(),EVENT_UNIT_DAMAGED))

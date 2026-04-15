@@ -1,0 +1,61 @@
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+Frame "BACKDROP" "xui_img_alpha"{
+	Width 0.5,
+	Height 0.2,
+	BackdropBackground "XG_JAPI\Lua\Xui\ui\blank.blp",
+    BackdropTileBackground,
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "xui_img_border_alpha"{
+	Width 0.5,
+	Height 0.2,
+	BackdropBackground "XG_JAPI\Lua\XUI\ui\blank.blp",
+    BackdropTileBackground,
+	BackdropBackgroundSize 0.128,
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+	BackdropCornerSize 0.012,
+	BackdropEdgeFile "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "xui_window"{
+	Width 0.5,
+	Height 0.2,
+	BackdropBackground "UI\Widgets\EscMenu\Human\editbox-background.blp",
+    BackdropTileBackground,
+	BackdropBackgroundSize 0.128,
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+	BackdropCornerSize 0.007,
+	BackdropEdgeFile "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+    BackdropBlendAll,
+}
+
+Frame "TEXT" "xui_text_gold"{
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.013, "",
+    FontJustificationOffset 0.0 -0.001,
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.5 0.5 0.5 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,
+    FontJustificationV JUSTIFYMIDDLE, 
+}
+
+Frame "TEXT" "xui_text_white"{
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.013, "",
+    FontJustificationOffset 0.0 -0.001,
+    FontFlags "FIXEDSIZE",
+    FontColor 1.000 1.000 1.000 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.5 0.5 0.5 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,
+    FontJustificationV JUSTIFYMIDDLE, 
+	FontJustificationH JUSTIFYLEFT, 
+}
+

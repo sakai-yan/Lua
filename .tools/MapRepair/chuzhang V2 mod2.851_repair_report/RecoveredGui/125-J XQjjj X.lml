@@ -1,0 +1,18 @@
+﻿name: J XQjjj X
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventAttacked)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_XQjjj_X_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:set gg_trg_J_XQjjj=CreateTrigger())
+  - CustomScriptCode (const:call TriggerAddCondition(gg_trg_J_XQjjj,Condition(function Trig_J_XQjjj_Conditions)))
+  - CustomScriptCode (const:call TriggerAddAction(gg_trg_J_XQjjj,function Trig_J_XQjjj_Actions))
+  - CustomScriptCode (const:call TriggerRegisterUnitEvent(gg_trg_J_XQjjj,GetAttackedUnitBJ(),EVENT_UNIT_DAMAGED))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

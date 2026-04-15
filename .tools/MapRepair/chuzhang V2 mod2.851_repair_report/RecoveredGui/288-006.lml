@@ -1,0 +1,15 @@
+﻿name: 006
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterEnterRectSimple (var:gg_rct______________128)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig____________________006_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - ModifyGateBJ (preset:GateOperationOpen, var:gg_dest_ZTsx_9678)
+  - KillDestructable (var:gg_dest_DTfx_11059)

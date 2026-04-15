@@ -1,0 +1,31 @@
+﻿name: shijian
+type: gui
+category: 0
+enabled: false
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:0.1)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:set bj_forLoopAIndex=0)
+  - CustomScriptCode (const:set bj_forLoopAIndexEnd=udg_jiduishuzi)
+  - CustomScriptCode (const:loop)
+  - CustomScriptCode (const:exitwhen bj_forLoopAIndex>bj_forLoopAIndexEnd)
+  - CustomScriptCode (const:set udg_movepoint[GetForLoopIndexA()]=GetUnitLoc(udg_jituidanwei[GetForLoopIndexA()]))
+  - CustomScriptCode (const:set udg_targetpoint[GetForLoopIndexA()]=PolarProjectionBJ(udg_movepoint[GetForLoopIndexA()],udg_jituijiaodu2,udg_jituidiaodu3[GetForLoopIndexA()]))
+  - CustomScriptCode (const:set udg_jituidiaodu3[GetForLoopIndexA()]=AngleBetweenPoints(udg_jituipoint,udg_movepoint[GetForLoopIndexA()]))
+  - CustomScriptCode (const:set udg_jituijiaodu1[GetForLoopIndexA()]=GetUnitFacing(udg_jituidanwei[GetForLoopIndexA()]))
+  - CustomScriptCode (const:call SetUnitPositionLocFacingBJ(udg_jituidanwei[GetForLoopIndexA()],udg_targetpoint[GetForLoopIndexA()],udg_jituijiaodu1[GetForLoopIndexA()]))
+  - CustomScriptCode (const:call AddSpecialEffectTargetUnitBJ("chest",udg_jituidanwei[GetForLoopIndexA()],"Abilities\\Weapons\\SteamTank\\SteamTankImpact.mdl"))
+  - SetVariable (var:udg_jituixiaoguo, call:GetLastCreatedEffectBJ)
+  - CustomScriptCode (const:call UnitDamageTargetBJ(GetTriggerUnit(),udg_jituidanwei[GetForLoopIndexA()],((I2R(GetUnitAbilityLevelSwapped('A00G',GetTriggerUnit()))*10.)*(I2R(GetHeroStatBJ(bj_HEROSTAT_STR,GetTriggerUnit(),false))*(I2R(GetUnitAbilityLevelSwapped('A00G',GetTriggerUnit()))/10.))),ATTACK_TYPE_NORMAL,DAMAGE_TYPE_NORMAL))
+  - CustomScriptCode (const:call DestroyEffect(udg_jituixiaoguo))
+  - CustomScriptCode (const:call RemoveLocation(udg_targetpoint[GetForLoopIndexA()]))
+  - CustomScriptCode (const:call RemoveLocation(udg_movepoint[GetForLoopIndexA()]))
+  - CustomScriptCode (const:set bj_forLoopAIndex=bj_forLoopAIndex+1)
+  - CustomScriptCode (const:endloop)
+  - CustomScriptCode (const:call UnitDamageTargetBJ( udg_Axf11,  udg_Bxf22,((I2R(GetHeroStatBJ(bj_HEROSTAT_INT,udg_HERO[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))],false))+udg_JX[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])*((1*1)*(0.70+(0.02*I2R(udg_JX_lv[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))))), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL ))
+  - CreateNUnitsAtLoc (const:1, const:h000, call:GetOwningPlayer, call:PolarProjectionBJ, call:GetUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:9], call:GetLastCreatedUnit)
+  - IssueTargetOrder (var:udg_QQxf33[const:9], const:Awrs, var:udg_Bxf22)

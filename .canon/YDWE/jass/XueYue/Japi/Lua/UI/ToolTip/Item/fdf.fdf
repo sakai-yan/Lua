@@ -1,0 +1,14 @@
+Frame "BACKDROP" "XG_Border_Hunman" 
+{
+    Width 0.0745,
+    Height 0.04325,
+
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\ToolTips\Human\human-tooltip-background.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.012,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004f 0.004f 0.004f 0.004f,
+    BackdropEdgeFile  "UI\Widgets\ToolTips\Human\human-tooltip-border.blp",
+    BackdropBlendAll,
+}

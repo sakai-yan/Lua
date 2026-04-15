@@ -1,0 +1,20 @@
+﻿name: dead
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventDeath)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_dead_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:call StartTimerBJ(udg_hero_time[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))],false,15.00))
+  - CustomScriptCode (const:call CreateTimerDialogBJ(GetLastCreatedTimerBJ(),(GetPlayerName(GetOwningPlayer(GetTriggerUnit()))+"复活")))
+  - CustomScriptCode (const:set udg_hero_window[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=GetLastCreatedTimerDialogBJ())
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - CreateNUnitsAtLoc (const:1, const:u000, call:GetOwningPlayer, var:udg_SP, preset:RealUnitFacing)
+  - UnitApplyTimedLifeBJ (const:15.00, preset:TimedLifeBuffCodeGeneric, call:GetLastCreatedUnit)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

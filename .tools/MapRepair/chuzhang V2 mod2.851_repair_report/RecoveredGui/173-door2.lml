@@ -1,0 +1,12 @@
+﻿name: door2
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterUnitEvent (var:gg_unit_nsog_0708, preset:UnitEventDeath)
+conditions:
+  -
+actions:
+  - PolledWait (const:30)
+  - ShowUnitShow (var:gg_unit_czcs_0777)

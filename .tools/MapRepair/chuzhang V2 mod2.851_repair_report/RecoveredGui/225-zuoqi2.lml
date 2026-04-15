@@ -1,0 +1,21 @@
+﻿name: zuoqi2
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_zuoqi2_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:set udg_z_X[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=GetLocationX(GetUnitLoc(GetTriggerUnit())))
+  - CustomScriptCode (const:set udg_z_Y[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=GetLocationY(GetUnitLoc(GetTriggerUnit())))
+  - ShowUnitHide (call:GetTriggerUnit)
+  - CustomScriptCode (const:call SetUnitPositionLoc(udg_HERO[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))],Location(udg_z_X[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))],udg_z_Y[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])))
+  - CustomScriptCode (const:call ShowUnitShow(udg_HERO[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))
+  - CustomScriptCode (const:call PauseUnitBJ(false,udg_HERO[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))
+  - CustomScriptCode (const:set udg_zuoqi[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=null)
+  - RemoveUnit (call:GetTriggerUnit)

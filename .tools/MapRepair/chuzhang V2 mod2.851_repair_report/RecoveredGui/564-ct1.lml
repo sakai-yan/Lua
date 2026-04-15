@@ -1,0 +1,23 @@
+﻿name: ct1
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerChatEvent (preset:Player00, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player01, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player02, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player03, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player04, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player05, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player06, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player07, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player08, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player09, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player10, const:C1, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player11, const:C1, preset:ChatMatchTypeSubstring)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:set udg_C_JT1[GetConvertedPlayerId(GetTriggerPlayer())]=S2R(SubStringBJ(GetEventPlayerChatString(),3,6)))
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetTriggerPlayer(),0,0,R2S(udg_C_JT1[GetConvertedPlayerId(GetTriggerPlayer())])))

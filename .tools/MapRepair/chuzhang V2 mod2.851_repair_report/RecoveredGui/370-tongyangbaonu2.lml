@@ -1,0 +1,11 @@
+﻿name: tongyangbaonu2
+type: custom-text
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  -
+conditions:
+  -
+actions:
+  -

@@ -1,0 +1,8 @@
+﻿Trigger: gattack e
+Mode: gui
+Action Count: 7
+Custom Script Count: 7
+Control Flow Count: 3
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.

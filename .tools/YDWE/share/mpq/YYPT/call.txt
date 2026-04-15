@@ -1,0 +1,309 @@
+[EXGetGamePlaySecs]
+title = "基础 - 地图内玩家游戏时长 [JAPI]"
+description = "获得${玩家}游戏时长"
+comment = "EXGetGamePlaySecs(player)，获得玩家游戏时长(单位：秒)"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+
+[YDWEPlatformIsInPlatform]
+title = "地图在11平台上 [JAPI]"
+description = "目前地图正在11平台上运行"
+comment = "判断地图是否在11平台上；此功能可以根据地图所在平台做出差异化操作。特别注意：此操作内含有等待。"
+category = TC_YYPT
+returns = boolean
+
+[YDWERecordGetI]
+title = "11RPG存档 - 获取 [JAPI]"
+description = "11RPG存档 - 读取${玩家}中的〖${数据名}〗"
+comment = "从玩家11RPG存档上获取数据，需要填入正确的数据名。"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+default = "EverguoIsHandsome"
+
+
+[YDWERPGGetKey]
+title = "11RPG积分 - 读取 [JAPI]"
+description = "11RPG积分 - 读取${玩家}中的〖${数据名}〗"
+comment = "从11RPG积分上获取数据，需要填入正确的数据名。"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+default = "EverguoIsHandsome"
+
+
+[YDWERPGBillingGetStatus]
+title = "道具 - 读取状态（时间类道具）数量 [JAPI]"
+description = "读取${玩家}中状态〖${状态名}〗的数量"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+default = "EverguoIsHandsome"
+
+[YDWERPGBillingGetItem]
+title = "道具 - 读取道具（次数类道具）数量 [JAPI]"
+description = "读取${玩家}中道具〖${道具名}〗的数量"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+default = "EverguoIsHandsome"
+
+[YDWERPGBillingHasStatus]
+title = "道具 - 存在状态（时间类道具） [JAPI]"
+description = "查询 ${玩家}中是否存在状态〖${状态名}〗"
+category = TC_YYPT
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+default = "EverguoIsHandsome"
+
+[YDWERPGBillingHasItem]
+title = "道具 - 存在道具（次数类道具） [JAPI]"
+description = "查询 ${玩家}中是否存在道具〖${道具名}〗"
+category = TC_YYPT
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+default = "EverguoIsHandsome"
+
+
+[EXNetCommonConsume]
+title = "道具 - 地图内直扣妖豆 [JAPI]"
+description = "${玩家}消费妖豆${多少}"
+comment = "玩家购买商品，成功返回ture，失败返回false"
+category = TC_YYPT
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = integer
+
+[EXNetConsume]
+title = "计费 - 消费地图货币 [JAPI]"
+description = "${玩家}消费地图货币${多少}"
+comment = "玩家购买商品消费(弃用)，成功返回ture，失败返回false"
+category = TC_YYPT
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = integer
+
+[EXNetUseItem]
+title = "道具 - 道具（次数类道具）数量扣除 [JAPI]"
+description = "${玩家}消耗道具〖${道具ID}〗${数量}"
+comment = "玩家请求消耗普通道具，成功返回ture，失败返回false"
+category = TC_YYPT
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+default = "EverguoIsHandsome"
+[[.args]]
+type = integer
+min = 1
+
+[EXGetPlayerRealName]
+title = "基础 - 地图内获得玩家平台昵称 [JAPI]"
+description = "获得${玩家}11平台昵称"
+comment = "EXGetPlayerRealName(player)，获得玩家平台昵称"
+category = TC_YYPT
+returns = string
+[[.args]]
+type = player
+default = "Player00"
+
+[YDWEGetRPGRankName]
+title = "积分 - 排行-显示当前的积分排行榜名称 [JAPI]"
+description = "YDWEGetRPGRankName()"
+comment = "显示当前的积分排行榜名称"
+category = TC_YYPT
+returns = string
+
+[YDWEGetRPGTopName]
+title = "积分 - 排行-显示在排行榜中第rank位的玩家名 [JAPI]"
+description = "排行榜排名${名次}的玩家名字"
+comment = "YDWEGetRPGTopName(rank)，显示在排行榜中第rank位的玩家名，如果不存在则返回空字符串"
+category = TC_YYPT
+returns = string
+[[.args]]
+type = integer
+min = 1
+
+[YDWEGetRPGTopScore]
+title = "积分 - 排行-显示在排行榜中第rank位的玩家分数 [JAPI]"
+description = "排行榜排名${名次}的玩家分数"
+comment = "YDWEGetRPGTopScore(rank)，显示在排行榜中第rank位的玩家分数，如果不存在则返回-1"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = integer
+min = 1
+
+[YDWEGetPalyerRPGRank]
+title = "积分 - 排行-显示玩家的积分排行名次 [JAPI]"
+description = "获得${玩家}的积分排行名次"
+comment = "YDWEGetPalyerRPGRank(player)，显示玩家的排行，如果不存在则返回-1"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+
+[YDWEGetPalyerRPGRankScore]
+title = "积分 - 排行-显示玩家的积分排行分数 [JAPI]"
+description = "获得${玩家}的积分分数"
+comment = "YDWEGetPalyerRPGRankScore(player)，显示玩家的分数，如果不存在则返回-1"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+
+[YDWERPGBillingGetCommonCurrency]
+title = "道具 - 读取玩家妖豆数量 [JAPI]"
+description = "读取${玩家}的妖豆数量"
+comment = "YDWERPGBillingGetCommonCurrency(player)，获取玩家妖豆数量"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+
+[YDWERPGBillingGetCurrency]
+title = "计费 - 获取玩家地图货币余额 [JAPI]"
+description = "获取${玩家}的地图货币余额"
+comment = "YDWERPGBillingGetCurrency(playerId)，获取玩家地图货币余额"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = player
+default = "Player00"
+
+[EXNetGetTime]
+title = "基础 - 时间函数 [JAPI]"
+description = "获取当前时间"
+comment = "EXNetGetTime()，时间函数"
+category = TC_YYPT
+returns = string
+
+[YDWERPGGetMapConfig]
+title = "配置 - 获取地图配置 [JAPI]"
+description = "获取地图${XXX}项的配置"
+comment = "YDWERPGGetMapConfig(key)，获取地图配置"
+category = TC_YYPT
+returns = string
+[[.args]]
+type = string
+
+[YDWEStatRemoteData]
+title = "测试 - 统计引用 [JAPI]"
+description ="设置${玩家}的${统计项}=${XXX}"
+comment = "EXNetStatRemoteData(player, key ,value) 统计引用，成功返回true，失败返回false"
+category = TC_YYPT
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+[YDWERPGGetRemoteData]
+title = "存档 - 读取用户数据 [JAPI]"
+description ="读取${玩家}的${XXX}存档"
+comment = "YDWERPGGetRemoteData(player,key)，读取用户存档数据"
+category = TC_YYPT
+returns = string
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+
+[YDWESaveRemoteData]
+title = "存档 - 保存用户数据 [JAPI]"
+description ="存储${玩家}的${XXX}=${XXX}"
+comment = "YDWESaveRemoteData(player, key ,value) 保存用户存档数据 成功返回true，失败返回false"
+category = TC_YYPT
+returns = boolean
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+
+[YDWECheckIsYYHighLadder]
+title = "辅助 - 判断是否为11平台天梯房 [JAPI]"
+description ="判断是否为11平台天梯房"
+comment = "YDWECheckIsYYHighLadder() 判断是否为11平台天梯房 true-是，false-否"
+category = TC_YYPT
+returns = boolean
+
+
+[YDWEGetYYAssistantValue]
+title = "辅助 - 获取11平台辅助信息 [JAPI]"
+description ="读取辅助信息${键名}"
+comment = "YDWEGetYYAssistantValue(key) 获取11平台辅助信息 可填参数datetime roomtype..."
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = string
+
+
+[YDWEBits32And]
+title = "辅助 - 整数与操作 [JAPI]"
+description ="${值1} 与 ${值2}"
+comment = "值1 与 值2"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+
+[YDWEBits32Or]
+title = "辅助 - 整数或操作 [JAPI]"
+description ="${值1} 或 ${值2}"
+comment = "值1 或 值2"
+category = TC_YYPT
+returns = integer
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+

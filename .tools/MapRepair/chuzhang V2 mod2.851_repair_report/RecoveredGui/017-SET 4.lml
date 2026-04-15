@@ -1,0 +1,34 @@
+﻿name: SET 4
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventSingle (const:25.00)
+conditions:
+  -
+actions:
+  - CreateQuestBJ (preset:QuestTypeReqDiscovered, const:御剑门转职, const:|cFFFFCC00剑豪：|r在杨清处接任务，然后拿着他给的信念之剑去杀10只蔷树精，任务过程中记得剑是不能拿下的。完成后回来找扬清，他会让你再去杀草齿兽，收集16个草齿兽牙（那剑依旧不能拿下)。完成后他会给你令牌，拿着令牌去找蔡景阳。蔡景阳会要求你去杀5个黑岗山寨的队长。完成后回来复命即可完成转职。
+|cFFFFCC00弃剑：|r在卓腾云处接任务，他让你去文莱村寻找卓小云，找到卓小云后，要护送卓小云回到御剑门，路上会刷出强盗。到达后，卓腾云会让你杀20个咕噜龙获得鸟龙鳞，完成后，回去找卓腾云，卓腾云会给你最后的挑战，去黑岗山寨剿灭5个山贼队长，杀完后回去交任务即可完成转职, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeReqDiscovered, const:法魂门转职, const:|cFFFFCC00念火师:|r在门派胡不留处接任务.然后给你个集火容器去收集5个灵力火种.完成后找胡不留.会叫你去找掌门胡絮.胡絮会让你去塔木森林杀暴怒鹿妖收集10分树灵（随即给）完成后找胡絮谈话.然后回去找胡不留，胡不留让你杀龙骨守护者.拿遗失铁环（随即出）。拿到遗失铁环后，找胡不留交任务即可完成转职
+|cFFFFCC00水脉师:|r在门派水无名处接任务.会给你个瓶子去塔木森林收集塔木水.完成后找水无名.然后水无名叫你杀10只咕咕兽.杀完后找水无名.之后去杀9只龙骨守护者.完成后交了任务即可完成转职, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeReqDiscovered, const:清心阁转职, const:TRIGSTR_1560, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeReqDiscovered, const:月刀门转职, const:|cFFFFCC00血刀：|r在塔木村外的码头童无欺那里前往月刀岛，找丁宁接任务，然后去杀15只咕噜龙获得纯阴之血，完成后回去找丁宁，接着会让你杀10个龙骨守护者，杀够后，回去找丁宁，做最后的挑战——杀死残暴鹿妖，完成后回去找丁宁即可完成转职
+|cFFFFCC00刀狂：|r在塔木村外的码头童无欺那里前往月刀岛，找卯人敌接任务，去杀15只凶残鹿妖，杀够后回去找卯人敌，继而去杀15个草齿兽，完成回去找卯人敌就去做最后的挑战吧，杀死残暴鹿妖，完成后回去找卯人敌，即可完成转职, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeReqDiscovered, const:佛圣门转职, const:|cFFFFCC00金刚：|r在智慈大师那接任务，挑战18铜人成功后，回去交任务即可完成转职
+|cFFFFCC00太罗：|r在智明大师那接任务，挑战18铜人成功后，回去交任务即可完成转职, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeReqDiscovered, const:佛圣门转职, const:|cFFFFCC00鬼阎：|r在半衰人处接任务，她会要求你去杀20只草齿收，完成后回来找半蓑人，然后去黑岗山寨，杀死50个人，完成后再回去找半蓑人，他会让你再去杀黑岗山寨的首领，完成后复命完成转职。, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeReqDiscovered, const:太虚观转职, const:|cFFFFCC00蜀道师：|r接了任务后去找太虚掌门，他会要求你去杀10只咕噜龙，杀完后他会再要求你去找清心阁的陆容大夫，陆容大夫需要雀丹素炼制解药，去杀涉毒鹿妖拿到雀丹素后交给陆容大夫即可。最后回去找掌门，转职完成。
+|cFFFFCC00剑玄师：|r任务NPC岩青让你去打探点尹月行的行踪。到文莱村往塔木村的桥北方找到尹月行。找到后回去找岩青。岩青命令你去捉拿尹月行，你回到之前尹月行的地方不发现人已不在。向旁边的张业打探后去文莱村，进入村口时突然会出现一个妖物。切记不需要杀死它，只要熬到1分钟即可。最好后你再去找尹月行，按他要求杀死10个龙骨守护者，再回来找尹月行即可完成转职, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeOptDiscovered, const:基本指令, const:“XM|cFF00FF00*|r”：设置当主人生命低于|cFF00FF00*|r%时，珍兽自动喝药
+“YM|cFF00FF00*|r”：设置当主人法力低于|cFF00FF00*|r%时，珍兽自动喝药
+“TM|cFF00FF00*|r”：建议踢掉玩家|cFF00FF00*|r，|cFF00FF00*|r为数字1~12。当超过半数人输入时生效, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeOptDiscovered, const:法术常识, const:◆法师穿重甲会影响法术的释放
+◆法距增加的装备能让法师的施法距离变得更远
+◆施法加速能让法师的技能恢复间隔变短
+◆法术低耗的装备能让法师施法消耗的法力减少
+◆法抗能够提升人物对法术的抵抗能力，效果可叠加, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)
+  - CreateQuestBJ (preset:QuestTypeOptDiscovered, const:关于盾牌, const:盾牌能够很好地提升人的防御能力，但同时也会降低人物的伤害输出。其中包括：
+攻击速度减少
+攻击力减少
+系数减少, const:ReplaceableTextures\CommandButtons\BTNAmbush.blp)

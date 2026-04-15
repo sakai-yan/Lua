@@ -1,0 +1,9 @@
+﻿Trigger: tiaocha2
+Mode: custom-text
+Action Count: 19
+Custom Script Count: 15
+Control Flow Count: 9
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed in the 15-19 action mixed pseudo-GUI band with 15 custom-script lines and 9 control-flow markers across 19 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger stayed in the 15-19 action mixed pseudo-GUI band with 15 custom-script lines and 9 control-flow markers across 19 actions.

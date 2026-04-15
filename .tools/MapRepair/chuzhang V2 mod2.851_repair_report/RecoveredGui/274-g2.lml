@@ -1,0 +1,14 @@
+﻿name: g2
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventAttacked)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_g2_Func001C())then)
+  - CustomScriptCode (const:call IssueNeutralImmediateOrder(Player(PLAYER_NEUTRAL_AGGRESSIVE),GetTriggerUnit(),"roar"))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)

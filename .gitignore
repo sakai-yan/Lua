@@ -1,0 +1,17 @@
+.vs/
+# Planning workspace temp artifacts
+.planning/workspaces/*/tmp/
+
+# Generated tool outputs and archives
+.tools/**/publish/
+.tools/**/snapshots/
+
+# Embedded local repositories that should not become submodules in this repo
+.canon/YDWE/source/
+.tools/luamake/
+.tools/YDWE/source/
+w3x2lni-source/
+
+# Nested git metadata and lock files
+**/.git/
+**/index.lock

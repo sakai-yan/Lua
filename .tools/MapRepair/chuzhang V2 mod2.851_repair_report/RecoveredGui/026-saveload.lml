@@ -1,0 +1,11 @@
+﻿name: saveload
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterGameLoadedEventBJ
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call ForForce(GetPlayersAll(),function Trig_saveload_Func001A))

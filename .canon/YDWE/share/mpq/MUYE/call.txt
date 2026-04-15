@@ -1,0 +1,57 @@
+﻿[MUYE_string_HH]
+title = "[木叶函数] - 字符串 + |n"
+description = "${字符串} + |n"
+comment = "木叶函数：字符串自动连接一个|n换行符"
+category = TC_NOTHING
+returns = string
+[[.args]]
+type = string
+default = null
+
+[MUYE_stringLv3_ZNHH]
+title = "[木叶函数] - 连接字符串Lv3(智能换行) "
+description = "${字符串} + ${字符串} + ${字符串}"
+comment = "木叶函数：如果单个字符串是空字符串则这个空字符串不会连接|n换行符"
+category = TC_NOTHING
+returns = string
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+[[.args]]
+type = string
+default = null
+
+[MUYE_GetUnitX]
+title = "单位所在X轴坐标Cos偏移 - [木叶函数]"
+description = "X坐标[${数值}] + 偏移距离[${数值}] * Cos[${角度}]"
+comment = "单位所在X坐标 + 偏移距离 * Cos---(距离填0就是获取当前X坐标)"
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+default = "GetUnitX"
+[[.args]]
+type = real
+default = "0"
+[[.args]]
+type = degree
+default = "GetUnitFacing"
+
+[MUYE_GetUnitY]
+title = "单位所在Y轴坐标Sin偏移 - [木叶函数]"
+description = "Y坐标[${数值}] + 偏移距离[${数值}] * Sin[${角度}]"
+comment = "单位所在Y坐标 + 偏移距离 * Sin ---(距离填0就是获取当前Y坐标)"
+category = TC_MATH
+returns = real
+[[.args]]
+type = real
+default = "GetUnitY"
+[[.args]]
+type = real
+default = "0"
+[[.args]]
+type = degree
+default = "GetUnitFacing"

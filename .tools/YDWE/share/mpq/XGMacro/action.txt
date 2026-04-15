@@ -1,0 +1,166 @@
+[XG_Macro_Set_Act]
+title = "动作      [注册]"
+description = "为  ${name}  绑定动作  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = code
+default = "SetVariable"
+
+[XG_Macro_Get_Act2]
+title = "动作      [执行]"
+description = "执行动作:  ${name} "
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+script_name = XG_Macro_Get_Act
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Set_Boolexpr]
+title = "条件[布尔表达式]      [注册]"
+description = "为  ${name}  绑定布尔表达式  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = boolexpr
+default = ""
+
+[XG_Macro_Set_Boolcall]
+title = "条件[条件表达式]      [注册]"
+description = "为  ${name}  绑定条件表达式  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型 和布尔表达式不同的是条件表达式将会保留原函数,这意味着你可以使用动作来执行条件表达式"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = boolcall
+default = ""
+
+
+[XG_Macro_Set_Bool]
+title = "条件[布尔值]      [注册]"
+description = "为  ${name}  绑定布尔值  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = boolean
+default = ""
+
+[XG_Macro_Set_Str]
+title = "条件[字符串]      [注册]"
+description = "为  ${name}  绑定字符串  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = string
+default = ""
+
+[XG_Macro_Set_Int]
+title = "条件[整数]      [注册]"
+description = "为  ${name}  绑定整数  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = integer
+default = ""
+
+[XG_Macro_Set_Real]
+title = "条件[实数]      [注册]"
+description = "为  ${name}  绑定实数  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = real
+default = ""
+
+[XG_Macro_Set_Unit]
+title = "条件[单位]      [注册]"
+description = "为  ${name}  绑定单位  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = unit
+default = ""
+
+[XG_Macro_Set_UnitCode]
+title = "条件[单位类型]      [注册]"
+description = "为  ${name}  绑定单位类型  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = unitcode
+default = ""
+
+[XG_Macro_Set_Item]
+title = "条件[物品]      [注册]"
+description = "为  ${name}  绑定物品  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = item
+default = ""
+
+[XG_Macro_Set_ItemCode]
+title = "条件[物品类型]      [注册]"
+description = "为  ${name}  绑定物品类型  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = itemcode
+default = ""
+
+[XG_Macro_Set_AbilCode]
+title = "条件[技能类型]      [注册]"
+description = "为  ${name}  绑定技能类型  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = abilcode
+default = ""
+
+[XG_Macro_Set_Player]
+title = "条件[玩家]      [注册]"
+description = "为  ${name}  绑定玩家  ${code}"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"
+[[.args]]
+type = player
+default = ""

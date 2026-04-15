@@ -1,0 +1,15 @@
+﻿name: czd1 baoxiang
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventHeroUseItem)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_czd1_baoxiang_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - RemoveItem (call:GetManipulatedItem)
+  - CustomScriptCode (const:call UnitAddItemByIdSwapped(udg_LOST_ITEM[GetRandomInt(300,308)],GetTriggerUnit()))

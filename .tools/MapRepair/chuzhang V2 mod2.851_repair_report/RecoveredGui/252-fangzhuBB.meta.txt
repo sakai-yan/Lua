@@ -1,0 +1,9 @@
+﻿Trigger: fangzhuBB
+Mode: gui
+Action Count: 4
+Custom Script Count: 4
+Control Flow Count: 3
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Preserved action function `Trig_fangzhuBB_Actions` as a custom-script callback because it uses locals or early returns.

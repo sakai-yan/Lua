@@ -1,0 +1,11 @@
+﻿name: STR
+type: custom-text
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  -
+conditions:
+  -
+actions:
+  -

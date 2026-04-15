@@ -1,0 +1,16 @@
+﻿name: J RJ
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:0.85)
+conditions:
+  -
+actions:
+  - SetVariable (var:udg_RJ, const:1)
+  - CustomScriptCode (const:loop)
+  - CustomScriptCode (const:exitwhen udg_RJ>12)
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP_FIRE[udg_RJ],function Trig_J_RJ_Func001Func001A))
+  - SetVariable (var:udg_RJ, var:udg_RJ+1)
+  - CustomScriptCode (const:endloop)

@@ -1,0 +1,26 @@
+﻿name: biaoche 1
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterEnterRectSimple (var:gg_rct_yabiao1)
+  - TriggerRegisterEnterRectSimple (var:gg_rct_yabiao2)
+  - TriggerRegisterEnterRectSimple (var:gg_rct_yabiao3)
+  - TriggerRegisterEnterRectSimple (var:gg_rct_yabiao4)
+  - TriggerRegisterEnterRectSimple (var:gg_rct_yabiao5)
+  - TriggerRegisterEnterRectSimple (var:gg_rct_yabiao6)
+  - TriggerRegisterEnterRectSimple (var:gg_rct_yabiao7)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_biaoche_1_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - SetVariable (var:udg_SP2, call:PolarProjectionBJ)
+  - CreateNUnitsAtLoc (const:1, const:nban, preset:PlayerNA, var:udg_SP2, preset:RealUnitFacing)
+  - UnitApplyTimedLifeBJ (const:30.00, preset:TimedLifeBuffCodeGeneric, call:GetLastCreatedUnit)
+  - IssuePointOrderLoc (call:GetLastCreatedUnit, const:attack, var:udg_SP)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP2))

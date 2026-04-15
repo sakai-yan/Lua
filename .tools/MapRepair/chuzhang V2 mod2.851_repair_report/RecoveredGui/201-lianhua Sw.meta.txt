@@ -1,0 +1,10 @@
+﻿Trigger: lianhua Sw
+Mode: custom-text
+Action Count: 115
+Custom Script Count: 83
+Control Flow Count: 33
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still expanded into 115 flat actions, including 83 custom-script lines and 33 control-flow custom-script markers.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still expanded into 115 flat actions, including 83 custom-script lines and 33 control-flow custom-script markers.

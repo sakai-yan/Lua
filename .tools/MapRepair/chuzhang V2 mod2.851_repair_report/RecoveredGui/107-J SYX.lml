@@ -1,0 +1,14 @@
+﻿name: J SYX
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_SYX_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:set udg_J_SY_NUM[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=0)

@@ -1,0 +1,33 @@
+﻿name: tmdjingong dead
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventDeath)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_tmdjingong_dead_Func001C())then)
+  - SetVariable (var:udg_R_FS_hantmdweia_num2, const:26)
+  - DisplayTextToForce (call:GetPlayersAll, const:|cFFFFFF99成功瓦解了山猪的进攻了，找张凡谈谈吧|r)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - PingMinimapLocForForce (call:GetPlayersAll, var:udg_SP, const:10.00)
+  - PlaySoundAtPointBJ (var:gg_snd_SecretFound, const:100, var:udg_SP, const:0)
+  - PolledWait (const:10)
+  - ShowUnitShow (var:gg_unit_czcs_08001)
+  - ShowUnitShow (var:gg_unit_czcs_08002)
+  - ShowUnitShow (var:gg_unit_czcs_08003)
+  - ShowUnitShow (var:gg_unit_czcs_08006)
+  - ShowUnitShow (var:gg_unit_czcs_08007)
+  - ShowUnitShow (var:gg_unit_czcs_08004)
+  - ShowUnitShow (var:gg_unit_czcs_08010)
+  - ShowUnitShow (var:gg_unit_czcs_08012)
+  - ShowUnitShow (var:gg_unit_czcs_08013)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:if(Trig_tmdjingong_dead_Func002C())then)
+  - CustomScriptCode (const:call ForForce(GetPlayersAll(),function Trig_tmdjingong_dead_Func002Func001A))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)

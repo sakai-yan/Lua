@@ -1,0 +1,17 @@
+﻿name: gattack
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventAttacked)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_gattack_Func001C())then)
+  - CustomScriptCode (const:set gg_trg_g=CreateTrigger())
+  - CustomScriptCode (const:call TriggerAddCondition(gg_trg_g,Condition(function Trig_g_Conditions)))
+  - CustomScriptCode (const:call TriggerAddAction(gg_trg_g,function Trig_g_Actions))
+  - CustomScriptCode (const:call TriggerRegisterUnitEvent(gg_trg_g,GetAttackedUnitBJ(),EVENT_UNIT_DAMAGED))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)

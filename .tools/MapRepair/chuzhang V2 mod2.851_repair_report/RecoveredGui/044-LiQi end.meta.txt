@@ -1,0 +1,8 @@
+﻿Trigger: LiQi end
+Mode: gui
+Action Count: 1
+Custom Script Count: 1
+Control Flow Count: 0
+
+Notes:
+- Preserved action function `Trig_LiQi_end_Actions` as a custom-script callback because it uses locals or early returns.

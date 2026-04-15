@@ -1,0 +1,10 @@
+﻿Trigger: yabiaoa
+Mode: custom-text
+Action Count: 33
+Custom Script Count: 21
+Control Flow Count: 12
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 21 custom-script lines and 12 control-flow markers across 33 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 21 custom-script lines and 12 control-flow markers across 33 actions.

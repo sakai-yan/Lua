@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Packer.Core\Packer.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Packer</AssemblyName>
+    <RootNamespace>Packer.WinForms</RootNamespace>
+    <Product>Packer</Product>
+    <Title>Packer</Title>
+    <Description>War3 Lua unit packer desktop tool</Description>
+    <PublishSingleFile>true</PublishSingleFile>
+    <EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+
+</Project>

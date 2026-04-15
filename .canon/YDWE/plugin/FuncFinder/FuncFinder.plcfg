@@ -1,0 +1,6 @@
+[Info]
+PluginName = 雪月函数检索插件
+[Load]
+Enable = 1
+Loader = FuncFinder.lua
+Dll    = FuncFinder.dll

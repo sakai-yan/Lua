@@ -1,0 +1,10 @@
+﻿Trigger: Z0
+Mode: custom-text
+Action Count: 16
+Custom Script Count: 11
+Control Flow Count: 3
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed in the 15-19 action mixed pseudo-GUI band with 11 custom-script lines and 3 control-flow markers across 16 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger stayed in the 15-19 action mixed pseudo-GUI band with 11 custom-script lines and 3 control-flow markers across 16 actions.

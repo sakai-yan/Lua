@@ -1,0 +1,62 @@
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+//******************************
+//*
+//* MAIN MENU BUTTONS
+//*
+//******
+	
+
+
+//µ◊≤„- Ù–‘√Ë ˆ±≥æ∞Õº-∏˙ÀÊ Û±Í
+ Frame "BACKDROP" "a" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Scrollbar-BackdropBackground.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.006,
+        BackdropBackgroundInsets 0.002 0.002 0.002 0.002,
+        BackdropEdgeFile  "UI\Widgets\ToolTips\Human\human-tooltip-border.blp",
+        BackdropBlendAll,
+		}
+
+Frame "TEXT" "b1" {
+    FrameFont "fonts.ttf", 0.0125, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYTOP,
+    FontFlags "FIXEDSIZE",
+    FontShadowOffset 0.0005 -0.0005,
+}
+
+ Frame "BACKDROP" "c" {
+        BackdropTileBackground,
+        BackdropBackground  "war3mapImported\bjt1.tga",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.006,
+        BackdropBackgroundInsets 0.002 0.002 0.002 0.002,
+        BackdropEdgeFile  "UI\Widgets\ToolTips\Human\human-tooltip-border.blp",
+        BackdropBlendAll,
+		}
+
+ Frame "BACKDROP" "d" {
+        BackdropTileBackground,
+        BackdropBackground  "war3mapImported\bjt2.tga",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.006,
+        BackdropBackgroundInsets 0.002 0.002 0.002 0.002,
+        BackdropEdgeFile  "UI\Widgets\ToolTips\Human\human-tooltip-border.blp",
+        BackdropBlendAll,
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+

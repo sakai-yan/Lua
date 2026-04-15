@@ -1,0 +1,13 @@
+[TriggerTypes]
+
+HeightType=1,0,0,变换类型,integer
+SpeedType=1,0,0,变速类型,integer
+
+[TriggerParams]
+
+HeightType_1=0,HeightType,1,速度
+HeightType_2=0,HeightType,2,时间
+
+SpeedType_1=0,SpeedType,0,匀速
+SpeedType_2=0,SpeedType,1,加速
+SpeedType_3=0,SpeedType,2,减速

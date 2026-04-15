@@ -1,0 +1,2 @@
+﻿Recovered 569 trigger definitions from `InitCustomTriggers()`.
+437 trigger(s) were emitted as custom-text triggers.

@@ -1,0 +1,1 @@
+XG_JAPI\Lua\UI\ToolTip\Item\fdf.fdf

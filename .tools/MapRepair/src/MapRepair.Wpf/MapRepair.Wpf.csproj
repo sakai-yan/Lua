@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\MapRepair.Core\MapRepair.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>MapRepair</AssemblyName>
+    <RootNamespace>MapRepair.Wpf</RootNamespace>
+    <Product>MapRepair</Product>
+    <Title>MapRepair</Title>
+    <Description>YDWE-friendly Warcraft III map repair tool</Description>
+    <PublishSingleFile>true</PublishSingleFile>
+    <EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+
+</Project>

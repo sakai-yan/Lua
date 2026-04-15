@@ -1,0 +1,9 @@
+﻿Trigger: J SYX X
+Mode: custom-text
+Action Count: 17
+Custom Script Count: 13
+Control Flow Count: 6
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed in the 15-19 action mixed pseudo-GUI band with 13 custom-script lines and 6 control-flow markers across 17 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger stayed in the 15-19 action mixed pseudo-GUI band with 13 custom-script lines and 6 control-flow markers across 17 actions.

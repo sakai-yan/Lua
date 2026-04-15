@@ -1,0 +1,345 @@
+diff --git a/src/App.tsx b/src/App.tsx
+index df9e378..b9efc09 100644
+--- a/src/App.tsx
++++ b/src/App.tsx
+@@ -47,100 +47,113 @@ type DraftJob = {
+ 
+ const defaultSettings: AppSettings = {
+   output_dir: "",
+   overwrite_mode: "rename",
+   accel_mode: "auto",
+   default_preset_id: "quality",
+   gif_width: 720,
+   gif_fps: 18,
+   video_repeat_count: 1,
+ };
+ 
+ function App() {
+   const [settings, setSettings] = useState<AppSettings>(defaultSettings);
+   const [drafts, setDrafts] = useState<DraftJob[]>([]);
+   const [jobs, setJobs] = useState<JobSummary[]>([]);
+   const [dragActive, setDragActive] = useState(false);
+   const [busyText, setBusyText] = useState("正在读取本地配置");
+   const [notice, setNotice] = useState<string | null>(null);
+   const [queueIdle, setQueueIdle] = useState(true);
+ 
+-  const refreshJobs = useEffectEvent(async () => {
++  const refreshJobs = async () => {
+     try {
+       const nextJobs = await listJobs();
+       startTransition(() => {
+         setJobs(nextJobs);
+       });
+     } catch (error) {
+       setNotice(String(error));
+     }
+-  });
++  };
+ 
+-  const persistSettings = useEffectEvent(async (nextSettings: AppSettings) => {
++  const persistSettings = async (nextSettings: AppSettings) => {
+     try {
+       const saved = await writeAppSettings(nextSettings);
+       setSettings(saved);
+     } catch (error) {
+       setNotice(String(error));
+     }
+-  });
++  };
+ 
+-  const handlePaths = useEffectEvent(async (paths: string[]) => {
++  const handlePaths = async (paths: string[]) => {
+     const uniquePaths = [...new Set(paths.filter(Boolean))];
+     if (uniquePaths.length === 0) {
+       return;
+     }
+ 
+     setBusyText(`正在探测 ${uniquePaths.length} 个文件`);
+-    const results = await Promise.allSettled(uniquePaths.map((path) => probeMedia(path)));
+-    const nextDrafts: DraftJob[] = [];
+-    const failures: string[] = [];
+-
+-    results.forEach((result) => {
+-      if (result.status === "fulfilled") {
+-        nextDrafts.push({
+-          id: crypto.randomUUID(),
+-          probe: result.value,
+-          trimStartMs: 0,
+-          trimEndMs: result.value.duration_ms,
+-        });
+-      } else {
+-        failures.push(String(result.reason));
+-      }
+-    });
+-
+-    startTransition(() => {
+-      setDrafts((previous) => {
+-        const byPath = new Map(previous.map((draft) => [draft.probe.path, draft]));
+-        for (const draft of nextDrafts) {
+-          byPath.set(draft.probe.path, draft);
++    try {
++      const results = await Promise.allSettled(
++        uniquePaths.map((path) => probeMedia(path)),
++      );
++      const nextDrafts: DraftJob[] = [];
++      const failures: string[] = [];
++
++      results.forEach((result) => {
++        if (result.status === "fulfilled") {
++          nextDrafts.push({
++            id: crypto.randomUUID(),
++            probe: result.value,
++            trimStartMs: 0,
++            trimEndMs: result.value.duration_ms,
++          });
++        } else {
++          failures.push(String(result.reason));
+         }
+-        return Array.from(byPath.values()).sort((left, right) =>
+-          left.probe.path.localeCompare(right.probe.path),
+-        );
+       });
+-    });
+ 
+-    setBusyText("");
+-    if (failures.length > 0) {
+-      setNotice(failures.join("；"));
++      startTransition(() => {
++        setDrafts((previous) => {
++          const byPath = new Map(previous.map((draft) => [draft.probe.path, draft]));
++          for (const draft of nextDrafts) {
++            byPath.set(draft.probe.path, draft);
++          }
++          return Array.from(byPath.values()).sort((left, right) =>
++            left.probe.path.localeCompare(right.probe.path),
++          );
++        });
++      });
++
++      if (failures.length > 0) {
++        setNotice(failures.join("；"));
++      }
++    } finally {
++      setBusyText("");
+     }
++  };
++
++  const refreshJobsFromEffect = useEffectEvent(() => {
++    void refreshJobs();
++  });
++
++  const handlePathsFromEffect = useEffectEvent((paths: string[]) => {
++    void handlePaths(paths);
+   });
+ 
+   useEffect(() => {
+     let disposed = false;
+ 
+     void (async () => {
+       try {
+         const [initialSettings, initialJobs] = await Promise.all([
+           readAppSettings(),
+           listJobs(),
+         ]);
+         if (disposed) {
+           return;
+         }
+         setSettings(initialSettings);
+         setJobs(initialJobs);
+         setBusyText("");
+       } catch (error) {
+         if (!disposed) {
+           setNotice(String(error));
+@@ -160,131 +173,136 @@ function App() {
+ 
+     void (async () => {
+       unlistenFns = await Promise.all([
+         listen<JobProgressEvent>("job_progress", (event) => {
+           if (!mounted) {
+             return;
+           }
+           setJobs((previous) =>
+             previous.map((job) =>
+               job.id === event.payload.job_id
+                 ? {
+                     ...job,
+                     progress: event.payload.progress,
+                     current_step: event.payload.current_step,
+                   }
+                 : job,
+             ),
+           );
+         }),
+         listen<JobStatusChangedEvent>("job_status_changed", () => {
+-          void refreshJobs();
++          if (!mounted) {
++            return;
++          }
++          refreshJobsFromEffect();
+         }),
+         listen<JobLogLineEvent>("job_log_line", (event) => {
+           if (!mounted) {
+             return;
+           }
+           setJobs((previous) =>
+             previous.map((job) =>
+               job.id === event.payload.job_id
+                 ? {
+                     ...job,
+                     logs: [...job.logs, event.payload.line].slice(-120),
+                   }
+                 : job,
+             ),
+           );
+         }),
+         listen<QueueIdleEvent>("queue_idle", (event) => {
+           if (!mounted) {
+             return;
+           }
+           setQueueIdle(event.payload.idle);
+-          void refreshJobs();
++          refreshJobsFromEffect();
+         }),
+         getCurrentWebviewWindow().onDragDropEvent((event) => {
+           if (event.payload.type === "enter") {
+             setDragActive(true);
+           } else if (event.payload.type === "leave") {
+             setDragActive(false);
+           } else if (event.payload.type === "drop") {
+             setDragActive(false);
+-            void handlePaths(event.payload.paths);
++            handlePathsFromEffect(event.payload.paths);
+           }
+         }),
+       ]);
+ 
+       if (!mounted) {
+         for (const unlisten of unlistenFns) {
+           unlisten();
+         }
+       }
+     })();
+ 
+     return () => {
+       mounted = false;
+       for (const unlisten of unlistenFns) {
+         unlisten();
+       }
+     };
+-  }, [handlePaths, refreshJobs]);
++  }, []);
+ 
+   const updateSettings = (patch: Partial<AppSettings>) => {
+-    setSettings((previous) => {
+-      const next = { ...previous, ...patch };
+-      void persistSettings(next);
+-      return next;
+-    });
++    const next = { ...settings, ...patch };
++    setSettings(next);
++    void persistSettings(next);
+   };
+ 
+   const pickFiles = async () => {
+     try {
+       const selected = await open({
+         multiple: true,
+         filters: supportedFileFilters,
+       });
+       if (!selected) {
+         return;
+       }
+       const paths = Array.isArray(selected) ? selected : [selected];
+       await handlePaths(paths);
+     } catch (error) {
+       setNotice(String(error));
+     }
+   };
+ 
+   const pickOutputDir = async () => {
+     try {
+       const selected = await open({
+         directory: true,
+         multiple: false,
+         defaultPath: settings.output_dir || undefined,
+       });
+       if (typeof selected === "string" && selected) {
+         updateSettings({ output_dir: selected });
+       }
+     } catch (error) {
+       setNotice(String(error));
+     }
+   };
+ 
+-  const updateDraftTrim = (draftId: string, field: "trimStartMs" | "trimEndMs", value: string) => {
++  const updateDraftTrim = (
++    draftId: string,
++    field: "trimStartMs" | "trimEndMs",
++    value: string,
++  ) => {
+     setDrafts((previous) =>
+       previous.map((draft) => {
+         if (draft.id !== draftId) {
+           return draft;
+         }
+         const nextMs = clampSecondsToMs(value, draft.probe.duration_ms);
+         return { ...draft, [field]: nextMs };
+       }),
+     );
+   };
+ 
+   const removeDraft = (draftId: string) => {
+     setDrafts((previous) => previous.filter((draft) => draft.id !== draftId));
+   };
+ 
+   const buildJobSpec = (draft: DraftJob): JobSpec => {
+     const trimRange =
+       draft.trimStartMs > 0 || draft.trimEndMs < draft.probe.duration_ms
+         ? {
+             start_ms: Math.min(draft.trimStartMs, draft.trimEndMs - 1),
+@@ -302,44 +320,41 @@ function App() {
+       accel_mode: settings.accel_mode,
+     };
+   };
+ 
+   const enqueueDraft = async (draft: DraftJob) => {
+     try {
+       await enqueueJob(buildJobSpec(draft));
+       setDrafts((previous) => previous.filter((item) => item.id !== draft.id));
+       await refreshJobs();
+     } catch (error) {
+       setNotice(String(error));
+     }
+   };
+ 
+   const enqueueAllDrafts = async () => {
+     for (const draft of drafts) {
+       await enqueueDraft(draft);
+     }
+   };
+ 
+-  const runJobAction = async (
+-    action: "cancel" | "retry" | "open",
+-    jobId: string,
+-  ) => {
++  const runJobAction = async (action: "cancel" | "retry" | "open", jobId: string) => {
+     try {
+       if (action === "cancel") {
+         await cancelJob(jobId);
+       } else if (action === "retry") {
+         await retryJob(jobId);
+       } else {
+         await openOutput(jobId);
+       }
+       await refreshJobs();
+     } catch (error) {
+       setNotice(String(error));
+     }
+   };
+ 
+   const activeCount = jobs.filter((job) =>
+     ["queued", "probing", "running", "muxing"].includes(job.status),
+   ).length;
+   const finishedCount = jobs.filter((job) =>
+     ["succeeded", "failed", "cancelled"].includes(job.status),
+   ).length;

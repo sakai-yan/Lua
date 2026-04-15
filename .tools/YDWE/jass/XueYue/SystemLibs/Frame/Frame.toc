@@ -1,0 +1,3 @@
+ui\framedef\glue\battlenettemplates.fdf
+ui\framedef\glue\standardtemplates.fdf
+

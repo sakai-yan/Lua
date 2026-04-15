@@ -1,0 +1,839 @@
+﻿udg_HERO: unit array
+udg_FX: real array
+udg_ZX: real array
+udg_BUFF_Z: real array
+udg_BUFF_F: real array
+udg_LV_YL: integer array
+udg_SP: location
+udg_w3v: gamecache
+udg_LVJ: real array
+udg_T1: item
+udg_GROUP: group
+udg_GROUP2: group
+udg_z_X: real array
+udg_z_Y: real array
+udg_R_FS_hantmdweia: boolean = false
+udg_R_FS_hantmdweia_num1: integer = 0
+udg_R_FS_hantmdweia_num2: integer = 1
+udg_R_FS_hantmdweia_type: integer array
+udg_R_FS_hantmdweia_player: boolean array
+udg_RS_Unit: unit array
+udg_RS_CurrentEffect: effect array
+udg_RS_XVelocity: real array
+udg_RS_YVelocity: real array
+udg_RS_ZVelocity: real array
+udg_RS_NextNode: integer array
+udg_RS_PreviousNode: integer array
+udg_RS_LastNode: integer = 0
+udg_RS_RecycleNodes: integer array
+udg_RS_RecycleableNodesNumber: integer = 0
+udg_RS_NodeNumber: integer = 0
+udg_RS_OriginalCaster: unit array
+udg_RS_ActivationTime: real array
+udg_RS_CurrentZ: real array
+udg_RS_MapMinX: real = 0
+udg_RS_MapMaxX: real = 0
+udg_RS_MapMinY: real = 0
+udg_RS_MapMaxY: real = 0
+udg_RS_ZLoc: location
+udg_RS_TempGroup: group
+udg_RS_TempGroup2: group
+udg_RS_HealthDamage: real array
+udg_RS_ManaDamage: real array
+udg_RS_SpellCounter: integer = 0
+udg_SD_tmd_34_Caster: unit
+udg_SD_tmd_34_Effect: string = 
+udg_SD_tmd_34_Point: location
+udg_Temp_tmd_34_Point: location
+udg_SD_tmd_34_Integer: integer = 0
+udg_SD_tmd_34_Real: real = 0
+udg_SD_tmd_34_Offset: location
+udg_guiTempPoint1: location
+udg_guiTempPoint2: location
+udg_guiHero: unit array
+udg_guiDarkOrigin: unit array
+udg_guiDarkDummyGroup: group array
+udg_guiCageAnimHoldTimer: timer array
+udg_guiCageAnimLock: boolean array
+udg_guiPickedNail: unit array
+udg_pzbarrier: unit array
+udg_pzWarper: unit
+udg_pzWarperCastPoint: location
+udg_EL_Caster: unit
+udg_EL_Owner: player
+udg_EL_Ability_Level: integer = 0
+udg_EL_Targeted_Location: location
+udg_EL_Damage_Area_of_Effect: real = 0
+udg_EL_Dummy_Ability_Ligtning: integer = 0
+udg_EL_Base_Number_of_Ligtnings: integer = 0
+udg_EL_Total_Number_of_Ligtnings: integer = 0
+udg_EL_Damage_Group: group
+udg_EL_Loop_Location: location
+udg_EL_Base_Damage: real = 0
+udg_EL_Total_Damage: real = 0
+udg_EL_Seek_Area_of_Effect: real = 0
+udg_EL_Seek_Group: group
+udg_EL_Seek_Unit: unit
+udg_EL_Dummy_Ability_Clap: integer = 0
+udg_PW_tmd_22_Integer: integer array
+udg_PW_tmd_22_Damage: real array
+udg_PW_tmd_22_TargetPoint: location array
+udg_PW_tmd_22_CasterPoint: location array
+udg_PW_tmd_22_Real: real array
+udg_PW_tmd_22_Unit: unit array
+udg_PW_tmd_22_TempPoint: location array
+udg_PW_tmd_22_TempGroup: group array
+udg_PW_tmd_22_WaveInteger: integer array
+udg_PW_tmd_22_Index: integer array
+udg_HL_TargetPoint: location
+udg_HL_Level: integer = 0
+udg_HL_Range: real = 0
+udg_HL_Heal: real = 0
+udg_HL_Damage: real = 0
+udg_HL_AttackType: attacktype
+udg_HL_DamageType: damagetype
+udg_HL_DestroyTrees: boolean = false
+udg_HL_TempPoint: location
+udg_HL_TempGroup: group
+udg_HL_Loop: integer = 0
+udg_dummy_pttmd: location
+udg_disttmd: real = 0
+udg_tar_pttmd: location
+udg_tar_utmd: unit
+udg_dum_utmd: unit
+udg_angtmd: real = 0
+udg_tar_pttmd2: location
+udg_angtmd2: real = 0
+udg_exp_rtmd: real = 0
+udg_angtmd3: real = 0
+udg_lvltmd: integer = 0
+udg_IB_tmppoint: location
+udg_IB_tmppoint2: location
+udg_IB_ang: real = 0
+udg_IB_ang_add: real = 0
+udg_IB_tmppoint3: location
+udg_IB_tmpeff: effect
+udg_SS_Number: real array
+udg_Sheild_How_Many: integer = 0
+udg_SS_Times: integer = 0
+udg_SS_Skip: integer = 0
+udg_SS_Rotate_Off: boolean array
+udg_SS_Hero: unit array
+udg_SS_Point: location array
+udg_SS_Dummy: unit array
+udg_SS_Special: effect array
+udg_SS_Angle: real array
+udg_SS_Countdown: integer array
+udg_SS: integer = 0
+udg_SS_Angle_Speed_Rotation: real array
+udg_SS_Group: group array
+udg_SS_Unit: unit array
+udg_SS_Knockback_Off: boolean array
+udg_SS_Speed: real array
+udg_SS_Distance: real array
+udg_SS_Formula: real array
+udg_SS_Damage: real array
+udg_SS_LEVEL: integer = 0
+udg_BtmdE_integer: integer = 0
+udg_BtmdE_array: integer = 0
+udg_BtmdE_caster: unit array
+udg_BtmdE_dummy: unit array
+udg_BtmdE_angle: real array
+udg_BtmdE_point1: location array
+udg_tmd_11_bounces: integer array
+udg_BtmdE_height: real array
+udg_BtmdE_MAX: integer array
+udg_BtmdE_array2: integer = 0
+udg_BtmdE_move: location array
+udg_BtmdE_speed: integer array
+udg_BtmdE_target: location array
+udg_tmd_11_Formula: integer array
+udg_tmd_11_loop_off: boolean array
+udg_BtmdE_distance: real array
+udg_tmd_11_first_integer: integer = 0
+udg_tmd_11_bounces_ran: integer array
+udg_cast_tmd_11_angle: real array
+udg_tmd_11_damage: integer array
+udg_BtmdE_group: group array
+udg_tmd_11_damage1: integer array
+udg_MapHostile: location
+udg_MapGroup: group
+udg_Times: integer array
+udg_Caster: unit array
+udg_Pointtmdria: location array
+udg_Targeted: unit array
+udg_Angel: real array
+udg_SPtmdriaeed: real array
+udg_Arrow: unit array
+udg_ARROWS: group
+udg_Loop: integer = 0
+udg_Knock: integer array
+udg_Distance: real array
+udg_Formula: real array
+udg_TARGETED: group
+udg_Collision: group array
+udg_SPtmdriaeedBlast: group array
+udg_RAPED: unit
+udg_Distance_fragment: real array
+udg_Damage_per_fragment: real array
+udg_Create_point: location array
+udg_Damage_formula: real array
+udg_SPtmdriaecial_effect1: string array
+udg_SPtmdriaecial_effect2: string array
+udg_SPtmdriaecial_effect3: string array
+udg_MBLevel: integer array
+udg_MB_Caster: unit array
+udg_MB_Point: location array
+udg_MB_Speed: real array
+udg_MB_Distance: real array
+udg_MB_Formula: real array
+udg_MB_Damage: real array
+udg_MB_Group: group array
+udg_MB_Loop: integer = 0
+udg_MB_Center: location array
+udg_MB_HOW: integer array
+udg_MB_Switch: integer array
+udg_MB_Eyecandy1: real array
+udg_OnorOff: group
+udg_Times2: integer = 0
+udg_WB_Hero: unit array
+udg_Times3: integer = 0
+udg_WB_Point: location array
+udg_WB_Distance: real array
+udg_WB_Loop: integer = 0
+udg_WB_angel: real array
+udg_XWB: location array
+udg_WB_X: location array
+udg_WB_Group: group array
+udg_Freezed: group array
+udg_Reached_D: real array
+udg_WB_Speed: real array
+udg_WB_Damage: real array
+udg_WB_ON: integer array
+udg_WB: group
+udg_Times4: integer = 0
+udg_GJ_Caster: unit array
+udg_GJ_P: location array
+udg_GJ_TARG: location array
+udg_GJ_Distance: real array
+udg_GEYSERS: group
+udg_GJ_Switch: integer array
+udg_GJ: integer = 0
+udg_GJ_D_Switch: real array
+udg_GJ_YesorNO: boolean array
+udg_GJ_Group: group array
+udg_GJ_Timer: integer array
+udg_GJ_Speed: real array
+udg_GJ_Max: location array
+udg_GJ_Division: real array
+udg_MB_Coutbuff: integer array
+udg_Times5: integer = 0
+udg_SPtmdria_Point: location array
+udg_SPtmdria_Caster: unit array
+udg_SPtmdria_Target: unit array
+udg_SPtmdria_Chain: unit array
+udg_SPtmdria: group
+udg_SPtmdria_Jumps: integer array
+udg_Loop_SP: integer = 0
+udg_SPtmdria_Group: group array
+udg_Times6: integer = 0
+udg_DS_TAR: unit array
+udg_DS: group
+udg_DS_High: real array
+udg_DSs: integer = 0
+udg_DS_YA: boolean array
+udg_DS_P: location array
+udg_J_YXZ_UNIT: unit array
+udg_J_YXZ_UNIT2: unit array
+udg_J_YXZ: integer = 0
+udg_Jbg6411111: unit
+udg_Kbg64: unit
+udg_baguazhang1: effect array
+udg_baguazhang2: effect array
+udg_R2bg64222: integer = 0
+udg_dian: location
+udg_shu: integer = 0
+udg_xiaoguo: effect
+udg_jituidanwei: unit array
+udg_jituidanweizu: group
+udg_jituijiaodu1: real array
+udg_jituijiaodu2: real = 0
+udg_jituidiaodu3: real array
+udg_jituipoint: location
+udg_jiduishuzi: integer = 0
+udg_targetpoint: location array
+udg_movepoint: location array
+udg_jituixiaoguo: effect
+udg_Axf11: unit
+udg_Bxf22: unit
+udg_QQxf33: unit array
+udg_Q1xf66: effect array
+udg_ZZxf55: integer = 0
+udg_SSxf44: real = 0
+udg_LOST_ITEM: integer array
+udg_i: integer = 0
+udg_p: location array
+udg_Cache: gamecache
+udg_AA: boolean array
+udg_point: location array
+udg_XIA: integer array
+udg_MATCH_NUM: integer = 0
+udg_SKILL_f: integer array
+udg_FK: real array
+udg_ZK: real array
+udg_GROUP_FIRE: group array
+udg_P: location
+udg_J_bc: rect
+udg_LV_A: real array
+udg_WL: real = 0
+udg_ITEM_BAG_A: unit array
+udg_ITEM_BAG_B: unit array
+udg_ITEM_BAG_C: unit array
+udg_itemA: item array
+udg_itemB: item array
+udg_Nhong: integer = 0
+udg_itemC: item array
+udg_ITEM_bag: unit array
+udg_camera_T: boolean array
+udg_hero_point: integer array
+udg_TIli_point: integer array
+udg_J_HP_distance: real = 0
+udg_J_HP_distance2: real = 0
+udg_J_HP_N: integer = 0
+udg_J_HP_Degree: real = 0
+udg_J_HP_POINT: location
+udg_J_HP_unit: unit
+udg_SP2: location
+udg_J_HP_unit2: unit
+udg_SP3: location
+udg_hero_window: timerdialog array
+udg_M_TXM: boolean array
+udg_M_TURE: boolean array
+udg_MTXM_SET: dialog array
+udg_MFXM_settle1: button array
+udg_MFXM_settle2: button array
+udg_JX: real array
+udg_DX: real array
+udg_QX: real array
+udg_GX: real array
+udg_YX: real array
+udg_JX_N: real array
+udg_QX_N: real array
+udg_GX_N: real array
+udg_FX_N: real array
+udg_DX_N: real array
+udg_YX_N: real array
+udg_SpellCount: integer array
+udg_Skillup_FX: integer array
+udg_Exp_FX_skill: integer array
+udg_FX_lv: integer array
+udg_JX_lv: integer array
+udg_QX_lv: integer array
+udg_GX_lv: integer array
+udg_DX_lv: integer array
+udg_Exp_QX_skill: integer array
+udg_Exp_JX_skill: integer array
+udg_Exp_GX_skill: integer array
+udg_Exp_DX_skill: integer array
+udg_ITEM_FX: integer array
+udg_ITEM_DX: integer array
+udg_ITEM_QX: integer array
+udg_ITEM_JX: integer array
+udg_ITEM_GX: integer array
+udg_Skillup_DX: integer array
+udg_Skillup_QX: integer array
+udg_Skillup_JX: integer array
+udg_Skillup_GX: integer array
+udg_M_YJM: boolean array
+udg_MYJM_SET: dialog array
+udg_MYJM_settle1: button array
+udg_MYJM_settle2: button array
+udg_M_SLS: boolean array
+udg_MSLS_SET: dialog array
+udg_MSLS_settle1: button array
+udg_MSLS_settle2: button array
+udg_M_SNG: boolean array
+udg_MSNG_SET: dialog array
+udg_MSNG_settle1: button array
+udg_MSNG_settle2: button array
+udg_J_ls_unit: unit array
+udg_J_ls_type: integer array
+udg_PLAYGROUP: group array
+udg_PLAYGROUP_TURE: boolean array
+udg_PLAY_GROUP: dialog array
+udg_PLAY_GROUP_set1: button array
+udg_PLAY_GROUP_set2: button array
+udg_PLAY_GROUP_leader: unit array
+udg_PLAYGROUPoff__TURE: boolean array
+udg_PLAYGROUP_top: boolean array
+udg_hero_time: timer array
+udg_J_ZB_SP: location array
+udg_J_ZB_group: group array
+udg_J_ZB_NUM: integer array
+udg_LIAN_JI: integer array
+udg_LJ_NUM: integer array
+udg_W_BX: real array
+udg_CS: real = 0
+udg_BUFF_WL: unit array
+udg_BUFF_JL: unit array
+udg_MS_duikang: boolean = false
+udg_PP: location
+udg_M_GM: boolean array
+udg_MGM_SET: dialog array
+udg_MGM_settle2: button array
+udg_MGM_settle1: button array
+udg_MPDM_SET: dialog array
+udg_MPDM_settle1: button array
+udg_MPDM_settle2: button array
+udg_M_PDM: boolean array
+udg_J_SY_NUM: integer array
+udg_J_SY_SP: location array
+udg_J_SY_group: group array
+udg_R_chulaizadao: boolean array
+udg_R_SX_CZ1: boolean array
+udg_R_SX_CZ2: boolean array
+udg_player: force array
+udg_R_CJ_shenggancao1: boolean array
+udg_R_CJ_shenggancao2: boolean array
+udg_R_CJ_shenggancao_num: integer array
+udg_R_shenggancao_p1: location array
+udg_R_CJ_shenggancao3: boolean array
+udg_ITEM_E: integer array
+udg_ITEM_D1: integer array
+udg_ITEM_D2: integer array
+udg_ITEM_C1: integer array
+udg_ITEM_C2: integer array
+udg_R_LX_yezhuchengqun1: boolean array
+udg_R_LX_yezhuchengqun2: boolean array
+udg_R_LX_yezhuchengqun_num: integer array
+udg_R_LX_yezhuchengqun_num2: integer array
+udg_R_LX_yezhuchengqun3: boolean array
+udg_R_SX_zhangfan: boolean array
+udg_R_FS_hanwei: boolean = false
+udg_R_FS_hanwei_num1: integer = 0
+udg_R_FS_hanwei_num2: integer = 1
+udg_R_FS_hanwei_type: integer array
+udg_R_FS_hanwei_player: boolean array
+udg_R_CJ_qingzao1: boolean array
+udg_R_CJ_qingzao3: boolean array
+udg_R_CJ_qingzao2: boolean array
+udg_R_CJ_qingzao_num: integer array
+udg_R_qingzao_p1: location array
+udg_R_xiufushizhen1: boolean array
+udg_R_xiufushizhen2: boolean array
+udg_R_xiufushizhen3: boolean array
+udg_R_xiufushizhen_num1: integer array
+udg_R_xiufushizhen_num2: integer array
+udg_R_xiufushizhen_num3: integer array
+udg_R_xiufushizhen_p1: location array
+udg_ITEM_JEWEL_E: integer array
+udg_R_xunzhaotongmen1: boolean array
+udg_R_xunzhaotongmen2: boolean array
+udg_R_xunzhaotongmen3: boolean array
+udg_R_xunzhaotongmen4: boolean array
+udg_R_xunzhaotongmen5: boolean array
+udg_HERO_SET: dialog array
+udg_HERO_SET_1: button array
+udg_HERO_SET_4: button array
+udg_HERO_SET_2: button array
+udg_HERO_SET_3: button array
+udg_HERO_SET_6: button array
+udg_HERO_SET_5: button array
+udg_HERO_SET_7: button array
+udg_M_FHM: boolean array
+udg_HERO_SET_8: button array
+udg_M_QMF: boolean array
+udg_MDX_set_1: button array
+udg_MDX_set_4: button array
+udg_MDX_set_2: button array
+udg_MDX_set_3: button array
+udg_MDX_SET: dialog array
+udg_R_qingchushuiguai1: boolean array
+udg_qingchushuiguai2: boolean array
+udg_R_qingchushuiguai2: boolean array
+udg_R_qingchushuiguai_num: integer array
+udg_R_CJ_yaohua1: boolean array
+udg_R_CJ_yaohua2: boolean array
+udg_R_CJ_yaohua_num: integer array
+udg_R_yaohua_p1: location array
+udg_R_CJ_yaohua3: boolean array
+udg_R_CJ_tuiling1: boolean array
+udg_R_CJ_tuiling2: boolean array
+udg_R_CJ_tuiling_a1: boolean array
+udg_R_CJ_tuiling_a2: boolean array
+udg_R_CJ_tuiling_a3: boolean array
+udg_R_CJ_tuiling3: boolean array
+udg_R_xiongpi1: boolean array
+udg_R_xiongpi4: boolean array
+udg_R_xiongpi2: boolean array
+udg_R_xiongpi3: boolean array
+udg_R_xiongpi_num1: integer array
+udg_R_xiongpi_num2: integer array
+udg_R_tamuzhigen1: boolean array
+udg_R_tamuzhigen2: boolean array
+udg_R_tamuzhigen3: boolean array
+udg_R_tamuzhigen_num: integer array
+udg_R_tamuzhigen_p1: location array
+udg_R_jinghua1: boolean array
+udg_R_jinghua2: boolean array
+udg_R_jinghua3: boolean array
+udg_R_jinghua_num1: integer array
+udg_R_jinghua_num2: integer array
+udg_R_jinghua4: boolean array
+udg_R_ZJ_xiaotong1: boolean = false
+udg_R_ZJ_xiaotong2: boolean = false
+udg_R_ZJ_xiaotong3: boolean array
+udg_R_xiongcan1: boolean array
+udg_R_xiongcan2: boolean array
+udg_R_xiongcan3: boolean array
+udg_yabiao1: boolean array
+udg_yabiaoA: boolean array
+udg_yabiaoa: boolean array
+udg_yabiaoc: boolean array
+udg_MP_nianhuoshi1: boolean array
+udg_MP_nianhuoshi2: boolean array
+udg_MP_nianhuoshi3: boolean array
+udg_MP_nianhuoshi_NUM1: integer array
+udg_MP_nianhuoshi_NUM2: integer array
+udg_MP_nianhuoshi4: boolean array
+udg_MP_nianhuoshi6: boolean array
+udg_MP_nianhuoshi5: boolean array
+udg_MP_nianhuoshi7: boolean array
+udg_J_XT_NUM: integer array
+udg_J_XT_group: group array
+udg_J_XT_SP: location array
+udg_MP_jianhao1: boolean array
+udg_MP_jianhao2: boolean array
+udg_MP_jianhao3: boolean array
+udg_MP_jianhao4: boolean array
+udg_MP_jianhao5: boolean array
+udg_MP_jianhao_NUM1: integer array
+udg_MP_jianhao_NUM2: integer array
+udg_MP_shengming1: boolean array
+udg_MP_shengming_guanzi: boolean array
+udg_MP_shengming2: boolean array
+udg_MP_shengming3: boolean array
+udg_MP_shengming4: boolean array
+udg_MP_shengming5: boolean array
+udg_MP_shengming6: boolean array
+udg_MP_shengming_NUM2: integer array
+udg_MP_shengming_NUM1: integer array
+udg_MP_shengming_p1: location array
+udg_MP_shengming_p2: location array
+udg_MP_shengming_hero: unit array
+udg_MP_shengming_INT: integer = 0
+udg_zhizao_lv: integer array
+udg_Exp_zhizuo_skill: integer array
+udg_Skillup_zhizao: integer array
+udg_ITEM_D3: integer array
+udg_ITEM_C3: integer array
+udg_MP_qiaomu1: boolean array
+udg_MP_qiaomu_niao: boolean array
+udg_MP_qiaomu_zhu: boolean array
+udg_MP_qiaomu4: boolean array
+udg_MP_qiaomu5: boolean array
+udg_FileName: string = 
+udg_File: string array
+udg_War3Path: string array
+udg_hghghgh: string = 
+udg_pid: integer array
+udg_j: integer = 0
+udg_Save: boolean array
+udg_ListFile: string array
+udg_skill: integer array
+udg_item: integer array
+udg_item_num: integer array
+udg_T: integer = 0
+udg_ZZ_1: integer array
+udg_group_off: boolean array
+udg_ZZ_0: integer array
+udg_s: string array
+udg_date: integer array
+udg_g: integer = 140
+udg_MDX_set_5: button array
+udg_getitem: item array
+udg_HERO_SET_9: button array
+udg_hero_SP: location array
+udg_lv_num: integer array
+udg_P_STR: integer array
+udg_P_INT: integer array
+udg_P_AGI: integer array
+udg_EXP: integer = 0
+udg_PLAYGROUP_lv: integer array
+udg_B: integer array
+udg_KUANG: integer = 0
+udg_R_xiezicongsheng1: boolean array
+udg_R_xiezicongsheng2: boolean array
+udg_R_xiezicongsheng_num: integer array
+udg_R_CJ_gongju1: boolean array
+udg_R_CJ_gongju_T: boolean array
+udg_R_CJ_gongju2: boolean array
+udg_MP_zhoushi1: boolean array
+udg_MP_zhoushi2: boolean array
+udg_MP_zhoushi3: boolean array
+udg_MP_zhoushi4: boolean array
+udg_MP_zhoushi5: boolean array
+udg_MP_zhoushi_num: integer array
+udg_MP_zhoushi6: boolean array
+udg_MP_zhoushi7: boolean array
+udg_index: integer array
+udg_GROUP_poison: group array
+udg_MP_shuimai1: boolean array
+udg_MP_shuimai_num: integer array
+udg_MP_shuimai2: boolean array
+udg_MP_shuimai3: boolean array
+udg_MP_shuimai4: boolean array
+udg_MP_shuimai_num2: integer array
+udg_MP_qijian1: boolean array
+udg_MP_qijian2: boolean array
+udg_MP_qijian3: boolean array
+udg_MP_qijian4: boolean array
+udg_MP_qijian_true: boolean array
+udg_MP_qijian_num: integer array
+udg_MP_qijian5: boolean array
+udg_tempitem: item array
+udg_zuoqi: unit array
+udg_ITEM_BAG_D: unit array
+udg_ITEM_BAG_E: unit array
+udg_itemE: item array
+udg_itemD: item array
+udg_jinjixinjian1: boolean array
+udg_jinjixinjian2: boolean array
+udg_tiaocha1: boolean array
+udg_tiaocha2: boolean array
+udg_tiaocha3: boolean array
+udg_tiaocha4: boolean array
+udg_tiaocha5: boolean array
+udg_zhiguliangyao1: boolean array
+udg_zhiguliangyao2: boolean array
+udg_zhiguliangyao3: boolean array
+udg_zhiguliangyao4: boolean array
+udg_R_zhigu_p1: location array
+udg_zhigu_num: integer array
+udg_shiwusucai1: boolean array
+udg_shiwusucai2: boolean array
+udg_shiwusucai_num: integer array
+udg_tongyangbaonu1: boolean array
+udg_tongyangbaonu2: boolean array
+udg_tongyangbaonu_num: integer array
+udg_miaozhaizhimen1: boolean array
+udg_miaozhaizhimen2: boolean array
+udg_miaozhaizhimen3: boolean array
+udg_miaozhaizhimen4: boolean array
+udg_miaozhaizhimen_num1: integer array
+udg_miaozhaizhimen_num2: integer array
+udg_miaozhaizhimen_num3: integer array
+udg_Miaojiangzhanshen1: boolean array
+udg_Miaojiangzhanshen2: boolean array
+udg_Miaojiangzhanshen3: boolean array
+udg_hero_SP_N: integer array
+udg_PLAY_GROUP_NO: integer array
+udg_PLAY_GROUP_player: force array
+udg_K: integer = 0
+udg_fengyin1: boolean = false
+udg_fengyin2: boolean = false
+udg_fengyin3: boolean array
+udg_fengyin_num1: integer = 0
+udg_fengyin_num2: integer = 0
+udg_ITEM_CL1: unit array
+udg_GOLD: integer array
+udg_G: integer = 0
+udg_TIME: integer array
+udg_J_PH_Degree: real array
+udg_J_PH_distance: real array
+udg_J_PH_distance2: real array
+udg_J_PH_N: integer array
+udg_J_PH_POINT: location array
+udg_J_PH_unit: unit array
+udg_J_PH_unit2: unit array
+udg_SP_PH: location array
+udg_J_PH_TRUE: boolean array
+udg_J_HP: integer = 0
+udg_SP_PH2: location array
+udg_SP_FUHUO: location
+udg_MDX_set_6: button array
+udg_MDX_set_7: button array
+udg_MDX_set_8: button array
+udg_MP_jianhao_NUM3: integer array
+udg_MP_shudao1: boolean array
+udg_MP_shudao2: boolean array
+udg_MP_shudao3: boolean array
+udg_MP_shudao4: boolean array
+udg_MP_shudao5: boolean array
+udg_MP_shudao_num1: integer array
+udg_MP_shudao6: boolean array
+udg_MP_jianxuan1: boolean array
+udg_MP_jianxuan5: boolean array
+udg_MP_jianxuan2: boolean array
+udg_MP_jianxuan3: boolean array
+udg_MP_jianxuan4: boolean array
+udg_MP_jianxuan6: boolean array
+udg_MP_jianxuan7: boolean array
+udg_MP_jianxuan_win: timerdialog
+udg_MP_jianxuan_time: timer
+udg_MP_jianxuan_unit: unit
+udg_MP_jianxuan8: boolean array
+udg_MP_jianxuan9: boolean array
+udg_MP_jianxuan10: boolean array
+udg_MP_jianxuan_num: integer array
+udg_lingshou: integer array
+udg_J_ZH_LV: integer = 0
+udg_WOOD: integer array
+udg_GXSQ: boolean array
+udg_MP_jingang1: boolean array
+udg_MP_tailuo1: boolean array
+udg_MP_jingang_num: integer array
+udg_fuben2: integer = 0
+udg_niudangzhiyou1: boolean array
+udg_niudangzhiyou2: boolean array
+udg_niudangzhiyou_num: integer array
+udg_MP_daokuang1: boolean array
+udg_MP_daokuang_num1: integer array
+udg_MP_daokuang2: boolean array
+udg_MP_daokuang_num2: integer array
+udg_MP_daokuang3: boolean array
+udg_MP_xuedao1: boolean array
+udg_MP_xuedao2: boolean array
+udg_MP_xuedao3: boolean array
+udg_MP_xuedao_num1: integer array
+udg_MP_xuedao_num2: integer array
+udg_MP_xuedao4: boolean array
+udg_MP_daokuang4: boolean array
+udg_MP_guiyan1: boolean array
+udg_MP_guiyan2: boolean array
+udg_MP_guiyan3: boolean array
+udg_MP_guiyan4: boolean array
+udg_MP_guiyan_num1: integer array
+udg_MP_guiyan_num2: integer array
+udg_shulian_time: timer array
+udg_LVsLV: real = 0
+udg_GROUP_poison_big: group array
+udg_GROUP_KF: group array
+udg_SP4: location
+udg_FY_J_GXJJ_UNIT: unit array
+udg_GROUP_CY: group array
+udg_J_CY_unit: unit array
+udg_SP_CY: location array
+udg_SP_CY_UNMOOV: location array
+udg_J_CY_P: location array
+udg_J_d: real array
+udg_J_d2: real array
+udg_J_CY_N: integer array
+udg_J_D: real array
+udg_J_CY_TRUE: boolean array
+udg_CY: integer = 0
+udg_SP_CY2: location array
+udg_J_JL_NUM: integer array
+udg_J_JL_SP: location array
+udg_J_JL_group: group array
+udg_J_SFJZ_num: integer array
+udg_J_SFJZ_unit: unit array
+udg_J_SFJZ_P: location array
+udg_J_SFJZ_group: group array
+udg_J_SFJZ: unit array
+udg_J_FLFZ_UNIT: unit array
+udg_MDX_set_9: button array
+udg_MDX_set_10: button array
+udg_MDX_set_13: button array
+udg_MDX_set_14: button array
+udg_Fuhuo: integer = 0
+udg_ZB: integer = 0
+udg_SYX: integer = 0
+udg_FD: integer = 0
+udg_WDSX: integer = 0
+udg_RJ: integer = 0
+udg_ZBZ: integer = 0
+udg_XTH: integer = 0
+udg_JLLB: integer = 0
+udg_FLFZ: integer = 0
+udg_SFJZ2: integer = 0
+udg_R_gululong1: boolean array
+udg_R_gululong2: boolean array
+udg_R_gululong_num: integer array
+udg_ZZ_TY: integer array
+udg_YF_js: integer array
+udg_SL: integer array
+udg_SYX2: integer = 0
+udg_T_TZ1: boolean array
+udg_T_TZ2: boolean array
+udg_T_TZ_PL: integer array
+udg_T_TZ3: boolean array
+udg_T_TZ4: boolean array
+udg_T_TZ5: boolean array
+udg_T_TZ6: boolean array
+udg_T_TZ7: boolean array
+udg_T_TZ8: boolean array
+udg_T_TZ9: boolean array
+udg_T_TZ10: boolean array
+udg_T_TZ11: boolean array
+udg_T_TZ13: boolean array
+udg_T_TZ14: boolean array
+udg_T_TZ15: boolean array
+udg_T_TZ16: boolean array
+udg_T_TZ17: boolean array
+udg_T_TZ18: boolean array
+udg_T_TZ19: boolean array
+udg_T_TZ20: boolean array
+udg_T_TZ21: boolean array
+udg_T_TZ22: boolean array
+udg_SLT: integer array
+udg_chenghao: string array
+udg_name: string array
+udg_CH: integer array
+udg_MOVEangle: real array
+udg_C_JT1: real array
+udg_C_JT2: real array
+udg_C_JT3: real array
+udg_CCC: unit array
+udg_HUODONG: timer
+udg_HUODONG_WIN: timerdialog
+udg_BB: integer array
+udg_BB_TYPE: integer array
+udg_BB_type: integer array
+udg_BB_LV: integer array
+udg_HERO_BB: unit array
+udg_BB_STR: integer array
+udg_BB_AGI: integer array
+udg_BB_INT: integer array
+udg_BB_hp: integer array
+udg_BB_HP: integer array
+udg_BB_skill: integer array
+udg_BB_SKILL1: integer array
+udg_BB_SKILL3: integer array
+udg_BB_SKILL2: integer array
+udg_BB_exp: integer array
+udg_BB_SKILL: integer array
+udg_BB_ITEM: integer array
+udg_BB_ITEM_NUM: integer array
+udg_V_00: integer array
+udg_BB_TURE: boolean array
+udg_BBtime: integer = 0
+udg_BB_X: real array
+udg_BB_Y: real array
+udg_PLAY_NUM: integer = 0
+udg_TT: real array
+udg_hero_time2: timer array
+udg_hero_window2: timerdialog array
+udg_tie: rect array
+udg_tong: rect array
+udg_li: rect array
+udg_tree: rect array
+udg_ITEM_BB: integer array
+udg_FZB: integer = 0
+udg_BLSY_unit: unit array
+udg_BLSY: integer array
+udg_BBtime2: integer = 0
+udg_LiQi: integer array
+udg_HERO_MO_TIME: timer array
+udg_HERO_MO_TIMEWIN: timerdialog array
+udg_HREO_MO_TURE: boolean array
+udg_EXP_HERO: integer array
+udg_EXP_HERO_BB: integer array
+udg_ITEM_FB: integer array
+udg_BB_SKILL4: integer array
+udg_ITEM_fb: item array
+udg_a: integer array
+udg_b: integer array
+udg_c: integer array
+udg_ITEM_fb_ps: real array
+udg_EX: integer = 0

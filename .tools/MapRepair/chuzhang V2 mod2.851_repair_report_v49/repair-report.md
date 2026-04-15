@@ -1,0 +1,719 @@
+﻿# Repair Report
+
+- 输入地图：`D:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\chuzhang V2 mod2.851.w3x`
+- 输出地图：`D:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\chuzhang V2 mod2.851_repaired_v49.w3x`
+- 模板仓库根：`D:\Software\魔兽地图编辑\[0]新整合编辑器\Lua`
+- 回退等级：`None`
+
+## 保留文件
+
+- `195dca6f.blp`
+- `1ec19c6d.blp`
+- `1Hswd_02.blp`
+- `1Hswd_03.blp`
+- `20048108175471.mdx`
+- `2348b670.blp`
+- `2348b870.blp`
+- `3.mdx`
+- `a4ca2eb9.blp`
+- `a96e1800.blp`
+- `Anguirus.blp`
+- `ApocalypseCowStomp.mdx`
+- `AquaSpikeVersion2.mdx`
+- `B130FD0.blp`
+- `B131690.blp`
+- `B2A27B0.blp`
+- `baihu.blp`
+- `BAIHU.mdl`
+- `bajiao.mdl`
+- `bajiaoshugan.blp`
+- `bajiaoyezi.blp`
+- `BAOJI.mdl`
+- `BAOJI.mdx`
+- `BearSkinBrown.blp`
+- `BlessingofElun.mdx`
+- `brigand_shield.mdx`
+- `Buckler_Oval_A_01.mdx`
+- `Buckler_Oval_A_01Cape.blp`
+- `cb580f43.blp`
+- `CenarionFury.mdl`
+- `CenarionFury.mdx`
+- `changjian.blp`
+- `Claw-R.mdx`
+- `Claw001.blp`
+- `Claw001.MDX`
+- `CowSkull.mdx`
+- `creaturecrabcrabreflect.blp`
+- `Daikyou.blp`
+- `Daikyou.mdl`
+- `DaikyouFace.blp`
+- `daoshi00877.mdl`
+- `daoshi1.blp`
+- `daoshi2.blp`
+- `daoshi3.blp`
+- `DDK.blp`
+- `DDK.mdx`
+- `DLPTQW16.mdl`
+- `DLPTQXM17.mdl`
+- `DLPTQZ18.mdl`
+- `E00H-NCK.blp`
+- `E00H-NCKW.blp`
+- `E00H.mdx`
+- `E00I-A.blp`
+- `E00I-B.blp`
+- `E00I-yanglixian2.blp`
+- `E00I.mdx`
+- `E00J-20d094b0.blp`
+- `E00J-SLWS.blp`
+- `E00J.mdx`
+- `E00K.mdx`
+- `E00Khulijing.blp`
+- `E00L.mdx`
+- `E00Lshuangtounianshou1.blp`
+- `E00Lshuangtounianshou2.blp`
+- `E00M.mdx`
+- `E00MJSP.blp`
+- `E00MWINGEDLIONMOUNTSKIN01.blp`
+- `E00P.MDx`
+- `E00P1111.blp`
+- `E00PBow_1H_Blood_C_01.blp`
+- `E00S.mdx`
+- `E00S1.blp`
+- `E00S2.blp`
+- `E00S3.blp`
+- `E00V.mdx`
+- `E00VNJS1.blp`
+- `E00VNJS2.blp`
+- `E00VNJS3.blp`
+- `egem.wav`
+- `ElunesFire.mdl`
+- `fairywing.blp`
+- `FH.mdx`
+- `FHN.blp`
+- `FHS.blp`
+- `FHT.blp`
+- `FireSoul.mdl`
+- `FireSoul.mdx`
+- `FlameBomb.mdx`
+- `Gate.mdl`
+- `GJ.blp`
+- `GJ.mdl`
+- `GlaiveRight.mdx`
+- `gsk3_1.blp`
+- `gushu (1).blp`
+- `gushu (2).blp`
+- `gushu (3).blp`
+- `gushu.mdl`
+- `heiyi.mdl`
+- `heiyi.mdx`
+- `Helm.mdx`
+- `HeroAyame.mdl`
+- `HeroAyame.mdx`
+- `HeroMitsuhideAkechi.mdl`
+- `herongamy1.mdx`
+- `herongamy_body.blp`
+- `herongamy_sword.blp`
+- `heshang01.blp`
+- `heshang02.blp`
+- `heshang03.blp`
+- `heshang04.blp`
+- `heshang05.blp`
+- `heshang06.blp`
+- `hzyn.blp`
+- `hzyn.mdl`
+- `hzyn.mdx`
+- `LIUDAO.MDX`
+- `liushu.mdl`
+- `liushushugan.blp`
+- `liushuyezi.blp`
+- `liyanran.mdl`
+- `liyanran1.blp`
+- `liyanran2.blp`
+- `liyanran3.blp`
+- `liyanran4.blp`
+- `liyanran5.blp`
+- `liyanran6.blp`
+- `LJH.blp`
+- `LJH.mdx`
+- `LJH2.blp`
+- `Maidor.blp`
+- `maidor.mdl`
+- `Maidor.mdx`
+- `muisc3.mp3`
+- `npc_erentoumu.blp`
+- `npc_erentoumu.mdx`
+- `npc_erentoumuw.blp`
+- `npc_FangZhang.mdl`
+- `PandaBlade1.blp`
+- `PandaBlade2.blp`
+- `PandarenSamurai.mdl`
+- `PandarenSamurai.mdx`
+- `pescii.mdl`
+- `Polearm_2H_Bladed_C_01.blp`
+- `Polearm_2H_Bladed_C_01.mdx`
+- `Polearm_2H_Bladed_D_03.mdx`
+- `Polearm_2H_Horde_D_03RedBlack.blp`
+- `Polearm_2H_PVPAlliance_A_01.mdx`
+- `Polearm_2H_PVPAlliance_A_01GreenSilver.blp`
+- `Polearm_2H_Trident_B_01.mdx`
+- `Polearm_2H_Trident_B_01Silver.blp`
+- `Polearm_2H_Trident_C_01.mdx`
+- `Polearm_2H_Trident_C_01Black.blp`
+- `Polearm_2H_ZulGurub_D_01.blp`
+- `Polearm_2H_ZulGurub_D_01.mdx`
+- `power_orb.mdx`
+- `PurpleShark.mdl`
+- `ReplaceableTextures\CommandButtonsDisabled\DISBTNSinstarSwordV2.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh001.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh002.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh003.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh004.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh005.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh006.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh007.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh008.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh009.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh010.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh011.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh012.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DISh013.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIShdjj.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIShdpp.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIStmdA2.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIStmdA3.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIStmdA5.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIStmdA6.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIStmdA7.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIStmdA8.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIStmdA9.blp`
+- `ReplaceableTextures\CommandButtons\12i.blp`
+- `ReplaceableTextures\CommandButtons\16i.blp`
+- `ReplaceableTextures\CommandButtons\17i.blp`
+- `ReplaceableTextures\CommandButtons\18i.blp`
+- `ReplaceableTextures\CommandButtons\1i.blp`
+- `ReplaceableTextures\CommandButtons\3i.blp`
+- `ReplaceableTextures\CommandButtons\4i.blp`
+- `ReplaceableTextures\CommandButtons\5i.blp`
+- `ReplaceableTextures\CommandButtons\6i.blp`
+- `ReplaceableTextures\CommandButtons\7i.blp`
+- `ReplaceableTextures\CommandButtons\8i.blp`
+- `ReplaceableTextures\CommandButtons\AC10i.blp`
+- `ReplaceableTextures\CommandButtons\AC11i.blp`
+- `ReplaceableTextures\CommandButtons\AC12i.blp`
+- `ReplaceableTextures\CommandButtons\AC13i.blp`
+- `ReplaceableTextures\CommandButtons\AC14i.blp`
+- `ReplaceableTextures\CommandButtons\AC15i.blp`
+- `ReplaceableTextures\CommandButtons\AC16i.blp`
+- `ReplaceableTextures\CommandButtons\AC17i.blp`
+- `ReplaceableTextures\CommandButtons\AC18i.blp`
+- `ReplaceableTextures\CommandButtons\AC19i.blp`
+- `ReplaceableTextures\CommandButtons\AC1i.blp`
+- `ReplaceableTextures\CommandButtons\AC20i.blp`
+- `ReplaceableTextures\CommandButtons\AC21i.blp`
+- `ReplaceableTextures\CommandButtons\AC22i.blp`
+- `ReplaceableTextures\CommandButtons\AC23i.blp`
+- `ReplaceableTextures\CommandButtons\AC24i.blp`
+- `ReplaceableTextures\CommandButtons\AC25i.blp`
+- `ReplaceableTextures\CommandButtons\AC28i.blp`
+- `ReplaceableTextures\CommandButtons\AC2i.blp`
+- `ReplaceableTextures\CommandButtons\AC31i.blp`
+- `ReplaceableTextures\CommandButtons\AC32i.blp`
+- `ReplaceableTextures\CommandButtons\AC33i.blp`
+- `ReplaceableTextures\CommandButtons\AC3i.blp`
+- `ReplaceableTextures\CommandButtons\AC4i.blp`
+- `ReplaceableTextures\CommandButtons\AC5i.blp`
+- `ReplaceableTextures\CommandButtons\AC6i.blp`
+- `ReplaceableTextures\CommandButtons\AC7i.blp`
+- `ReplaceableTextures\CommandButtons\AC8i.blp`
+- `ReplaceableTextures\CommandButtons\AC9i.blp`
+- `ReplaceableTextures\CommandButtons\AD11i.blp`
+- `ReplaceableTextures\CommandButtons\AD12i.blp`
+- `ReplaceableTextures\CommandButtons\AD14i.blp`
+- `ReplaceableTextures\CommandButtons\AD15i.blp`
+- `ReplaceableTextures\CommandButtons\AD16i.blp`
+- `ReplaceableTextures\CommandButtons\AD17i.blp`
+- `ReplaceableTextures\CommandButtons\AD1i.blp`
+- `ReplaceableTextures\CommandButtons\AD2i.blp`
+- `ReplaceableTextures\CommandButtons\AD3i.blp`
+- `ReplaceableTextures\CommandButtons\AD4i.blp`
+- `ReplaceableTextures\CommandButtons\AD5i.blp`
+- `ReplaceableTextures\CommandButtons\AD6i.blp`
+- `ReplaceableTextures\CommandButtons\ADU1.blp`
+- `ReplaceableTextures\CommandButtons\ADU11.blp`
+- `ReplaceableTextures\CommandButtons\ADU14i.blp`
+- `ReplaceableTextures\CommandButtons\ADU15i.blp`
+- `ReplaceableTextures\CommandButtons\ADU16i.blp`
+- `ReplaceableTextures\CommandButtons\ADU2.blp`
+- `ReplaceableTextures\CommandButtons\ADU3.blp`
+- `ReplaceableTextures\CommandButtons\ADU4.blp`
+- `ReplaceableTextures\CommandButtons\ADU5.blp`
+- `ReplaceableTextures\CommandButtons\ADU8.blp`
+- `ReplaceableTextures\CommandButtons\AF10i.blp`
+- `ReplaceableTextures\CommandButtons\AF11i.blp`
+- `ReplaceableTextures\CommandButtons\AF12i.blp`
+- `ReplaceableTextures\CommandButtons\AF13i.blp`
+- `ReplaceableTextures\CommandButtons\AF14i.blp`
+- `ReplaceableTextures\CommandButtons\AF15i.blp`
+- `ReplaceableTextures\CommandButtons\AF1i.blp`
+- `ReplaceableTextures\CommandButtons\AF22i.blp`
+- `ReplaceableTextures\CommandButtons\AF3i.blp`
+- `ReplaceableTextures\CommandButtons\AF4i.blp`
+- `ReplaceableTextures\CommandButtons\AF6i.blp`
+- `ReplaceableTextures\CommandButtons\AF7i.blp`
+- `ReplaceableTextures\CommandButtons\AF8i.blp`
+- `ReplaceableTextures\CommandButtons\AG10i.blp`
+- `ReplaceableTextures\CommandButtons\AG11i.blp`
+- `ReplaceableTextures\CommandButtons\AG12i.blp`
+- `ReplaceableTextures\CommandButtons\AG1i.blp`
+- `ReplaceableTextures\CommandButtons\AG2i.blp`
+- `ReplaceableTextures\CommandButtons\AG3i.blp`
+- `ReplaceableTextures\CommandButtons\AG4i.blp`
+- `ReplaceableTextures\CommandButtons\AG5i.blp`
+- `ReplaceableTextures\CommandButtons\AG6i.blp`
+- `ReplaceableTextures\CommandButtons\AG7i.blp`
+- `ReplaceableTextures\CommandButtons\AG8i.blp`
+- `ReplaceableTextures\CommandButtons\AG9i.blp`
+- `ReplaceableTextures\CommandButtons\AJ10i.blp`
+- `ReplaceableTextures\CommandButtons\AJ11i.blp`
+- `ReplaceableTextures\CommandButtons\AJ12i.blp`
+- `ReplaceableTextures\CommandButtons\AJ14i.blp`
+- `ReplaceableTextures\CommandButtons\AJ15i.blp`
+- `ReplaceableTextures\CommandButtons\AJ17i.blp`
+- `ReplaceableTextures\CommandButtons\AJ1i.blp`
+- `ReplaceableTextures\CommandButtons\AJ2i.blp`
+- `ReplaceableTextures\CommandButtons\AJ3i.blp`
+- `ReplaceableTextures\CommandButtons\AJ5i.blp`
+- `ReplaceableTextures\CommandButtons\AJ6i.blp`
+- `ReplaceableTextures\CommandButtons\AJ7i.blp`
+- `ReplaceableTextures\CommandButtons\AJ8i.blp`
+- `ReplaceableTextures\CommandButtons\AJ9i.blp`
+- `ReplaceableTextures\CommandButtons\AS10i.blp`
+- `ReplaceableTextures\CommandButtons\AS11i.blp`
+- `ReplaceableTextures\CommandButtons\AS12i.blp`
+- `ReplaceableTextures\CommandButtons\AS15i.blp`
+- `ReplaceableTextures\CommandButtons\AS16i.blp`
+- `ReplaceableTextures\CommandButtons\AS17i.blp`
+- `ReplaceableTextures\CommandButtons\AS18i.blp`
+- `ReplaceableTextures\CommandButtons\AS19i.blp`
+- `ReplaceableTextures\CommandButtons\AS20i.blp`
+- `ReplaceableTextures\CommandButtons\AS21i.blp`
+- `ReplaceableTextures\CommandButtons\AS26i.blp`
+- `ReplaceableTextures\CommandButtons\AS27i.blp`
+- `ReplaceableTextures\CommandButtons\AS28i.blp`
+- `ReplaceableTextures\CommandButtons\AS29i.blp`
+- `ReplaceableTextures\CommandButtons\AS2i.blp`
+- `ReplaceableTextures\CommandButtons\AS31i.blp`
+- `ReplaceableTextures\CommandButtons\AS3i.blp`
+- `ReplaceableTextures\CommandButtons\AS40i.blp`
+- `ReplaceableTextures\CommandButtons\AS41i.blp`
+- `ReplaceableTextures\CommandButtons\AS42i.blp`
+- `ReplaceableTextures\CommandButtons\AS43i.blp`
+- `ReplaceableTextures\CommandButtons\AS46i.blp`
+- `ReplaceableTextures\CommandButtons\AS47i.blp`
+- `ReplaceableTextures\CommandButtons\AS48i.blp`
+- `ReplaceableTextures\CommandButtons\AS4i.blp`
+- `ReplaceableTextures\CommandButtons\as50i.blp`
+- `ReplaceableTextures\CommandButtons\AS53i.blp`
+- `ReplaceableTextures\CommandButtons\AS55i.blp`
+- `ReplaceableTextures\CommandButtons\AS65i.blp`
+- `ReplaceableTextures\CommandButtons\AS66i.blp`
+- `ReplaceableTextures\CommandButtons\AS67i.blp`
+- `ReplaceableTextures\CommandButtons\AS68i.blp`
+- `ReplaceableTextures\CommandButtons\AS69i.blp`
+- `ReplaceableTextures\CommandButtons\AS6i.blp`
+- `ReplaceableTextures\CommandButtons\AS70i.blp`
+- `ReplaceableTextures\CommandButtons\AS72i.blp`
+- `ReplaceableTextures\CommandButtons\AS73i.blp`
+- `ReplaceableTextures\CommandButtons\AS76i.blp`
+- `ReplaceableTextures\CommandButtons\AS77i.blp`
+- `ReplaceableTextures\CommandButtons\AS7i.blp`
+- `ReplaceableTextures\CommandButtons\AS81i.blp`
+- `ReplaceableTextures\CommandButtons\AS82i.blp`
+- `ReplaceableTextures\CommandButtons\AS84i.blp`
+- `ReplaceableTextures\CommandButtons\AS90i.blp`
+- `ReplaceableTextures\CommandButtons\AS91i.blp`
+- `ReplaceableTextures\CommandButtons\AS92i.blp`
+- `ReplaceableTextures\CommandButtons\AS93i.blp`
+- `ReplaceableTextures\CommandButtons\AS96i.blp`
+- `ReplaceableTextures\CommandButtons\AS97i.blp`
+- `ReplaceableTextures\CommandButtons\AT10i.blp`
+- `ReplaceableTextures\CommandButtons\AT11i.blp`
+- `ReplaceableTextures\CommandButtons\AT13i.blp`
+- `ReplaceableTextures\CommandButtons\AT14i.blp`
+- `ReplaceableTextures\CommandButtons\AT16i.blp`
+- `ReplaceableTextures\CommandButtons\AT1i.blp`
+- `ReplaceableTextures\CommandButtons\AT2i.blp`
+- `ReplaceableTextures\CommandButtons\AT3i.blp`
+- `ReplaceableTextures\CommandButtons\AT5i.blp`
+- `ReplaceableTextures\CommandButtons\AT6i.blp`
+- `ReplaceableTextures\CommandButtons\AT7i.blp`
+- `ReplaceableTextures\CommandButtons\AT8i.blp`
+- `ReplaceableTextures\CommandButtons\AY11i.blp`
+- `ReplaceableTextures\CommandButtons\AY14i.blp`
+- `ReplaceableTextures\CommandButtons\AY15i.blp`
+- `ReplaceableTextures\CommandButtons\AY16i.blp`
+- `ReplaceableTextures\CommandButtons\AY17i.blp`
+- `ReplaceableTextures\CommandButtons\AY18i.blp`
+- `ReplaceableTextures\CommandButtons\AY19i.blp`
+- `ReplaceableTextures\CommandButtons\AY1i.blp`
+- `ReplaceableTextures\CommandButtons\AY20i.blp`
+- `ReplaceableTextures\CommandButtons\AY24i.blp`
+- `ReplaceableTextures\CommandButtons\AY25i.blp`
+- `ReplaceableTextures\CommandButtons\AY26i.blp`
+- `ReplaceableTextures\CommandButtons\AY27i.blp`
+- `ReplaceableTextures\CommandButtons\AY28i.blp`
+- `ReplaceableTextures\CommandButtons\AY29i.blp`
+- `ReplaceableTextures\CommandButtons\AY2i.blp`
+- `ReplaceableTextures\CommandButtons\AY30i.blp`
+- `ReplaceableTextures\CommandButtons\AY31i.blp`
+- `ReplaceableTextures\CommandButtons\AY32i.blp`
+- `ReplaceableTextures\CommandButtons\AY33i.blp`
+- `ReplaceableTextures\CommandButtons\AY34i.blp`
+- `ReplaceableTextures\CommandButtons\AY35i.blp`
+- `ReplaceableTextures\CommandButtons\AY3i.blp`
+- `ReplaceableTextures\CommandButtons\AY4i.blp`
+- `ReplaceableTextures\CommandButtons\AY5i.blp`
+- `ReplaceableTextures\CommandButtons\AY6i.blp`
+- `ReplaceableTextures\CommandButtons\AY7i.blp`
+- `ReplaceableTextures\CommandButtons\BD1.blp`
+- `ReplaceableTextures\CommandButtons\BD2.blp`
+- `ReplaceableTextures\CommandButtons\BD3.blp`
+- `ReplaceableTextures\CommandButtons\BD4.blp`
+- `ReplaceableTextures\CommandButtons\BD5.blp`
+- `ReplaceableTextures\CommandButtons\BD6.blp`
+- `ReplaceableTextures\CommandButtons\BD7.blp`
+- `ReplaceableTextures\CommandButtons\BD8.blp`
+- `ReplaceableTextures\CommandButtons\BD9.blp`
+- `ReplaceableTextures\CommandButtons\bnzd.blp`
+- `ReplaceableTextures\CommandButtons\BTNSinstarSwordV2.blp`
+- `ReplaceableTextures\CommandButtons\fczr.blp`
+- `ReplaceableTextures\CommandButtons\h001.blp`
+- `ReplaceableTextures\CommandButtons\h002.blp`
+- `ReplaceableTextures\CommandButtons\h003.blp`
+- `ReplaceableTextures\CommandButtons\h004.blp`
+- `ReplaceableTextures\CommandButtons\h005.blp`
+- `ReplaceableTextures\CommandButtons\h006.blp`
+- `ReplaceableTextures\CommandButtons\h007.blp`
+- `ReplaceableTextures\CommandButtons\h008.blp`
+- `ReplaceableTextures\CommandButtons\h009.blp`
+- `ReplaceableTextures\CommandButtons\h010.blp`
+- `ReplaceableTextures\CommandButtons\h011.blp`
+- `ReplaceableTextures\CommandButtons\h012.blp`
+- `ReplaceableTextures\CommandButtons\h013.blp`
+- `ReplaceableTextures\CommandButtons\hdgz.blp`
+- `ReplaceableTextures\CommandButtons\hdjj.blp`
+- `ReplaceableTextures\CommandButtons\hdpp.blp`
+- `ReplaceableTextures\CommandButtons\hdzj.blp`
+- `ReplaceableTextures\CommandButtons\JN10i.blp`
+- `ReplaceableTextures\CommandButtons\JN11i.blp`
+- `ReplaceableTextures\CommandButtons\JN12i.blp`
+- `ReplaceableTextures\CommandButtons\JN13i.blp`
+- `ReplaceableTextures\CommandButtons\JN14i.blp`
+- `ReplaceableTextures\CommandButtons\JN18i.blp`
+- `ReplaceableTextures\CommandButtons\JN19i.blp`
+- `ReplaceableTextures\CommandButtons\JN1i.blp`
+- `ReplaceableTextures\CommandButtons\JN20i.blp`
+- `ReplaceableTextures\CommandButtons\JN21i.blp`
+- `ReplaceableTextures\CommandButtons\JN22i.blp`
+- `ReplaceableTextures\CommandButtons\JN23i.blp`
+- `ReplaceableTextures\CommandButtons\JN24i.blp`
+- `ReplaceableTextures\CommandButtons\JN25i.blp`
+- `ReplaceableTextures\CommandButtons\JN26i.blp`
+- `ReplaceableTextures\CommandButtons\JN27i.blp`
+- `ReplaceableTextures\CommandButtons\JN28i.blp`
+- `ReplaceableTextures\CommandButtons\JN29i.blp`
+- `ReplaceableTextures\CommandButtons\JN2i.blp`
+- `ReplaceableTextures\CommandButtons\JN30i.blp`
+- `ReplaceableTextures\CommandButtons\JN31i.blp`
+- `ReplaceableTextures\CommandButtons\JN32i.blp`
+- `ReplaceableTextures\CommandButtons\JN33i.blp`
+- `ReplaceableTextures\CommandButtons\JN35i.blp`
+- `ReplaceableTextures\CommandButtons\JN36i.blp`
+- `ReplaceableTextures\CommandButtons\JN37i.blp`
+- `ReplaceableTextures\CommandButtons\JN38i.blp`
+- `ReplaceableTextures\CommandButtons\JN39i.blp`
+- `ReplaceableTextures\CommandButtons\JN3i.blp`
+- `ReplaceableTextures\CommandButtons\JN40i.blp`
+- `ReplaceableTextures\CommandButtons\JN41i.blp`
+- `ReplaceableTextures\CommandButtons\JN43i.blp`
+- `ReplaceableTextures\CommandButtons\JN44i.blp`
+- `ReplaceableTextures\CommandButtons\JN45i.blp`
+- `ReplaceableTextures\CommandButtons\JN46i.blp`
+- `ReplaceableTextures\CommandButtons\JN47i.blp`
+- `ReplaceableTextures\CommandButtons\JN48i.blp`
+- `ReplaceableTextures\CommandButtons\JN49i.blp`
+- `ReplaceableTextures\CommandButtons\JN4i.blp`
+- `ReplaceableTextures\CommandButtons\JN50i.blp`
+- `ReplaceableTextures\CommandButtons\JN51i.blp`
+- `ReplaceableTextures\CommandButtons\JN52i.blp`
+- `ReplaceableTextures\CommandButtons\JN53i.blp`
+- `ReplaceableTextures\CommandButtons\JN55i.blp`
+- `ReplaceableTextures\CommandButtons\JN56i.blp`
+- `ReplaceableTextures\CommandButtons\JN57i.blp`
+- `ReplaceableTextures\CommandButtons\JN60i.blp`
+- `ReplaceableTextures\CommandButtons\JN61i.blp`
+- `ReplaceableTextures\CommandButtons\JN62i.blp`
+- `ReplaceableTextures\CommandButtons\JN63i.blp`
+- `ReplaceableTextures\CommandButtons\JN65i.blp`
+- `ReplaceableTextures\CommandButtons\JN6i.blp`
+- `ReplaceableTextures\CommandButtons\JN7i.blp`
+- `ReplaceableTextures\CommandButtons\JN8i.blp`
+- `ReplaceableTextures\CommandButtons\JN9i.blp`
+- `ReplaceableTextures\CommandButtons\kgmx.blp`
+- `ReplaceableTextures\CommandButtons\tmdA1.blp`
+- `ReplaceableTextures\CommandButtons\tmdA2.blp`
+- `ReplaceableTextures\CommandButtons\tmdA3.blp`
+- `ReplaceableTextures\CommandButtons\tmdA4.blp`
+- `ReplaceableTextures\CommandButtons\tmdA5.blp`
+- `ReplaceableTextures\CommandButtons\tmdA6.blp`
+- `ReplaceableTextures\CommandButtons\tmdA7.blp`
+- `ReplaceableTextures\CommandButtons\tmdA8.blp`
+- `ReplaceableTextures\CommandButtons\tmdA9.blp`
+- `ReplaceableTextures\CommandButtons\ZB_CB1.blp`
+- `ReplaceableTextures\CommandButtons\ZB_CB2.blp`
+- `ReplaceableTextures\fairywing.MDX`
+- `ReplaceableTextures\FWING.blp`
+- `ReplaceableTextures\WingBlack4.blp`
+- `ReplaceableTextures\WingOfTheLucifer.MDX`
+- `ReplaceableTextures\wnsword.mdx`
+- `ReplaceableTextures\wnword01.blp`
+- `ReplaceableTextures\wnword02.blp`
+- `RoundShield.mdx`
+- `rsrsdummy.mdl`
+- `SeaTurtle.mdl`
+- `seaturtleskinwhite.blp`
+- `sharkskinpurple.blp`
+- `shideng.blp`
+- `shideng.mdl`
+- `Shield_Crest_A_01.mdx`
+- `Shield_Crest_A_01Cape.blp`
+- `Shield_Crest_B_02.mdx`
+- `Shield_Crest_B_02Cape.blp`
+- `Shield_Horde_A_02.mdx`
+- `Shield_Horde_A_02Cape.blp`
+- `shitouqipan.mdl`
+- `Shiva'sEnchantment.mdx`
+- `Shoulder_Plate_RaidWarrior_F_01Rust.blp`
+- `srd1.mdx`
+- `ssx.blp`
+- `ssx34.mdl`
+- `ssx34.mdx`
+- `StarBreath.mdx`
+- `Stave4.blp`
+- `Stave4.mdx`
+- `Stave5.mdx`
+- `Stave5a.blp`
+- `Stave5b.blp`
+- `Stave6.blp`
+- `Stave6.mdx`
+- `Stave7.blp`
+- `Stave7.mdx`
+- `Stave8.blp`
+- `Stave8.mdx`
+- `Stave9.blp`
+- `Stave9.mdx`
+- `Sword2.blp`
+- `Sword_1H_Horde_C_02.mdx`
+- `Sword_1H_Horde_C_02Gray.blp`
+- `Sword_1H_Long_D_01.mdx`
+- `Sword_1H_Long_D_01_V01.blp`
+- `Sword_1H_Sabre_B_02.mdx`
+- `Sword_1H_Sabre_B_02Black.blp`
+- `Sword_1H_Stratholme_D_02.mdx`
+- `Sword_1H_Stratholme_D_03.mdx`
+- `Sword_2H_Bastard_D_01.mdx`
+- `Sword_2H_Bastard_D_01_V01.blp`
+- `Sword_2H_Blackwing_A_01.mdx`
+- `sword_2h_blackwing_a_01cape.blp`
+- `Sword_2H_Broadsword_A_02.mdx`
+- `Sword_2H_Broadsword_A_02Silver.blp`
+- `Sword_2H_Broadsword_B_01.mdx`
+- `Sword_2H_Broadsword_B_01Gold.blp`
+- `Sword_2H_Claymore_A_01.mdx`
+- `Sword_2H_Claymore_A_01Black.blp`
+- `Sword_2H_Horde_B_03.mdx`
+- `Sword_2H_Horde_B_03Black.blp`
+- `Sword_2H_Horde_C_01.mdx`
+- `Sword_2H_Horde_C_01Black.blp`
+- `Tank.mdx`
+- `Textures\Bandit.blp`
+- `Textures\Claw.blp`
+- `Textures\Fackel.blp`
+- `Textures\HeroAyame.blp`
+- `Textures\HeroCloth.blp`
+- `Textures\HeroMitsuhideAkechi.blp`
+- `Textures\Holzplatte.blp`
+- `Textures\Katana.blp`
+- `Textures\RibbonNE1_blue.blp`
+- `Textures\Stroh.blp`
+- `Textures\Uebungspuppe.blp`
+- `TMnan.mdx`
+- `Uebungspuppe.mdl`
+- `UnholySeal.mdl`
+- `Units\CampaignAbilityStrings.txt`
+- `Units\CampaignUnitFunc.txt`
+- `Units\ItemFunc.txt`
+- `units\neutralupgradestrings.txt`
+- `Units\undead`
+- `Wall.mdl`
+- `war3map.doo`
+- `war3map.j`
+- `war3map.mmp`
+- `war3map.shd`
+- `war3map.w3b`
+- `war3map.w3d`
+- `war3map.w3e`
+- `war3map.w3i`
+- `war3map.wpm`
+- `war3mapExtra.txt`
+- `war3mapImported\Balkenenden.blp`
+- `war3mapImported\Balken_hell.blp`
+- `war3mapimported\dljm 1.mdl`
+- `war3mapimported\dljm 3.mdl`
+- `war3mapimported\dljm 5.mdl`
+- `war3mapImported\DUMMY.mdl`
+- `war3mapImported\Farn.mdl`
+- `war3mapImported\FarnSE2.mdl`
+- `war3mapImported\Fern3.mdl`
+- `war3mapImported\IonCannonBeam.mdl`
+- `war3mapImported\jiao.blp`
+- `war3mapImported\lian.blp`
+- `war3mapImported\shou.blp`
+- `war3mapImported\tlba21.blp`
+- `war3mapImported\tlba5.blp`
+- `war3mapImported\tlba7.blp`
+- `war3mapImported\tlba8.blp`
+- `war3mapImported\tlba9.blp`
+- `war3mapImported\toufa1.blp`
+- `war3mapImported\toufa2.blp`
+- `war3mapImported\wq1.blp`
+- `war3mapImported\wq2.blp`
+- `war3mapImported\yaodai.blp`
+- `war3mapImported\yifu.blp`
+- `war3mapImported\zhuangshi1.mdl`
+- `war3mapMap.blp`
+- `war3mapMisc.txt`
+- `war3mapSkin.txt`
+- `warlock_shield.mdx`
+- `WaterFlash.mdl`
+- `WaterFlash.mdx`
+- `WingBlack4.blp`
+- `wizardcone.mdx`
+- `wristclaw.mdx`
+- `xianglu1.mdl`
+- `xiongwang.mdx`
+- `xiongwang1.blp`
+- `xiongwang2.blp`
+- `xiongwang3.blp`
+- `xiongwang4.blp`
+- `xx.mdl`
+- `xx.MDX`
+- `xy1.blp`
+- `xy2.blp`
+- `YUANQI.MDX`
+- `z13.mdl`
+- `z13.mdx`
+- `zhugan.blp`
+- `zhuye.blp`
+- `zhuzi01.mdl`
+- `zhuzi02.mdl`
+- `zhuzi03.mdl`
+- `zhuzi04.mdl`
+- `zy.blp`
+
+## 生成文件
+
+- `(listfile)`
+- `war3map.imp`
+- `war3map.w3a`
+- `war3map.w3c`
+- `war3map.w3h`
+- `war3map.w3q`
+- `war3map.w3r`
+- `war3map.w3s`
+- `war3map.w3t`
+- `war3map.w3u`
+- `war3map.wts`
+- `war3mapUnits.doo`
+
+## 省略文件
+
+- `E00MJSJ.blp`
+- `ReplaceableTextures\CommandButtonsDisabled\DIStmdA1.blp`
+
+## 警告
+
+- ``E00MJSJ.blp` 的扇区偏移损坏。`
+- `Preserved the original `E00MJSJ.blp` payload under report artifact `MapRepairPreserved\raw\E00MJSJ.blp.rawbin`.`
+- ``ReplaceableTextures\CommandButtonsDisabled\DIStmdA1.blp` 的扇区偏移损坏。`
+- `Preserved the original `ReplaceableTextures\CommandButtonsDisabled\DIStmdA1.blp` payload under report artifact `MapRepairPreserved\raw\ReplaceableTextures\CommandButtonsDisabled\DIStmdA1.blp.rawbin`.`
+- `Added 2 placeholder `TRIGSTR_*` definitions to `war3map.wts` because the preserved script references them but the protected source string table does not.`
+- ``bajiao.mdl` was rebuilt from `bajiao.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``DLPTQW16.mdl` was rebuilt from `DLPTQW16.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``DLPTQXM17.mdl` was rebuilt from `DLPTQXM17.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``DLPTQZ18.mdl` was rebuilt from `DLPTQZ18.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``Gate.mdl` was rebuilt from `Gate.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``gushu.mdl` was rebuilt from `gushu.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``liushu.mdl` was rebuilt from `liushu.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``pescii.mdl` was rebuilt from `pescii.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``shideng.mdl` was rebuilt from `shideng.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``shitouqipan.mdl` was rebuilt from `shitouqipan.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``Uebungspuppe.mdl` was rebuilt from `Uebungspuppe.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``Wall.mdl` was rebuilt from `Wall.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapimported\dljm 1.mdl` was rebuilt from `war3mapimported\dljm 1.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapimported\dljm 3.mdl` was rebuilt from `war3mapimported\dljm 3.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapimported\dljm 5.mdl` was rebuilt from `war3mapimported\dljm 5.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapImported\Farn.mdl` was rebuilt from `war3mapImported\Farn.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapImported\FarnSE2.mdl` was rebuilt from `war3mapImported\FarnSE2.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapImported\Fern3.mdl` was rebuilt from `war3mapImported\Fern3.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapImported\zhuangshi1.mdl` was rebuilt from `war3mapImported\zhuangshi1.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``xianglu1.mdl` was rebuilt from `xianglu1.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``zhuzi01.mdl` was rebuilt from `zhuzi01.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``zhuzi02.mdl` was rebuilt from `zhuzi02.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``zhuzi03.mdl` was rebuilt from `zhuzi03.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``zhuzi04.mdl` was rebuilt from `zhuzi04.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``Daikyou.mdl` was rebuilt from `Daikyou.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``GJ.mdl` was rebuilt from `GJ.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``npc_FangZhang.mdl` was rebuilt from `npc_FangZhang.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``BAIHU.mdl` was rebuilt from `BAIHU.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``BAOJI.mdl` was rebuilt from `BAOJI.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``CenarionFury.mdl` was rebuilt from `CenarionFury.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``daoshi00877.mdl` was rebuilt from `daoshi00877.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``ElunesFire.mdl` was rebuilt from `ElunesFire.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``FireSoul.mdl` was rebuilt from `FireSoul.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``heiyi.mdl` was rebuilt from `heiyi.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``HeroAyame.mdl` was rebuilt from `HeroAyame.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``HeroMitsuhideAkechi.mdl` was rebuilt from `HeroMitsuhideAkechi.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``hzyn.mdl` was rebuilt from `hzyn.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``maidor.mdl` was rebuilt from `maidor.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``PandarenSamurai.mdl` was rebuilt from `PandarenSamurai.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``PurpleShark.mdl` was rebuilt from `PurpleShark.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``rsrsdummy.mdl` was rebuilt from `rsrsdummy.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``SeaTurtle.mdl` was rebuilt from `SeaTurtle.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``ssx34.mdl` was rebuilt from `ssx34.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``UnholySeal.mdl` was rebuilt from `UnholySeal.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapImported\DUMMY.mdl` was rebuilt from `DUMMY.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``war3mapImported\IonCannonBeam.mdl` was rebuilt from `war3mapImported\IonCannonBeam.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``WaterFlash.mdl` was rebuilt from `WaterFlash.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``xx.mdl` was rebuilt from `xx.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- ``z13.mdl` was rebuilt from `z13.mdx` using a binary `MDX` payload. The archive path now matches the `.mdl` reference, but the model format still does not match the `.mdl` extension and the editor may continue treating it as missing.`
+- `Preserved 443 referenced asset files inferred from object-data, script, text, SLK, or model texture paths.`
+- `已从 unit SLK 重建 661 个对象到 `war3map.w3u`。`
+- `已从 item SLK 重建 657 个对象到 `war3map.w3t`。`
+- `已从 buff SLK 重建 155 个对象到 `war3map.w3h`。`
+- `已从 upgrade SLK 重建 65 个对象到 `war3map.w3q`。`
+- `Preserved the original `war3map.w3a` payload under report artifact `MapRepairPreserved\original\war3map.w3a.bin`.`
+- `已从 ability SLK 重建 896 个对象到 `war3map.w3a`。`
+- `Pruned 6 unreferenced source model aliases because the detected references only required the opposite extension variants (`.mdx` -> `.mdl`: 6, `.mdl` -> `.mdx`: 0).`
+- ``E00M.mdx` references texture `E00MJSJ.blp`, but that texture was not found in the repaired archive or the detected Warcraft archives. If the model still renders incorrectly, restore the texture under this exact path.`
+- ``ReplaceableTextures\wnsword.mdx` references texture `wnword01.blp`, but that texture was not found in the repaired archive or the detected Warcraft archives. If the model still renders incorrectly, restore the texture under this exact path.`
+- ``ReplaceableTextures\wnsword.mdx` references texture `wnword02.blp`, but that texture was not found in the repaired archive or the detected Warcraft archives. If the model still renders incorrectly, restore the texture under this exact path.`
+- `Pruned 9 embedded object-source SLK entries after rebuilding object data so later `w3x2lni` exports do not inherit stale map SLK metadata.`
+- `Rebuilt `war3map.imp` with 604 import/override paths.`
+- `Missing `war3mapUnits.doo`; generated an empty unit file.`
+- `Inferred 221 regions from war3map.j into `war3map.w3r`.`
+- `Inferred 1 cameras from war3map.j into `war3map.w3c`.`
+- `Inferred 18 sounds from war3map.j/WTS into `war3map.w3s`.`
+- `Missing `war3map.wtg`; the protected source map only preserves compiled script and does not contain GUI trigger metadata. Left trigger data absent instead of injecting a repository template, because the original trigger tree cannot be reconstructed from this artifact.`
+- `Missing `war3map.wct`; the protected source map does not contain original trigger comment/custom-text metadata. Left trigger custom-text data absent instead of injecting a repository template, because the original editor view cannot be reconstructed.`
+

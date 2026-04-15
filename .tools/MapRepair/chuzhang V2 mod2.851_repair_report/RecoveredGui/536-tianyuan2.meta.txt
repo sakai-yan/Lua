@@ -1,0 +1,10 @@
+﻿Trigger: tianyuan2
+Mode: custom-text
+Action Count: 71
+Custom Script Count: 57
+Control Flow Count: 33
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger remained a dense pseudo-GUI body with 71 flat actions, 57 custom-script lines, and 33 control-flow custom-script markers.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger remained a dense pseudo-GUI body with 71 flat actions, 57 custom-script lines, and 33 control-flow custom-script markers.

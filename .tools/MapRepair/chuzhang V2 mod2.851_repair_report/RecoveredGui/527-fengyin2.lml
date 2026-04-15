@@ -1,0 +1,21 @@
+﻿name: fengyin2
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterEnterRectSimple (var:gg_rct______________113)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_fengyin2_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - PauseUnitBJ (preset:PauseUnpauseOptionPause, call:GetTriggerUnit)
+  - SetUnitAnimation (call:GetTriggerUnit, const:stand channel)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - PlaySoundAtPointBJ (var:gg_snd_QuestNew, const:100, var:udg_SP, const:0)
+  - DisplayTextToForce (call:GetPlayersAll, const:|cFFFFCC00司徒西风：|r|cFFCCFFCC我现在开始对这片沼泽施加剑印，估计会触动附近的妖兽。你们无论如何都要阻止他们破坏仪式！拜托了！
+|r|cFFFF6600任|r|cFFFF8C26务|r|cFFFFB24C要|r|cFFFFD973求|r|cFFFFFF99：|r|cFF00FF00保护司徒西风，直到仪庀)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - EnableTrigger (var:gg_trg_fengyin_att)

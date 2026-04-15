@@ -1,0 +1,8 @@
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\publish\win-x64-self-contained-20260405-1016\MapRepair.pdb
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\publish\win-x64-self-contained-20260405-1016\D3DCompiler_47_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\publish\win-x64-self-contained-20260405-1016\PenImc_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\publish\win-x64-self-contained-20260405-1016\PresentationNative_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\publish\win-x64-self-contained-20260405-1016\vcruntime140_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\publish\win-x64-self-contained-20260405-1016\wpfgfx_cor3.dll
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\publish\win-x64-self-contained-20260405-1016\MapRepair.Core.pdb
+d:\Software\魔兽地图编辑\[0]新整合编辑器\Lua\.tools\MapRepair\publish\win-x64-self-contained-20260405-1016\MapRepair.exe

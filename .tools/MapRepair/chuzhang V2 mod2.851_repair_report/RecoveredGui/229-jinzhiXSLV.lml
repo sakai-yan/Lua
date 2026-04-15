@@ -1,0 +1,11 @@
+﻿name: jinzhiXSLV
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:1.00)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call ForForce(GetPlayersAll(),function Trig_jinzhiXSLV_Func001A))

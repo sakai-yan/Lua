@@ -1,0 +1,327 @@
+[MHGameStartEvent_Register]
+title = "游戏开始"
+description = "游戏开始"
+comment = "该事件不可注销。指所有玩家加载完毕进入地图的一瞬间"
+category = TC_MHEVENTREG
+
+[MHGameTickEvent_Register]
+title = "游戏Tick"
+description = "游戏Tick"
+comment = "该事件不可注销。魔兽的同步帧"
+category = TC_MHEVENTREG
+
+[MHDamagingEvent_Register]
+title = "任意单位即将受伤"
+description = "任意单位 即将受伤"
+comment = "该事件不可注销。前伤害事件，事件触发时伤害还未结算为最终伤害，此时可以修改攻击/伤害类型和伤害来源/受伤单位"
+category = TC_MHEVENTREG
+
+[MHDamageEvent_Register]
+title = "任意单位接受伤害"
+description = "任意单位 接受伤害"
+comment = "该事件不可注销。可以看做YD伤害事件的替代，没有泄漏"
+category = TC_MHEVENTREG
+
+[MHUnitCreateEvent_Register]
+title = "任意单位被创建"
+description = "任意单位 被创建"
+comment = "该事件不可注销。可替代任意单位进入可用地图（大概"
+category = TC_MHEVENTREG
+
+[MHUnitRemoveEvent_Register]
+title = "任意单位被删除"
+description = "任意单位 被删除"
+comment = "该事件不可注销。包括触发器删除和死亡后尸体消失"
+category = TC_MHEVENTREG
+
+[MHUnitAttackLaunchEvent_Register]
+title = "任意单位攻击出手"
+description = "任意单位 攻击出手"
+comment = "该事件不可注销。前摇结束的一瞬间"
+category = TC_MHEVENTREG
+
+[MHUnitSearchTargetEvent_Register]
+title = "任意单位获取仇恨目标"
+description = "任意单位 获取仇恨目标"
+comment = "该事件不可注销。可用于自定义仇恨系统"
+category = TC_MHEVENTREG
+
+[MHUnitRestoreLifeEvent_Register]
+title = "任意单位恢复生命值"
+description = "任意单位 恢复生命值"
+comment = "该事件不可注销。不包括自然回血"
+category = TC_MHEVENTREG
+
+[MHUnitRestoreManaEvent_Register]
+title = "任意单位恢复魔法值"
+description = "任意单位 恢复魔法值"
+comment = "该事件不可注销。不包括自然回蓝"
+category = TC_MHEVENTREG
+
+[MHUnitDispelEvent_Register]
+title = "任意单位被驱散魔法效果"
+description = "任意单位 被驱散魔法效果"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHItemCreateEvent_Register]
+title = "任意物品被创建"
+description = "任意物品 被创建"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHItemRemoveEvent_Register]
+title = "任意物品被删除"
+description = "任意物品 被删除"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHUnitHarvestEvent_Register]
+title = "任意单位送回资源"
+description = "任意单位 送回资源"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHHeroGetExpEvent_Register]
+title = "任意单位获取经验值"
+description = "任意单位 获取经验值"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHPlayerLeaveEvent_Register]
+title = "任意玩家离开游戏"
+description = "任意玩家 离开游戏"
+comment = "该事件不可注销。包括正常离开和掉线"
+category = TC_MHEVENTREG
+
+[MHPlayerGoldChangeEvent_Register]
+title = "任意玩家黄金变动"
+description = "任意玩家 黄金变动"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHPlayerLumberChangeEvent_Register]
+title = "任意玩家木材变动"
+description = "任意玩家 木材变动"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHAbilityAddEvent_Register]
+title = "任意技能被添加"
+description = "任意技能 被添加"
+comment = "该事件不可注销。包括添加技能、魔法效果"
+category = TC_MHEVENTREG
+
+[MHAbilityRemoveEvent_Register]
+title = "任意技能被删除"
+description = "任意技能 被删除"
+comment = "该事件不可注销。包括删除技能、魔法效果"
+category = TC_MHEVENTREG
+
+[MHAbilityStartCooldownEvent_Register]
+title = "任意技能进入冷却"
+description = "任意技能 进入冷却"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHAbilityEndCooldownEvent_Register]
+title = "任意技能结束冷却"
+description = "任意技能 结束冷却"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHAbilityRefreshAuraEvent_Register]
+title = "任意光环技能刷新"
+description = "任意光环技能 刷新"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+
+[MHMissileLaunchEvent_Register]
+title = "任意投射物发射"
+description = "任意投射物 发射"
+comment = "该事件不可注销。不推荐使用"
+category = TC_MHEVENTREG
+
+[MHMissileHitEvent_Register]
+title = "任意投射物命中"
+description = "任意投射物 命中"
+comment = "该事件不可注销。不推荐使用"
+category = TC_MHEVENTREG
+
+[MHSyncEvent_Register]
+title = "数据同步事件"
+description = "来源于标签 ${key} 的数据被同步"
+comment = "该事件不可注销"
+category = TC_MHEVENTREG
+[[.args]]
+type = string
+
+
+
+[MHGameStopEvent_Register]
+title = "游戏停止"
+description = "游戏停止"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHGameExitEvent_Register]
+title = "游戏退出"
+description = "游戏退出"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHHashtableChangeEvent_Register]
+title = "哈希表发生变动"
+description = "哈希表 ${ht} 的哈希项 发生变动"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+[[.args]]
+type = hashtable
+
+[MHMsgKeyUpEvent_Register]
+title = "本地玩家弹起按键"
+description = "本地玩家 弹起按键"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgKeyDownEvent_Register]
+title = "本地玩家按下按键"
+description = "本地玩家 按下按键"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgKeyHoldEvent_Register]
+title = "本地玩家按住按键"
+description = "本地玩家 按住按键"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgMouseUpEvent_Register]
+title = "本地玩家鼠标弹起"
+description = "本地玩家 鼠标弹起"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgMouseDownEvent_Register]
+title = "本地玩家鼠标按下"
+description = "本地玩家 鼠标按下"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgMouseScrollEvent_Register]
+title = "本地玩家鼠标滚动"
+description = "本地玩家 鼠标滚动"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgMouseMoveEvent_Register]
+title = "本地玩家鼠标移动"
+description = "本地玩家 鼠标移动"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgIndicatorEvent_Register]
+title = "本地玩家按下目标指示器"
+description = "本地玩家 按下目标指示器"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgCallTargetModeEvent_Register]
+title = "本地玩家调起指示器"
+description = "本地玩家 调起指示器"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgCallBuildModeEvent_Register]
+title = "本地玩家调起建造指示器"
+description = "本地玩家 调起建造指示器"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgCancelIndicatorEvent_Register]
+title = "本地玩家取消指示器"
+description = "本地玩家 取消指示器"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgImmediateOrderEvent_Register]
+title = "本地玩家发布无目标命令"
+description = "本地玩家 发布无目标命令"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHMsgTargetOrderEvent_Register]
+title = "本地玩家发布目标命令"
+description = "本地玩家 发布目标命令"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！包括点目标和指定物体目标"
+category = TC_MHEVENTREG
+
+[MHMsgDropItemOrderEvent_Register]
+title = "本地玩家发布丢弃物品命令"
+description = "本地玩家 发布丢弃物品命令"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！包括丢弃到点和单位"
+category = TC_MHEVENTREG
+
+[MHMsgSmartOrderEvent_Register]
+title = "本地玩家发布右键物体命令"
+description = "本地玩家 发布右键物体命令"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！包括丢弃到点和单位"
+category = TC_MHEVENTREG
+
+[MHMsgWindowResizeEvent_Register]
+title = "本地玩家窗口大小变化"
+description = "本地玩家 窗口大小变化"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHFrameEvent_Register]
+title = "本地Frame事件"
+description = "为 ${frame} 注册 ${event} 事件"
+comment = "异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+[[.args]]
+type = integer
+[[.args]]
+type = MHFrameEvent
+default = "FRAME_EVENT_ID_FRAME_MOUSE_ENTER"
+
+[MHUITickEvent_Register]
+title = "本地帧绘制事件"
+description = "本地玩家 每帧绘制"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHUIHPBarEvent_Register]
+title = "血条刷新事件"
+description = "本地玩家 血条刷新"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+[MHUIRenderEvent_Register]
+title = "渲染事件"
+description = "本地玩家 渲染"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！"
+category = TC_MHEVENTREG
+
+
+
+
+
+
+[MHMsgSelectorEvent_Register]
+title = "本地玩家按下目标选择器"
+description = "本地玩家 按下目标选择器"
+comment = "已废弃"
+category = TC_MHOLD
+
+[MHMsgClickButtonEvent_Register]
+title = "本地玩家点击命令按钮事件"
+description = "本地玩家 点击命令按钮"
+comment = "已废弃"
+category = TC_MHOLD
+
+[MHGameDesyncEvent_Register]
+title = "玩家掉线"
+description = "玩家掉线"
+comment = "已废弃"
+category = TC_MHOLD

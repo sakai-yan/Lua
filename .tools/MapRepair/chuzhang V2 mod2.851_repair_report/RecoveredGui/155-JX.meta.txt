@@ -1,0 +1,10 @@
+﻿Trigger: JX
+Mode: custom-text
+Action Count: 112
+Custom Script Count: 112
+Control Flow Count: 66
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still expanded into 112 flat actions, including 112 custom-script lines and 66 control-flow custom-script markers.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still expanded into 112 flat actions, including 112 custom-script lines and 66 control-flow custom-script markers.

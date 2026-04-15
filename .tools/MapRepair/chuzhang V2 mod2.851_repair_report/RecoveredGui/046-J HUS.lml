@@ -1,0 +1,19 @@
+﻿name: J HUS
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_HUS_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - CustomScriptCode (const:call PauseTimerBJ(true,udg_hero_time[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))]))
+  - CustomScriptCode (const:call DestroyTimerDialog(udg_hero_window[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))]))
+  - CustomScriptCode (const:call ReviveHeroLoc(udg_HERO[GetConvertedPlayerId(GetOwningPlayer(GetSpellTargetUnit()))],udg_SP,true))
+  - RemoveUnit (call:GetSpellTargetUnit)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

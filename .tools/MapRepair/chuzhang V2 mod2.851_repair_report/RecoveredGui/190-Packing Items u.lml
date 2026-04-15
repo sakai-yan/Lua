@@ -1,0 +1,11 @@
+﻿name: Packing Items u
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventHeroPickUpItem)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call Trig_Packing_Items_______u_Actions())

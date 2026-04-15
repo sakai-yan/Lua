@@ -1,0 +1,57 @@
+<Window x:Class="MapRepair.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MapRepair"
+        Width="920"
+        Height="640"
+        MinWidth="760"
+        MinHeight="520"
+        WindowStartupLocation="CenterScreen">
+  <Grid Margin="16">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="130"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="90"/>
+    </Grid.ColumnDefinitions>
+
+    <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,12" FontSize="22" FontWeight="SemiBold" Text="YDWE 可开图修复器"/>
+
+    <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Text="输入地图"/>
+    <TextBox x:Name="InputMapBox" Grid.Row="1" Grid.Column="1" Margin="0,0,8,8" TextChanged="InputMapBox_TextChanged"/>
+    <Button x:Name="BrowseInputButton" Grid.Row="1" Grid.Column="2" Margin="0,0,0,8" Content="浏览" Click="BrowseInput_Click"/>
+
+    <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Text="输出地图"/>
+    <TextBox x:Name="OutputMapBox" Grid.Row="2" Grid.Column="1" Margin="0,0,8,8"/>
+    <Button x:Name="BrowseOutputButton" Grid.Row="2" Grid.Column="2" Margin="0,0,0,8" Content="浏览" Click="BrowseOutput_Click"/>
+
+    <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Text="报告目录"/>
+    <TextBox x:Name="ReportDirBox" Grid.Row="3" Grid.Column="1" Margin="0,0,8,8"/>
+    <Button x:Name="BrowseReportButton" Grid.Row="3" Grid.Column="2" Margin="0,0,0,8" Content="浏览" Click="BrowseReport_Click"/>
+
+    <TextBox x:Name="ResultBox"
+             Grid.Row="4"
+             Grid.ColumnSpan="3"
+             Margin="0,8,0,12"
+             Padding="10"
+             VerticalScrollBarVisibility="Auto"
+             HorizontalScrollBarVisibility="Auto"
+             AcceptsReturn="True"
+             TextWrapping="Wrap"
+             IsReadOnly="True"
+             FontFamily="Consolas"/>
+
+    <StackPanel Grid.Row="5" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
+      <TextBlock x:Name="StatusText" Margin="0,0,12,0" VerticalAlignment="Center" Foreground="#555555" Text="就绪"/>
+      <Button x:Name="InspectButton" Width="96" Margin="0,0,8,0" Content="Inspect" Click="Inspect_Click"/>
+      <Button x:Name="RepairButton" Width="96" Content="Repair" Click="Repair_Click"/>
+    </StackPanel>
+  </Grid>
+</Window>

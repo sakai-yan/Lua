@@ -1,0 +1,10 @@
+﻿Trigger: attack
+Mode: custom-text
+Action Count: 11
+Custom Script Count: 11
+Control Flow Count: 6
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed in the compact 8-11 action control-heavy band with 11 custom-script lines and 6 control-flow markers.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger stayed in the compact 8-11 action control-heavy band with 11 custom-script lines and 6 control-flow markers.

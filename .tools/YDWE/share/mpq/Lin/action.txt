@@ -1,0 +1,20 @@
+[SetUnitFlyHeightEX]
+title = "Ex - 设置单位飞行高度"
+description = "设置单位 ${Unit} 的飞行高度为 ${Height} 按 ${Type} 类型 ${Speed} 变化,并 ${SpeedType} 运行"
+comment = "霖湙: 当速度/时间小于等于0时为瞬时变化"
+category = XG_Unit
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = real
+default = "GetUnitFlyHeight"
+[[.args]]
+type = HeightType
+default = "HeightType_1"
+[[.args]]
+type = real
+default = "0"
+[[.args]]
+type = SpeedType
+default = "SpeedType_1"

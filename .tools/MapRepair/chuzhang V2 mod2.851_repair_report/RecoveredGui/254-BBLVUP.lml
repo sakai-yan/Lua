@@ -1,0 +1,14 @@
+﻿name: BBLVUP
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventHero_Level)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_BBLVUP_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:call Trig_BBLVUP_Actions())

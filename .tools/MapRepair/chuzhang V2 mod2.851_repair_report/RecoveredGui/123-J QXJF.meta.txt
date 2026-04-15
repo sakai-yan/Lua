@@ -1,0 +1,11 @@
+﻿Trigger: J QXJF
+Mode: custom-text
+Action Count: 20
+Custom Script Count: 19
+Control Flow Count: 12
+Fallback Reason: Fell back to custom-text because the trigger had no recoverable GUI events and still relied on 19 custom-script action(s).
+
+Notes:
+- No standard trigger-registration calls could be mapped back into GUI event nodes.
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the trigger had no recoverable GUI events and still relied on 19 custom-script action(s).

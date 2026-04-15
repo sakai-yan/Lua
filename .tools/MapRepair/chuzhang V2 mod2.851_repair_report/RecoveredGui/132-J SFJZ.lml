@@ -1,0 +1,18 @@
+﻿name: J SFJZ
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_J_SFJZ_Func001C())then)
+  - CustomScriptCode (const:set udg_J_SFJZ_num[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=0)
+  - CustomScriptCode (const:set udg_J_SFJZ_unit[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=GetTriggerUnit())
+  - CustomScriptCode (const:set udg_J_SFJZ_P[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=GetUnitLoc(GetTriggerUnit()))
+  - UnitAddAbilityBJ (const:A04E, call:GetTriggerUnit)
+  - CustomScriptCode (const:else)
+  - DoNothing
+  - CustomScriptCode (const:endif)

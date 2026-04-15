@@ -1,0 +1,14 @@
+﻿name: bag sell
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellCast)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_bag_sell_Func001C())then)
+  - CustomScriptCode (const:call UnitDropItemTarget(GetTriggerUnit(),GetSpellTargetItem(),gg_unit_ngme_0734))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)

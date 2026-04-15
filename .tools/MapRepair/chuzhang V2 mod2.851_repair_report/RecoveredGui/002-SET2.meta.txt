@@ -1,0 +1,9 @@
+﻿Trigger: SET2
+Mode: custom-text
+Action Count: 77
+Custom Script Count: 18
+Control Flow Count: 6
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still depended on mixed GUI/custom-script control flow with 18 custom-script lines and 6 control-flow markers across 77 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still depended on mixed GUI/custom-script control flow with 18 custom-script lines and 6 control-flow markers across 77 actions.

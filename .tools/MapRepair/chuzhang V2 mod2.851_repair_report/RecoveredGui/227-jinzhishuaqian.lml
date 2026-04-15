@@ -1,0 +1,11 @@
+﻿name: jinzhishuaqian
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:0.10)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call ForForce(GetPlayersAll(),function Trig_jinzhishuaqian_Func001A))

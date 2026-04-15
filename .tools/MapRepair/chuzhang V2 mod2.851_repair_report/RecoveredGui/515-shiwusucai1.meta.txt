@@ -1,0 +1,10 @@
+﻿Trigger: shiwusucai1
+Mode: custom-text
+Action Count: 22
+Custom Script Count: 18
+Control Flow Count: 12
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 18 custom-script lines and 12 control-flow markers across 22 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 18 custom-script lines and 12 control-flow markers across 22 actions.

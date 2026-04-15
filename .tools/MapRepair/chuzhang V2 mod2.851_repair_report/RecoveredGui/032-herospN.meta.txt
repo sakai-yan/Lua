@@ -1,0 +1,10 @@
+﻿Trigger: herospN
+Mode: custom-text
+Action Count: 51
+Custom Script Count: 51
+Control Flow Count: 36
+Fallback Reason: Fell back to custom-text because the trigger had no recoverable GUI events and still relied on 51 custom-script action(s).
+
+Notes:
+- No standard trigger-registration calls could be mapped back into GUI event nodes.
+- Fell back to custom-text because the trigger had no recoverable GUI events and still relied on 51 custom-script action(s).

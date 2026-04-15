@@ -1,0 +1,310 @@
+[Hunit]
+title = "单位 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+
+[Hitem]
+title = "物品 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = item
+default = "GetManipulatedItem"
+
+[Hplayer]
+title = "玩家 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = player
+default = "GetOwningPlayer"
+
+[Hgroup]
+title = "单位组 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = group
+default = "GetLastCreatedGroup"
+
+[Hforce]
+title = "玩家组 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = force
+default = "GetPlayersAllies"
+
+[Hunitpool]
+title = "单位池 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = unitpool
+default = "LoadUnitPoolHandle"
+
+[Hitempool]
+title = "物品池 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = itempool
+default = "LoadItemPoolHandle"
+
+[Htimer]
+title = "计时器 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = timer
+default = "GetExpiredTimer"
+
+[Hlocation]
+title = "点 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = location
+default = "GetRectCenter"
+
+[Hdestructable]
+title = "可破坏物 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = destructable
+default = "LoadDestructableHandleBJ"
+
+[Heffect]
+title = "特效 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = effect
+default = "GetLastCreatedEffectBJ"
+
+[Hdialog]
+title = "对话框 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = dialog
+default = "GetClickedDialogBJ"
+
+[Hbutton]
+title = "对话框按钮 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = button
+default = "GetLastCreatedButtonBJ"
+
+[Htexttag]
+title = "漂浮文字 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = texttag
+default = "GetLastCreatedTextTag"
+
+[Hhashtable]
+title = "哈希表 -> handle对象"
+description = "${对象}"
+comment = "雪月补充"
+category = XG_XGA
+returns = handle
+[[.args]]
+type = hashtable
+default = "GetLastCreatedHashtableBJ"
+
+
+[EXGetUnitArrayString]
+title = "获取单位[字符串] [数组] [JAPI]"
+description = "获取 ${单位} 的 ${类型}[${索引}] 值"
+comment = "雪月补充"
+category = TC_UNIT
+returns = string
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "0"
+[[.args]]
+type = integer
+default = "0"
+
+[EXGetUnitString]
+title = "设置单位[字符串] [JAPI]"
+description = "获取 ${单位} 的 ${类型} 值"
+comment = "雪月补充"
+category = TC_UNIT
+returns = string
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "0"
+
+[EXGetUnitReal]
+title = "设置单位[实数] [JAPI]"
+description = "获取 ${单位} 的 ${类型} 值"
+comment = "雪月补充"
+category = TC_UNIT
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "0"
+
+[EXGetUnitInteger]
+title = "设置单位[整数] [JAPI]"
+description = "获取 ${单位} 的 ${类型} 值"
+comment = "雪月补充"
+category = TC_UNIT
+returns = integer
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "0"
+
+[CreateSound]
+title = "创建声音 [文件]"
+description = "从文件创建声音 ${声音} 是否循环:${loop} 是否3D${3D} 限制播放范围${stopWhenOuToFrange} 淡入速率:${fadeInRate} 淡出速率:${fadeOutRate} EAX设置:${eaxSettingout}"
+comment = "雪月补充"
+category = TC_SOUND
+returns = sound
+[[.args]]
+type = string
+default = "Sound\\Music\\mp3Music\\Human1.mp3"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = integer
+default = "10"
+[[.args]]
+type = integer
+default = "10"
+[[.args]]
+type = string
+default = "null"
+
+[CreateSoundFilenameWithLabel]
+title = "创建声音 [文件] [标签]"
+description = "从文件创建声音 ${声音} 是否循环:${loop} 是否3D${3D} 限制播放范围${stopWhenOuToFrange} 淡入速率:${fadeInRate} 淡出速率:${fadeOutRate} SLKEntryName:${SLKEntryName}"
+comment = "雪月补充"
+category = TC_SOUND
+returns = sound
+[[.args]]
+type = string
+default = "Sound\\Music\\mp3Music\\Human1.mp3"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = integer
+default = "10"
+[[.args]]
+type = integer
+default = "10"
+[[.args]]
+type = string
+default = "null"
+
+[CreateSoundFromLabel]
+title = "创建声音 [标签]"
+description = "从标签创建声音 ${soundLabel} 是否循环:${loop} 是否3D${3D} 限制播放范围${stopWhenOuToFrange} 淡入速率:${fadeInRate} 淡出速率:${fadeOutRate}"
+comment = "雪月补充"
+category = TC_SOUND
+returns = sound
+[[.args]]
+type = string
+default = "null"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = integer
+default = "10"
+[[.args]]
+type = integer
+default = "10"
+
+
+[YDWEDistanceBetweenUnitAndPoint]
+title = "单位到点的距离 [New!]"
+description = "${单位} 到 ${点} 的距离"
+category = TC_LOCATION
+returns = real
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = location
+
+[YDWEAngleBetweenUnitAndPoint]
+title = "单位到点的角度 [New!]"
+description = "${单位} 到 ${点} 的角度"
+category = TC_LOCATION
+returns = degree
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = location
+

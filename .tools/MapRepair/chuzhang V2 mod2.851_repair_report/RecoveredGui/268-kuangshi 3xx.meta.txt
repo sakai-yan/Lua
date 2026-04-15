@@ -1,0 +1,10 @@
+﻿Trigger: kuangshi 3xx
+Mode: custom-text
+Action Count: 6
+Custom Script Count: 3
+Control Flow Count: 0
+Fallback Reason: Fell back to custom-text because the trigger had no recoverable GUI events and still relied on 3 custom-script action(s).
+
+Notes:
+- No standard trigger-registration calls could be mapped back into GUI event nodes.
+- Fell back to custom-text because the trigger had no recoverable GUI events and still relied on 3 custom-script action(s).

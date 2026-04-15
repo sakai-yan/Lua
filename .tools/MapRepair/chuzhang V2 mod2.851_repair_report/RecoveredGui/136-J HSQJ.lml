@@ -1,0 +1,20 @@
+﻿name: J HSQJ
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_HSQJ_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - CreateNUnitsAtLoc (const:1, const:esen, call:GetOwningPlayer, var:udg_SP, preset:RealUnitFacing)
+  - UnitApplyTimedLifeBJ (const:0.50, preset:TimedLifeBuffCodeGeneric, call:GetLastCreatedUnit)
+  - CustomScriptCode (const:set udg_GROUP=GetUnitsInRangeOfLocMatching(250.00,udg_SP,Condition(function Trig_J_HSQJ_Func006002003)))
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP,function Trig_J_HSQJ_Func007A))
+  - CustomScriptCode (const:call DestroyGroup(udg_GROUP))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

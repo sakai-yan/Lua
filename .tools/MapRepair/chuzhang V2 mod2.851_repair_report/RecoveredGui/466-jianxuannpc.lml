@@ -1,0 +1,13 @@
+﻿name: jianxuannpc
+type: gui
+category: 0
+enabled: false
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:2.00)
+conditions:
+  -
+actions:
+  - SetVariable (var:udg_SP, call:GetRectCenter)
+  - IssuePointOrderLoc (var:gg_unit_ndqn_0615, const:attack, var:udg_SP)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

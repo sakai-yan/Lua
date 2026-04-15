@@ -1,0 +1,31 @@
+﻿name: SHIJIAO
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player00)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player01)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player02)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player03)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player04)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player05)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player06)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player07)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player08)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player09)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player10)
+  - TriggerRegisterPlayerEventEndCinematic (preset:Player11)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_SHIJIAO_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:set udg_MOVEangle[GetConvertedPlayerId(GetTriggerPlayer())]=GetUnitFacing(udg_CCC[GetConvertedPlayerId(GetTriggerPlayer())]))
+  - CustomScriptCode (const:call SetCameraFieldForPlayer(GetOwningPlayer(udg_HERO[GetConvertedPlayerId(GetTriggerPlayer())]),CAMERA_FIELD_ROTATION,udg_MOVEangle[GetConvertedPlayerId(GetTriggerPlayer())],0.60))
+  - CustomScriptCode (const:call SetCameraFieldForPlayer(GetOwningPlayer(udg_HERO[GetConvertedPlayerId(GetTriggerPlayer())]),CAMERA_FIELD_TARGET_DISTANCE,udg_C_JT1[GetConvertedPlayerId(GetTriggerPlayer())],0.60))
+  - CustomScriptCode (const:call SetCameraFieldForPlayer(GetOwningPlayer(udg_HERO[GetConvertedPlayerId(GetTriggerPlayer())]),CAMERA_FIELD_ANGLE_OF_ATTACK,udg_C_JT2[GetConvertedPlayerId(GetTriggerPlayer())],0.60))
+  - CustomScriptCode (const:call SetCameraFieldForPlayer(GetOwningPlayer(udg_HERO[GetConvertedPlayerId(GetTriggerPlayer())]),CAMERA_FIELD_ZOFFSET,udg_C_JT3[GetConvertedPlayerId(GetTriggerPlayer())],1.00))
+  - CustomScriptCode (const:call SetCameraFieldForPlayer(GetOwningPlayer(udg_HERO[GetConvertedPlayerId(GetTriggerPlayer())]),CAMERA_FIELD_FARZ,99999.00,1.00))
+  - CustomScriptCode (const:call SelectUnitForPlayerSingle(udg_CCC[GetConvertedPlayerId(GetTriggerPlayer())],GetTriggerPlayer()))

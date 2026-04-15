@@ -1,0 +1,96 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "MapRepair.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MapRepair.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MapRepair.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MapRepair.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../../../.tools/MapRepair/src/MapRepair.Core/MapRepair.Core.csproj",
+      "msbuildProject": "../../../../../.tools/MapRepair/src/MapRepair.Core/MapRepair.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "MapRepair.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\DCY1\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "d:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.planning\\workspaces\\maprepair-trigger-editor-compatibility\\tools\\maprepair_smoke_w2l_probe\\MapRepair.SmokeW2lProbe.csproj",
+      "projectName": "MapRepair.SmokeW2lProbe",
+      "projectPath": "d:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.planning\\workspaces\\maprepair-trigger-editor-compatibility\\tools\\maprepair_smoke_w2l_probe\\MapRepair.SmokeW2lProbe.csproj",
+      "packagesPath": "C:\\Users\\DCY1\\.nuget\\packages\\",
+      "outputPath": "d:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.planning\\workspaces\\maprepair-trigger-editor-compatibility\\tools\\maprepair_smoke_w2l_probe\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\DCY1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "d:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Core\\MapRepair.Core.csproj": {
+              "projectPath": "d:\\Software\\魔兽地图编辑\\[0]新整合编辑器\\Lua\\.tools\\MapRepair\\src\\MapRepair.Core\\MapRepair.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

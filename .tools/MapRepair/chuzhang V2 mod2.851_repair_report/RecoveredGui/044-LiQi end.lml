@@ -1,0 +1,22 @@
+﻿name: LiQi end
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:1])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:2])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:3])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:4])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:5])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:6])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:7])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:8])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:9])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:10])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:11])
+  - TriggerRegisterTimerExpireEventBJ (var:udg_HERO_MO_TIME[const:12])
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call Trig_LiQi_end_Actions())

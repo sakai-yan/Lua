@@ -1,0 +1,14 @@
+﻿name: zhenshoudan
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventHeroUseItem)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_zhenshoudan_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:call Trig_zhenshoudan_Actions())

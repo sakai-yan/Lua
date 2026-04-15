@@ -1,0 +1,8 @@
+﻿Trigger: dead 2
+Mode: gui
+Action Count: 6
+Custom Script Count: 6
+Control Flow Count: 3
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.

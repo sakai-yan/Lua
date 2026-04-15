@@ -1,0 +1,10 @@
+﻿Trigger: J SMYD
+Mode: custom-text
+Action Count: 48
+Custom Script Count: 44
+Control Flow Count: 30
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 44 custom-script lines and 30 control-flow markers across 48 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 44 custom-script lines and 30 control-flow markers across 48 actions.

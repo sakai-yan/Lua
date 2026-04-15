@@ -1,0 +1,9 @@
+﻿Trigger: 012
+Mode: custom-text
+Action Count: 9
+Custom Script Count: 6
+Control Flow Count: 6
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed in the compact 8-11 action control-heavy band with 6 custom-script lines and 6 control-flow markers.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger stayed in the compact 8-11 action control-heavy band with 6 custom-script lines and 6 control-flow markers.

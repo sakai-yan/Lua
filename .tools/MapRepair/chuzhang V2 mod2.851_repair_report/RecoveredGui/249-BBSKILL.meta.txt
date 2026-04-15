@@ -1,0 +1,11 @@
+﻿Trigger: BBSKILL
+Mode: custom-text
+Action Count: 1
+Custom Script Count: 1
+Control Flow Count: 0
+Fallback Reason: Fell back to custom-text because the trigger had no recoverable GUI events and still relied on 1 custom-script action(s).
+
+Notes:
+- No standard trigger-registration calls could be mapped back into GUI event nodes.
+- Preserved action function `Trig_BBSKILL_Actions` as a custom-script callback because it uses locals or early returns.
+- Fell back to custom-text because the trigger had no recoverable GUI events and still relied on 1 custom-script action(s).

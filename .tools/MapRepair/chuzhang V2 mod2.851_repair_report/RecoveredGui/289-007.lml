@@ -1,0 +1,14 @@
+﻿name: 007
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterUnitEvent (var:gg_unit_nsog_0708, preset:UnitEventAttacked)
+conditions:
+  -
+actions:
+  - SetVariable (var:udg_SP, call:GetRectCenter)
+  - CustomScriptCode (const:call IssuePointOrderByIdLoc(gg_unit_nsog_0708,851990,udg_SP))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - DisableTrigger (call:GetTriggeringTrigger)

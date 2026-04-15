@@ -1,0 +1,18 @@
+﻿name: guanka
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterEnterRectSimple (var:gg_rct_guanka1)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_guanka_Func001C())then)
+  - DoNothing
+  - CustomScriptCode (const:else)
+  - SetVariable (var:udg_SP, call:GetRectCenter)
+  - SetUnitPositionLoc (call:GetTriggerUnit, var:udg_SP)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()),0,0,"|cFFFFCC00孙末肖：|r|cFFCCFFCC你的修为还是少到外面的世界吧~~年轻人|r\n|cFFFF0000系统提示：|r|cFF00FFFF必须等级大于|r|cFFFFFF0020|r|cFF00FFFF.|r"))
+  - CustomScriptCode (const:endif)

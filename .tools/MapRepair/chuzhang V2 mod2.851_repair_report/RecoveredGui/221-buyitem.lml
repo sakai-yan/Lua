@@ -1,0 +1,14 @@
+﻿name: buyitem
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSellItem)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:set udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))]=(udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))]-R2I((GetItemLifeBJ(GetSoldItem())*1.00))))
+  - CustomScriptCode (const:set udg_WOOD[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=(udg_WOOD[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]-R2I((I2R(GetItemLevel(GetSoldItem()))*1.00))))
+  - CustomScriptCode (const:call SetPlayerStateBJ(GetOwningPlayer(GetBuyingUnit()),PLAYER_STATE_RESOURCE_GOLD,udg_GOLD[GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))]))
+  - CustomScriptCode (const:call SetPlayerStateBJ(GetOwningPlayer(GetBuyingUnit()),PLAYER_STATE_RESOURCE_LUMBER,udg_WOOD[GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))]))

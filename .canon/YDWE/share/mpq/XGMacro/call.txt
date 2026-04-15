@@ -1,0 +1,120 @@
+[XG_Macro_Get_Act]
+title = "动作   [执行]"
+description = "从  ${name}  获取动作"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = code
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_Boolexpr]
+title = "条件[布尔表达式]   [执行]"
+description = "从  ${name}  获取布尔表达式"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = boolexpr
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_Bool]
+title = "条件[布尔值]   [执行]"
+description = "从  ${name}  获取布尔值"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = boolean
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_Str]
+title = "条件[字符串]   [执行]"
+description = "从  ${name}  获取字符串"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = string
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_Int]
+title = "条件[整数]   [执行]"
+description = "从  ${name}  获取整数"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = integer
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_Real]
+title = "条件[实数]   [执行]"
+description = "从  ${name}  获取实数"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = real
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_Unit]
+title = "条件[单位]   [执行]"
+description = "从  ${name}  获取单位"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = unit
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_UnitCode]
+title = "条件[单位类型]   [执行]"
+description = "从  ${name}  获取单位类型"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = unitcode
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_Item]
+title = "条件[物品]   [执行]"
+description = "从  ${name}  获取物品"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = item
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_ItemCode]
+title = "条件[物品类型]   [执行]"
+description = "从  ${name}  获取物品类型"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = itemcode
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_AbilCode]
+title = "条件[技能类型]   [执行]"
+description = "从  ${name}  获取技能类型"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = abilcode
+[[.args]]
+type = string
+default = "设置变量A"
+
+[XG_Macro_Get_Player]
+title = "条件[玩家]   [执行]"
+description = "从  ${name}  获取玩家"
+comment = "雪月系统: 绑定的 Key 可全局使用 不支持往上使用。同名字会冲突不论是否同类型"
+category = XG_Macro
+returns = player
+[[.args]]
+type = string
+default = "设置变量A"
+

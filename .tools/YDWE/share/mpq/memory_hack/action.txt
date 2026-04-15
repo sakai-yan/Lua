@@ -1,0 +1,5557 @@
+[MHGame_SetCheatFlag]
+title = "设置作弊标志 [MemHack]"
+description = "设置作弊标志 ${cheat_flag}"
+comment = "BitSet。局域网下依然有效"
+category = TC_MEMHACK
+[[.args]]
+type = integer
+
+[MHGame_ExecuteCode]
+title = "执行函数 [MemHack]"
+description = "执行 ${code}"
+comment = "执行一个jass函数。可异步"
+category = TC_MEMHACK
+[[.args]]
+type = scriptcode
+default = "function DoNothing"
+
+[MHGame_ExecuteFunc]
+title = "执行函数 [MemHack]"
+description = "执行 ${func_name}"
+comment = "执行一个jass函数。可异步"
+category = TC_MEMHACK
+[[.args]]
+type = string
+default = "DoNothing"
+
+[MHGame_RemoveModelCache]
+title = "删除模型缓存 [MemHack]"
+description = "删除 ${model_path} 的缓存"
+comment = ""
+category = TC_MEMHACK
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+
+[MHGame_DisablePause]
+title = "禁止游戏暂停 [MemHack]"
+description = "禁止游戏暂停: ${is_disable}"
+comment = ""
+category = TC_MEMHACK
+[[.args]]
+type = boolean
+default = "true"
+
+[MHGame_SetWindowTitle]
+title = "设置窗口标题 [MemHack]"
+description = "设置窗口标题为 ${title}"
+comment = ""
+category = TC_MEMHACK
+[[.args]]
+type = string
+
+[MHGame_SetWindowIcon]
+title = "设置窗口图标 [MemHack]"
+description = "设置窗口图标为 ${path}"
+comment = "传入mpq中ico格式的图标文件"
+category = TC_MEMHACK
+[[.args]]
+type = string
+
+
+
+
+
+
+
+
+
+[MHEvent_SetUnit]
+title = "设置事件单位"
+description = "设置事件单位为 ${unit}"
+comment = "仅支持MH的部分事件"
+category = TC_MHEVENT
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHEvent_SetAbility]
+title = "设置事件技能"
+description = "设置事件技能为 ${ability}"
+comment = "仅支持MH的部分事件"
+category = TC_MHEVENT
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHEvent_SetItem]
+title = "设置事件物品"
+description = "设置事件物品为 ${item}"
+comment = "仅支持MH的部分事件"
+category = TC_MHEVENT
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+[MHEvent_SetPlayer]
+title = "设置事件玩家"
+description = "设置事件玩家为 ${player}"
+comment = "仅支持MH的部分事件"
+category = TC_MHEVENT
+[[.args]]
+type = player
+default = "Player00"
+
+[MHEvent_SetMissile]
+title = "设置事件投射物"
+description = "设置事件投射物为 ${missile}"
+comment = "仅支持MH的部分事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+
+[MHEvent_SetOrder]
+title = "设置事件命令"
+description = "设置事件命令为 ${order_id}"
+comment = "仅支持MH的部分事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 114514
+
+[MHEvent_SetKey]
+title = "设置事件按键"
+description = "设置事件按键为 ${key}"
+comment = "仅支持MH的部分事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 1919810
+
+[MHEvent_SetFrame]
+title = "设置事件Frame"
+description = "设置事件Frame为 ${frame}"
+comment = "仅支持MH的部分事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+
+[MHDamagingEvent_SetDamage]
+title = "设置伤害值 (前伤害事件)"
+description = "[前伤害事件]设置伤害值为 ${damage}"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 114514
+
+[MHDamagingEvent_SetSource]
+title = "设置伤害来源 (前伤害事件)"
+description = "[前伤害事件]设置伤害来源为 ${unit}"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+[[.args]]
+type = unit
+default = bj_lastCreatedUnit
+
+[MHDamagingEvent_SetFlag]
+title = "设置伤害标志 (前伤害事件)"
+description = "[前伤害事件]设置伤害标志为 ${flag}"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 0
+
+[MHDamagingEvent_SetAtkType]
+title = "设置攻击类型 (前伤害事件)"
+description = "[前伤害事件]设置攻击类型为 ${atk_type}"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+[[.args]]
+type = attacktype
+default = "AttackTypeNormal"
+
+[MHDamagingEvent_SetDmgType]
+title = "设置伤害类型 (前伤害事件)"
+description = "[前伤害事件]设置伤害类型为 ${dmg_type}"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+[[.args]]
+type = damagetype
+default = "DamageTypeNormal"
+
+[MHDamagingEvent_SetWeapType]
+title = "设置武器类型 (前伤害事件)"
+description = "[前伤害事件]设置武器类型为 ${weap_type}"
+comment = "响应 任意单位即将受伤 事件"
+category = TC_MHEVENT
+[[.args]]
+type = weapontype
+default = "WEAPON_TYPE_WHOKNOWS"
+
+[MHDamageEvent_SetDamage]
+title = "设置伤害值 (后伤害事件)"
+description = "[后伤害事件]设置伤害值为 ${dur}"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 114514
+
+[MHDamageEvent_SetSource]
+title = "设置伤害来源 (后伤害事件)"
+description = "[后伤害事件]设置伤害来源为 ${unit}"
+comment = "响应 任意单位接受伤害 事件"
+category = TC_MHEVENT
+[[.args]]
+type = unit
+default = bj_lastCreatedUnit
+
+[MHNativeDamageEvent_SetDamage]
+title = "设置伤害值 (YD/原生伤害事件)"
+description = "[YD/原生伤害事件]设置伤害值为 ${dur}"
+comment = "响应 YD和原生的伤害事件。修复了ydjapi设置伤害值导致吸血变扣血的bug"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 114514
+
+[MHUnitAttackLaunchEvent_SetTargetUnit]
+title = "设置攻击目标单位"
+description = "设置攻击目标单位为 ${target}"
+comment = "响应 任意单位攻击出手 事件"
+script_name = MHUnitAttackLaunchEvent_SetTarget
+category = TC_MHEVENT
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHUnitAttackLaunchEvent_SetWeapsOn]
+title = "设置攻击索引"
+description = "设置攻击索引为 ${weaps_on}"
+comment = "响应 任意单位攻击出手 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 1
+
+[MHUnitAttackLaunchEvent_Disable]
+title = "屏蔽攻击出手"
+description = "屏蔽攻击出手: ${is_disable}"
+comment = "响应 任意单位攻击出手 事件"
+category = TC_MHEVENT
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnitSearchTargetEvent_SetTarget]
+title = "设置仇恨目标单位"
+description = "设置仇恨目标单位为 ${target}"
+comment = "响应 任意单位切换仇恨目标 事件"
+category = TC_MHEVENT
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHUnitRestoreLifeEvent_SetValue]
+title = "设置恢复的生命值"
+description = "设置恢复的生命值为 ${value}"
+comment = "响应 任意单位恢复生命值 事件。正数回血负数扣血"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 114514
+
+[MHUnitRestoreManaEvent_SetValue]
+title = "设置恢复的魔法值"
+description = "设置恢复的魔法值为 ${value}"
+comment = "响应 任意单位恢复魔法值 事件。正数回蓝负数扣蓝"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 114514
+
+[MHUnitDispelEvent_SetDamage]
+title = "设置驱散魔法效果造成的伤害"
+description = "设置驱散魔法效果造成的伤害为 ${damage}"
+comment = "响应 任意单位被驱散魔法效果 事件。设置的是对召唤物的伤害"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 114514
+
+[MHUnitHarvestEvent_SetValue]
+title = "设置单位送回的资源量"
+description = "设置单位送回的资源量为 ${value}"
+comment = "响应 任意单位送回资源 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 114514
+
+[MHUnitHarvestEvent_SetResourceGold]
+title = "设置单位送回的资源类型"
+description = "设置单位送回的资源是黄金: ${value}"
+comment = "响应 任意单位送回资源 事件。设置为False可将送回的黄金变为木材，仅对农民、苦工、食尸鬼送回资源有效"
+category = TC_MHEVENT
+[[.args]]
+type = boolean
+default = "false"
+
+[MHHeroGetExpEvent_SetValue]
+title = "设置获得的经验值"
+description = "设置获得的经验值为 ${value}"
+comment = "响应 任意单位获取经验值 事件。非负数"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 114
+min = 0
+
+[MHPlayerGoldChangeEvent_SetValue]
+title = "设置变动的黄金"
+description = "设置变动的黄金为 ${value}"
+comment = "响应 任意玩家黄金变动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 114
+
+[MHPlayerGoldChangeEvent_SetTax]
+title = "设置变动的黄金是否计算税率"
+description = "设置变动的黄金计算税率: ${is_tax}"
+comment = "响应 任意玩家黄金变动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = boolean
+default = "false"
+
+[MHPlayerLumberChangeEvent_SetValue]
+title = "设置变动的木材"
+description = "设置变动的木材为 ${value}"
+comment = "响应 任意玩家木材变动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 114
+
+[MHPlayerLumberChangeEvent_SetTax]
+title = "设置变动的木材是否计算税率"
+description = "设置变动的木材计算税率: ${is_tax}"
+comment = "响应 任意玩家木材变动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = boolean
+default = "false"
+
+[MHMissileHitEvent_SetTargetUnit]
+title = "设置命中的目标"
+description = "设置命中的目标为 ${target}"
+comment = "响应 任意投射物命中 事件。不推荐使用"
+script_name = MHMissileHitEvent_SetTarget
+category = TC_MHEVENT
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHMissileHitEvent_SetDamage]
+title = "设置命中时的伤害"
+description = "设置命中时的伤害为 ${damage}"
+comment = "响应 任意投射物命中 事件。不推荐使用"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 114514
+
+[MHMissileHitEvent_ResetUnit]
+title = "重置投射物"
+description = "重置投射物: 来源 ${source}, 目标 ${target}"
+comment = "响应 任意投射物命中 事件。重新运行投射物，重置后本次命中不会结算。不推荐使用"
+script_name = MHMissileHitEvent_Reset
+category = TC_MHEVENT
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHHashtableChangeEvent_SetNewValueInt]
+title = "设置变动的整数哈希项新值"
+description = "设置变动的整数哈希项新值为 ${new_value}"
+comment = "响应 哈希项发生变动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 0
+
+[MHHashtableChangeEvent_SetNewValueReal]
+title = "设置变动的实数哈希项新值"
+description = "设置变动的实数哈希项新值为 ${new_value}"
+comment = "响应 哈希项发生变动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 0
+
+[MHHashtableChangeEvent_SetNewValueBool]
+title = "设置变动的布尔值哈希项新值"
+description = "设置变动的布尔值哈希项新值为 ${new_value}"
+comment = "响应 哈希项发生变动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = boolean
+default = "true"
+
+[MHHashtableChangeEvent_SetNewValueStr]
+title = "设置变动的字符串哈希项新值"
+description = "设置变动的字符串哈希项新值为 ${new_value}"
+comment = "响应 哈希项发生变动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = string
+default = "野兽先辈"
+
+[MHFrameScrollEvent_SetValue]
+title = "设置滚动值"
+description = "设置滚动值为 ${value}"
+comment = "响应 鼠标滚动Frame 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 0
+
+[MHMsgMouseScrollEvent_SetValue]
+title = "设置滚动值"
+description = "设置滚动值为 ${value}"
+comment = "响应 本地玩家鼠标滚动 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 0
+
+[MHMsgLocalOrderEvent_SetCastType]
+title = "设置本地命令的释放类型"
+description = "设置本地命令的释放类型为 ${value}"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 0
+
+[MHMsgLocalOrderEvent_SetFlag]
+title = "设置本地命令的标志"
+description = "设置本地命令的标志为 ${value}"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+[[.args]]
+type = integer
+default = 0
+
+[MHMsgLocalOrderEvent_SetTargetUnit]
+title = "设置本地命令的目标单位"
+description = "设置本地命令的目标单位为 ${target}"
+comment = "响应 本地玩家发布命令 事件"
+script_name = MHMsgLocalOrderEvent_SetTarget
+category = TC_MHEVENT
+[[.args]]
+type = unit
+
+[MHMsgLocalOrderEvent_SetTargetItem]
+title = "设置本地命令的目标物品"
+description = "设置本地命令的目标物品为 ${target}"
+comment = "响应 本地玩家发布命令 事件"
+script_name = MHMsgLocalOrderEvent_SetTarget
+category = TC_MHEVENT
+[[.args]]
+type = item
+
+[MHMsgLocalOrderEvent_SetTargetDest]
+title = "设置本地命令的目标可破坏物"
+description = "设置本地命令的目标可破坏物为 ${target}"
+comment = "响应 本地玩家发布命令 事件"
+script_name = MHMsgLocalOrderEvent_SetTarget
+category = TC_MHEVENT
+[[.args]]
+type = destructable
+
+[MHMsgLocalOrderEvent_SetTargetXY]
+title = "设置本地命令的目标点"
+description = "设置本地命令的目标点为 (${x}, ${y})"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHMsgLocalOrderEvent_SetDropped]
+title = "设置本地命令的被丢弃物品"
+description = "设置本地命令的被丢弃物品为 ${dropped}"
+comment = "响应 本地玩家发布命令 事件"
+category = TC_MHEVENT
+[[.args]]
+type = item
+
+[MHUIHPBarEvent_SetX]
+title = "设置血条X偏移"
+description = "设置刷新的血条X偏移为 ${x}"
+comment = "响应 血条刷新 事件。绝对锚点"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 0
+
+[MHUIHPBarEvent_SetY]
+title = "设置血条Y偏移"
+description = "设置刷新的血条Y偏移为 ${y}"
+comment = "响应 血条刷新 事件。绝对锚点"
+category = TC_MHEVENT
+[[.args]]
+type = real
+default = 0
+
+
+
+
+
+
+
+
+
+[MHFrame_LoadTOC]
+title = "加载TOC文件"
+description = "加载 ${file_path}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = string
+
+[MHFrame_Destroy]
+title = "删除Frame"
+description = "删除 ${frame}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+
+[MHFrame_Update]
+title = "更新Frame"
+description = "更新 ${frame}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+
+[MHFrame_Click]
+title = "点击Frame"
+description = "点击 ${frame}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+
+[MHFrame_SetParent]
+title = "设置父级"
+description = "设置 ${frame} 的父级为 ${parent_frame}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = "MHUI_GetGameUI"
+
+[MHFrame_SetLayoutLayer]
+title = "设置layout渲染层级"
+description = "设置 ${frame} 的layout渲染层级为 ${layout_layer}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHLayoutLayer
+default = "LAYOUT_LAYER_BACKGROUND"
+
+[MHFrame_Hide]
+title = "隐藏"
+description = "设置 ${frame} 隐藏: ${is_hide}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = boolean
+default = "true"
+
+[MHFrame_Disable]
+title = "禁用"
+description = "设置 ${frame} 禁用: ${is_disable}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = boolean
+default = "true"
+
+[MHFrame_SetPriority]
+title = "设置优先级"
+description = "设置 ${frame} 的优先级为 ${priority}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 0
+
+[MHFrame_SetLayerStyle]
+title = "设置LayerStyle"
+description = "设置 ${frame} 的LayerStyle为 ${style}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHFrame_LayerStyleOperator]
+title = "操作LayerStyle"
+description = "为 ${frame} 的LayerStyle ${op} ${style}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHFlagOperator
+default = "FLAG_OPERATOR_ADD"
+[[.args]]
+type = MHLayerStyle
+default = "LAYER_STYLE_VIEW_PORT"
+
+[MHFrame_SetAlpha]
+title = "设置透明度"
+description = "设置 ${frame} 的透明度为 ${alpha}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 0
+
+[MHFrame_SetAbsolutePoint]
+title = "设置绝对锚点"
+description = "设置 ${frame} 的 ${anchor} 锚点的绝对偏移为 (${x}, ${y})"
+comment = "xy为屏幕坐标，左下角为坐标原点。x= 0~0.8; y = 0~0.6"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+[[.args]]
+type = real
+default = 0.4
+[[.args]]
+type = real
+default = 0.3
+
+[MHFrame_SetRelativePoint]
+title = "设置相对锚点"
+description = "设置 ${frame} 的 ${anchor} 锚点相对于 ${relative_frame} 的 ${anchor} 锚点的偏移为 (${x}, ${y})"
+comment = "xy为屏幕坐标，左下角为坐标原点。x = 0~0.8; y = 0~0.6"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+[[.args]]
+type = real
+default = 0.4
+[[.args]]
+type = real
+default = 0.3
+
+[MHFrame_SetPointX]
+title = "设置锚点的X轴偏移"
+description = "设置 ${frame} 的 ${anchor} 锚点的X轴偏移为 ${x}"
+comment = "设置现有锚点的X轴偏移"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+[[.args]]
+type = real
+
+[MHFrame_SetPointY]
+title = "设置锚点的Y轴偏移"
+description = "设置 ${frame} 的 ${anchor} 锚点的Y轴偏移为 ${y}"
+comment = "设置现有锚点的Y轴偏移"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+[[.args]]
+type = real
+default = 0
+
+[MHFrame_SetPointPosition]
+title = "设置锚点的坐标"
+description = "设置 ${frame} 的 ${anchor} 锚点的坐标为 (${x}, ${y})"
+comment = "设置现有锚点的坐标"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHAnchor
+default = "ANCHOR_CENTER"
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+
+[MHFrame_SetAllPoints]
+title = "设置所有锚点"
+description = "设置 ${frame} 的所有锚点到 ${relative_frame} 上"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHFrame_ClearAllPoints]
+title = "清除所有锚点"
+description = "清除 ${frame} 的所有锚点"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+
+[MHFrame_SetWidth]
+title = "设置宽度"
+description = "设置 ${frame} 的宽度为 ${width}"
+comment = "宽度为屏幕坐标: 0~0.8"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+
+[MHFrame_SetHeight]
+title = "设置高度"
+description = "设置 ${frame} 的高度为 ${height}"
+comment = "高度为屏幕坐标: 0~0.6"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+
+[MHFrame_SetSize]
+title = "设置尺寸"
+description = "设置 ${frame} 的宽度为 ${width} 高度为 ${height}"
+comment = "宽度和高度为屏幕坐标"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHFrame_SetScale]
+title = "设置缩放"
+description = "设置 ${frame} 的缩放为 ${scale}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 1
+
+[MHFrame_SetColor]
+title = "设置颜色 (Hex)"
+description = "设置 ${frame} 的颜色为 ${color}"
+comment = "16进制颜色代码，可以用自定义代码填写。仅支持CSimpleFontString, CSimpleTexture和CTextFrame"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = -1
+
+[MHFrame_SetColorEx]
+title = "设置颜色 (ARGB)"
+description = "设置 ${frame} 的颜色: 透明度 ${alpha}, 红色值 ${red}, 绿色值 ${green}, 蓝色值 ${blue}"
+comment = "仅支持CSimpleFontString, CSimpleTexture和CTextFrame"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 255
+min = 0
+max = 255
+[[.args]]
+type = integer
+default = 255
+min = 0
+max = 255
+[[.args]]
+type = integer
+default = 255
+min = 0
+max = 255
+[[.args]]
+type = integer
+default = 255
+min = 0
+max = 255
+
+[MHFrame_SetTexture]
+title = "设置贴图"
+description = "设置 ${frame} 的贴图为 ${texture}。平铺 ${is_tile}"
+comment = "仅支持CBackdropFrame, CSimpleTexture, CCommandButton和CSimpleStatusBar"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = imagefile
+default = "\"ReplaceableTextures\\CommandButtons\\BTNStormBolt.blp\""
+[[.args]]
+type = boolean
+default = "false"
+
+[MHFrame_SetModel]
+title = "设置模型"
+description = "设置 ${frame} 的模型为 ${color} 模型类型 ${model_type} 参数 ${flag}"
+comment = "仅支持CModelFrame, CSpriteFrame和CStatBar"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHFrame_SetFont]
+title = "设置字体"
+description = "设置 ${frame} 的字体为 ${font_path}, 大小 ${height}, 参数 ${flag}"
+comment = "仅支持CTextFrame, CEditBox, CSimpleFontString和CSimpleMessageFrame"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = real
+default = 0.1
+[[.args]]
+type = integer
+default = 0
+
+[MHFrame_SetFontHeight]
+title = "设置字体大小"
+description = "设置 ${frame} 的字体大小为 ${height}"
+comment = "仅支持CTextFrame和CSimpleFontString"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 0.1
+
+[MHFrame_SetText]
+title = "设置文本"
+description = "设置 ${frame} 的文本为 ${text}"
+comment = "仅支持CEditBox, CSlashChatBox, CGlueEditBoxWar3, CSimpleFontString, CTextArea, CTextFrame, CTextButtonFrame, CTimerTextFrame和CGlueTextButtonWar3"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = string
+default = "senpai, sukissu!"
+
+[MHFrame_SetTextLimit]
+title = "设置文本限制"
+description = "设置 ${frame} 的文本字数限制为 ${length}"
+comment = "仅支持CEditBox和CSimpleFontString"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 114514
+
+[MHFrame_SetTextAlign]
+title = "设置文本对齐"
+description = "设置 ${frame} 的垂直对齐方式为 ${vertex_align} 水平对齐方式为 ${horizon_align}"
+comment = "仅支持CSimpleFontString, CTextFrame和CSimpleMessageFrame"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHFrameTextVertexAlign
+default = "TEXT_VERTEX_ALIGN_CENTER"
+[[.args]]
+type = MHFrameTextHorizonAlign
+default = "TEXT_HORIZON_ALIGN_CENTER"
+
+[MHFrame_SetTextColor]
+title = "设置文本颜色"
+description = "设置 ${frame} 的 ${color_type} 为 ${color}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHFrameTextColor
+default = "TEXT_COLOR_NORMAL"
+[[.args]]
+type = integer
+default = "0xFFFFFFFF"
+
+[MHFrame_SetTextFlag]
+title = "设置文本标志"
+description = "设置 ${frame} 的文本标志 为 ${flag}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHFrame_SetTextStyle]
+title = "设置文本样式"
+description = "设置 ${frame} 的文本样式 为 ${style}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHFrame_SetTextShadowOff]
+title = "设置文本阴影偏移"
+description = "设置 ${frame} 的文本阴影偏移为 (${x}, ${y})"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHFrame_SetValue]
+title = "设置数值"
+description = "设置 ${frame} 的数值为 ${value}"
+comment = "仅支持CSlider, CSimpleStatusBar和CStatBar"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 0
+
+[MHFrame_SetLimit]
+title = "设置数值限制"
+description = "设置 ${frame} 的最大数值为 ${max_limit} 最小数值为 ${min_limit}"
+comment = "仅支持CSlider, CSimpleStatusBar和CStatBar"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+
+[MHFrame_AddBorder]
+title = "添加边框"
+description = "为 ${frame} 添加边框。边框贴图 ${border_file}，背景贴图 ${background_file}，边框标志 ${border_flag}，边框尺寸 ${border_size}，填充尺寸 ${padding}，平铺 ${is_tile}"
+comment = "仅支持CSimpleFrame和CBackdropFrame"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = imagefile
+default = "\"UI\\Widgets\\ToolTips\\Human\\human-tooltip-border.blp\""
+[[.args]]
+type = imagefile
+default = "\"UI\\Widgets\\ToolTips\\Human\\human-tooltip-background.blp\""
+[[.args]]
+type = integer
+default = "0xFF"
+[[.args]]
+type = real
+default = 0.01
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = boolean
+default = "true"
+
+[MHFrame_CageMouse]
+title = "限制鼠标"
+description = "设置 ${frame} 限制鼠标 ${flag}"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = boolean
+default = "false"
+
+[MHFrame_BindToUnit]
+title = "绑定到头顶"
+description = "绑定 ${frame} 到 ${unit} 头顶"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHFrame_UnbindFrame]
+title = "取消绑定"
+description = "取消 ${frame} 的绑定"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = integer
+
+[MHFrame_UnbindUnit]
+title = "取消绑定"
+description = "取消 ${unit} 的绑定"
+comment = ""
+category = TC_MHFRAME
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHFrame_SetSimpleButtonState]
+title = "设置状态 (CSimpleButton)"
+description = "设置 ${button} 的状态为 ${state}"
+comment = "仅支持CSimpleButton"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = MHCSimpleButtonState
+default = "SIMPLEBUTTON_STATE_ENABLE"
+
+[MHFrame_AddTextAreaText]
+title = "添加文本 (CTextArea)"
+description = "为 ${text_area} 添加 ${text}"
+comment = "仅支持CTextArea"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = string
+default = "senpai sukissu!"
+
+[MHFrame_SetSimpleTextureBlendMode]
+title = "设置混合模式 (CSimpleTexture)"
+description = "设置 ${texture_frame} 的混合模式为 ${mode}"
+comment = "仅支持CSimpleButton"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = blendmode
+default = "BlendModeBlend"
+
+[MHFrame_SetSpriteColor]
+title = "设置颜色 (CSpriteFrame)"
+description = "设置 ${sprite_frame} 的颜色为 ${color}"
+comment = "仅对CSpriteFrame和CPortraitButton有效。16进制颜色代码"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = "0xFFFFCC00"
+
+[MHFrame_SetSpriteRoll]
+title = "设置横滚角 (CSpriteFrame)"
+description = "设置 ${sprite_frame} 的绕X轴转角为 ${roll}"
+comment = "仅对CSpriteFrame和CPortraitButton有效。角度制"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+
+[MHFrame_SetSpritePitch]
+title = "设置俯仰角 (CSpriteFrame)"
+description = "设置 ${sprite_frame} 的绕Y轴转角为 ${pitch}"
+comment = "仅对CSpriteFrame和CPortraitButton有效。角度制"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+
+[MHFrame_SetSpriteYaw]
+title = "设置偏航角 (CSpriteFrame)"
+description = "设置 ${sprite_frame} 的绕Z轴转角为 ${yaw}"
+comment = "仅对CSpriteFrame和CPortraitButton有效。角度制"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+
+[MHFrame_SetSpriteScale]
+title = "设置缩放 (CSpriteFrame)"
+description = "设置 ${sprite_frame} 的缩放为 ${scale}"
+comment = "仅对CSpriteFrame和CPortraitButton有效"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+
+[MHFrame_SetSpriteScaleEx]
+title = "设置三轴缩放 (CSpriteFrame)"
+description = "设置 ${sprite_frame} 的三轴缩放为 (${x_scale}, ${y_scale}, ${z_scale})"
+comment = "仅对CSpriteFrame和CPortraitButton有效"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHFrame_SetSpriteAnimation]
+title = "设置动画 (CSpriteFrame)"
+description = "设置 ${sprite_frame} 的动画为 ${anim} 附加动画名 ${attach}"
+comment = "仅对CSpriteFrame和CPortraitButton有效"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = string
+default = "attack"
+[[.args]]
+type = string
+
+[MHFrame_SetSpriteAnimationProgress]
+title = "设置动画进度 (CSpriteFrame)"
+description = "设置 ${sprite_frame} 的当前动画进度为 ${progress}"
+comment = "仅对CSpriteFrame和CPortraitButton有效。0~1"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+
+[MHFrame_SetPortraitModel]
+title = "设置模型 (CPortraitButton)"
+description = "设置 ${portrait} 的模型为 ${model_path} 并设置队伍颜色为 ${color}"
+comment = "仅对CPortraitButton有效"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+[[.args]]
+type = playercolor
+default = "Color00"
+
+[MHFrame_SetPortraitCameraPosition]
+title = "设置镜头位置 (CPortraitButton)"
+description = "设置 ${portrait} 的镜头位置为 (${x}, ${y}, ${z})"
+comment = "仅对CPortraitButton有效"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+
+[MHFrame_SetPortraitCameraFocus]
+title = "设置镜头焦点 (CPortraitButton)"
+description = "设置 ${portrait} 的镜头焦点为 (${x}, ${y}, ${z})"
+comment = "仅对CPortraitButton有效"
+category = TC_MHFRAME
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MHUI_UpdateMiniMap]
+title = "刷新小地图"
+description = "刷新小地图。左下角 (${min_x}, ${min_y}) 右上角 (${max_x}, ${max_y})"
+comment = "可刷新小地图的贴图和点击框。坐标为屏幕坐标"
+category = TC_MHUI
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHUI_SetCursorModel]
+title = "设置鼠标模型"
+description = "设置鼠标模型为 ${model_path}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = modelfile
+
+[MHUI_SetCursorItemIcon]
+title = "设置鼠标物品贴图"
+description = "设置鼠标物品贴图为 ${path}"
+comment = "会直接改变鼠标动画变成拿起物品的状态"
+category = TC_MHUI
+[[.args]]
+type = imagefile
+default = "\"ReplaceableTextures\\CommandButtons\\BTNStormBolt.blp\""
+
+[MHUI_SendPlayerChat]
+title = "模拟玩家聊天"
+description = "令 ${player} 发送聊天 ${text}。持续时间 ${dur} 频道 ${channel}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = player
+default = "Player00"
+[[.args]]
+type = string
+default = "senpai sukissu!"
+[[.args]]
+type = real
+default = 10
+[[.args]]
+type = MHChatChannel
+default = "CHAT_CHANNEL_ALL"
+
+[MHUI_SendChatMessage]
+title = "发送聊天信息"
+description = "发送聊天信息 ${text}。持续时间 ${dur} 颜色 ${color}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = string
+default = "senpai sukissu!"
+[[.args]]
+type = real
+default = 10
+[[.args]]
+type = integer
+default = "0xFFFFFFFF"
+
+[MHUI_SendErrorMessage]
+title = "发送错误信息"
+description = "发送错误信息 ${text}。持续时间 ${dur} 颜色 ${color}"
+comment = "配合播放错误音效和本地事件来可以达到自定义目标允许"
+category = TC_MHUI
+[[.args]]
+type = string
+default = "senpai sukissu!"
+[[.args]]
+type = real
+default = 10
+[[.args]]
+type = integer
+default = "0xFFFFFFFF"
+
+[MHUI_SendUpKeepMessage]
+title = "发送维修信息"
+description = "发送维修信息 ${text}。持续时间 ${dur} 颜色 ${color}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = string
+default = "senpai sukissu!"
+[[.args]]
+type = real
+default = 10
+[[.args]]
+type = integer
+default = "0xFFFFFFFF"
+
+[MHUI_PlayNativeSound]
+title = "播放原生音效"
+description = "播放 ${label}"
+comment = "参考War3.mpq中UI\\SoundInfo文件夹下的文件。也可参考物编中的声音字段"
+category = TC_MHUI
+[[.args]]
+type = string
+default = "InterfaceError"
+
+[MHUI_PlayErrorSound]
+title = "播放错误音效"
+description = "播放错误音效"
+comment = ""
+category = TC_MHUI
+
+[MHUI_DrawAttackSpeed]
+title = "绘制攻速"
+description = "绘制攻速: ${is_enable}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_DrawMoveSpeed]
+title = "绘制移速"
+description = "绘制移速: ${is_enable}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_EnableDrawMPBar]
+title = "绘制蓝条"
+description = "绘制蓝条: ${is_enable}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_OnlyDrawAllyMPBar]
+title = "仅绘制盟友蓝条"
+description = "仅绘制盟友蓝条: ${is_only}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_MPBarDrawHeroLevel]
+title = "绘制英雄等级"
+description = "在蓝条旁绘制英雄等级: ${is_draw}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_EnableDrawAbilsCooldown]
+title = "技能冷却显示"
+description = "开启技能冷却显示: ${is_enable}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_EnableDrawItemsCooldown]
+title = "物品冷却显示"
+description = "开启物品冷却显示: ${is_enable}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_EnableDrawAbilsHotkey]
+title = "技能热键显示"
+description = "开启技能热键显示: ${is_enable}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_EnableDrawItemsHotkey]
+title = "物品热键显示"
+description = "开启物品热键显示: ${is_enable}"
+comment = ""
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUI_SetCooldownDivide]
+title = "设置冷却显示小数显示间隔"
+description = "设置小数显示间隔时间为 ${time}"
+comment = "指冷却到什么时间以下时显示小数。默认为1s"
+category = TC_MHUI
+[[.args]]
+type = real
+default = 1
+
+[MHUI_FixGarbled]
+title = "开启叠字修复"
+description = "开启叠字修复: ${is_enable}"
+comment = "并非窗口缩放"
+category = TC_MHUI
+[[.args]]
+type = boolean
+default = "true"
+
+
+
+
+
+
+
+
+
+
+[MHUIData_SetCommandButtonAbility]
+title = "设置命令按钮的技能"
+description = "设置 ${button} 的技能为 ${unit} 的 ${ability}"
+comment = "指通过 [Frame]创建CommandButton 所创建的按钮"
+category = TC_MHUIDATA
+[[.args]]
+type = integer
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHUIData_SetCommandButtonCastType]
+title = "设置命令按钮的释放类型"
+description = "设置 ${button} 的释放类型为 ${cast_type}"
+comment = "指的技能栏/物品栏中的按钮。释放类型参考文档"
+category = TC_MHUIDATA
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 0
+
+[MHUIData_SetCommandButtonGoldCost]
+title = "设置命令按钮的黄金消耗"
+description = "设置 ${button} 的黄金消耗为 ${cost}"
+comment = "指通过 [Frame]创建CommandButton 所创建的按钮"
+category = TC_MHUIDATA
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 0
+
+[MHUIData_SetCommandButtonLumberCost]
+title = "设置命令按钮的木材消耗"
+description = "设置 ${button} 的木材消耗为 ${cost}"
+comment = "指通过 [Frame]创建CommandButton 所创建的按钮"
+category = TC_MHUIDATA
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 0
+
+[MHUIData_SetCommandButtonFoodCost]
+title = "设置命令按钮的人口消耗"
+description = "设置 ${button} 的人口消耗为 ${cost}"
+comment = "指通过 [Frame]创建CommandButton 所创建的按钮"
+category = TC_MHUIDATA
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 0
+
+[MHUIData_SetCommandButtonXY]
+title = "设置命令按钮的坐标"
+description = "设置 ${button} 的坐标为 (${x}, ${y})"
+comment = "指的技能栏/物品栏中的按钮。坐标取值范围与物编一致"
+category = TC_MHUIDATA
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MHMsg_SetWindowSize]
+title = "设置窗口大小"
+description = "设置魔兽窗口宽: ${width}, 高: ${height}"
+comment = "异步函数"
+category = TC_MHMESSAGE
+[[.args]]
+type = integer
+default = 1920
+[[.args]]
+type = integer
+default = 1080
+
+[MHMsg_SetWindowPosition]
+title = "设置窗口位置"
+description = "设置魔兽窗口位置为 (${x}, ${y})"
+comment = "屏幕左上角为坐标原点。xy单位是像素，代表窗口左上角距离屏幕左边/顶部的距离，建议搭配获取屏幕分辨率食用"
+category = TC_MHMESSAGE
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHMsg_SetCursorPosition]
+title = "设置鼠标坐标"
+description = "设置鼠标的屏幕坐标为 (${x}, ${y})"
+comment = ""
+category = TC_MHMESSAGE
+[[.args]]
+type = real
+default = 0.4
+[[.args]]
+type = real
+default = 0.3
+
+[MHMsg_PressKey]
+title = "强制按键"
+description = "命令本地玩家按下 ${key}"
+comment = "异步函数"
+category = TC_MHMESSAGE
+[[.args]]
+type = integer
+default = "0x54"
+
+[MHMsg_CallTargetMode]
+title = "调起指示器"
+description = "调起技能为 ${ability_id} 命令为 ${order_id} 释放类型为 ${flag} 的指示器"
+comment = "异步函数。强制调起指示器。释放类型参考文档"
+category = TC_MHMESSAGE
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 852095
+[[.args]]
+type = integer
+default = "0x6"
+
+[MHMsg_CallTargetModeEx]
+title = "调起指示器Ex"
+description = "调起技能为 ${ability_id} 命令为 ${order_id} 释放类型为 ${flag} 的指示器"
+comment = "异步函数。强制调起指示器。释放类型参考文档"
+category = TC_MHMESSAGE
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 852095
+[[.args]]
+type = integer
+default = "0x6"
+
+[MHMsg_CallBuildMode]
+title = "调起建造指示器"
+description = "调起单位类型为 ${unit_id} 释放类型为 ${flag} 的建造指示器"
+comment = "异步函数。强制调起建造指示器，需要能建造对应建筑"
+category = TC_MHMESSAGE
+[[.args]]
+type = unitcode
+default = 'npgf'
+[[.args]]
+type = integer
+default = "0x100008"
+
+[MHMsg_CancelIndicator]
+title = "取消指示器"
+description = "取消当前调起的指示器"
+comment = "异步函数。强制取消指示器"
+category = TC_MHMESSAGE
+
+[MHMsg_SendImmediateOrder]
+title = "发布无目标命令"
+description = "发布 ${order_id} 本地命令。标志 ${flag}"
+comment = "异步函数。标志参考文档"
+category = TC_MHMESSAGE
+[[.args]]
+type = ordercode
+default = YDWEAbilityId2OrderId
+[[.args]]
+type = integer
+default = 0
+
+[MHMsg_SendTargetOrderUnit]
+title = "发布目标命令"
+description = "对目标 ${unit} 目标点 (${x}, ${y}) 发布 ${order_id} 本地命令。来源物品 ${source_item} 释放类型 ${cast_type} 标志 ${flag}"
+comment = "异步函数。目标参数省略的时候为点目标命令。标志参考文档"
+script_name = MHMsg_SendTargetOrder
+category = TC_MHMESSAGE
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = ordercode
+default = YDWEAbilityId2OrderId
+[[.args]]
+type = item
+default = "null"
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHMsg_SendIndicatorOrderUnit]
+title = "发布指示器命令"
+description = "对目标 ${unit} 目标点 (${x}, ${y}) 发布 ${order_id} 本地命令。标志 ${flag}"
+comment = "异步函数。目标参数省略的时候为点目标命令。标志参考文档"
+script_name = MHMsg_SendIndicatorOrder
+category = TC_MHMESSAGE
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = ordercode
+default = YDWEAbilityId2OrderId
+[[.args]]
+type = integer
+default = 0
+
+[MHMsg_SendSelectorOrder]
+title = "发布选择器命令"
+description = "对目标点 (${x}, ${y}) 发布 ${order_id} 本地命令。标志 ${flag}"
+comment = "异步函数。标志参考文档"
+category = TC_MHMESSAGE
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = ordercode
+default = YDWEAbilityId2OrderId
+[[.args]]
+type = integer
+default = 0
+
+[MHMsg_SendDropItemOrder]
+title = "发布丢弃物品命令"
+description = "对目标 ${unit} 目标点 (${x}, ${y}) 发布丢弃 ${item} 本地命令。标志 ${flag}"
+comment = "异步函数。目标参数省略的时候为点目标命令。标志参考文档"
+category = TC_MHMESSAGE
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = integer
+default = 0
+
+[MHMsg_SendSmartOrderUnit]
+title = "发布右键物体命令"
+description = "对目标 ${unit} 发布 ${order_id} 右键本地命令。标志 ${flag}"
+comment = "异步函数。目标参数省略的时候为点目标命令。标志参考文档"
+script_name = MHMsg_SendSmartOrder
+category = TC_MHMESSAGE
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = ordercode
+default = YDWEAbilityId2OrderId
+[[.args]]
+type = integer
+default = 0
+
+[MHMsg_SetCustomFovFix]
+title = "设置屏幕比例为"
+description = "设置屏幕比例为 ${value}"
+comment = "异步函数。"
+category = TC_MHMESSAGE
+[[.args]]
+type = real
+
+[MHMsg_EnableWideScreen]
+title = "允许宽屏模式"
+description = "允许宽屏模式 ${is_enable}"
+comment = "异步函数。"
+category = TC_MHMESSAGE
+[[.args]]
+type = boolean
+default = "false"
+
+[MHMsg_ForceAspectRatio]
+title = "强制窗口比例"
+description = "强制窗口比例为16:9"
+comment = "异步函数。仅窗口模式有效"
+category = TC_MHMESSAGE
+
+[MHMsg_EnableBorderless]
+title = "窗口无边框"
+description = "窗口无边框 ${is_enable}"
+comment = "异步函数。仅窗口模式有效"
+category = TC_MHMESSAGE
+[[.args]]
+type = boolean
+default = "true"
+
+[MHMsg_EnableLockCursor]
+title = "窗口锁鼠"
+description = "窗口锁鼠 ${is_enable}"
+comment = "异步函数。仅窗口模式有效"
+category = TC_MHMESSAGE
+[[.args]]
+type = boolean
+default = "true"
+
+
+
+
+
+
+
+
+
+
+
+[MHConst_SetOPLimit]
+title = "设置字节码限制"
+description = "设置字节码限制为 ${opcode_limit}"
+comment = "有符号整数，默认为30w，在魔兽版本1.29或更高版本是300w。"
+category = TC_MHCONSTANT
+[[.args]]
+type = integer
+default = "0x7FFFFFFF"
+
+[MHConst_SetMaxArraySize]
+title = "设置最大数组长度"
+description = "设置最大数组长度 ${limit}"
+comment = "无符号整数。默认限制为8192"
+category = TC_MHCONSTANT
+[[.args]]
+type = integer
+default = 114514
+
+[MHConst_SetMaxMoveSpeed]
+title = "设置最大移动速度"
+description = "设置最大移速上限为 ${limit}"
+comment = "可突破522的移速上限。不推荐超过1000"
+category = TC_MHCONSTANT
+[[.args]]
+type = real
+default = 810
+
+[MHConst_SetMaxAttackSpeed]
+title = "设置最大攻击速度"
+description = "设置最大攻速倍率上限为 ${limit}"
+comment = "可突破每秒46次的上限。默认为5 (即500%攻速加成)"
+category = TC_MHCONSTANT
+[[.args]]
+type = real
+default = 114
+
+[MHConst_SetMaxDuration]
+title = "设置最大持续时间"
+description = "设置最大持续时间为 ${limit}"
+comment = "可突破300s的最大持续时间和冷却时间的限制"
+category = TC_MHCONSTANT
+[[.args]]
+type = real
+default = 114514
+
+[MHConst_SetMaxSight]
+title = "设置最大视野"
+description = "设置最大视野为 ${limit}"
+comment = "可突破1800的最大视野限制。不能设置太大的值否则会崩溃"
+category = TC_MHCONSTANT
+[[.args]]
+type = real
+default = 7200
+
+[MHConst_SetMaxFood]
+title = "设置最大人口"
+description = "设置最大人口为 ${limit}"
+comment = "可突破300的最大人口限制"
+category = TC_MHCONSTANT
+[[.args]]
+type = integer
+default = 114514
+
+[MHConst_UnlockBlpSizeLimit]
+title = "解除Blp大小限制"
+description = "解除Blp大小限制: ${is_unlock}"
+comment = "解除后blp大小最大为32768x32768"
+category = TC_MHCONSTANT
+[[.args]]
+type = boolean
+default = "true"
+
+[MHConst_UnlockFontHeight]
+title = "解除字体大小限制"
+description = "解除字体大小限制: ${is_unlock}"
+comment = "默认限制为19.2/当前窗口高度。解除后仍然有一定限制，超出某个数值后不会渲染"
+category = TC_MHCONSTANT
+[[.args]]
+type = boolean
+default = "true"
+
+
+
+
+
+[MHSyncEvent_Sync]
+title = "发送同步数据"
+description = "发送标签为 ${key} 数据内容为 ${data} 的同步数据"
+comment = "标签key最长32字节, 数据data长度没有限制"
+category = TC_MHSYNC
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+[MHSyncEvent_JsonSync]
+title = "发送Json格式的同步数据"
+description = "发送标签为 ${key} 数据内容为 ${data} 的同步数据"
+comment = "标签key最长32字节, 数据data长度没有限制"
+category = TC_MHSYNC
+[[.args]]
+type = string
+[[.args]]
+type = integer
+
+
+
+
+
+
+
+[MHDamage_DamageUnit]
+title = "伤害目标"
+description = "命令 ${unit} 对 ${target} 造成 ${damage} 点伤害。攻击类型 ${atk_type}, 伤害类型 ${dmg_type}, 是物理伤害 ${is_physical}, 伤害标志 ${flag}"
+comment = "等同于 单位-伤害目标 函数，只是开放了设置物理伤害和伤害标志的接口"
+category = TC_MHDAMAGE
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = real
+default = 114514
+[[.args]]
+type = attacktype
+default = "AttackTypeNormal"
+[[.args]]
+type = damagetype
+default = "DamageTypeNormal"
+[[.args]]
+type = boolean
+default = "false"
+[[.args]]
+type = integer
+default = 0
+
+
+
+
+
+
+
+[MHAbility_CastUnit]
+title = "释放技能"
+description = "命令 ${unit} 对目标 ${target} 对目标点 (${x}, ${y}) 释放 ${ability_id}"
+comment = "跳过魔耗、冷却和目标允许等判定强制释放。并且不会消耗魔法和进入冷却，不会触发相关事件。内部会判定释放类型"
+script_name = MHAbility_Cast
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_CastUnitEx]
+title = "释放技能Ex"
+description = "命令 ${unit} 对目标 ${target} 对目标点 (${x}, ${y}) 释放 ${ability_id}"
+comment = "跳过魔耗、冷却和目标允许等判定强制释放。并且不会消耗魔法和进入冷却。会触发发动技能效果事件。内部会判定释放类型"
+script_name = MHAbility_CastEx
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_SetTargetAllow]
+title = "设置目标允许"
+description = "设置 ${unit} 的 ${ability_id} 技能的当前目标允许为 ${target_allow}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+
+[MHAbility_FlagOperator]
+title = "操作技能标志"
+description = "为 ${unit} 的 ${ability_id} 技能 ${op} ${target_allow}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHFlagOperator
+default = "FLAG_OPERATOR_ADD"
+[[.args]]
+type = MHAbilityFlag
+default = "ABILITY_FLAG1_ON_COOLDOWN"
+
+[MHAbility_SetCooldown]
+title = "设置冷却时间"
+description = "设置 ${unit} 的 ${ability_id} 技能的当前冷却时间为 ${dur}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = real
+default = "114514"
+
+[MHAbility_SetCooldownEx]
+title = "设置冷却时间Ex"
+description = "设置 ${unit} 的 ${ability_id} 技能的当前冷却时间为 ${dur} 最大冷却时间为 ${max_dur}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = real
+default = "114514"
+[[.args]]
+type = real
+default = "1919810"
+
+[MHAbility_SetSpellRemain]
+title = "设置持续时间"
+description = "设置 ${unit} 的 ${ability_id} 技能的剩余持续时间为 ${dur}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHbz'
+[[.args]]
+type = real
+default = "114514"
+
+[MHAbility_SetTargetUnit]
+title = "设置当前目标"
+description = "设置 ${unit} 的 ${ability_id} 技能的当前目标单位为 ${target}"
+comment = "可在 发动技能效果 事件中修改技能目标"
+script_name = MHAbility_SetTarget
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHAbility_SetTargetX]
+title = "设置当前目标点X"
+description = "设置 ${unit} 的 ${ability_id} 技能的当前目标点X为 ${x}"
+comment = "可在 发动技能效果 事件中修改技能目标"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = real
+default = 114
+
+[MHAbility_SetTargetY]
+title = "设置当前目标点Y"
+description = "设置 ${unit} 的 ${ability_id} 技能的当前目标点Y为 ${y}"
+comment = "可在 发动技能效果 事件中修改技能目标"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = real
+default = 514
+
+[MHAbility_Hide]
+title = "隐藏"
+description = "设置 ${unit} 的 ${ability_id} 技能隐藏: ${is_hide}"
+comment = "计数器。效果相当于设置按钮坐标 (0, -11)"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = boolean
+default = "true"
+
+[MHAbility_HideEx]
+title = "隐藏Ex"
+description = "设置 ${unit} 的 ${ability_id} 技能隐藏Ex: ${is_hide}"
+comment = "该函数隐藏的技能可被发布本地命令和按下指示器"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = boolean
+default = "true"
+
+[MHAbility_Disable]
+title = "禁用"
+description = "设置 ${unit} 的 ${ability_id} 技能禁用: ${is_disable} 并操作隐藏: ${is_hide}"
+comment = "计数器。禁用实际效果，不显示冷却，对大部分光环无效。正在施法中的技能会因为此禁用而中断。"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHAbility_DisableEx]
+title = "禁用Ex"
+description = "设置 ${unit} 的 ${ability_id} 技能禁用 (Ex): ${is_disable}"
+comment = "计数器。相当于闪电之球的关联技能。不禁用实际效果，不能点击，仍然能显示冷却，禁用时不会中断正在施法的技能。"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = boolean
+default = "true"
+
+[MHAbility_SetCastpoint]
+title = "设置前摇"
+description = "设置 ${unit} 的 ${ability_id} 技能的前摇为 ${value}"
+comment = "部分无目标技能前摇和后摇都为0时会恢复动作，类似刀阵旋风。"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = real
+default = 114514
+
+[MHAbility_SetBackswing]
+title = "设置后摇"
+description = "设置 ${unit} 的 ${ability_id} 技能的后摇为 ${value}"
+comment = "部分无目标技能前摇和后摇都为0时会恢复动作，类似刀阵旋风。"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = 'GetTriggerUnit'
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = real
+default = 114514
+
+[MHAbility_SetChargeCount]
+title = "设置下标数值"
+description = "设置 ${unit} 的 ${ability_id} 技能的下标为 ${count}"
+comment = "设置光环技能的下标会导致游戏崩溃"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 114514
+
+[MHAbility_SetChargeText]
+title = "设置下标文本"
+description = "设置 ${unit} 的 ${ability_id} 技能的下标为 ${text}"
+comment = "设置光环技能的下标会导致游戏崩溃。优先级高于下标数值"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = string
+default = "野兽先辈"
+
+[MHAbility_SetChargeState]
+title = "设置下标状态"
+description = "设置 ${unit} 的 ${ability_id} 技能的下标启用: ${is_enable}"
+comment = "设置光环技能的下标会导致游戏崩溃"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = boolean
+default = "false"
+
+[MHAbility_SetCastType]
+title = "设置释放类型"
+description = "设置 ${unit} 的 ${ability_id} 技能的释放类型为: ${cast_type}"
+comment = "bitset"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+
+[MHAbility_RestoreCastType]
+title = "恢复释放类型"
+description = "恢复 ${unit} 的 ${ability_id} 技能的释放类型"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_SetCastTypeEx]
+title = "设置释放类型Ex"
+description = "设置 ${ability_id} 技能的释放类型为: ${cast_type}"
+comment = "bitset"
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+
+[MHAbility_RestoreCastTypeEx]
+title = "恢复释放类型Ex"
+description = "恢复 ${ability_id} 技能的释放类型"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_SetHookOrder]
+title = "设置命令ID"
+description = "设置 ${ability_id} 技能的命令ID为 ${order_id}"
+comment = "命令ID可自定义。设置后可以让同模板技能互不冲突"
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 114514
+
+[MHAbility_RestoreHookOrder]
+title = "恢复命令ID"
+description = "恢复 ${ability_id} 技能的命令ID"
+comment = "命令ID可自定义。将技能的命令ID恢复为原本的数值"
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_SetDefDataInt]
+title = "设置物编数据 (整数)"
+description = "设置 ${ability_id} 在物编中的 ${def_data} 为 ${new_value}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataInt
+default = "ABILITY_DEF_DATA_BASE_ID"
+[[.args]]
+type = integer
+default = 0
+
+[MHAbility_SetDefDataReal]
+title = "设置物编数据 (实数)"
+description = "设置 ${ability_id} 在物编中的 ${def_data} 为 ${new_value}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataReal
+default = "ABILITY_DEF_DATA_MISSILE_SPEED"
+[[.args]]
+type = real
+default = 0
+
+[MHAbility_SetDefDataBool]
+title = "设置物编数据 (布尔值)"
+description = "设置 ${ability_id} 在物编中的 ${def_data} 为 ${new_value}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataBool
+default = "ABILITY_DEF_DATA_MISSILE_HOMING"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHAbility_SetDefDataStr]
+title = "设置物编数据 (字符串)"
+description = "设置 ${ability_id} 在物编中的 ${def_data} 为 ${new_value}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataStr
+default = "ABILITY_DEF_DATA_NAME"
+[[.args]]
+type = string
+default = null
+
+[MHAbility_SetLevelDefDataInt]
+title = "设置物编等级数据 (整数)"
+description = "设置 ${ability_id} 在物编中等级 ${level} 的 ${def_data} 为 ${new_value}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataInt
+default = "ABILITY_LEVEL_DEF_DATA_MANA_COST"
+[[.args]]
+type = integer
+default = 0
+
+[MHAbility_SetLevelDefDataReal]
+title = "设置物编等级数据 (实数)"
+description = "设置 ${ability_id} 在物编中等级 ${level} 的 ${def_data} 为 ${new_value}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataReal
+default = "ABILITY_LEVEL_DEF_DATA_COOLDOWN"
+[[.args]]
+type = real
+default = 0
+
+[MHAbility_SetLevelDefDataStr]
+title = "设置物编等级数据 (字符串)"
+description = "设置 ${ability_id} 在物编中等级 ${level} 的 ${def_data} 为 ${new_value}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataStr
+default = "ABILITY_LEVEL_DEF_DATA_TIP"
+[[.args]]
+type = string
+default = null
+
+[MHAbility_SetCustomDataInt]
+title = "设置自定义物编数据 (整数)"
+description = "设置 ${unit} 的 ${ability_id} 技能在物编中的 ${flag} 为 ${new_value}"
+comment = "该函数修改的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataInt
+default = "ABILITY_DEF_DATA_BUTTON_X"
+[[.args]]
+type = integer
+default = 0
+
+[MHAbility_SetCustomDataReal]
+title = "设置自定义物编数据 (实数)"
+description = "设置 ${unit} 的 ${ability_id} 技能在物编中的 ${flag} 为 ${new_value}"
+comment = "该函数修改的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataReal
+default = "ABILITY_DEF_DATA_MISSILE_SPEED"
+[[.args]]
+type = real
+default = 0
+
+[MHAbility_SetCustomDataBool]
+title = "设置自定义物编数据 (布尔值)"
+description = "设置 ${unit} 的 ${ability_id} 技能在物编中的 ${flag} 为 ${new_value}"
+comment = "该函数修改的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataBool
+default = "ABILITY_DEF_DATA_MISSILE_HOMING"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHAbility_SetCustomDataStr]
+title = "设置自定义物编数据 (字符串)"
+description = "设置 ${unit} 的 ${ability_id} 技能在物编中的 ${flag} 为 ${new_value}"
+comment = "该函数修改的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = MHAbilityDefDataStr
+default = "ABILITY_DEF_DATA_NAME"
+[[.args]]
+type = string
+default = "野兽先辈"
+
+[MHAbility_SetCustomLevelDataInt]
+title = "设置自定义物编等级数据 (整数)"
+description = "设置 ${unit} 的 ${ability_id} 技能在物编中等级 ${level} 的 ${flag} 为 ${new_value}"
+comment = "该函数修改的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataInt
+default = "ABILITY_LEVEL_DEF_DATA_MANA_COST"
+[[.args]]
+type = integer
+default = 0
+
+[MHAbility_SetCustomLevelDataReal]
+title = "设置自定义物编等级数据 (实数)"
+description = "设置 ${unit} 的 ${ability_id} 技能在物编中等级 ${level} 的 ${flag} 为 ${new_value}"
+comment = "该函数修改的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataReal
+default = "ABILITY_LEVEL_DEF_DATA_COOLDOWN"
+[[.args]]
+type = real
+default = 0
+
+[MHAbility_SetCustomLevelDataStr]
+title = "设置自定义物编等级数据 (字符串)"
+description = "设置 ${unit} 的 ${ability_id} 技能在物编中等级 ${level} 的 ${flag} 为 ${new_value}"
+comment = "该函数修改的是实例数据，不同单位的同一个技能的数据允许不同"
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelDefDataStr
+default = "ABILITY_LEVEL_DEF_DATA_TIP"
+[[.args]]
+type = string
+default = ""
+
+[MHAbility_ResetCustomData]
+title = "重置自定义物编数据"
+description = "重置 ${unit} 的 ${ability_id} 技能的自定义物编数据"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+[MHAbility_SetExtraLevelDataInt]
+title = "设置额外等级数据 (整数)"
+description = "设置 ${unit} 的 ${ability_id} 技能等级 ${level} 的 ${flag} 为 ${new_value}"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = MHAbilityLevelExtraDataInt
+default = "ABILITY_LEVEL_EXTRA_DATA_GOLD_COST"
+[[.args]]
+type = integer
+default = 0
+
+[MHAbility_ResetExtraData]
+title = "重置额外数据"
+description = "重置 ${unit} 的 ${ability_id} 技能的额外数据"
+comment = ""
+category = TC_MHABILITY
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+
+
+
+
+
+
+
+[MHBuff_Create]
+title = "添加Buff"
+description = "为 ${unit} 添加 ${buff_id}。使用模板: ${template_buff} 持续时间: ${dur}"
+comment = ""
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = buffcode
+default = 'B000'
+[[.args]]
+type = MHBuffTemplate
+default = "BUFF_TEMPLATE_BINF"
+[[.args]]
+type = real
+default = 114514
+
+[MHBuff_CreateEx]
+title = "添加BuffEx"
+description = "为 ${unit} 添加 ${buff_id}。使用模板: ${template_buff} 等级 ${level} 魔法偷取优先级 ${priority} 持续时间: ${dur}"
+comment = ""
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = buffcode
+default = 'B000'
+[[.args]]
+type = MHBuffTemplate
+default = "BUFF_TEMPLATE_BINF"
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = real
+default = 114514
+
+[MHBuff_CreateInt]
+title = "添加Buff (整数)"
+description = "为 ${unit} 添加 ${buff_id}。使用模板: ${template_buff} 持续时间: ${dur}"
+comment = ""
+script_name = MHBuff_Create
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "'B000'"
+[[.args]]
+type = MHBuffTemplate
+default = "BUFF_TEMPLATE_BINF"
+[[.args]]
+type = real
+default = 114514
+
+[MHBuff_SetLevel]
+title = "设置等级"
+description = "设置 ${unit} 的 ${buff_id} 魔法效果等级为 ${level}"
+comment = "光环的魔法效果等级会被刷新"
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = buffcode
+default = 'Bcri'
+[[.args]]
+type = integer
+default = 1
+
+[MHBuff_SetLevelInt]
+title = "设置等级 (整数)"
+description = "设置 ${unit} 的 ${buff_id} 魔法效果等级为 ${level}"
+comment = "光环的魔法效果等级会被刷新"
+script_name = MHBuff_SetLevel
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "'Bcri'"
+[[.args]]
+type = integer
+default = 1
+
+[MHBuff_SetRemain]
+title = "设置剩余持续时间"
+description = "设置 ${unit} 的 ${buff_id} 魔法效果剩余持续时间为 ${dur}"
+comment = ""
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = buffcode
+default = 'Bcri'
+[[.args]]
+type = real
+default = 114514
+
+[MHBuff_SetRemainInt]
+title = "设置剩余持续时间 (整数)"
+description = "设置 ${unit} 的 ${buff_id} 魔法效果剩余持续时间为 ${dur}"
+comment = ""
+script_name = MHBuff_SetRemain
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = integer
+default = "'Bcri'"
+[[.args]]
+type = real
+default = 114514
+
+[MHBuff_SetOverlay]
+title = "设置叠加"
+description = "设置 ${buff} 允许叠加: ${is_disable}"
+comment = "解除同模板buff不叠加的限制。暂不支持投射物技能buff的叠加"
+category = TC_MHBUFF
+[[.args]]
+type = MHBuffTemplate
+default = "BUFF_TEMPLATE_BINF"
+[[.args]]
+type = boolean
+default = "true"
+
+[MHBuff_SetPolarity]
+title = "设置极性"
+description = "设置 ${unit} 的 ${buff} 魔法效果的 ${polarity} 为 ${is_polarity}"
+comment = ""
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = buffcode
+default = 'Bcri'
+[[.args]]
+type = MHBuffPolarity
+default = "BUFF_POLARITY_CANT_DISPEL"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHBuff_SetPolarityInt]
+title = "设置极性 (整数)"
+description = "设置 ${unit} 的 ${buff} 魔法效果的 ${polarity} 为 ${is_polarity}"
+comment = ""
+script_name = MHBuff_SetPolarity
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+[[.args]]
+type = MHBuffPolarity
+default = "BUFF_POLARITY_CANT_DISPEL"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHBuff_RestorePolarity]
+title = "恢复极性"
+description = "恢复 ${unit} 的 ${buff} 魔法效果的 ${polarity}"
+comment = ""
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = buffcode
+default = 'Bcri'
+[[.args]]
+type = MHBuffPolarity
+default = "BUFF_POLARITY_CANT_DISPEL"
+
+[MHBuff_RestorePolarityInt]
+title = "恢复极性 (整数)"
+description = "恢复 ${unit} 的 ${buff} 魔法效果的 ${polarity}"
+comment = ""
+script_name = MHBuff_RestorePolarity
+category = TC_MHBUFF
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+[[.args]]
+type = MHBuffPolarity
+default = "BUFF_POLARITY_CANT_DISPEL"
+
+
+
+
+
+
+
+[MHEffect_EnumInRange]
+title = "[MemHack] - 选取特效做动作 (多项)"
+description = "选取 (${x}, ${y}) 为中心 ${range} 为半径内的所有特效做动作"
+comment = "需对应的MapHelper支持"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+
+[MHEffect_EnumInRangeEx]
+title = "[MemHack] - 选取特效做动作 (单项)"
+description = "选取 (${x}, ${y}) 为中心 ${range} 为半径内的所有特效做动作: ${func_name}"
+comment = "填函数名即可"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+[[.args]]
+type = string
+default = "DoNothing"
+
+[MHEffect_SetX]
+title = "[MemHack] - 设置X坐标"
+description = "设置 ${effect} 的X坐标为 ${x}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = 114
+
+[MHEffect_SetY]
+title = "[MemHack] - 设置Y坐标"
+description = "设置 ${effect} 的Y坐标为 ${y}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = 514
+
+[MHEffect_SetZ]
+title = "[MemHack] - 设置Z坐标"
+description = "设置 ${effect} 的Z坐标为 ${z}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = 1919
+
+[MHEffect_SetPosition]
+title = "[MemHack] - 设置三轴坐标"
+description = "设置 ${effect} 的三轴坐标为 (${x}, ${y}, ${z})"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+
+[MHEffect_SetRoll]
+title = "[MemHack] - 设置绕X轴转角"
+description = "设置 ${effect} 绕X轴的转角为 ${roll}"
+comment = "多次调用会累加"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = degree
+default = 0
+
+[MHEffect_SetPitch]
+title = "[MemHack] - 设置绕Y轴转角"
+description = "设置 ${effect} 绕Y轴的转角为 ${pitch}"
+comment = "多次调用会累加"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = degree
+default = 0
+
+[MHEffect_SetYaw]
+title = "[MemHack] - 设置绕Z轴转角"
+description = "设置 ${effect} 绕Z轴的转角为 ${yaw}"
+comment = "多次调用会累加"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = degree
+default = 0
+
+[MHEffect_Rotate]
+title = "[MemHack] - 设置自转角"
+description = "设置 ${effect} 自转角为 ${deg}"
+comment = "多次调用会累加。右手螺旋定则"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = degree
+default = 0
+
+[MHEffect_SetVector]
+title = "[MemHack] - 设置方向向量"
+description = "设置 ${effect} 的方向向量为 (${xv}, ${yv}, ${zv})"
+comment = "向量形式。(1, 0, 0)表示初始朝向 (正东)。不需要归一化"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+
+[MHEffect_Towards]
+title = "[MemHack] - 设置朝向"
+description = "让 ${effect} 朝向点 (${target_x}, ${target_y}, ${target_z})"
+comment = "直接让特效朝向目标点"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHEffect_SetScale]
+title = "[MemHack] - 设置缩放"
+description = "设置 ${effect} 的缩放为 ${scale}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = 1
+
+[MHEffect_SetScaleEx]
+title = "[MemHack] - 设置三轴缩放"
+description = "设置 ${effect} 的三轴缩放为 (${x}, ${y}, ${z})"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = real
+default = 1
+
+[MHEffect_SetParticleScale]
+title = "[MemHack] - 设置粒子缩放"
+description = "设置 ${effect} 的粒子缩放为 ${scale}"
+comment = "多次设置会乘算叠加"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = 1
+
+[MHEffect_SetMirror]
+title = "[MemHack] - 镜像操作"
+description = "将 ${effect} 按 ${axis} 镜像"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = MHMirrorAxis
+default = "MIRROR_AXIS_XY"
+
+[MHEffect_ResetMatrix]
+title = "[MemHack] - 重置变换"
+description = "重置 ${effect}"
+comment = "方向和大小重置到初始状态"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_SetModel]
+title = "[MemHack] - 设置模型"
+description = "设置 ${effect} 的模型为 ${model_path}。参数 ${flag}"
+comment = "参数的作用未知"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+[[.args]]
+type = boolean
+default = "false"
+
+[MHEffect_SetTeamColor]
+title = "[MemHack] - 设置队伍颜色"
+description = "设置 ${effect} 的队伍颜色为 ${color}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = playercolor
+default = "Color00"
+
+[MHEffect_SetTeamGlow]
+title = "[MemHack] - 设置队伍光晕"
+description = "设置 ${effect} 的队伍光晕为 ${color}"
+comment = "填颜色就行"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = playercolor
+default = "Color00"
+
+[MHEffect_Hide]
+title = "[MemHack] - 隐藏"
+description = "设置 ${effect} 隐藏: ${is_hide}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = boolean
+default = "true"
+
+[MHEffect_SetAlpha]
+title = "[MemHack] - 设置透明度"
+description = "设置 ${effect} 的透明度为 ${alpha}"
+comment = "0~255"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = integer
+default = 255
+
+[MHEffect_SetColor]
+title = "[MemHack] - 设置颜色"
+description = "设置 ${effect} 的颜色为 ${color}"
+comment = "16进制颜色代码"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = integer
+default = "0xFFFFFFFF"
+
+[MHEffect_SetColorEx]
+title = "[MemHack] - 设置颜色 (ARGB)"
+description = "设置 ${effect} 的颜色为: 透明度 ${alpha}, 红色值 ${red}, 绿色值 ${green}, 蓝色值 ${blue}"
+comment = "颜色值的取值范围与物编中相同"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = integer
+default = 255
+[[.args]]
+type = integer
+default = 255
+[[.args]]
+type = integer
+default = 255
+[[.args]]
+type = integer
+default = 255
+
+[MHEffect_SetAnimation]
+title = "[MemHack] - 播放动画"
+description = "播放 ${effect} 第 ${index} 号动画。概率 ${rarity}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = integer
+default = 0
+
+[MHEffect_SetAnimationByName]
+title = "[MemHack] - 播放动画 (按名字)"
+description = "播放 ${effect} 的 ${string} 动画。附加链接动画名 ${attachment}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = string
+default = "attack"
+[[.args]]
+type = string
+default = null
+
+[MHEffect_SetAnimationByType]
+title = "[MemHack] - 播放动画 (按类型)"
+description = "播放 ${effect} 的 ${anim_type} 动画, 是否循环: ${loop}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = MHAnimType
+default = "ANIM_TYPE_ATTACK"
+[[.args]]
+type = boolean
+default = "true"
+
+[MHEffect_SetAnimationProgress]
+title = "[MemHack] - 设置动画进度"
+description = "设置 ${effect} 当前动画的进度为 ${progress}"
+comment = "0~1"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = "0.114514"
+
+[MHEffect_SetTimeScale]
+title = "[MemHack] - 设置动画速度"
+description = "设置 ${effect} 当前动画的速度为 ${scale}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = real
+default = "114514"
+
+[MHEffect_BindToUnit]
+title = "[MemHack] - 绑定到单位"
+description = "绑定 ${effect} 到 ${target} 的 ${attach} 附加点"
+comment = ""
+script_name = MHEffect_BindToWidget
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = string
+default = "overhead"
+
+[MHEffect_BindToItem]
+title = "[MemHack] - 绑定到物品"
+description = "绑定 ${effect} 到 ${target} 的 ${attach} 附加点"
+comment = ""
+script_name = MHEffect_BindToWidget
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = string
+default = "overhead"
+
+[MHEffect_BindToDest]
+title = "[MemHack] - 绑定到可破坏物"
+description = "绑定 ${effect} 到 ${target} 的 ${attach} 附加点"
+comment = ""
+script_name = MHEffect_BindToWidget
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = destructable
+default = "bj_lastCreatedDestructable"
+[[.args]]
+type = string
+default = "overhead"
+
+[MHEffect_BindToEffect]
+title = "[MemHack] - 绑定到特效"
+description = "绑定 ${effect} 到 ${target} 的 ${attach} 附加点"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = effect
+[[.args]]
+type = string
+default = "overhead"
+
+[MHEffect_BindToFrame]
+title = "[MemHack] - 绑定到Frame"
+description = "绑定 ${effect} 到 ${target} 的 ${attach} 附加点"
+comment = "仅支持CSpriteFrame和CPortraitButton"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = integer
+[[.args]]
+type = string
+default = "overhead"
+
+[MHEffect_Unbind]
+title = "[MemHack] - 从物体上解绑"
+description = "解绑 ${effect}"
+comment = ""
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+
+[MHEffect_ForceRender]
+title = "[MemHack] - 强制渲染"
+description = "强制渲染 ${effect}: ${is_force}"
+comment = "可以强制渲染大模型特效，即使特效中心不在屏幕内也能渲染。仅支持没有绑定到物体的特效"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = boolean
+default = "true"
+
+[MHEffect_SwitchRender]
+title = "[MemHack] - 开关特效渲染"
+description = "渲染特效: ${is_render}"
+comment = "填false即可停止渲染所有非绑定的特效"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = boolean
+default = "false"
+
+[MHEffect_SwitchExclude]
+title = "[MemHack] - 除外特效渲染"
+description = "继续渲染 ${effect}: ${is_render}"
+comment = "指 开关特效渲染 关闭后仍然渲染的特效"
+category = TC_SPECIALEFFECT
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = boolean
+default = "true"
+
+
+
+
+
+
+
+
+[MHMath_RemoveIntegerPool]
+title = "删除整数池 [MemHack]"
+description = "删除整数池 ${pool}"
+comment = ""
+category = TC_MATH
+[[.args]]
+type = integer
+
+[MHMath_ClearIntegerPool]
+title = "清空整数池 [MemHack]"
+description = "清空整数池 ${pool}"
+comment = ""
+category = TC_MATH
+[[.args]]
+type = integer
+
+[MHMath_IntegerPoolInsert]
+title = "整数池插入整数 [MemHack]"
+description = "向整数池 ${pool} 中插入 ${value} 权重 ${weight}"
+comment = ""
+category = TC_MATH
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 114514
+[[.args]]
+type = real
+default = 1
+
+[MHMath_IntegerPoolErase]
+title = "整数池移除整数 [MemHack]"
+description = "从整数池 ${pool} 中移除 ${value}"
+comment = ""
+category = TC_MATH
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 1919810
+
+[MHMath_IntegerPoolEnum]
+title = "选取整数池做动作 [MemHack]"
+description = "选取整数池 ${pool} 中所有整数做动作"
+comment = "需对应的MapHelper支持"
+category = TC_MATH
+[[.args]]
+type = integer
+
+
+
+
+
+[MHGroup_AddGroup]
+title = "[MemHack] - 为单位组添加另一个单位组"
+description = "为 ${this_group} 添加 ${that_group}"
+comment = ""
+category = TC_UNITGROUP
+[[.args]]
+type = group
+[[.args]]
+type = group
+
+[MHGroup_RemoveGroup]
+title = "[MemHack] - 为单位组删除另一个单位组"
+description = "为 ${this_group} 删除 ${that_group}"
+comment = ""
+category = TC_UNITGROUP
+[[.args]]
+type = group
+[[.args]]
+type = group
+
+
+
+
+
+
+
+[MHUnit_EnumInRangeEx]
+title = "[MemHack] - 选取圆形范围内的单位做动作 (多项)"
+description = "选取以 (${x},${y}) 为圆心,半径 ${range} 所构成的圆形区域内的单位做动作"
+comment = "需对应的MapHelper支持"
+category = TC_UNIT
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 256
+
+[MHUnit_EnumInRange]
+title = "[MemHack] - 选取圆形范围内的单位做动作 (单项)"
+description = "选取以 (${x},${y}) 为圆心,半径 ${range} 所构成的圆形区域内的单位做动作: ${callback}"
+comment = "填函数名即可"
+category = TC_UNIT
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+[[.args]]
+type = string
+default = "DoNothing"
+
+[MHUnit_EnumSector]
+title = "[MemHack] - 选取扇形范围内的单位做动作 (多项)"
+description = "选取以 (${x},${y}) 为圆心, 半径 ${range} 方向角 ${orientation} 圆心角 ${angle} 所构成的扇形区域内的单位做动作"
+comment = "需对应的MapHelper支持。正东方向角为0, 正北为90。方向角和圆心角均为角度值"
+category = TC_UNIT
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 256
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHUnit_EnumLine]
+title = "[MemHack] - 选取直线范围内的单位做动作 (多项)"
+description = "选取以 (${x},${y}) 为原点, 方向角 ${orientation} 长度 ${range} 宽度 ${width} 所构成的直线区域内的单位做动作"
+comment = "需对应的MapHelper支持。正东方向角为0, 正北为90"
+category = TC_UNIT
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+
+[MHUnit_EnumInScreenEx]
+title = "[MemHack] - 选取屏幕内的单位做动作(多项)"
+description = "选取屏幕内的单位做动作"
+comment = "需对应的MapHelper支持。异步动作"
+category = TC_UNIT
+
+[MHUnit_EnumInScreen]
+title = "[MemHack] - 选取屏幕内的单位做动作"
+description = "选取屏幕内的单位做动作: ${callback}"
+comment = "异步动作"
+category = TC_UNIT
+[[.args]]
+type = string
+default = "DoNothing"
+
+[MHUnit_EnumSelections]
+title = "[MemHack] - 选取选择的单位做动作"
+description = "选取当前选择的所有单位做动作"
+comment = "需对应的MapHelper支持。异步动作"
+category = TC_UNIT
+
+[MHUnit_AddAbility]
+title = "[MemHack] - 添加技能"
+description = "为 ${unit} 添加 ${ability_id}。检查相同技能: ${check_duplicate}"
+comment = "原版的添加技能会检查相同技能"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = boolean
+default = "false"
+
+[MHUnit_RemoveAbility]
+title = "[MemHack] - 删除技能"
+description = "为 ${unit} 删除 ${ability_id}。检查相同技能: ${check_duplicate}"
+comment = "原版的删除技能不会检查相同技能"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_EnumAbility]
+title = "[MemHack] - 选取技能做动作"
+description = "选取 ${unit} 的所有技能做动作"
+comment = "需对应的MapHelper支持。不要在回调中添加或删除技能"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = bj_lastCreatedUnit
+
+[MHUnit_SetData]
+title = "[MemHack] - 设置数据"
+description = "设置 ${unit} 的 ${flag} 为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHUnitData
+default = "UNIT_DATA_MAX_LIFE"
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_SetArmourType]
+title = "[MemHack] - 设置护甲类型"
+description = "设置 ${unit} 的护甲类型为 ${armour_type}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+
+[MHUnit_SetAtkDataInt]
+title = "[MemHack] - 设置攻击数据 (整数)"
+description = "设置 ${unit} 的 ${flag} 为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHUnitAtkDataInt
+default = "UNIT_ATK_DATA_BASE_DAMAGE1"
+[[.args]]
+type = integer
+default = 114514
+
+[MHUnit_SetAtkDataReal]
+title = "[MemHack] - 设置攻击数据 (实数)"
+description = "设置 ${unit} 的 ${flag} 为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHUnitAtkDataReal
+default = "UNIT_ATK_DATA_ATTACK_SPEED"
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_SetAttackTimerRemain]
+title = "[MemHack] - 设置攻击计时器剩余时间"
+description = "设置 ${unit} 的攻击计时器剩余时间为 ${value}"
+comment = "到下一次攻击开始所需时间。移动、右键移动会启动一个0.5s的该计时器"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_SetAttackPointTimerRemain]
+title = "[MemHack] - 设置前摇计时器剩余时间"
+description = "设置 ${unit} 的前摇计时器剩余时间为 ${value}"
+comment = "攻击前摇"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_SetBackswingTimerRemain]
+title = "[MemHack] - 设置后摇计时器剩余时间"
+description = "设置 ${unit} 的后摇计时器剩余时间为 ${value}"
+comment = "攻击后摇"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_ApplyTimedLife]
+title = "[MemHack] - 添加生命周期"
+description = "为 ${unit} 添加 ${bid}。持续时间 ${value}"
+comment = "此处id可自定义"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = buffcode
+default = 'Bcri'
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_CancelTimedLife]
+title = "[MemHack] - 取消生命周期"
+description = "取消 ${unit} 的生命周期"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_SetTimedLifeRemain]
+title = "[MemHack] - 设置生命周期剩余时间"
+description = "设置 ${unit} 的生命周期剩余时间为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_SetAsTargetType]
+title = "[MemHack] - 设置作为目标类型"
+description = "设置 ${unit} 的作为目标类型为 ${as_target_type}"
+comment = "设置的是物编中 战斗-作为目标类型"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+
+[MHUnit_Flag1Operator]
+title = "[MemHack] - 操作标志1"
+description = "为 ${unit} 的标志1 ${op} ${flag}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHFlagOperator
+default = "FLAG_OPERATOR_ADD"
+[[.args]]
+type = MHUnitFlag1
+default = "UNIT_FLAG1_INVULNERABLE"
+
+[MHUnit_Flag2Operator]
+title = "[MemHack] - 操作标志2"
+description = "为 ${unit} 的标志2 ${op} ${flag}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHFlagOperator
+default = "FLAG_OPERATOR_ADD"
+[[.args]]
+type = MHUnitFlag2
+default = "UNIT_FLAG2_ILLUSION"
+
+[MHUnit_Flag3Operator]
+title = "[MemHack] - 操作标志3"
+description = "为 ${unit} 的标志3 ${op} ${flag}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHFlagOperator
+default = "FLAG_OPERATOR_ADD"
+[[.args]]
+type = MHUnitFlag3
+default = "UNIT_FLAG3_MECHANICAL_CRITTER"
+
+[MHUnit_FlagTypeOperator]
+title = "[MemHack] - 操作单位种类"
+description = "为 ${unit} 的种类 ${flag} ${bit}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHFlagOperator
+default = "FLAG_OPERATOR_ADD"
+[[.args]]
+type = MHUnitFlagType
+default = "UNIT_FLAG_TYPE_WARD"
+
+[MHUnit_Kill]
+title = "[MemHack] - 杀死单位"
+description = "杀死 ${victim}。凶手单位: ${killer}"
+comment = "等同于cj的杀死单位，但是多了个设置凶手单位"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHUnit_Revive]
+title = "[MemHack] - 复活单位"
+description = "复活 ${unit} 在 (${x}, ${y})"
+comment = "复活英雄相当于cj的立即复活，无特效"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHUnit_Stun]
+title = "[MemHack] - 眩晕单位"
+description = "设置 ${unit} 眩晕: ${is_stun}"
+comment = "本质是单位的眩晕计数 + 1。如果是第一次眩晕，则会添加眩晕flag, 然后对单位发布眩晕命令"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_SetEthereal]
+title = "[MemHack] - 设置虚无状态"
+description = "设置 ${unit} 虚无: ${is_add}"
+comment = "计数器。可以在启用虚无前先启用'Aatk'(攻击)技能，则不会禁用攻击。如果先启用了攻击，则禁用虚无后也要禁用攻击技能来恢复计数。"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_SetInvisible]
+title = "[MemHack] - 设置单位隐形"
+description = "设置 ${unit} 隐形: ${is_add}。渐变时间 ${gradient_time}"
+comment = "计数器"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = real
+default = 0
+
+[MHUnit_DisableAutoAttack]
+title = "[MemHack] - 禁用自动攻击"
+description = "设置 ${unit} 禁用自动攻击: ${is_disable}"
+comment = "计数器。疾风步等隐形技能同款"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_DisableMove]
+title = "[MemHack] - 禁止单位移动"
+description = "禁止 ${unit} 移动: ${is_disable}"
+comment = "计数器。相当于狼骑网"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_SetMoveType]
+title = "[MemHack] - 设置移动类型"
+description = "设置 ${unit} 移动类型为 ${move_type}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHUnitMoveType
+default = "UNIT_MOVE_TYPE_FLY"
+
+[MHUnit_SetPathType]
+title = "[MemHack] - 设置寻路类型"
+description = "设置 ${unit} 寻路类型为 ${path_type}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHUnitPathType
+default = "UNIT_PATH_TYPE_FLY"
+
+[MHUnit_SetCollisionType]
+title = "[MemHack] - 设置碰撞类型"
+description = "设置 ${unit} 碰撞类型: 自己碰撞别人时 ${collision_type_1}, 别人碰撞自己时 ${collision_type_2}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHUnit_SetIllusionDamageDeal]
+title = "[MemHack] - 设置幻象造成伤害"
+description = "设置 ${unit} 造成伤害倍率为 ${value}"
+comment = "仅对真正的幻象起效"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 1
+
+[MHUnit_SetIllusionDamageReceive]
+title = "[MemHack] - 设置幻象接受伤害"
+description = "设置 ${unit} 接受伤害倍率为 ${value}"
+comment = "仅对真正的幻象起效"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 1
+
+[MHUnit_SetColor]
+title = "[MemHack] - 设置颜色"
+description = "设置 ${unit} 的颜色为 ${color}"
+comment = "类似于幻象和冰冻，不会改变单位本来的颜色"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+default = "0xFFFFCC00"
+
+[MHUnit_SetFacing]
+title = "[MemHack] - 设置朝向"
+description = "设置 ${unit} 的朝向为 ${degree}。是否立即:${is_instant}"
+comment = "角度值"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = degree
+default = 0
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_SetModel]
+title = "[MemHack] - 设置模型"
+description = "设置 ${unit} 的模型为 ${model_path}。参数 ${flag}"
+comment = "会同步设置肖像模型。参数作用未知"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+[[.args]]
+type = boolean
+default = "false"
+
+[MHUnit_SetPortrait]
+title = "[MemHack] - 设置肖像"
+description = "设置 ${unit} 的肖像模型为 ${model_path}"
+comment = "会同步设置肖像模型。参数作用未知"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+
+[MHUnit_SetTeamColor]
+title = "[MemHack] - 设置队伍颜色"
+description = "设置 ${unit} 的队伍颜色为 ${color}"
+comment = "填颜色就行"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = playercolor
+default = "Color00"
+
+[MHUnit_SetTeamGlow]
+title = "[MemHack] - 设置队伍光晕"
+description = "设置 ${unit} 的队伍光晕为 ${color}"
+comment = "填颜色就行"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = playercolor
+default = "Color00"
+
+[MHUnit_SetAnimationProgress]
+title = "[MemHack] - 设置动画进度"
+description = "设置 ${unit} 的当前动画进度为 ${progress}"
+comment = "0~1"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = "0.114514"
+
+[MHUnit_Morph]
+title = "[MemHack] - 变身"
+description = "命令 ${unit} 变身为 ${uid}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = unitcode
+default = 'hfoo'
+
+[MHUnit_LaunchAttackUnit]
+title = "[MemHack] - 进行一次攻击"
+description = "命令 ${unit} 使用攻击索引 ${weaps_on} 对 ${target} 攻击一次"
+comment = "不会打断当前动作。会触发 任意单位攻击出手 事件"
+script_name = MHUnit_LaunchAttack
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHUnit_UpdateInfoBar]
+title = "[MemHack] - 更新信息栏"
+description = "更新 ${unit} 的信息栏"
+comment = "设置某些属性后需要运行一次该函数"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_CancelTrain]
+title = "[MemHack] - 取消训练/研究"
+description = "取消 ${unit} 第 ${index} 格上的训练/研究"
+comment = "1~7"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+default = 1
+
+[MHUnit_SetProgressSpeed]
+title = "[MemHack] - 设置进度计时器的速度"
+description = "设置 ${unit} 当前进度计时器的速度为 ${speed}"
+comment = "包括训练、研究、建造和升级。默认速度为1"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114
+
+[MHUnit_SetProgress]
+title = "[MemHack] - 设置进度计时器的进度"
+description = "设置 ${unit} 当前进度计时器的进度为 ${progress}"
+comment = "仅支持训练和研究。取值范围0~1"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = "0.114"
+
+[MHUnit_SetProgressEx]
+title = "[MemHack] - 设置进度计时器的进度Ex"
+description = "设置 ${unit} 当前进度计时器的进度为: 已经过的时间 ${elapsed} / 总时间 ${total}"
+comment = "仅支持训练和研究"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+
+[MHUnit_Silence]
+title = "[MemHack] - 沉默"
+description = "设置 ${unit} 沉默: ${is_silence}"
+comment = "计数器"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_DisableAbility]
+title = "[MemHack] - 禁用技能"
+description = "禁用 ${unit} 的所有技能: ${is_disable}。隐藏 ${is_hide} 禁用魔法技能 ${disable_magic} 禁用物理技能 ${disable_physical}"
+comment = "计数器"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_RestoreLife]
+title = "[MemHack] - 恢复生命值"
+description = "恢复 ${unit} ${value} 点生命值"
+comment = "会触发 任意单位恢复生命值 事件。正数为回血负数为扣血"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_RestoreMana]
+title = "[MemHack] - 恢复魔法值"
+description = "恢复 ${unit} ${value} 点魔法值"
+comment = "会触发 任意单位恢复魔法值 事件。正数为回蓝负数为扣蓝"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_BindToUnit]
+title = "[MemHack] - 绑定到单位"
+description = "绑定 ${unit} 到 ${unit} 的 ${attach} 附加点"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = string
+default = "origin"
+
+[MHUnit_BindToEffect]
+title = "[MemHack] - 绑定到特效"
+description = "绑定 ${unit} 到 ${effect} 的 ${attach} 附加点"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = string
+default = "origin"
+
+[MHUnit_UnbindFromObject]
+title = "[MemHack] - 从物体上解绑"
+description = "将 ${unit} 从物体上解绑"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_DisableOrder]
+title = "[MemHack] - 禁止接收玩家命令"
+description = "禁止 ${unit} 接收来自 ${player} 的命令"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = player
+default = "Player00"
+
+[MHUnit_EnableOrder]
+title = "[MemHack] - 允许接收玩家命令"
+description = "允许 ${unit} 接收来自 ${player} 的命令"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = player
+default = "Player00"
+
+[MHUnit_DisableControl]
+title = "[MemHack] - 失控"
+description = "禁止 ${unit} 接收任何玩家的命令"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_EnableControl]
+title = "[MemHack] - 恢复控制"
+description = "允许 ${unit} 接收任何玩家的命令"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_SetAttackSpeedLimit]
+title = "[MemHack] - 设置攻速上限"
+description = "设置 ${unit} 的攻速上限为 ${limit}"
+comment = "单个单位的攻速上限。可以突破每秒46次的最大攻速限制"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 5
+
+[MHUnit_ResetAttackSpeedLimit]
+title = "[MemHack] - 重置攻速上限"
+description = "重置 ${unit} 的攻速上限"
+comment = "指代 单位-设置攻速上限 中设置的攻速上限"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_SetMoveSpeedLimit]
+title = "[MemHack] - 设置移速上限"
+description = "设置 ${unit} 的移速上限为 ${limit}"
+comment = "单个单位的移速上限。不推荐超过1000"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 810
+
+[MHUnit_ResetMoveSpeedLimit]
+title = "[MemHack] - 重置移速上限"
+description = "重置 ${unit} 的移速上限"
+comment = "指代 单位-设置移速上限 中设置的移速上限"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_AddSpellRange]
+title = "[MemHack] - 增加施法距离"
+description = "${unit} 的施法距离增加 ${range}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = real
+default = 810
+
+[MHUnit_ResetSpellRange]
+title = "[MemHack] - 重置施法距离"
+description = "重置 ${unit} 的额外施法距离"
+comment = "指代 单位-增加施法距离 中增加的施法距离"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_SetInfoName]
+title = "[MemHack] - 设置名称信息"
+description = "设置 ${unit} 的名称信息为 ${info_name}"
+comment = "仅有显示作用，不会影响到本来的名字"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = string
+default = "野兽先辈"
+
+[MHUnit_RestoreInfoName]
+title = "[MemHack] - 恢复名称信息"
+description = "恢复 ${unit} 的名称信息"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_SetInfoClass]
+title = "[MemHack] - 设置种类信息"
+description = "设置 ${unit} 的种类信息为 ${info_class}"
+comment = "仅有显示作用，不会影响到本来的种类。能让不显示种类信息的单位强制显示"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = string
+default = "豪俊影视"
+
+[MHUnit_RestoreInfoClass]
+title = "[MemHack] - 恢复种类信息"
+description = "恢复 ${unit} 的种类信息"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+
+[MHUnit_EnableShadow]
+title = "[MemHack] - 允许阴影"
+description = "允许 ${unit} 显示阴影: ${is_enable}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "false"
+
+[MHUnit_DisablePreSelectUI]
+title = "[MemHack] - 禁用预选UI"
+description = "禁用 ${unit} 的预选UI: ${is_disable}"
+comment = "指头顶提示和血条"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_EnableViewSkill]
+title = "[MemHack] - 强制技能显示"
+description = "强制显示 ${unit} 的技能给 ${player}"
+comment = "使得别的玩家也能看到该单位的技能，但是无法使用"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = player
+default = "Player00"
+
+[MHUnit_DisableViewSkill]
+title = "[MemHack] - 取消技能显示"
+description = "取消显示 ${unit} 的技能给 ${player}"
+comment = "使得别的玩家也能看到该单位的技能，但是无法使用"
+category = TC_UNIT
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = player
+default = "Player00"
+
+[MHUnit_SetDefDataInt]
+title = "[MemHack] - 设置物编数据 (整数)"
+description = "设置 ${unit} 在物编中的 ${flag} 为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitDefDataInt
+default = "UNIT_DEF_DATA_GOLD_COST"
+[[.args]]
+type = integer
+default = 114514
+
+[MHUnit_SetDefDataReal]
+title = "[MemHack] - 设置物编数据 (实数)"
+description = "设置 ${unit} 在物编中的 ${flag} 为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitDefDataReal
+default = "UNIT_DEF_DATA_COLLISION"
+[[.args]]
+type = real
+default = 114514
+
+[MHUnit_SetDefDataBool]
+title = "[MemHack] - 设置物编数据 (布尔值)"
+description = "设置 ${unit} 在物编中的 ${flag} 为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitDefDataBool
+default = "UNIT_DEF_DATA_SHOW_UI1"
+[[.args]]
+type = boolean
+default = "true"
+
+[MHUnit_SetDefDataStr]
+title = "[MemHack] - 设置物编数据 (字符串)"
+description = "设置 ${unit} 在物编中的 ${flag} 为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitDefDataStr
+default = "UNIT_DEF_DATA_NAME"
+[[.args]]
+type = string
+default = "senpai sukissu!"
+
+[MHUnit_SetLevelDefDataInt]
+title = "[MemHack] - 设置物编等级数据 (整数)"
+description = "设置 ${unit} 在物编中 ${flag} 的第 ${level} 项为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitLevelDefDataInt
+default = "UNIT_LEVEL_DATA_ABILITY"
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = integer
+default = 114514
+
+[MHUnit_SetLevelDefDataStr]
+title = "[MemHack] - 设置物编等级数据 (字符串)"
+description = "设置 ${unit} 在物编中 ${flag} 的第 ${level} 项为 ${value}"
+comment = ""
+category = TC_UNIT
+[[.args]]
+type = unitcode
+default = 'hfoo'
+[[.args]]
+type = MHUnitLevelDefDataStr
+default = "UNIT_LEVEL_DEF_DATA_PROPER_NAME"
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = string
+default = "senpai sukissu!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MHHero_SetPrimaryAttr]
+title = "[MemHack] - 设置主属性"
+description = "设置 ${unit} 的主属性为 ${attribute}"
+comment = ""
+category = TC_HERO
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHHeroAttribute
+default = "HERO_ATTR_STR"
+
+[MHHero_SetPrimaryAttrValue]
+title = "[MemHack] - 设置主属性数值"
+description = "设置 ${unit} 的主属性数值为 ${value}。允许永久奖励 ${allow_bonus}"
+comment = "\"永久奖励貌似无效项, 不需要理会\" by ydwe"
+category = TC_HERO
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+default = 114514
+[[.args]]
+type = boolean
+default = "false"
+
+[MHHero_SetAttrPlus]
+title = "[MemHack] - 设置属性成长"
+description = "设置 ${unit} 的 ${attr} 成长为 ${value}"
+comment = "游戏不会存储当前属性，只会存储基础属性 (初始+绿字) 和 属性成长，需要用到当前属性的时候就会计算 基础属性 + 属性成长 * (英雄等级 - 1)"
+category = TC_HERO
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = MHHeroAttribute
+default = "HERO_ATTR_STR"
+[[.args]]
+type = real
+default = 114
+
+[MHHero_ModifyAbility]
+title = "[MemHack] - 替换学习技能"
+description = "替换 ${unit} 的学习技能 ${old_id} 为 ${new_id}"
+comment = "只会影响未学习的技能"
+category = TC_HERO
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = abilcode
+default = 'AHbz'
+
+[MHHero_ModifyAbilityEx]
+title = "[MemHack] - 替换学习技能Ex"
+description = "将 ${unit} 学习技能列表中第 ${index} 个技能替换为为 ${new_id}"
+comment = "只会影响未学习的技能。序号1~5"
+category = TC_HERO
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = integer
+default = 1
+[[.args]]
+type = abilcode
+default = 'AHbz'
+
+[MHHero_ChangeAbility]
+title = "[MemHack] - 替换英雄技能"
+description = "将 ${unit} 的 ${old_id} 替换为 ${new_id}"
+comment = "最好替换同源技能。会同时影响已学习和未学习的技能"
+category = TC_HERO
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = abilcode
+default = 'AHbz'
+
+[MHHero_ChangeAbilityEx]
+title = "[MemHack] - 替换英雄技能Ex"
+description = "将 ${unit} 的 ${old_id} 完全替换为 ${new_id}"
+comment = "无同源技能限制。本质上是替换学习技能 + 删除旧技能 + 添加新技能 + 设置技能等级"
+category = TC_HERO
+[[.args]]
+type = unit
+default = GetTriggerUnit
+[[.args]]
+type = abilcode
+default = 'AHtb'
+[[.args]]
+type = abilcode
+default = 'AHbz'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MHItem_EnumInRange]
+title = "[MemHack] - 选取范围内的物品做动作 (多项)"
+description = "选取以 (${X},${Y}) 为中心,半径 ${Range} 内的物品做动作"
+comment = "需对应的MapHelper支持"
+category = TC_ITEM
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 256
+
+[MHItem_SetHookIcon]
+title = "[MemHack] - 设置图标"
+description = "设置 ${item} 的图标为 ${file_path}"
+comment = "可设置单个物品的图标"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = imagefile
+default = "\"ReplaceableTextures\\CommandButtons\\BTNStormBolt.blp\""
+
+[MHItem_ResetHookIcon]
+title = "[MemHack] - 恢复图标"
+description = "恢复 ${item} 的图标"
+comment = "指代被 设置图标 动作修改过图标的物品"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+[MHItem_SetHookName]
+title = "[MemHack] - 设置名称"
+description = "设置 ${item} 的名称为 ${name}"
+comment = "可设置单个物品的名称"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = string
+
+[MHItem_ResetHookName]
+title = "[MemHack] - 恢复名称"
+description = "恢复 ${item} 的名称"
+comment = "指代被 设置名称 动作修改过名称的物品"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+[MHItem_SetHookTip]
+title = "[MemHack] - 设置提示工具 - 普通"
+description = "设置 ${item} 的提示工具 - 普通为 ${tip}"
+comment = "可设置单个物品的提示工具 - 普通"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = string
+
+[MHItem_ResetHookTip]
+title = "[MemHack] - 恢复提示工具 - 普通"
+description = "恢复 ${item} 的提示工具 - 普通"
+comment = "指代被 设置提示工具 - 普通 动作修改过提示工具 - 普通的物品"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+[MHItem_SetHookUbertip]
+title = "[MemHack] - 设置提示工具 - 扩展"
+description = "设置 ${item} 的提示工具 - 扩展为 ${ubertip}"
+comment = "可设置单个物品的提示工具 - 扩展"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = string
+
+[MHItem_ResetHookUbertip]
+title = "[MemHack] - 恢复提示工具 - 扩展"
+description = "恢复 ${item} 的提示工具 - 扩展"
+comment = "指代被 设置提示工具 - 扩展 动作修改过提示工具 - 扩展的物品"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+
+[MHItem_SetModel]
+title = "[MemHack] - 设置模型"
+description = "设置 ${item} 的模型为 ${model_path} 参数 ${flag}"
+comment = "参数作用未知"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+[[.args]]
+type = integer
+default = 0
+
+[MHItem_SetPortrait]
+title = "[MemHack] - 设置肖像模型"
+description = "设置 ${item} 的肖像模型为 ${model_path}"
+comment = ""
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+
+[MHItem_SetColor]
+title = "[MemHack] - 设置颜色"
+description = "设置 ${item} 的颜色为 ${color}"
+comment = "十六进制颜色值, 比如0xFFFF0000代表红色"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = integer
+default = "0xFFFFFFFF"
+
+[MHItem_SetScale]
+title = "[MemHack] - 设置缩放"
+description = "设置 ${item} 的缩放大小为 ${scale}"
+comment = "默认缩放为1"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = real
+default = 1
+
+[MHItem_SetCollisionType]
+title = "[MemHack] - 设置碰撞类型"
+description = "设置 ${item} 碰撞类型: 自己碰撞别人时 ${collision_type_1}, 别人碰撞自己时 ${collision_type_2}"
+comment = ""
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHItem_SetDefDataInt]
+title = "[MemHack] - 设置物编数据 (整数)"
+description = "设置 ${item} 在物编中的 ${flag} 为 ${value}"
+comment = ""
+category = TC_ITEM
+[[.args]]
+type = itemcode
+default = "texp"
+[[.args]]
+type = MHItemDefDataInt
+default = "ITEM_DEF_DATA_GOLD_COST"
+[[.args]]
+type = integer
+default = 114
+
+[MHItem_SetDefDataBool]
+title = "[MemHack] - 设置物编数据 (布尔值)"
+description = "设置 ${item} 在物编中的 ${flag} 为 ${value}"
+comment = ""
+category = TC_ITEM
+[[.args]]
+type = itemcode
+default = "texp"
+[[.args]]
+type = MHItemDefDataBool
+default = "ITEM_DEF_DATA_DROP_ON_DEATH"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHItem_SetDefDataStr]
+title = "[MemHack] - 设置物编数据 (字符串)"
+description = "设置 ${item} 在物编中的 ${flag} 为 ${value}"
+comment = ""
+category = TC_ITEM
+[[.args]]
+type = itemcode
+default = "texp"
+[[.args]]
+type = MHItemDefDataStr
+default = "ITEM_DEF_DATA_NAME"
+[[.args]]
+type = string
+default = "林檎"
+
+[MHItem_DisablePreSelectUI]
+title = "[MemHack] - 禁用预选UI"
+description = "禁用 ${item} 的预选UI: ${is_disable}"
+comment = "指头顶提示"
+category = TC_ITEM
+[[.args]]
+type = item
+default = "bj_lastCreatedItem"
+[[.args]]
+type = boolean
+default = "true"
+
+
+
+
+
+
+
+
+[MHMissile_EnumInRange]
+title = "[MemHack] - 选取投射物做动作 (多项)"
+description = "选取 (${x}, ${y}) 为中心 ${range} 为半径内的所有投射物做动作"
+comment = "需对应的MapHelper支持。不推荐使用"
+category = TC_MHMISSILE
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+
+[MHMissile_EnumInRangeEx]
+title = "[MemHack] - 选取投射物做动作 (单项)"
+description = "选取 (${x}, ${y}) 为中心 ${range} 为半径内的所有投射物做动作: ${func_name}"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+[[.args]]
+type = string
+default = "DoNothing"
+
+[MHMissile_Hide]
+title = "[MemHack] - 隐藏"
+description = "设置 ${missile} 隐藏: ${is_hide}"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+[[.args]]
+type = integer
+[[.args]]
+type = boolean
+default = "true"
+
+[MHMissile_SetSource]
+title = "[MemHack] - 设置来源"
+description = "设置 ${missile} 的来源为 ${source}"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+[[.args]]
+type = integer
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHMissile_SetTargetUnit]
+title = "[MemHack] - 设置目标"
+description = "设置 ${missile} 的目标为 ${target}"
+comment = "不推荐使用"
+script_name = MHMissile_SetTarget
+category = TC_MHMISSILE
+[[.args]]
+type = integer
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+
+[MHMissile_SetModel]
+title = "[MemHack] - 设置模型"
+description = "设置 ${missile} 的模型为 ${model_path}"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+[[.args]]
+type = integer
+[[.args]]
+type = modelfile
+default = "\"Abilities\\Spells\\Human\\StormBolt\\StormBoltMissile.mdl\""
+
+[MHMissile_SetDataInt]
+title = "[MemHack] - 设置数据 (整数)"
+description = "设置 ${missile} 的 ${flag} 为 ${value}"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+[[.args]]
+type = integer
+[[.args]]
+type = MHMissileDataInt
+default = "MISSILE_DATA_ATTACK_TYPE"
+[[.args]]
+type = integer
+default = 114
+
+[MHMissile_SetDataReal]
+title = "[MemHack] - 设置数据 (实数)"
+description = "设置 ${missile} 的 ${flag} 为 ${value}"
+comment = "不推荐使用"
+category = TC_MHMISSILE
+[[.args]]
+type = integer
+[[.args]]
+type = MHMissileDataReal
+default = "MISSILE_DATA_DAMAGE"
+[[.args]]
+type = real
+default = 514
+
+
+
+
+
+
+
+
+
+
+[MHHashtable_EnumInteger]
+title = "[MemHack] - 遍历哈希表 (整数)"
+description = "选取哈希表 ${hashtable} 中的所有整数做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+
+[MHHashtable_EnumReal]
+title = "[MemHack] - 遍历哈希表 (实数)"
+description = "选取哈希表 ${hashtable} 中的所有实数做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+
+[MHHashtable_EnumBoolean]
+title = "[MemHack] - 遍历哈希表 (布尔值)"
+description = "选取哈希表 ${hashtable} 中的所有布尔值做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+
+[MHHashtable_EnumStr]
+title = "[MemHack] - 遍历哈希表 (字符串)"
+description = "选取哈希表 ${hashtable} 中的所有字符串做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+
+[MHHashtable_EnumHandle]
+title = "[MemHack] - 遍历哈希表 (句柄)"
+description = "选取哈希表 ${hashtable} 中的所有句柄做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+
+[MHHashtable_ScopedEnumInteger]
+title = "[MemHack] - 遍历子哈希表 (整数)"
+description = "选取哈希表 ${hashtable} 主键 ${parent_key} 中的所有整数做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+[[.args]]
+type = integer
+
+[MHHashtable_ScopedEnumReal]
+title = "[MemHack] - 遍历子哈希表 (实数)"
+description = "选取哈希表 ${hashtable} 主键 ${parent_key} 中的所有实数做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+[[.args]]
+type = integer
+
+[MHHashtable_ScopedEnumBoolean]
+title = "[MemHack] - 遍历子哈希表 (布尔值)"
+description = "选取哈希表 ${hashtable} 主键 ${parent_key} 中的所有布尔值做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+[[.args]]
+type = integer
+
+[MHHashtable_ScopedEnumStr]
+title = "[MemHack] - 遍历子哈希表 (字符串)"
+description = "选取哈希表 ${hashtable} 主键 ${parent_key} 中的所有字符串做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+[[.args]]
+type = integer
+
+[MHHashtable_ScopedEnumHandle]
+title = "[MemHack] - 遍历子哈希表 (句柄)"
+description = "选取哈希表 ${hashtable} 主键 ${parent_key} 中的所有句柄做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+[[.args]]
+type = integer
+
+[MHHashtable_EnumParentKey]
+title = "[MemHack] - 遍历主键"
+description = "选取哈希表 ${hashtable} 中的所有主键做动作"
+comment = "需对应的MapHelper支持。禁止在回调动作里删除哈希项！"
+category = TC_HASHTABLE
+[[.args]]
+type = hashtable
+
+
+
+[MHTextTag_SetFont]
+title = "[MemHack] - 设置字体"
+description = "设置漂浮文字字体为 ${path} 样式 ${style}"
+comment = ""
+category = TC_TEXTTAG
+[[.args]]
+type = string
+[[.args]]
+type = integer
+default = 0
+
+[MHTextTag_SetLimit]
+title = "[MemHack] - 设置数量限制"
+description = "设置最大漂浮文字数量为 ${limit}"
+comment = "游戏默认限制为100，只能增加"
+category = TC_TEXTTAG
+[[.args]]
+type = integer
+default = 114514
+
+[MHTextTag_SetAlpha]
+title = "[MemHack] - 设置透明度"
+description = "设置 ${texttag} 的透明度为 ${aplha}"
+comment = "0~255"
+category = TC_TEXTTAG
+[[.args]]
+type = texttag
+[[.args]]
+type = integer
+default = 255
+
+[MHTextTag_SetShadowColor]
+title = "[MemHack] - 设置阴影颜色"
+description = "设置 ${texttag} 的阴影颜色为 ${color}"
+comment = "0~255"
+category = TC_TEXTTAG
+[[.args]]
+type = texttag
+[[.args]]
+type = integer
+default = "0xFFFFFFFF"
+
+
+
+
+
+
+
+[MHDebug_EnableConsole]
+title = "打开控制台"
+description = "打开控制台: ${is_open}"
+comment = ""
+category = TC_MHDEBUG
+[[.args]]
+type = boolean
+default = "true"
+
+[MHDebug_EnableCrashTracer]
+title = "允许崩溃追踪"
+description = "允许崩溃追踪 ${is_enable}"
+comment = "崩溃后会自动生成日志，填false可关闭"
+category = TC_MHDEBUG
+[[.args]]
+type = boolean
+default = "true"
+
+[MHDebug_EnableCrashTracerDump]
+title = "允许崩溃转储"
+description = "允许崩溃转储 ${is_enable}"
+comment = "必须先开启崩溃追踪，崩溃后追加生成内存转储, 用于调试。游戏流程长的话转储文件会特别大, 非必要不开启。"
+category = TC_MHDEBUG
+[[.args]]
+type = boolean
+default = "true"
+
+[MHDebug_EnableDesyncCheck]
+title = "允许异步检测"
+description = "允许异步检测"
+comment = "启动后无法关闭。会在玩家掉线时生成日志。"
+category = TC_MHDEBUG
+
+[MHDebug_SetDesyncCheckFileCount]
+title = "设置异步日志文件数量"
+description = "保留 ${count} 个异步日志文件"
+comment = "默认为2，超过该数字后日志会轮换删除。异步日志没有记录到异步点的时候可以尝试设置为一个较大的数或者-1。过多的异步日志会导致游戏体积急剧增大"
+category = TC_MHDEBUG
+[[.args]]
+type = integer
+default = 2
+
+[MHDebug_ShowLeakMessage]
+title = "显示泄漏信息"
+description = "显示泄漏信息"
+comment = "显示当前存在的对象信息"
+category = TC_MHDEBUG
+
+[MHDebug_EnableLeakMonitor]
+title = "允许泄漏检测"
+description = "允许泄漏检测"
+comment = "启动后无法关闭。启动后才能生成泄露报告"
+category = TC_MHDEBUG
+
+[MHDebug_DumpLeakReport]
+title = "生成泄漏报告"
+description = "生成泄漏报告"
+comment = "生成详细的泄漏检测报告"
+category = TC_MHDEBUG
+
+[MHDebug_StartProfiling]
+title = "运行性能分析"
+description = "分析未来 ${dur} 内的回调耗时"
+comment = "时间到后会生成一个性能分析报告"
+category = TC_MHDEBUG
+[[.args]]
+type = real
+default = 10
+
+
+
+
+
+[MHTool_WriteClipboard]
+title = "写入剪贴板"
+description = "向剪贴板中写入内容 ${str}"
+comment = ""
+category = TC_MHSTRING
+[[.args]]
+type = string
+
+
+
+
+
+[MHString_EnumU8Char]
+title = "选取UTF8字符做动作"
+description = "选取 ${str} 中所有UTF8字符做动作"
+comment = "需对应的MapHelper支持"
+category = TC_MHSTRING
+[[.args]]
+type = string
+
+
+
+
+
+[MHTrigger_ClearEvent]
+title = "[MemHack] - 清空触发器事件"
+description = "清空 ${trigger} 的所有事件"
+comment = ""
+category = TC_TRIGGER
+[[.args]]
+type = trigger
+default = GetTriggeringTrigger
+
+
+
+
+
+
+[MHJson_Clear]
+title = "[MemHack] - 清空JSON对象"
+description = "清空JSON对象 ${id}"
+comment = "不会回收对象本身"
+category = TC_MHJSON
+[[.args]]
+type = integer
+
+[MHJson_Destroy]
+title = "[MemHack] - 删除JSON对象"
+description = "删除JSON对象 ${id}"
+comment = "回收对象"
+category = TC_MHJSON
+[[.args]]
+type = integer
+
+[MHJson_Parse]
+title = "[MemHack] - 解析字符串"
+description = "为JSON对象 ${id} 解析 ${ctx}"
+comment = "将json格式的字符串解析到json对象中。注意会覆盖当前的json内容"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+
+[MHJson_WriteInt]
+title = "[MemHack] - 写入整数"
+description = "在JSON对象 ${id} 键 ${field} 中写入整数 ${value}"
+comment = "不同于哈希表, 一个键中只能写入一种类型的值"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+
+[MHJson_WriteReal]
+title = "[MemHack] - 写入实数"
+description = "在JSON对象 ${id} 键 ${field} 中写入实数 ${value}"
+comment = "不同于哈希表, 一个键中只能写入一种类型的值"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = real
+
+[MHJson_WriteBool]
+title = "[MemHack] - 写入布尔值"
+description = "在JSON对象 ${id} 键 ${field} 中写入布尔值 ${value}"
+comment = "不同于哈希表, 一个键中只能写入一种类型的值"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = boolean
+
+[MHJson_WriteStr]
+title = "[MemHack] - 写入字符串"
+description = "在JSON对象 ${id} 键 ${field} 中写入字符串 ${value}"
+comment = "不同于哈希表, 一个键中只能写入一种类型的值"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+[MHJson_WriteArrayInt]
+title = "[MemHack] - 写入整数 (数组)"
+description = "在JSON对象 ${id} 键 ${field} 索引 ${index} 中写入整数 ${value}"
+comment = "不同于哈希表, 一个键中只能写入一种类型的值。数组下标从0开始"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+
+[MHJson_WriteArrayReal]
+title = "[MemHack] - 写入实数 (数组)"
+description = "在JSON对象 ${id} 键 ${field} 索引 ${index} 中写入实数 ${value}"
+comment = "不同于哈希表, 一个键中只能写入一种类型的值。数组下标从0开始"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+[[.args]]
+type = real
+
+[MHJson_WriteArrayBool]
+title = "[MemHack] - 写入布尔值 (数组)"
+description = "在JSON对象 ${id} 键 ${field} 索引 ${index} 中写入布尔值 ${value}"
+comment = "不同于哈希表, 一个键中只能写入一种类型的值。数组下标从0开始"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+[[.args]]
+type = boolean
+
+[MHJson_WriteArrayStr]
+title = "[MemHack] - 写入字符串 (数组)"
+description = "在JSON对象 ${id} 键 ${field} 索引 ${index} 中写入字符串 ${value}"
+comment = "不同于哈希表, 一个键中只能写入一种类型的值。数组下标从0开始"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+[[.args]]
+type = string
+
+[MHJson_PushbackInt]
+title = "[MemHack] - 插入整数 (数组)"
+description = "在JSON对象 ${id} 键 ${field} 的数组尾部插入整数 ${value}"
+comment = "插入到该数组的尾部"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = integer
+
+[MHJson_PushbackReal]
+title = "[MemHack] - 插入实数 (数组)"
+description = "在JSON对象 ${id} 键 ${field} 的数组尾部插入实数 ${value}"
+comment = "插入到该数组的尾部"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = real
+
+[MHJson_PushbackBool]
+title = "[MemHack] - 插入布尔值 (数组)"
+description = "在JSON对象 ${id} 键 ${field} 的数组尾部插入布尔值 ${value}"
+comment = "插入到该数组的尾部"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = boolean
+
+[MHJson_PushbackStr]
+title = "[MemHack] - 插入字符串 (数组)"
+description = "在JSON对象 ${id} 键 ${field} 的数组尾部插入字符串 ${value}"
+comment = "插入到该数组的尾部"
+category = TC_MHJSON
+[[.args]]
+type = integer
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+
+
+
+
+
+[MHLua_RunScript]
+title = "[MemHack] - 执行Lua脚本"
+description = "执行 ${path}"
+comment = "填写mpq中的路径。支持.lua文件和.luac字节码文件"
+category = TC_MHLUA
+[[.args]]
+type = string
+default = "war3map.lua"
+
+[MHPython_RunScript]
+title = "[MemHack] - 执行Python脚本"
+description = "执行 ${path}"
+comment = "填写mpq中的路径。支持.py文件和.pyc字节码文件"
+category = TC_MHPYTHON
+[[.args]]
+type = string
+default = "war3map.py"
+
+
+
+
+
+
+
+
+
+
+
+
+
+[MHEffect_SetAnimationEx]
+title = "[MemHack] - 播放动画 (按名字)"
+description = "播放 ${effect} 的 ${string} 动画。附加链接动画名 ${attachment}"
+comment = "该函数已废弃"
+category = TC_MHOLD
+[[.args]]
+type = effect
+default = "bj_lastCreatedEffect"
+[[.args]]
+type = string
+default = "attack"
+[[.args]]
+type = string
+default = null
+
+[MHGroup_ResetIterator]
+title = "[MemHack] - 重置迭代器"
+description = "重置 ${iterator}"
+comment = "该函数已废弃"
+category = TC_MHOLD
+[[.args]]
+type = integer
+
+[MHGroup_DestroyIterator]
+title = "[MemHack] - 删除迭代器"
+description = "删除 ${iterator}"
+comment = "该函数已废弃"
+category = TC_MHOLD
+[[.args]]
+type = integer
+
+[MHDebug_DesyncExcludeFunc]
+title = "设置异步检测排除函数"
+description = "异步检测日志不记录 ${func}"
+comment = "该函数已废弃"
+category = TC_MHOLD
+[[.args]]
+type = string
+
+[MHDebug_EnableLogAllDesync]
+title = "设置异步检测记录所有函数"
+description = "设置异步检测记录所有函数: ${is_all}"
+comment = "该函数已废弃"
+category = TC_MHOLD
+[[.args]]
+type = boolean
+default = "true"
+
+[MHDebug_SetJassLogLevel]
+title = "设置Jass日志等级"
+description = "设置日志等级为 ${log_level}"
+comment = "该函数已废弃"
+category = TC_MHOLD
+[[.args]]
+type = MHJassLogLevel
+default = "JASS_LOG_LEVEL_FUNCTION"
+
+[MHDebug_DumpJassLog]
+title = "输出Jass日志"
+description = "输出 ${count} 条日志到控制台"
+comment = "该函数已废弃"
+category = TC_MHOLD
+[[.args]]
+type = integer
+default = 512
+
+[MHDebug_DumpJassLogFile]
+title = "输出Jass日志文件"
+description = "输出jass追踪日志文件"
+comment = "该函数已废弃"
+category = TC_MHOLD
+
+[MHDebug_EnableCrashReport]
+title = "允许崩溃报告"
+description = "允许崩溃后自动生成报告"
+comment = "该函数已废弃"
+category = TC_MHOLD
+
+[MHDebug_EnableRunningTrace]
+title = "允许运行跟踪"
+description = "允许jass函数运行跟踪: ${is_enable}"
+comment = "该函数已废弃"
+category = TC_MHOLD
+[[.args]]
+type = boolean
+default = "true"
+
+[MHDebug_EnablePerformanceAnalysis]
+title = "启用性能分析"
+description = "启用性能分析"
+comment = "该函数已废弃"
+category = TC_MHOLD
+
+[MHDebug_DumpPerformanceAnalysisReport]
+title = "生成性能分析报告"
+description = "生成性能分析报告"
+comment = "该函数已废弃"
+category = TC_MHOLD
+
+[MHDebug_EnableCrashTraceback]
+title = "允许崩溃跟踪"
+description = "允许崩溃跟踪"
+comment = "已废弃"
+category = TC_MHOLD
+
+[MHDebug_SendLeakMessage]
+title = "显示泄漏信息"
+description = "显示泄漏信息"
+comment = "已废弃"
+category = TC_MHOLD
+
+[MHDrawCooldown_Initialize]
+title = "启动冷却绘制"
+description = "启动冷却绘制"
+comment = "已废弃"
+category = TC_MHOLD
+
+[MHDrawCooldown_SetDivide]
+title = "设置小数显示间隔"
+description = "设置小数显示间隔时间为 ${time}"
+comment = "已废弃"
+category = TC_MHOLD
+[[.args]]
+type = real
+default = 10
+
+[MHUnitDispelEvent_SetSource]
+title = "设置驱散魔法效果的单位"
+description = "设置驱散魔法效果的单位为 ${unit}"
+comment = "已废弃"
+category = TC_MHOLD
+[[.args]]
+type = unit
+default = bj_lastCreatedUnit

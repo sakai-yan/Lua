@@ -1,0 +1,9 @@
+﻿Trigger: kuangshi set
+Mode: custom-text
+Action Count: 108
+Custom Script Count: 24
+Control Flow Count: 12
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still expanded into 108 flat actions, including 24 custom-script lines and 12 control-flow custom-script markers.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still expanded into 108 flat actions, including 24 custom-script lines and 12 control-flow custom-script markers.

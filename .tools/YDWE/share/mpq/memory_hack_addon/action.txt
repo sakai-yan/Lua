@@ -1,0 +1,606 @@
+[MHGame_OpenUrl]
+title = "打开链接 [MemHack]"
+description = "打开 ${url}"
+comment = ""
+category = TC_MEMHACK
+[[.args]]
+type = string
+default = [[www.baidu.com]]
+
+
+
+
+
+[MHAudio_PlayEx]
+title = "播放音频Ex"
+description = "播放音频 ${path}, 音频类型 ${audio_type}, 衰减类型 ${attenuation} 音量 ${volume}, 速度 ${speed}, 绑定单位 ${unit}, 绑定坐标 (${x}, ${y}), 最小范围 ${min_range}, 最大范围　${max_range}, 是否循环 ${looping}, 渐入时间 ${fade_in}"
+comment = "音量和速度取0~1。当衰减类型为无衰减时不会产生空间化效果。渐入时间单位为毫秒"
+category = TC_MHADDON_AUDIO
+[[.args]]
+type = string
+[[.args]]
+type = MHAudioType
+default = "AUDIO_TYPE_AUDIO"
+[[.args]]
+type = MHAudioAttenuation
+default = "AUDIO_ATTENUATION_NONE"
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = unit
+default = "UnitNull"
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 900
+[[.args]]
+type = real
+default = 1800
+[[.args]]
+type = boolean
+default = "false"
+[[.args]]
+type = integer
+default = 0
+
+[MHAudio_Play]
+title = "播放音频"
+description = "播放音频 ${path}, 类型 ${audio_type}, 音量 ${volume}, 速度 ${speed}"
+comment = "音量和速度取0~1"
+category = TC_MHADDON_AUDIO
+[[.args]]
+type = string
+[[.args]]
+type = MHAudioType
+default = "AUDIO_TYPE_AUDIO"
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = real
+default = 1
+
+[MHAudio_Play3DPoint]
+title = "播放3D音频 (坐标)"
+description = "播放3D音频 ${path}, 类型 ${audio_type}, 音量 ${volume}, 速度 ${speed}, 在坐标 (${x}, ${y}, ${z}), 最小范围 ${min_range}, 最大范围 ${max_range}"
+comment = "音量和速度取0~1。该函数的z轴坐标参数已无作用"
+category = TC_MHADDON_AUDIO
+[[.args]]
+type = string
+[[.args]]
+type = MHAudioType
+default = "AUDIO_TYPE_AUDIO"
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = real
+[[.args]]
+type = real
+[[.args]]
+type = real
+default = 0
+[[.args]]
+type = real
+default = 900
+[[.args]]
+type = real
+default = 1800
+
+[MHAudio_Play3DUnit]
+title = "播放3D音频 (单位)"
+description = "播放3D音频 ${path}, 类型 ${audio_type}, 音量 ${volume}, 速度 ${speed}, 绑定单位 ${unit}, 最小范围 ${min_range}, 最大范围 ${max_range}"
+comment = "音量和速度取0~1"
+category = TC_MHADDON_AUDIO
+[[.args]]
+type = string
+[[.args]]
+type = MHAudioType
+default = "AUDIO_TYPE_AUDIO"
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = unit
+default = "GetTriggerUnit"
+[[.args]]
+type = real
+default = 900
+[[.args]]
+type = real
+default = 1800
+
+[MHAudio_Kill]
+title = "停止音频"
+description = "停止音频 ${path}, 类型 ${audio_type}"
+comment = ""
+category = TC_MHADDON_AUDIO
+[[.args]]
+type = string
+[[.args]]
+type = MHAudioType
+default = "AUDIO_TYPE_AUDIO"
+
+[MHAudio_KillEx]
+title = "停止音频Ex"
+description = "停止音频 ${path}, 类型 ${audio_type}, 渐出时间 ${fade_out}"
+comment = "渐出时间单位为毫秒"
+category = TC_MHADDON_AUDIO
+[[.args]]
+type = string
+[[.args]]
+type = MHAudioType
+default = "AUDIO_TYPE_AUDIO"
+[[.args]]
+type = integer
+default = 1000
+
+
+
+
+
+[MHHttp_RequestEx]
+title = "发送消息EX"
+description = "向服务器 ${url}:${port} 路由 ${route} 发送消息 ${msg}。连接超时: ${timeout} 秒, 是HTTPS: ${is_tls}, 阻塞线程: ${block}"
+comment = "url支持ip地址和域名，路由/代表根目录，空字符串也会被认为是根目录。阻塞线程只能在游戏开始之前即读图进图条走完之前使用"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = string
+[[.args]]
+type = integer
+default = 10
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHHttp_JsonRequestEx]
+title = "发送消息EX (JSON)"
+description = "向服务器 ${url}:${port} 路由 ${route} 发送消息 ${msg}。连接超时: ${timeout} 秒, 是HTTPS: ${is_tls}, 阻塞线程: ${block}"
+comment = "url支持ip地址和域名，路由/代表根目录，空字符串也会被认为是根目录。阻塞线程只能在游戏开始之前即读图进图条走完之前使用"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 10
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHHttp_UploadEx]
+title = "上传文件EX"
+description = "向服务器 ${url}:${port} 路由 ${route} 上传文件 ${path} 并附带消息 ${msg}。连接超时: ${timeout} 秒, 是HTTPS: ${is_tls}, 阻塞线程: ${block}"
+comment = "url支持ip地址和域名，路由/代表根目录，空字符串也会被认为是根目录。仅支持mpq中或魔兽目录下的文件。阻塞线程只能在游戏开始之前即读图进图条走完之前使用"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = string
+[[.args]]
+type = string
+[[.args]]
+type = integer
+default = 10
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHHttp_JsonUploadEx]
+title = "上传文件EX (JSON)"
+description = "向服务器 ${url}:${port} 路由 ${route} 上传文件 ${path} 并附带消息 ${msg}。连接超时: ${timeout} 秒, 是HTTPS: ${is_tls}, 阻塞线程: ${block}"
+comment = "url支持ip地址和域名，路由/代表根目录，空字符串也会被认为是根目录。仅支持mpq中或魔兽目录下的文件。阻塞线程只能在游戏开始之前即读图进图条走完之前使用"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = string
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 10
+[[.args]]
+type = boolean
+default = "true"
+[[.args]]
+type = boolean
+default = "false"
+
+[MHHttp_Request]
+title = "发送消息 (HTTP)"
+description = "向服务器 ${url}:${port} 路由 ${route} 发送HTTP消息 ${msg}。连接超时: ${timeout} 秒"
+comment = "url支持ip地址和域名，路由/代表根目录，空字符串也会被认为是根目录。"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = string
+[[.args]]
+type = integer
+default = 10
+
+[MHHttp_JsonRequest]
+title = "发送消息 (HTTP-JSON)"
+description = "向服务器 ${url}:${port} 路由 ${route} 发送JSON格式的HTTP消息 ${msg}。连接超时: ${timeout} 秒"
+comment = "url支持ip地址和域名，路由/代表根目录，空字符串也会被认为是根目录。msg为json对象"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 10
+
+[MHHttps_Request]
+title = "发送消息 (HTTPS)"
+description = "向服务器 ${url}:${port} 路由 ${route} 发送HTTPS消息 ${msg}。连接超时: ${timeout} 秒"
+comment = "url支持ip地址和域名，路由/代表根目录，空字符串也会被认为是根目录。"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = string
+[[.args]]
+type = integer
+default = 10
+
+[MHHttps_JsonRequest]
+title = "发送消息 (HTTPS-JSON)"
+description = "向服务器 ${url}:${port} 路由 ${route} 发送JSON格式的HTTPS消息 ${msg}。连接超时: ${timeout} 秒"
+comment = "url支持ip地址和域名，路由/代表根目录，空字符串也会被认为是根目录。msg为json对象"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = integer
+[[.args]]
+type = integer
+default = 10
+
+[MHHttp_SetMaxRetries]
+title = "设置重连次数"
+description = "设置最大重连次数为 ${max_retries}"
+comment = "默认为0。影响所有请求，包括http和https"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = integer
+default = 114514
+
+[MHHttps_LoadCert]
+title = "加载证书 (HTTPS)"
+description = "为发送至服务器 ${url}:${port} 的消息加载根证书 ${path}"
+comment = "url支持ip地址和域名。初始化运行一次即可，根证书填根证书文件在mpq中的路径。若不加载根证书，则不会对服务器发送的证书链进行验证"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+
+[MHHttps_HostnameVerify]
+title = "主机名验证 (HTTPS)"
+description = "为发送至服务器 ${url}:${port} 的消息开启主机名验证 ${is_enable}"
+comment = "url支持ip地址和域名。默认是开启的，填false可关闭"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = boolean
+default = "false"
+
+[MHHttps_EnableDebug]
+title = "调试模式 (HTTPS)"
+description = "为发送至服务器 ${url}:${port} 的消息开启调试模式 ${is_enable}"
+comment = "url支持ip地址和域名。开启调试模式后, 会在控制台和日志中显示ssl连接状态"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = boolean
+default = "true"
+
+
+
+
+
+[MHWebSocket_Connect]
+title = "建立连接"
+description = "在服务器 ${url}:${port} 之间建立WebSocket连接"
+comment = "url支持ip地址和域名"
+category = TC_MHADDON_WEBSOCKET
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+
+[MHWebSocket_Emit]
+title = "发送消息"
+description = "向服务器 ${url}:${port} 的命名空间 ${nsp} 发送消息ID为 ${event_id} 数据为 ${data} 的消息"
+comment = "url支持ip地址和域名。空字符串也会被认为是/"
+category = TC_MHADDON_WEBSOCKET
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = string
+[[.args]]
+type = string
+
+[MHWebSocket_EmitJson]
+title = "发送消息 (JSON)"
+description = "向服务器 ${url}:${port} 的命名空间 ${nsp} 发送消息ID为 ${event_id} 数据为 ${data} 的JSON格式消息"
+comment = "url支持ip地址和域名。空字符串也会被认为是/"
+category = TC_MHADDON_WEBSOCKET
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = string
+[[.args]]
+type = integer
+
+
+
+
+
+[MHHttp_LoadKey]
+title = "加载公钥"
+description = "为发送至服务器 ${url}:${port} 的消息加载公钥 ${path}"
+comment = "废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+
+[MHAudio_Remove]
+title = "删除音频"
+description = "删除 ${audio}"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+
+[MHAudio_Start]
+title = "开始播放"
+description = "开始播放 ${audio}"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+
+[MHAudio_Stop]
+title = "停止播放"
+description = "停止播放 ${audio}"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+
+[MHAudio_SetPause]
+title = "设置暂停"
+description = "设置 ${audio} 暂停: ${pause}"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+[[.args]]
+type = boolean
+default = "true"
+
+[MHAudio_SetPeriodic]
+title = "设置循环"
+description = "设置 ${audio} 模式为单曲循环: ${periodic}"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+[[.args]]
+type = boolean
+default = "true"
+
+[MHAudio_SetType]
+title = "设置类型"
+description = "设置 ${audio} 类型为: ${periodic}"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+[[.args]]
+type = MHAudioType
+default = "AUDIO_TYPE_AUDIO"
+
+[MHAudio_SetVolume]
+title = "设置音量"
+description = "设置 ${audio} 的音量为 ${volume}"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 1
+
+[MHAudio_SetProgress]
+title = "设置进度"
+description = "设置 ${audio} 的进度为 ${progress}"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 1
+
+[MHAudio_BindToUnit]
+title = "绑定单位"
+description = "设置 ${audio} 绑定至 ${u} 的 ${range} 范围内"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+[[.args]]
+type = unit
+default = "bj_lastCreatedUnit"
+[[.args]]
+type = real
+default = 1919
+
+[MHAudio_BindToPoint]
+title = "绑定坐标"
+description = "设置 ${audio} 绑定至 (${x}, ${y}) 的 ${range} 范围内"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+[[.args]]
+type = real
+default = 114
+[[.args]]
+type = real
+default = 514
+[[.args]]
+type = real
+default = 1919
+
+[MHAudio_Unbind]
+title = "解除绑定"
+description = "设置 ${audio} 解除绑定"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = integer
+
+[MHAudio_StartUnit]
+title = "播放并绑定到单位"
+description = "播放 ${path}, 类型 ${audio_type}, 音量 ${volume}, 绑定至单位 ${unit} 的 ${range} 范围内"
+comment = "已废弃"
+category = TC_MHADDON_OLD
+[[.args]]
+type = string
+[[.args]]
+type = MHAudioType
+default = "AUDIO_TYPE_AUDIO"
+[[.args]]
+type = real
+default = 1
+[[.args]]
+type = unit
+default = "UnitNull"
+[[.args]]
+type = real
+default = 1200

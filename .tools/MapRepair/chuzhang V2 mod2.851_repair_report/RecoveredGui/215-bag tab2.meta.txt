@@ -1,0 +1,9 @@
+﻿Trigger: bag tab2
+Mode: custom-text
+Action Count: 26
+Custom Script Count: 20
+Control Flow Count: 9
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 20 custom-script lines and 9 control-flow markers across 26 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 20 custom-script lines and 9 control-flow markers across 26 actions.

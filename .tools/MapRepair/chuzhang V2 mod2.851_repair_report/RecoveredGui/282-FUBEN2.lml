@@ -1,0 +1,20 @@
+﻿name: FUBEN2
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterEnterRectSimple (var:gg_rct_fuben2)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_FUBEN2_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - DisableTrigger (call:GetTriggeringTrigger)
+  - SetVariable (var:udg_SP, call:GetRectCenter)
+  - CustomScriptCode (const:call IssuePointOrderByIdLoc(gg_unit_nmpg_0548,851990,udg_SP))
+  - CustomScriptCode (const:call IssuePointOrderByIdLoc(gg_unit_nmpg_0549,851990,udg_SP))
+  - CustomScriptCode (const:call IssuePointOrderByIdLoc(gg_unit_nmpg_0550,851990,udg_SP))
+  - CustomScriptCode (const:call IssuePointOrderByIdLoc(gg_unit_nmpg_0551,851990,udg_SP))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

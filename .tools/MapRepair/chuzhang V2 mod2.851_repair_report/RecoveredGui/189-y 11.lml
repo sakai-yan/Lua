@@ -1,0 +1,15 @@
+﻿name: y 11
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_y_11_Func001C())then)
+  - CustomScriptCode (const:call DemonTurn2('ckng','I000',50,'mcou',0))
+  - CustomScriptCode (const:call DemonTurn2('ckng','I001',50,'rhth',0))
+  - CustomScriptCode (const:else)
+  - CustomScriptCode (const:endif)

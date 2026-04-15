@@ -1,0 +1,23 @@
+﻿name: group off
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerChatEvent (preset:Player00, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player01, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player02, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player03, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player04, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player05, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player06, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player07, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player08, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player09, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player10, const:+goff, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player11, const:+goff, preset:ChatMatchTypeExact)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:set udg_group_off[GetConvertedPlayerId(GetTriggerPlayer())]=true)
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetTriggerPlayer(),0,0,("|cFFFF0000系统信息：|r"+"你开启了拒绝邀请指令，如果需要关闭，请输入“+gon”")))

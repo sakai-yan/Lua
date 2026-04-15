@@ -1,0 +1,15 @@
+﻿name: J NPCS
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_NPCS_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetUnitLifePercentBJ (call:GetTriggerUnit, const:50.00)
+  - SetUnitManaPercentBJ (call:GetTriggerUnit, const:30.00)

@@ -1,0 +1,11 @@
+﻿name: item
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:3.00)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call EnumItemsInRectBJ(GetPlayableMapRect(),function Trig_item_Func001A))

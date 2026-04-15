@@ -1,0 +1,19 @@
+﻿name: J SLH
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellCast)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_SLH_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - CreateNUnitsAtLoc (const:1, const:uban, call:GetOwningPlayer, var:udg_SP, preset:RealUnitFacing)
+  - ShowUnitHide (call:GetLastCreatedUnit)
+  - UnitApplyTimedLifeBJ (const:1.00, preset:TimedLifeBuffCodeGeneric, call:GetLastCreatedUnit)
+  - IssueImmediateOrder (call:GetLastCreatedUnit, const:taunt)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

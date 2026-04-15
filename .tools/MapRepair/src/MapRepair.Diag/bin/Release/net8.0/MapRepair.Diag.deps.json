@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MapRepair.Diag/1.0.0": {
+        "dependencies": {
+          "MapRepair.Core": "1.0.0"
+        },
+        "runtime": {
+          "MapRepair.Diag.dll": {}
+        }
+      },
+      "MapRepair.Core/1.0.0": {
+        "runtime": {
+          "MapRepair.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MapRepair.Diag/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MapRepair.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

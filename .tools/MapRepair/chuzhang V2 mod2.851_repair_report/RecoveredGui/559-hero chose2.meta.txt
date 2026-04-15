@@ -1,0 +1,9 @@
+﻿Trigger: hero chose2
+Mode: custom-text
+Action Count: 117
+Custom Script Count: 108
+Control Flow Count: 27
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still expanded into 117 flat actions, including 108 custom-script lines and 27 control-flow custom-script markers.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still expanded into 117 flat actions, including 108 custom-script lines and 27 control-flow custom-script markers.

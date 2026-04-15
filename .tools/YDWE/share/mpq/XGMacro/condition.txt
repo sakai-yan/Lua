@@ -1,0 +1,8 @@
+[XG_Macro_Get_Boolcall]
+title = "条件[条件表达式]   [执行]"
+description = "条件表达式: ${name} "
+comment = "雪月系统: 事实上条件表达式和布尔表达式在这里是通用的"
+category = XG_Macro
+[[.args]]
+type = string
+default = "设置变量A"

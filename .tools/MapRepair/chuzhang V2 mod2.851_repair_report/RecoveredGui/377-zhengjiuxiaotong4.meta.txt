@@ -1,0 +1,8 @@
+﻿Trigger: zhengjiuxiaotong4
+Mode: gui
+Action Count: 9
+Custom Script Count: 5
+Control Flow Count: 3
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.

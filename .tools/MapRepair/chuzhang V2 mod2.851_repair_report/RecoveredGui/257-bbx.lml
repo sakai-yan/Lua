@@ -1,0 +1,23 @@
+﻿name: bbx
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerChatEvent (preset:Player00, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player01, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player02, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player03, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player04, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player05, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player06, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player07, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player08, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player09, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player10, const:XM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player11, const:XM, preset:ChatMatchTypeSubstring)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:set udg_BB_X[GetConvertedPlayerId(GetTriggerPlayer())]=S2R(SubStringBJ(GetEventPlayerChatString(),3,4)))
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetTriggerPlayer(),0,0,(("你设置了珍兽使用生命药丹的百分比为："+"|CFF00FF00")+(R2S(udg_BB_X[GetConvertedPlayerId(GetTriggerPlayer())])+"%"))))

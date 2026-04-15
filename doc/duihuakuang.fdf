@@ -1,0 +1,295 @@
+/**
+    @Backdrop @Carlos
+ */
+
+ //创建一个主UI
+Frame "BACKDROP" "MainUI" 
+{
+    Width 0.00,
+    Height 0.00,
+
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\ToolTips\Human\human-tooltip-background.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.00,
+    BackdropBackgroundSize  0.00,
+    BackdropBackgroundInsets 0.004f 0.004f 0.004f 0.004f,
+    BackdropEdgeFile  "UI\Widgets\ToolTips\Human\human-tooltip-border.blp",
+    BackdropBlendAll,
+}
+
+
+ //创建一个平铺的背景带边框 
+Frame "BACKDROP" "Duihuakuang" 
+{
+    Width 0.0745,
+    Height 0.04325,
+
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\ToolTips\Human\human-tooltip-background.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.012,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004f 0.004f 0.004f 0.004f,
+    BackdropEdgeFile  "UI\Widgets\ToolTips\Human\human-tooltip-border.blp",
+    BackdropBlendAll,
+}
+
+ //创建一个平铺的背景带边框，这个给物品提示栏用 
+Frame "BACKDROP" "wpts" 
+{
+    Width 0.0745,
+    Height 0.04325,
+
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\ToolTips\Human\human-tooltip-background.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.012,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004f 0.004f 0.004f 0.004f,
+    BackdropEdgeFile  "UI\Widgets\ToolTips\Human\human-tooltip-border.blp",
+    BackdropBlendAll,
+}
+
+ //创建一个黑色机械风格的背景带边框 
+ Frame "BACKDROP" "shangdian" 
+{
+    Width 0.18,
+    Height 0.04,
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.015,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+}
+
+ //创建一个黑色机械风格的背景带边框 
+ Frame "BACKDROP" "bbbj" 
+{
+    Width 0.18,
+    Height 0.04,
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.02,
+    BackdropBackgroundSize  0.015,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+}
+
+ //创建一个文本居中按钮 带有悬停高亮,按下 宽0.035 高0.025
+Frame "TEXTBUTTON" "BBAnniu1"
+{
+    Width 0.035,
+    Height 0.02,
+
+    //设置样式 悬停高亮                 可获取鼠标焦点 HIGHLTGHTONFOCUS
+        ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    //设置正常状态背景
+    ControlBackdrop "BBAnniu1_ButtonBack",
+        Frame "BACKDROP" "BBAnniu1_ButtonBack"{
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //设置按下状态下背景
+    ControlPushedBackdrop "BBAnniu1_ButtonPushedBack",
+        Frame "BACKDROP" "BBAnniu1_ButtonPushedBack" {
+    
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //悬停鼠标高亮
+        ControlMouseOverHighlight "BBAnniu1_ButtonHig",
+        Frame "HIGHLIGHT" "BBAnniu1_ButtonHig" {
+        HighlightType "FILETEXTURE",
+        HighlightAlphaFile "UI\Widgets\EscMenu\Human\quest-button-highlight.blp",
+        HighlightAlphaMode "ADD",
+    }
+}
+
+Frame "TEXTBUTTON" "BBAnniu2"
+{
+    Width 0.035,
+    Height 0.02,
+
+    //设置样式 悬停高亮                 可获取鼠标焦点 HIGHLTGHTONFOCUS
+        ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    //设置正常状态背景
+    ControlBackdrop "BBAnniu2_ButtonBack",
+        Frame "BACKDROP" "BBAnniu2_ButtonBack"{
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //设置按下状态下背景
+    ControlPushedBackdrop "BBAnniu2_ButtonPushedBack",
+        Frame "BACKDROP" "BBAnniu2_ButtonPushedBack" {
+    
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //悬停鼠标高亮
+        ControlMouseOverHighlight "BBAnniu2_ButtonHig",
+        Frame "HIGHLIGHT" "BBAnniu2_ButtonHig" {
+        HighlightType "FILETEXTURE",
+        HighlightAlphaFile "UI\Widgets\EscMenu\Human\quest-button-highlight.blp",
+        HighlightAlphaMode "ADD",
+    }
+}
+
+Frame "TEXTBUTTON" "BBAnniu3"
+{
+    Width 0.035,
+    Height 0.02,
+
+    //设置样式 悬停高亮                 可获取鼠标焦点 HIGHLTGHTONFOCUS
+        ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    //设置正常状态背景
+    ControlBackdrop "BBAnniu3_ButtonBack",
+        Frame "BACKDROP" "BBAnniu3_ButtonBack"{
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //设置按下状态下背景
+    ControlPushedBackdrop "BBAnniu3_ButtonPushedBack",
+        Frame "BACKDROP" "BBAnniu3_ButtonPushedBack" {
+    
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //悬停鼠标高亮
+        ControlMouseOverHighlight "BBAnniu3_ButtonHig",
+        Frame "HIGHLIGHT" "BBAnniu3_ButtonHig" {
+        HighlightType "FILETEXTURE",
+        HighlightAlphaFile "UI\Widgets\EscMenu\Human\quest-button-highlight.blp",
+        HighlightAlphaMode "ADD",
+    }
+}
+
+Frame "TEXTBUTTON" "BBAnniu4"
+{
+    Width 0.035,
+    Height 0.02,
+
+    //设置样式 悬停高亮                 可获取鼠标焦点 HIGHLTGHTONFOCUS
+        ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    //设置正常状态背景
+    ControlBackdrop "BBAnniu4_ButtonBack",
+        Frame "BACKDROP" "BBAnniu4_ButtonBack"{
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //设置按下状态下背景
+    ControlPushedBackdrop "BBAnniu4_ButtonPushedBack",
+        Frame "BACKDROP" "BBAnniu4_ButtonPushedBack" {
+    
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //悬停鼠标高亮
+        ControlMouseOverHighlight "BBAnniu4_ButtonHig",
+        Frame "HIGHLIGHT" "BBAnniu4_ButtonHig" {
+        HighlightType "FILETEXTURE",
+        HighlightAlphaFile "UI\Widgets\EscMenu\Human\quest-button-highlight.blp",
+        HighlightAlphaMode "ADD",
+    }
+}
+
+Frame "TEXTBUTTON" "BBAnniu5"
+{
+    Width 0.035,
+    Height 0.02,
+
+    //设置样式 悬停高亮                 可获取鼠标焦点 HIGHLTGHTONFOCUS
+        ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    //设置正常状态背景
+    ControlBackdrop "BBAnniu5_ButtonBack",
+        Frame "BACKDROP" "BBAnniu5_ButtonBack"{
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //设置按下状态下背景
+    ControlPushedBackdrop "BBAnniu5_ButtonPushedBack",
+        Frame "BACKDROP" "BBAnniu5_ButtonPushedBack" {
+    
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.015,
+    BackdropBackgroundSize  0.03,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+    
+    }
+    //悬停鼠标高亮
+        ControlMouseOverHighlight "BBAnniu5_ButtonHig",
+        Frame "HIGHLIGHT" "BBAnniu5_ButtonHig" {
+        HighlightType "FILETEXTURE",
+        HighlightAlphaFile "UI\Widgets\EscMenu\Human\quest-button-highlight.blp",
+        HighlightAlphaMode "ADD",
+    }
+}

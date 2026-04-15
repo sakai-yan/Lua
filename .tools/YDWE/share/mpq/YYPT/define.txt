@@ -1,0 +1,4 @@
+[TriggerCategories]
+TC_YYPT=[11平台],ReplaceableTextures\CommandButtons\BTNInfernal.blp
+
+

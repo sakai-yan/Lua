@@ -1,0 +1,9 @@
+﻿Trigger: J HLSUNIT
+Mode: custom-text
+Action Count: 90
+Custom Script Count: 66
+Control Flow Count: 36
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger remained a dense pseudo-GUI body with 90 flat actions, 66 custom-script lines, and 36 control-flow custom-script markers.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger remained a dense pseudo-GUI body with 90 flat actions, 66 custom-script lines, and 36 control-flow custom-script markers.

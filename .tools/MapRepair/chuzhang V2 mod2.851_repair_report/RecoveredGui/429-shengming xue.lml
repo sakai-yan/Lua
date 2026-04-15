@@ -1,0 +1,16 @@
+﻿name: shengming xue
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:1.00)
+conditions:
+  -
+actions:
+  - SetVariable (var:udg_MP_shengming_INT, const:1)
+  - CustomScriptCode (const:loop)
+  - CustomScriptCode (const:exitwhen udg_MP_shengming_INT>12)
+  - CustomScriptCode (const:call SetUnitLifeBJ(udg_MP_shengming_hero[udg_MP_shengming_INT],(GetUnitStateSwap(UNIT_STATE_LIFE,udg_MP_shengming_hero[udg_MP_shengming_INT])-15.00)))
+  - SetVariable (var:udg_MP_shengming_INT, var:udg_MP_shengming_INT+1)
+  - CustomScriptCode (const:endloop)

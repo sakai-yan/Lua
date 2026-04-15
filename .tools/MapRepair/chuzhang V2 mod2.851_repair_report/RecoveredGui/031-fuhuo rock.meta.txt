@@ -1,0 +1,10 @@
+﻿Trigger: fuhuo rock
+Mode: custom-text
+Action Count: 54
+Custom Script Count: 41
+Control Flow Count: 21
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 41 custom-script lines and 21 control-flow markers across 54 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 41 custom-script lines and 21 control-flow markers across 54 actions.

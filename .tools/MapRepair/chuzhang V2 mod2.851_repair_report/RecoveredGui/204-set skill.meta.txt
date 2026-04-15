@@ -1,0 +1,10 @@
+﻿Trigger: set skill
+Mode: custom-text
+Action Count: 51
+Custom Script Count: 0
+Control Flow Count: 0
+Fallback Reason: Fell back to custom-text because the trigger had no recoverable GUI events and still expanded into 51 GUI actions.
+
+Notes:
+- No standard trigger-registration calls could be mapped back into GUI event nodes.
+- Fell back to custom-text because the trigger had no recoverable GUI events and still expanded into 51 GUI actions.

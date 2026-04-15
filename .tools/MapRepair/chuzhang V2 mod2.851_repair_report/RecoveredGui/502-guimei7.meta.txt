@@ -1,0 +1,10 @@
+﻿Trigger: guimei7
+Mode: custom-text
+Action Count: 21
+Custom Script Count: 18
+Control Flow Count: 6
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still depended on mixed GUI/custom-script control flow with 18 custom-script lines and 6 control-flow markers across 21 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger still depended on mixed GUI/custom-script control flow with 18 custom-script lines and 6 control-flow markers across 21 actions.

@@ -1,0 +1,9 @@
+﻿Trigger: lostitem
+Mode: custom-text
+Action Count: 441
+Custom Script Count: 0
+Control Flow Count: 0
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger expanded into 441 flat actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger expanded into 441 flat actions.

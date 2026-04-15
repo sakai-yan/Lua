@@ -1,0 +1,16 @@
+﻿name: J fd
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterTimerEventPeriodic (const:0.60)
+conditions:
+  -
+actions:
+  - SetVariable (var:udg_FD, const:1)
+  - CustomScriptCode (const:loop)
+  - CustomScriptCode (const:exitwhen udg_FD>12)
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP_poison[udg_FD],function Trig_J_fd_Func001Func001A))
+  - SetVariable (var:udg_FD, var:udg_FD+1)
+  - CustomScriptCode (const:endloop)

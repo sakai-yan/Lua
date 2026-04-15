@@ -1,0 +1,9 @@
+﻿Trigger: J YXZ DEAD
+Mode: custom-text
+Action Count: 12
+Custom Script Count: 12
+Control Flow Count: 6
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still combined 6 control-flow marker(s) with 12 custom-script body line(s) in the 12-19 action stability band.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still combined 6 control-flow marker(s) with 12 custom-script body line(s) in the 12-19 action stability band.

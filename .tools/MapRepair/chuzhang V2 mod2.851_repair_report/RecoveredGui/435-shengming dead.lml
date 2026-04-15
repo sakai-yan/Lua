@@ -1,0 +1,17 @@
+﻿name: shengming dead
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventDeath)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_shengming_dead_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:set udg_tempitem[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=GetItemOfTypeFromUnitBJ(udg_HERO[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))],'oslo'))
+  - CustomScriptCode (const:call Removeitem2(udg_tempitem[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))
+  - CustomScriptCode (const:set udg_MP_shengming_hero[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=null)
+  - CustomScriptCode (const:set udg_MP_shengming_guanzi[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true)

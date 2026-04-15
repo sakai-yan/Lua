@@ -1,0 +1,183 @@
+[MHAddonConvertHttpError]
+title = "转换Http/Https错误码为整数 [MemHack]"
+description = "${error}"
+comment = "本身就是整数，左手倒右手而已"
+category = TC_CONV
+returns = integer
+[[.args]]
+type = MHHttpError
+default = "HTTP_ERROR_CONNECTION"
+
+
+
+
+
+[MHGame_GetAuthorName]
+title = "获取作者名 [MemHack]"
+description = "地图作者"
+comment = ""
+category = TC_MHADDON_MEMHACK
+returns = string
+
+
+
+
+
+[MHAudioEvent_GetPath]
+title = "事件音频路径"
+description = "事件音频路径"
+comment = "响应 任意音频开始播放 和 任意音频停止播放 事件"
+category = TC_MHADDON_AUDIO
+returns = string
+
+
+
+
+
+[MHHttpResponseEvent_GetRoute]
+title = "获取请求路由"
+description = "Http请求路由"
+comment = "响应 收到服务器的Http/Https回复 事件。指代发送请求时的路由"
+category = TC_MHADDON_HTTP
+returns = string
+
+[MHHttpResponseEvent_GetError]
+title = "获取错误码"
+description = "Http错误码"
+comment = "响应 收到服务器的Http/Https回复 事件。0代表连接成功"
+category = TC_MHADDON_HTTP
+returns = integer
+
+[MHHttpResponseEvent_GetStatus]
+title = "获取状态码"
+description = "Http状态码"
+comment = "响应 收到服务器的Http/Https回复 事件。标准Http状态码，200代表OK"
+category = TC_MHADDON_HTTP
+returns = integer
+
+[MHHttpResponseEvent_GetDelay]
+title = "获取消息延迟"
+description = "Http消息延迟"
+comment = "响应 收到服务器的Http/Https回复 事件。从发送消息开始到接收到服务器回复所用的时间，单位毫秒"
+category = TC_MHADDON_HTTP
+returns = integer
+
+[MHHttpResponseEvent_GetResponse]
+title = "获取回复消息"
+description = "Http回复消息"
+comment = "响应 收到服务器的Http/Https回复 事件"
+category = TC_MHADDON_HTTP
+returns = string
+
+[MHHttpResponseEvent_GetResponseJson]
+title = "获取回复消息 (JSON)"
+description = "JSON格式的Http回复消息"
+comment = "响应 收到服务器的Http/Https回复 事件。会创建json对象，用完记得删除"
+category = TC_MHADDON_HTTP
+returns = integer
+
+[MHWebSocketClienCloseEvent_GetReason]
+title = "获取断连原因"
+description = "断连原因"
+comment = "响应 WebSocket客户端断开连接 事件。0 - 正常断连，1 - 连接失败"
+category = TC_MHADDON_WEBSOCKET
+returns = integer
+
+[MHWebSocketClienReconnectEvent_GetAttempts]
+title = "获取重连次数"
+description = "重连次数"
+comment = "响应 WebSocket客户端尝试重连 事件。当前重连次数"
+category = TC_MHADDON_WEBSOCKET
+returns = integer
+
+[MHWebSocketClienReconnectEvent_GetDelay]
+title = "获取重连延时"
+description = "重连延时"
+comment = "响应 WebSocket客户端尝试重连 事件。当前重连消耗的总时间，毫秒"
+category = TC_MHADDON_WEBSOCKET
+returns = integer
+
+[MHWebSocketClientOpenSocketEvent_GetNamespace]
+title = "获取命名空间"
+description = "命名空间"
+comment = "响应 客户端建立Socket连接 事件"
+category = TC_MHADDON_WEBSOCKET
+returns = string
+
+[MHWebSocketClientCloseSocketEvent_GetNamespace]
+title = "获取命名空间"
+description = "命名空间"
+comment = "响应 客户端断开Socket连接 事件"
+category = TC_MHADDON_WEBSOCKET
+returns = string
+
+[MHWebSocketMessageEvent_GetNamespace]
+title = "获取命名空间"
+description = "命名空间"
+comment = "响应 WebSocket消息 事件"
+category = TC_MHADDON_WEBSOCKET
+returns = string
+
+[MHWebSocketMessageEvent_GetId]
+title = "获取事件ID"
+description = "事件ID"
+comment = "响应 WebSocket消息 事件"
+category = TC_MHADDON_WEBSOCKET
+returns = string
+
+[MHWebSocketMessageEvent_GetData]
+title = "获取消息数据"
+description = "消息事件数据"
+comment = "响应 WebSocket消息 事件"
+category = TC_MHADDON_WEBSOCKET
+returns = string
+
+[MHWebSocketMessageEvent_GetDataJson]
+title = "获取消息数据 (JSON)"
+description = "消息事件的JSON格式数据"
+comment = "响应 WebSocket消息 事件。会创建json对象，用完记得删除"
+category = TC_MHADDON_WEBSOCKET
+returns = integer
+
+
+
+
+
+[MHMpq_FileExists]
+title = "判定文件存在"
+description = "${mpq} 中存在 ${path}"
+comment = "第一项参数填0则会搜索整个地图+本地魔兽目录"
+category = TC_MHADDON_MPQ
+returns = boolean
+[[.args]]
+type = integer
+default = 0
+[[.args]]
+type = string
+
+[MHFileVerifyFailedEvent_GetFile]
+title = "获取验证失败的文件"
+description = "验证失败的文件"
+comment = "响应 文件验证失败 事件"
+category = TC_MHADDON_MPQ
+returns = string
+
+
+
+
+
+[MHAudio_Create]
+title = "创建音频"
+description = "以 ${file} 创建音频"
+comment = "已废弃"
+category = TC_MHOLD
+returns = integer
+[[.args]]
+type = string
+
+[MHEvent_GetAudio]
+title = "事件音频"
+description = "事件音频"
+comment = "已废弃"
+category = TC_MHOLD
+returns = integer

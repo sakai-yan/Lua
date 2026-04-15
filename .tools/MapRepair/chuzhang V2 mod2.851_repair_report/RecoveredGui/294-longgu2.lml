@@ -1,0 +1,17 @@
+﻿name: longgu2
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterEnterRectSimple (var:gg_rct_longgu3)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_longgu2_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP, call:GetRectCenter)
+  - SetUnitPositionLoc (call:GetTriggerUnit, var:udg_SP)
+  - PanCameraToTimedLocForPlayer (call:GetOwningPlayer, var:udg_SP, const:0)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

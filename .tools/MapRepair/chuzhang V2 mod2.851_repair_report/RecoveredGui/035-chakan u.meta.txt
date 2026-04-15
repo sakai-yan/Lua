@@ -1,0 +1,10 @@
+﻿Trigger: chakan u
+Mode: custom-text
+Action Count: 20
+Custom Script Count: 19
+Control Flow Count: 3
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed almost entirely custom-script with 19 custom-script lines across 20 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger stayed almost entirely custom-script with 19 custom-script lines across 20 actions.

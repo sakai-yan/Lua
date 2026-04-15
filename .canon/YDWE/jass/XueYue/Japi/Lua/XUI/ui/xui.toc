@@ -1,0 +1,4 @@
+//ui\xui.fdf
+XG_JAPI\Lua\XUI\ui\xui.fdf
+ui\framedef\glue\battlenetcustomjoinpanel.fdf
+ui\framedef\glue\battlenetchatpanel.fdf

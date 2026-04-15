@@ -1,0 +1,426 @@
+<Window x:Class="Packer.WinForms.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Packer" MinWidth="1500" MinHeight="980"
+        Width="1600" Height="1080"
+        WindowStartupLocation="CenterScreen"
+        Background="#0B0F1A"
+        FontFamily="Microsoft YaHei UI"
+        TextOptions.TextFormattingMode="Display"
+        TextOptions.TextRenderingMode="ClearType"
+        RenderOptions.ClearTypeHint="Enabled">
+
+  <Window.Resources>
+    <Style x:Key="PathTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource InputStyle}"/>
+
+    <Style x:Key="BrowseButtonStyle" TargetType="Button">
+      <Setter Property="Background" Value="{StaticResource AccentSoftBrush}"/>
+      <Setter Property="Foreground" Value="{StaticResource AccentBrightBrush}"/>
+      <Setter Property="FontFamily" Value="Microsoft YaHei UI"/>
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="Height" Value="36"/>
+      <Setter Property="Width" Value="60"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border x:Name="bd"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{StaticResource CardBorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="8">
+              <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+              <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="bd" Property="Background" Value="{StaticResource AccentBrush}"/>
+                <Setter TargetName="bd" Property="BorderThickness" Value="0"/>
+              </Trigger>
+              <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="bd" Property="Opacity" Value="0.75"/>
+              </Trigger>
+            </ControlTemplate.Triggers>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <Style x:Key="MetricTitleStyle" TargetType="TextBlock">
+      <Setter Property="FontSize" Value="11"/>
+      <Setter Property="Foreground" Value="{StaticResource BodyBrush}"/>
+      <Setter Property="Margin" Value="0,0,0,6"/>
+    </Style>
+
+    <Style x:Key="LogBoxStyle" TargetType="RichTextBox">
+      <Setter Property="Background" Value="#080D18"/>
+      <Setter Property="Foreground" Value="{StaticResource TitleBrush}"/>
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="FontFamily" Value="Cascadia Mono, Consolas, Microsoft YaHei UI"/>
+      <Setter Property="FontSize" Value="12"/>
+      <Setter Property="IsReadOnly" Value="True"/>
+      <Setter Property="Padding" Value="12"/>
+      <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+    </Style>
+  </Window.Resources>
+
+  <Grid>
+    <Rectangle Fill="{StaticResource BgGradientBrush}"/>
+
+    <Ellipse Width="500" Height="340" HorizontalAlignment="Left" VerticalAlignment="Top"
+             Margin="-120,-80,0,0" Opacity="0.18">
+      <Ellipse.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#3B82F6" Offset="0"/>
+          <GradientStop Color="Transparent" Offset="1"/>
+        </RadialGradientBrush>
+      </Ellipse.Fill>
+    </Ellipse>
+
+    <Ellipse Width="380" Height="260" HorizontalAlignment="Right" VerticalAlignment="Top"
+             Margin="0,20,-60,0" Opacity="0.12">
+      <Ellipse.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#06B6D4" Offset="0"/>
+          <GradientStop Color="Transparent" Offset="1"/>
+        </RadialGradientBrush>
+      </Ellipse.Fill>
+    </Ellipse>
+
+    <Ellipse Width="300" Height="220" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+             Margin="0,0,-40,-40" Opacity="0.10">
+      <Ellipse.Fill>
+        <RadialGradientBrush>
+          <GradientStop Color="#A78BFA" Offset="0"/>
+          <GradientStop Color="Transparent" Offset="1"/>
+        </RadialGradientBrush>
+      </Ellipse.Fill>
+    </Ellipse>
+
+    <Grid Margin="24">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="34"/>
+      </Grid.RowDefinitions>
+
+      <Border Grid.Row="0" Style="{StaticResource CardStyle}" Margin="0,0,0,16" Padding="22,16,22,14">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+
+          <ProgressBar x:Name="MarqueeBar"
+                       Grid.Row="1"
+                       Style="{StaticResource MarqueeStyle}"
+                       Visibility="Collapsed"
+                       Margin="-24,8,-24,-20"
+                       VerticalAlignment="Bottom"/>
+
+          <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel x:Name="HeaderTextStack" Grid.Column="0" VerticalAlignment="Center">
+              <TextBlock FontSize="26" FontWeight="Bold" Margin="0,0,0,4">
+                <TextBlock.Foreground>
+                  <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#60A5FA" Offset="0"/>
+                    <GradientStop Color="#06B6D4" Offset="1"/>
+                  </LinearGradientBrush>
+                </TextBlock.Foreground>
+                Packer
+              </TextBlock>
+              <TextBlock Text="项目代码持续输出到 War3，源资源可按真实引用同步到虚拟 MPQ 或正式 map。"
+                         FontSize="12"
+                         Foreground="{StaticResource BodyBrush}"
+                         TextWrapping="Wrap"
+                         MaxWidth="900"
+                         Margin="0,0,0,12"/>
+              <StackPanel Orientation="Horizontal">
+                <Border Style="{StaticResource TagStyle}" Background="{StaticResource AccentSoftBrush}" BorderBrush="{StaticResource CardBorderBrush}">
+                  <TextBlock Text="项目输出 + 资源输出" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource AccentBrightBrush}"/>
+                </Border>
+                <Border Style="{StaticResource TagStyle}" Background="{StaticResource CtaSoftBrush}" BorderBrush="{StaticResource CardBorderBrush}">
+                  <TextBlock Text="虚拟 MPQ / 正式打包" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource CtaBrush}"/>
+                </Border>
+                <Border Style="{StaticResource TagStyle}" Background="{StaticResource SuccessSoftBrush}" BorderBrush="{StaticResource CardBorderBrush}">
+                  <TextBlock Text="模型贴图依赖" FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource SuccessBrush}"/>
+                </Border>
+              </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+              <Button x:Name="InspectButton"
+                      Content="预检"
+                      Margin="0,0,12,0"
+                      Style="{StaticResource SecondaryButtonStyle}"
+                      Click="InspectButton_Click"/>
+              <Button x:Name="PackButton"
+                      Content="开始打包"
+                      Style="{StaticResource PrimaryButtonStyle}"
+                      Click="PackButton_Click"/>
+            </StackPanel>
+          </Grid>
+        </Grid>
+      </Border>
+
+      <Grid Grid.Row="1">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="0.60*"/>
+          <ColumnDefinition Width="16"/>
+          <ColumnDefinition Width="0.40*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Style="{StaticResource CardStyle}" Padding="0">
+          <ScrollViewer Padding="24,20">
+            <StackPanel x:Name="InputStack">
+              <TextBlock Style="{StaticResource CardHeadingStyle}" Text="项目根目录"/>
+              <TextBlock Style="{StaticResource CardSubStyle}" Text="包含 Code/ 等源码目录的 Lua 项目根。"/>
+              <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="8"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="ProjectRootBox" Grid.Column="0" Style="{StaticResource PathTextBoxStyle}"/>
+                <Button Grid.Column="2" Content="浏览" Style="{StaticResource BrowseButtonStyle}" Click="BrowseProjectRoot_Click"/>
+              </Grid>
+
+              <TextBlock Style="{StaticResource CardHeadingStyle}" Text="UnitType 目录"/>
+              <TextBlock Style="{StaticResource CardSubStyle}" Text="存放 UnitType Lua 配置文件的目录，通常是 Code/Config/UnitType。"/>
+              <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="8"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="UnitTypeDirBox" Grid.Column="0" Style="{StaticResource PathTextBoxStyle}"/>
+                <Button Grid.Column="2" Content="浏览" Style="{StaticResource BrowseButtonStyle}" Click="BrowseUnitTypeDir_Click"/>
+              </Grid>
+
+              <TextBlock Style="{StaticResource CardHeadingStyle}" Text="Mapper 文件"/>
+              <TextBlock Style="{StaticResource CardSubStyle}" Text="Code/Config/Mapper.lua，提供字段映射与 default 规则。"/>
+              <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="8"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="MapperFileBox" Grid.Column="0" Style="{StaticResource PathTextBoxStyle}"/>
+                <Button Grid.Column="2" Content="浏览" Style="{StaticResource BrowseButtonStyle}" Click="BrowseMapperFile_Click"/>
+              </Grid>
+
+              <TextBlock Style="{StaticResource CardHeadingStyle}" Text="Excel 文件"/>
+              <TextBlock Style="{StaticResource CardSubStyle}" Text="包含单位数据的 .xlsx 文件，按 ID + 名字 + 称谓 精确匹配。"/>
+              <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="8"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="ExcelFileBox" Grid.Column="0" Style="{StaticResource PathTextBoxStyle}"/>
+                <Button Grid.Column="2" Content="浏览" Style="{StaticResource BrowseButtonStyle}" Click="BrowseExcelFile_Click"/>
+              </Grid>
+
+              <TextBlock Style="{StaticResource CardHeadingStyle}" Text="备份和错误信息目录"/>
+              <TextBlock Style="{StaticResource CardSubStyle}" Text="保存 overwritten、manifest.md、error.md 和 staging 的目录。"/>
+              <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="8"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="SourceDirBox" Grid.Column="0" Style="{StaticResource PathTextBoxStyle}"/>
+                <Button Grid.Column="2" Content="浏览" Style="{StaticResource BrowseButtonStyle}" Click="BrowseSourceDir_Click"/>
+              </Grid>
+
+              <TextBlock Style="{StaticResource CardHeadingStyle}" Text="源资源目录"/>
+              <TextBlock Style="{StaticResource CardSubStyle}" Text="只会收集这个目录下、且被项目真实引用到的资源；留空则关闭资源同步。"/>
+              <Grid Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="8"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="AssetSourceRootBox" Grid.Column="0" Style="{StaticResource PathTextBoxStyle}"/>
+                <Button Grid.Column="2" Content="浏览" Style="{StaticResource BrowseButtonStyle}" Click="BrowseAssetSourceRoot_Click"/>
+              </Grid>
+
+              <TextBlock Style="{StaticResource CardHeadingStyle}" Text="虚拟 MPQ 目录"/>
+              <TextBlock Style="{StaticResource CardSubStyle}" Text="未勾选正式打包时，命中的资源会复制到这里；正式打包时资源自动改写到 War3\map。"/>
+              <Grid Margin="0,0,0,12">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="8"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="VirtualMpqRootBox" Grid.Column="0" Style="{StaticResource PathTextBoxStyle}"/>
+                <Button Grid.Column="2" Content="浏览" Style="{StaticResource BrowseButtonStyle}" Click="BrowseVirtualMpqRoot_Click"/>
+              </Grid>
+
+              <CheckBox x:Name="FormalPackCheckBox"
+                        Content="正式打包：资源直接复制到 War3\map"
+                        Foreground="{StaticResource TitleBrush}"
+                        Margin="0,0,0,20"/>
+
+              <TextBlock Style="{StaticResource CardHeadingStyle}" Text="War3 根目录"/>
+              <TextBlock Style="{StaticResource CardSubStyle}" Text="项目代码始终输出到这里的 map，unit.ini 始终输出到这里的 table\unit.ini。"/>
+              <Grid Margin="0,0,0,8">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="8"/>
+                  <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="War3RootBox"
+                         Grid.Column="0"
+                         Style="{StaticResource PathTextBoxStyle}"
+                         TextChanged="War3RootBox_TextChanged"/>
+                <Button Grid.Column="2" Content="浏览" Style="{StaticResource BrowseButtonStyle}" Click="BrowseWar3Root_Click"/>
+              </Grid>
+
+              <TextBlock x:Name="DerivedPathsHint"
+                         FontSize="11"
+                         FontFamily="Cascadia Mono, Consolas, Microsoft YaHei UI"
+                         Foreground="{StaticResource MutedBrush}"
+                         TextWrapping="Wrap"
+                         Margin="0,0,0,8"
+                         Text="（map、unit.ini 和资源输出目录会显示在这里）"/>
+
+              <Border Margin="0,12,0,0"
+                      Padding="16,14"
+                      Background="#101A2A"
+                      BorderBrush="{StaticResource BorderSubtleBrush}"
+                      BorderThickness="1"
+                      CornerRadius="14">
+                <StackPanel>
+                  <TextBlock Style="{StaticResource CardHeadingStyle}" Text="规则与注意点" Margin="0,0,0,6"/>
+                  <TextBlock Style="{StaticResource CardSubStyle}" Margin="0,0,0,8"
+                             Text="当前版本会先处理项目代码输出，再额外扫描并复制命中的源资源。"/>
+                  <TextBlock Foreground="{StaticResource BodyBrush}" FontSize="11" Margin="0,0,0,6"
+                             Text="1. 只有包含 Unit.unitType 的 UnitType Lua 才会参与 UnitType 输出。"/>
+                  <TextBlock Foreground="{StaticResource BodyBrush}" FontSize="11" Margin="0,0,0,6"
+                             Text="2. 项目代码仍写到 War3\map，外部资源按“正式打包”切到 map 或虚拟 MPQ。"/>
+                  <TextBlock Foreground="{StaticResource BodyBrush}" FontSize="11" Margin="0,0,0,6"
+                             Text="3. 命中的模型会继续解析贴图依赖，并按模型里的引用路径复制贴图。"/>
+                  <TextBlock Foreground="{StaticResource BodyBrush}" FontSize="11"
+                             Text="4. 项目源码不会被回写；备份、错误报告和 staging 会写入备份目录。"/>
+                </StackPanel>
+              </Border>
+            </StackPanel>
+          </ScrollViewer>
+        </Border>
+
+        <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto">
+          <StackPanel>
+            <Border Style="{StaticResource CardStyle}" Margin="0,0,0,12" MinHeight="200">
+              <StackPanel>
+                <TextBlock Style="{StaticResource CardHeadingStyle}" Text="运行概览"/>
+                <TextBlock Style="{StaticResource CardSubStyle}" Text="显示本次预检或打包的状态与输出位置。"/>
+                <Border x:Name="StatusChip"
+                        Style="{StaticResource StatusChipStyle}"
+                        Background="{StaticResource AccentSoftBrush}"
+                        BorderBrush="{StaticResource CardBorderBrush}"
+                        Margin="0,0,0,12">
+                  <TextBlock x:Name="StatusLabel"
+                             Text="等待输入配置"
+                             FontSize="12"
+                             FontWeight="SemiBold"
+                             Foreground="{StaticResource AccentBrightBrush}"/>
+                </Border>
+                <TextBox x:Name="SummaryBox"
+                         IsReadOnly="True"
+                         Background="#080D18"
+                         BorderThickness="0"
+                         FontFamily="Cascadia Mono, Consolas, Microsoft YaHei UI"
+                         FontSize="11"
+                         Foreground="{StaticResource BodyBrush}"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         MinHeight="78"
+                         MaxHeight="120"
+                         VerticalScrollBarVisibility="Auto"
+                         Padding="10"
+                         Text=""/>
+              </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}" Margin="0,0,0,12" MinHeight="260">
+              <StackPanel>
+                <TextBlock Style="{StaticResource CardHeadingStyle}" Text="结果摘要"/>
+                <TextBlock Style="{StaticResource CardSubStyle}" Text="预检和打包都会刷新这里的关键统计。"/>
+                <UniformGrid Rows="3" Columns="2" Margin="0,4,0,0">
+                  <Border Margin="4" Background="#1A2235" CornerRadius="12">
+                    <StackPanel Margin="12,10">
+                      <TextBlock Style="{StaticResource MetricTitleStyle}" Text="项目文件"/>
+                      <TextBlock x:Name="SourceFilesLabel" Style="{StaticResource MetricValueStyle}" Foreground="{StaticResource AccentBrightBrush}" Text="0"/>
+                    </StackPanel>
+                  </Border>
+                  <Border Margin="4" Background="#1A2235" CornerRadius="12">
+                    <StackPanel Margin="12,10">
+                      <TextBlock Style="{StaticResource MetricTitleStyle}" Text="UnitType Lua"/>
+                      <TextBlock x:Name="UnitTypeLabel" Style="{StaticResource MetricValueStyle}" Foreground="{StaticResource PurpleBrush}" Text="0"/>
+                    </StackPanel>
+                  </Border>
+                  <Border Margin="4" Background="#1A2235" CornerRadius="12">
+                    <StackPanel Margin="12,10">
+                      <TextBlock Style="{StaticResource MetricTitleStyle}" Text="识别单位"/>
+                      <TextBlock x:Name="RecognizedLabel" Style="{StaticResource MetricValueStyle}" Foreground="{StaticResource OrangeBrush}" Text="0"/>
+                    </StackPanel>
+                  </Border>
+                  <Border Margin="4" Background="#1A2235" CornerRadius="12">
+                    <StackPanel Margin="12,10">
+                      <TextBlock Style="{StaticResource MetricTitleStyle}" Text="成功单位"/>
+                      <TextBlock x:Name="SuccessLabel" Style="{StaticResource MetricValueStyle}" Foreground="{StaticResource SuccessBrush}" Text="0"/>
+                    </StackPanel>
+                  </Border>
+                  <Border Margin="4" Background="#1A2235" CornerRadius="12">
+                    <StackPanel Margin="12,10">
+                      <TextBlock Style="{StaticResource MetricTitleStyle}" Text="命中资源"/>
+                      <TextBlock x:Name="ReferencedAssetsLabel" Style="{StaticResource MetricValueStyle}" Foreground="{StaticResource CtaBrush}" Text="0"/>
+                    </StackPanel>
+                  </Border>
+                  <Border Margin="4" Background="#1A2235" CornerRadius="12">
+                    <StackPanel Margin="12,10">
+                      <TextBlock Style="{StaticResource MetricTitleStyle}" Text="输出资源"/>
+                      <TextBlock x:Name="ResolvedAssetsLabel" Style="{StaticResource MetricValueStyle}" Foreground="{StaticResource SuccessBrush}" Text="0"/>
+                    </StackPanel>
+                  </Border>
+                </UniformGrid>
+              </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource CardStyle}" Padding="0" MinHeight="252">
+              <StackPanel>
+                <StackPanel Margin="24,20,24,12">
+                  <TextBlock Style="{StaticResource CardHeadingStyle}" Text="实时日志"/>
+                  <TextBlock Style="{StaticResource CardSubStyle}" Text="按顺序显示预检 / 打包日志、备份记录与错误信息。"/>
+                </StackPanel>
+                <RichTextBox x:Name="LogBox" Style="{StaticResource LogBoxStyle}" MinHeight="170" MaxHeight="280"/>
+              </StackPanel>
+            </Border>
+          </StackPanel>
+        </ScrollViewer>
+      </Grid>
+
+      <Grid Grid.Row="2">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0"
+                   VerticalAlignment="Center"
+                   FontSize="11"
+                   Foreground="{StaticResource MutedBrush}"
+                   Text="Packer · War3 Lua 单位打包器"/>
+        <TextBlock Grid.Column="1"
+                   VerticalAlignment="Center"
+                   FontSize="11"
+                   Foreground="{StaticResource MutedBrush}"
+                   Text="项目输出到 War3，资源输出可切换到虚拟 MPQ"/>
+      </Grid>
+    </Grid>
+  </Grid>
+</Window>

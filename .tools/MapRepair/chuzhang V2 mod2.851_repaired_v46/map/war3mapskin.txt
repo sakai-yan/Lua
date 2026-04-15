@@ -1,0 +1,4 @@
+[CustomSkin]
+IdlePeon=ReplaceableTextures\CommandButtons\BTNDustOfAppearance.blp
+[FrameDef]
+COLON_SPELLS=|cFFC0C0C0掉宝种类：|r

@@ -1,0 +1,26 @@
+﻿name: cinematic LOCK
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerChatEvent (preset:Player00, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player01, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player02, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player03, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player04, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player05, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player06, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player07, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player08, const:+c, preset:ChatMatchTypeExact)
+  - TriggerRegisterPlayerChatEvent (preset:Player09, const:+c, preset:ChatMatchTypeExact)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if(Trig_cinematic_LOCK_Func001C())then)
+  - CustomScriptCode (const:call SetCameraTargetControllerNoZForPlayer(GetTriggerPlayer(),udg_CCC[GetConvertedPlayerId(GetTriggerPlayer())],0,0,false))
+  - CustomScriptCode (const:set udg_camera_T[GetConvertedPlayerId(GetTriggerPlayer())]=true)
+  - CustomScriptCode (const:else)
+  - ResetToGameCameraForPlayer (call:GetTriggerPlayer, const:0)
+  - CustomScriptCode (const:set udg_camera_T[GetConvertedPlayerId(GetTriggerPlayer())]=false)
+  - CustomScriptCode (const:endif)

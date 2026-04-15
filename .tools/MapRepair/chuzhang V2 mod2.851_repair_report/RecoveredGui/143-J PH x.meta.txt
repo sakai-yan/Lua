@@ -1,0 +1,9 @@
+﻿Trigger: J PH x
+Mode: custom-text
+Action Count: 34
+Custom Script Count: 23
+Control Flow Count: 12
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 23 custom-script lines and 12 control-flow markers across 34 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 23 custom-script lines and 12 control-flow markers across 34 actions.

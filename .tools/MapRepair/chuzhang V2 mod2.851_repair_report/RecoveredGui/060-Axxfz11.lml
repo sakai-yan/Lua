@@ -1,0 +1,53 @@
+﻿name: Axxfz11
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellCast)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_Axxfz11_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - TriggerSleepAction (const:0.40)
+  - SetVariable (var:udg_Axf11, call:GetTriggerUnit)
+  - SetVariable (var:udg_Bxf22, call:GetSpellTargetUnit)
+  - CreateNUnitsAtLoc (const:1, const:xxz2, call:GetOwningPlayer, call:PolarProjectionBJ, preset:RealUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:1], call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:xxz2, call:GetOwningPlayer, call:PolarProjectionBJ, preset:RealUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:2], call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:xxz2, call:GetOwningPlayer, call:PolarProjectionBJ, preset:RealUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:3], call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:xxz2, call:GetOwningPlayer, call:PolarProjectionBJ, preset:RealUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:4], call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:xxz2, call:GetOwningPlayer, call:PolarProjectionBJ, preset:RealUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:5], call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:xxz2, call:GetOwningPlayer, call:PolarProjectionBJ, preset:RealUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:6], call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:xxz2, call:GetOwningPlayer, call:PolarProjectionBJ, preset:RealUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:7], call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:xxz2, call:GetOwningPlayer, call:PolarProjectionBJ, preset:RealUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:8], call:GetLastCreatedUnit)
+  - TriggerSleepAction (const:0.10)
+  - EnableTrigger (var:gg_trg_Bxxfz22)
+  - TriggerSleepAction (const:6.00)
+  - DisableTrigger (var:gg_trg_Bxxfz22)
+  - RemoveUnit (var:udg_QQxf33[const:1])
+  - RemoveUnit (var:udg_QQxf33[const:2])
+  - RemoveUnit (var:udg_QQxf33[const:3])
+  - RemoveUnit (var:udg_QQxf33[const:4])
+  - RemoveUnit (var:udg_QQxf33[const:5])
+  - RemoveUnit (var:udg_QQxf33[const:6])
+  - RemoveUnit (var:udg_QQxf33[const:7])
+  - RemoveUnit (var:udg_QQxf33[const:8])
+  - TriggerSleepAction (const:0.10)
+  - AddSpecialEffectTargetUnitBJ (const:chest, var:udg_Bxf22, const:Abilities\Spells\Other\Volcano\VolcanoDeath.mdl)
+  - CustomScriptCode (const:call DestroyEffect(GetLastCreatedEffectBJ()))
+  - CustomScriptCode (const:call UnitDamageTargetBJ( udg_Axf11,  udg_Bxf22,((I2R(GetHeroStatBJ(bj_HEROSTAT_INT,udg_HERO[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))],false))+udg_JX[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])*((1*1)*(0.70+(0.02*I2R(udg_JX_lv[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))))), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL ))
+  - CreateNUnitsAtLoc (const:1, const:h000, call:GetOwningPlayer, call:PolarProjectionBJ, call:GetUnitFacing)
+  - SetVariable (var:udg_QQxf33[const:9], call:GetLastCreatedUnit)
+  - IssueTargetOrder (var:udg_QQxf33[const:9], const:Awrs, var:udg_Bxf22)
+  - TriggerSleepAction (const:0.20)
+  - ConditionalTriggerExecute (var:gg_trg_Cxxfz33)

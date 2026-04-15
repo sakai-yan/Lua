@@ -1,0 +1,265 @@
+{
+  "lua": {
+    "config": {
+      "callback_count": 64,
+      "callback_ticks": 2000,
+      "n_mem_instances": 50000,
+      "n_mem_points": 50000,
+      "n_objects": 40000,
+      "n_panels": 5000,
+      "n_points": 80000,
+      "n_struct": 40000,
+      "repeats": 3
+    },
+    "memory": {
+      "class_attr_instance_avg": {
+        "anchor_bytes": 1048632,
+        "avg_bytes": 184.0024,
+        "payload_bytes": 9200120,
+        "total_bytes": 10248752
+      },
+      "class_raw_instance_avg": {
+        "anchor_bytes": 1048560,
+        "avg_bytes": 184.00144,
+        "payload_bytes": 9200072,
+        "total_bytes": 10248632
+      },
+      "point_packed_100k": {
+        "anchor_bytes": 1048632,
+        "avg_bytes": 0.00096,
+        "payload_bytes": 48,
+        "total_bytes": 1048680
+      },
+      "point_table_xy_100k": {
+        "anchor_bytes": 1048632,
+        "avg_bytes": 120,
+        "payload_bytes": 6000000,
+        "total_bytes": 7048632
+      },
+      "struct_soa_100k": {
+        "anchor_bytes": 1048752,
+        "avg_bytes": 62.96096,
+        "payload_bytes": 3148048,
+        "total_bytes": 4196800
+      }
+    },
+    "notes": [
+      "project-like benchmarks run actual repo modules for Class, Struct, LinkedList, Point, and Panel",
+      "Panel timing uses stubbed JASS/Constant/Tool layers, so it measures Lua framework overhead rather than in-engine host cost",
+      "Struct benchmark reflects the current worktree implementation that exposes define/get/set/recycle"
+    ],
+    "runtime": {
+      "executable": ".tools\\lua53\\bin\\lua.exe",
+      "point_max": 214748.3647,
+      "point_min": -214748.3648,
+      "point_scale": 10000,
+      "version": "Lua 5.3"
+    },
+    "time": {
+      "class_attr_update": {
+        "checksum": 2399940000000,
+        "samples": [
+          0.021999999999999992,
+          0.02099999999999999,
+          0.02100000000000002
+        ],
+        "seconds_median": 0.02100000000000002,
+        "seconds_min": 0.02099999999999999
+      },
+      "class_raw_create": {
+        "checksum": 80000,
+        "samples": [
+          0.020000000000000004,
+          0.018000000000000002,
+          0.017
+        ],
+        "seconds_median": 0.018000000000000002,
+        "seconds_min": 0.017
+      },
+      "class_raw_update": {
+        "checksum": 2399940000000,
+        "samples": [
+          0.004999999999999977,
+          0.0030000000000000027,
+          0.0040000000000000036
+        ],
+        "seconds_median": 0.0040000000000000036,
+        "seconds_min": 0.0030000000000000027
+      },
+      "linkedlist_dispatch": {
+        "checksum": 132224000,
+        "samples": [
+          0.008000000000000007,
+          0.008000000000000007,
+          0.007000000000000006
+        ],
+        "seconds_median": 0.008000000000000007,
+        "seconds_min": 0.007000000000000006
+      },
+      "panel_create_destroy_stub": {
+        "checksum": 5000,
+        "samples": [
+          1.646,
+          1.7269999999999999,
+          1.7220000000000004
+        ],
+        "seconds_median": 1.7220000000000004,
+        "seconds_min": 1.646
+      },
+      "point_pack_unpack": {
+        "checksum": -8000000,
+        "samples": [
+          0.09400000000000003,
+          0.128,
+          0.09999999999999998
+        ],
+        "seconds_median": 0.09999999999999998,
+        "seconds_min": 0.09400000000000003
+      },
+      "struct_lifecycle": {
+        "checksum": 2400100000,
+        "samples": [
+          0.015000000000000013,
+          0.015000000000000013,
+          0.014999999999999958
+        ],
+        "seconds_median": 0.015000000000000013,
+        "seconds_min": 0.014999999999999958
+      }
+    }
+  },
+  "python": {
+    "runtime": {
+      "version": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "executable": "C:\\Users\\DCY1\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "pointer_bits": 64
+    },
+    "config": {
+      "repeats": 3,
+      "n_objects": 40000,
+      "n_struct": 40000,
+      "n_points": 80000,
+      "n_panels": 5000,
+      "callback_count": 64,
+      "callback_ticks": 2000,
+      "n_mem_instances": 50000,
+      "n_mem_points": 50000
+    },
+    "time": {
+      "class_raw_create": {
+        "seconds_min": 0.007386199999928067,
+        "seconds_median": 0.00805739999987054,
+        "samples": [
+          0.00805739999987054,
+          0.00843750000012733,
+          0.007386199999928067
+        ],
+        "checksum": 80000
+      },
+      "class_raw_update": {
+        "seconds_min": 0.005298000000038883,
+        "seconds_median": 0.00531009999986054,
+        "samples": [
+          0.00531009999986054,
+          0.006003899999996065,
+          0.005298000000038883
+        ],
+        "checksum": 2399940000000
+      },
+      "class_attr_update": {
+        "seconds_min": 0.012160900000253605,
+        "seconds_median": 0.012190599999939877,
+        "samples": [
+          0.012190599999939877,
+          0.013150899999800458,
+          0.012160900000253605
+        ],
+        "checksum": 2399940000000
+      },
+      "struct_lifecycle": {
+        "seconds_min": 0.01796070000000327,
+        "seconds_median": 0.018558699999630335,
+        "samples": [
+          0.01796070000000327,
+          0.018558699999630335,
+          0.020969499999864638
+        ],
+        "checksum": 2400100000
+      },
+      "linkedlist_dispatch": {
+        "seconds_min": 0.008054299999912473,
+        "seconds_median": 0.008863900000051217,
+        "samples": [
+          0.008054299999912473,
+          0.009142599999904633,
+          0.008863900000051217
+        ],
+        "checksum": 132224000
+      },
+      "point_pack_unpack": {
+        "seconds_min": 0.0567019000000073,
+        "seconds_median": 0.05859920000011698,
+        "samples": [
+          0.0567019000000073,
+          0.060998299999937444,
+          0.05859920000011698
+        ],
+        "checksum": -7999999
+      },
+      "panel_create_destroy_stub": {
+        "seconds_min": 0.24674330000016198,
+        "seconds_median": 0.2517573000000084,
+        "samples": [
+          0.2517573000000084,
+          0.24674330000016198,
+          0.2532223999996859
+        ],
+        "checksum": 5000
+      }
+    },
+    "memory": {
+      "class_slots_instance_avg": {
+        "total_bytes": 6428896.0,
+        "anchor_bytes": 444320.0,
+        "payload_bytes": 5984576.0,
+        "avg_bytes": 119.69152
+      },
+      "class_property_instance_avg": {
+        "total_bytes": 6428864.0,
+        "anchor_bytes": 444320.0,
+        "payload_bytes": 5984544.0,
+        "avg_bytes": 119.69088
+      },
+      "point_packed_100k": {
+        "total_bytes": 2143544.0,
+        "anchor_bytes": 444320.0,
+        "payload_bytes": 1699224.0,
+        "avg_bytes": 33.98448
+      },
+      "point_tuple_xy_100k": {
+        "total_bytes": 3643680.0,
+        "anchor_bytes": 444320.0,
+        "payload_bytes": 3199360.0,
+        "avg_bytes": 63.9872
+      },
+      "struct_soa_100k": {
+        "total_bytes": 6553632.0,
+        "anchor_bytes": 1988848.0,
+        "payload_bytes": 4564784.0,
+        "avg_bytes": 91.29568
+      },
+      "shallow_getsizeof": {
+        "slots_node": 56,
+        "property_node": 56,
+        "packed_int": 32,
+        "tuple_point": 64
+      }
+    },
+    "notes": [
+      "Python project-like benchmarks use slots/property/custom SOA analogs rather than repo code",
+      "UiNode is a rough structural analog to the stubbed Panel path, not a game-host integration benchmark"
+    ]
+  },
+  "generated_at": "2026-03-23 22:43:50"
+}

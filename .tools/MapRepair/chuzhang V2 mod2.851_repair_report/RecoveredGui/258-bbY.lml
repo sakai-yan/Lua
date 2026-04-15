@@ -1,0 +1,23 @@
+﻿name: bbY
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerChatEvent (preset:Player00, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player01, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player02, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player03, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player04, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player05, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player06, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player07, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player08, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player09, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player10, const:YM, preset:ChatMatchTypeSubstring)
+  - TriggerRegisterPlayerChatEvent (preset:Player11, const:YM, preset:ChatMatchTypeSubstring)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:set udg_BB_Y[GetConvertedPlayerId(GetTriggerPlayer())]=S2R(SubStringBJ(GetEventPlayerChatString(),3,4)))
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetTriggerPlayer(),0,0,(("你设置了珍兽使用法力药丹的百分比为："+"|CFF00FF00")+(R2S(udg_BB_Y[GetConvertedPlayerId(GetTriggerPlayer())])+"%"))))

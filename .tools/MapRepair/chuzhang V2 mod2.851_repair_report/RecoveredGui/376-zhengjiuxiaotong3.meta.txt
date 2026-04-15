@@ -1,0 +1,9 @@
+﻿Trigger: zhengjiuxiaotong3
+Mode: custom-text
+Action Count: 25
+Custom Script Count: 16
+Control Flow Count: 9
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a medium branch-heavy pseudo-GUI body with 16 custom-script lines and 9 control-flow markers across 25 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a medium branch-heavy pseudo-GUI body with 16 custom-script lines and 9 control-flow markers across 25 actions.

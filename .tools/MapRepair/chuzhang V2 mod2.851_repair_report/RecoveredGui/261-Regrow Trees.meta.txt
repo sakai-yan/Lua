@@ -1,0 +1,9 @@
+﻿Trigger: Regrow Trees
+Mode: custom-text
+Action Count: 31
+Custom Script Count: 25
+Control Flow Count: 15
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 25 custom-script lines and 15 control-flow markers across 31 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still looked like a small branch-heavy pseudo-GUI body with 25 custom-script lines and 15 control-flow markers across 31 actions.

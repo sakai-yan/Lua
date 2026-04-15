@@ -1,0 +1,11 @@
+﻿name: jingong1
+type: custom-text
+category: 0
+enabled: false
+runOnMapInit: false
+events:
+  -
+conditions:
+  -
+actions:
+  -

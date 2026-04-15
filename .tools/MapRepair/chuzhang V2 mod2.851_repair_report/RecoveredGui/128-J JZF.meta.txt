@@ -1,0 +1,10 @@
+﻿Trigger: J JZF
+Mode: custom-text
+Action Count: 15
+Custom Script Count: 15
+Control Flow Count: 9
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger stayed in the 15-19 action mixed pseudo-GUI band with 15 custom-script lines and 9 control-flow markers across 15 actions.
+
+Notes:
+- 1 root condition function(s) were preserved as custom-script guard actions.
+- Fell back to custom-text because the reconstructed GUI trigger stayed in the 15-19 action mixed pseudo-GUI band with 15 custom-script lines and 9 control-flow markers across 15 actions.

@@ -1,0 +1,8 @@
+﻿Trigger: Func
+Mode: gui
+Action Count: 0
+Custom Script Count: 0
+Control Flow Count: 0
+
+Notes:
+- No standard trigger-registration calls could be mapped back into GUI event nodes.

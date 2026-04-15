@@ -1,0 +1,353 @@
+{
+  "python": {
+    "runtime": {
+      "version": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "executable": "C:\\Users\\DCY1\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "pointer_bits": 64,
+      "platform": "Windows-11-10.0.26200-SP0"
+    },
+    "config": {
+      "repeats": 5,
+      "n_int": 5000000,
+      "n_float": 5000000,
+      "n_call": 2000000,
+      "n_array": 500000,
+      "n_hash": 200000,
+      "n_mem_array": 100000,
+      "n_mem_hash": 100000,
+      "n_many_empty": 200000,
+      "n_records": 100000,
+      "startup_repeats": 12
+    },
+    "time": {
+      "int_arith": {
+        "seconds_min": 0.17241199999989476,
+        "seconds_median": 0.17382850000012695,
+        "samples": [
+          0.17707510000036564,
+          0.18638849999933882,
+          0.17364859999997861,
+          0.17241199999989476,
+          0.17382850000012695
+        ],
+        "checksum": -1083
+      },
+      "float_arith": {
+        "seconds_min": 0.11825990000033926,
+        "seconds_median": 0.11877629999980854,
+        "samples": [
+          0.12362429999939195,
+          0.11855950000062876,
+          0.11825990000033926,
+          0.11919599999964703,
+          0.11877629999980854
+        ],
+        "checksum": 648722.0538869655
+      },
+      "function_call": {
+        "seconds_min": 0.129231300000356,
+        "seconds_median": 0.13203119999980117,
+        "samples": [
+          0.1341192999998384,
+          0.13203119999980117,
+          0.129231300000356,
+          0.1308593000003384,
+          0.13258589999986725
+        ],
+        "checksum": 4000002000000
+      },
+      "array_build": {
+        "seconds_min": 0.019423599999754515,
+        "seconds_median": 0.01972739999928308,
+        "samples": [
+          0.020321200000580575,
+          0.01972739999928308,
+          0.01953700000012759,
+          0.020135700000537327,
+          0.019423599999754515
+        ],
+        "checksum": 500000
+      },
+      "array_iter_sum": {
+        "seconds_min": 0.009634400000322785,
+        "seconds_median": 0.009939699999449658,
+        "samples": [
+          0.01027420000082202,
+          0.009634400000322785,
+          0.009854099999756727,
+          0.009939699999449658,
+          0.010160499999983585
+        ],
+        "checksum": 125000250000
+      },
+      "hash_build": {
+        "seconds_min": 0.014751800000340154,
+        "seconds_median": 0.015072899999722722,
+        "samples": [
+          0.015459600000212959,
+          0.015072899999722722,
+          0.014751800000340154,
+          0.014870799999698647,
+          0.015092499999809661
+        ],
+        "checksum": 200000
+      },
+      "hash_lookup": {
+        "seconds_min": 0.008965999999418273,
+        "seconds_median": 0.00965360000009241,
+        "samples": [
+          0.008965999999418273,
+          0.009112599999753002,
+          0.011502700000164623,
+          0.00965360000009241,
+          0.01041709999935847
+        ],
+        "checksum": 20000100000
+      }
+    },
+    "memory": {
+      "empty_list_avg": {
+        "total_bytes": 12824264.0,
+        "anchor_bytes": 1624264.0,
+        "payload_bytes": 11200000.0,
+        "avg_bytes": 56.0
+      },
+      "empty_dict_avg": {
+        "total_bytes": 14424264.0,
+        "anchor_bytes": 1624264.0,
+        "payload_bytes": 12800000.0,
+        "avg_bytes": 64.0
+      },
+      "empty_set_avg": {
+        "total_bytes": 44824264.0,
+        "anchor_bytes": 1624264.0,
+        "payload_bytes": 43200000.0,
+        "avg_bytes": 216.0
+      },
+      "dict_record_avg": {
+        "total_bytes": 25588840.0,
+        "anchor_bytes": 801192.0,
+        "payload_bytes": 24787648.0,
+        "avg_bytes": 247.87648
+      },
+      "slot_record_avg": {
+        "total_bytes": 12788912.0,
+        "anchor_bytes": 801192.0,
+        "payload_bytes": 11987720.0,
+        "avg_bytes": 119.8772
+      },
+      "array_list_100k_int": {
+        "total_bytes": 3992072.0,
+        "avg_bytes": 39.92072
+      },
+      "array_tuple_100k_int": {
+        "total_bytes": 3992120.0,
+        "avg_bytes": 39.9212
+      },
+      "array_packed_q_100k_int": {
+        "total_bytes": 816880.0,
+        "avg_bytes": 8.1688
+      },
+      "dict_100k_str_int": {
+        "total_bytes": 11725831.0,
+        "avg_bytes": 117.25831
+      },
+      "set_100k_str": {
+        "total_bytes": 8883623.0,
+        "avg_bytes": 88.83623
+      },
+      "shallow_getsizeof": {
+        "empty_list": 56,
+        "empty_tuple": 48,
+        "empty_dict": 64,
+        "empty_set": 216,
+        "slot_record": 56,
+        "dict_record": 184
+      }
+    },
+    "notes": [
+      "time uses time.perf_counter() wall-clock seconds with one warmup run plus repeated measurements",
+      "memory uses tracemalloc live allocation deltas and shallow getsizeof for a few small-object references",
+      "pure CPython loops are measured here; NumPy/C extensions are intentionally excluded"
+    ]
+  },
+  "lua": {
+    "config": {
+      "n_array": 500000,
+      "n_call": 2000000,
+      "n_float": 5000000,
+      "n_hash": 200000,
+      "n_int": 5000000,
+      "n_many_empty": 200000,
+      "n_mem_array": 100000,
+      "n_mem_hash": 100000,
+      "n_records": 100000,
+      "repeats": 5
+    },
+    "memory": {
+      "array_table_100k_int": {
+        "avg_bytes": 20.97208,
+        "total_bytes": 2097208
+      },
+      "empty_table_avg": {
+        "anchor_bytes": 4194360,
+        "avg_bytes": 56,
+        "payload_bytes": 11200000,
+        "total_bytes": 15394360
+      },
+      "hash_table_100k_str_int": {
+        "avg_bytes": 41.9436,
+        "total_bytes": 4194360
+      },
+      "record_table_avg": {
+        "anchor_bytes": 2097208,
+        "avg_bytes": 184,
+        "payload_bytes": 18400000,
+        "total_bytes": 20497208
+      },
+      "set_table_100k_str": {
+        "avg_bytes": 41.9436,
+        "total_bytes": 4194360
+      }
+    },
+    "notes": [
+      "time uses os.clock() CPU seconds with one warmup run plus repeated measurements",
+      "memory uses collectgarbage('count') heap deltas after forced full GC",
+      "Lua table stores numbers inline; Python builtins usually store references to boxed objects"
+    ],
+    "runtime": {
+      "executable": ".tools\\lua53\\bin\\lua.exe",
+      "number_kind": {
+        "float": "float",
+        "integer": "integer"
+      },
+      "version": "Lua 5.3"
+    },
+    "time": {
+      "array_build": {
+        "checksum": 500000,
+        "samples": [
+          0.006000000000000005,
+          0.006000000000000005,
+          0.008000000000000007,
+          0.006000000000000005,
+          0.0050000000000000044
+        ],
+        "seconds_median": 0.006000000000000005,
+        "seconds_min": 0.0050000000000000044
+      },
+      "array_iter_sum": {
+        "checksum": 125000250000,
+        "samples": [
+          0.0029999999999998916,
+          0.0040000000000000036,
+          0.0030000000000000027,
+          0.0030000000000000027,
+          0.0040000000000000036
+        ],
+        "seconds_median": 0.0030000000000000027,
+        "seconds_min": 0.0029999999999998916
+      },
+      "float_arith": {
+        "checksum": 648722.0538869655,
+        "samples": [
+          0.029000000000000026,
+          0.02999999999999997,
+          0.030000000000000027,
+          0.034999999999999976,
+          0.029000000000000026
+        ],
+        "seconds_median": 0.02999999999999997,
+        "seconds_min": 0.029000000000000026
+      },
+      "function_call": {
+        "checksum": 4000002000000,
+        "samples": [
+          0.052000000000000046,
+          0.051999999999999935,
+          0.052000000000000046,
+          0.051999999999999935,
+          0.051000000000000045
+        ],
+        "seconds_median": 0.051999999999999935,
+        "seconds_min": 0.051000000000000045
+      },
+      "hash_build": {
+        "checksum": 200000,
+        "samples": [
+          0.017000000000000015,
+          0.016000000000000014,
+          0.015000000000000013,
+          0.017000000000000015,
+          0.016000000000000014
+        ],
+        "seconds_median": 0.016000000000000014,
+        "seconds_min": 0.015000000000000013
+      },
+      "hash_lookup": {
+        "checksum": 20000100000,
+        "samples": [
+          0.004999999999999893,
+          0.0050000000000000044,
+          0.0050000000000000044,
+          0.0050000000000000044,
+          0.0040000000000000036
+        ],
+        "seconds_median": 0.0050000000000000044,
+        "seconds_min": 0.0040000000000000036
+      },
+      "int_arith": {
+        "checksum": -1083,
+        "samples": [
+          0.03399999999999999,
+          0.034,
+          0.034,
+          0.035,
+          0.03500000000000003
+        ],
+        "seconds_median": 0.034,
+        "seconds_min": 0.03399999999999999
+      }
+    }
+  },
+  "startup": {
+    "lua": {
+      "seconds_min": 0.005401500000516535,
+      "seconds_median": 0.006018700000367971,
+      "samples": [
+        0.007474799999727111,
+        0.006015900000420515,
+        0.006021500000315427,
+        0.005539700000554149,
+        0.005485600000611157,
+        0.005401500000516535,
+        0.005430000000160362,
+        0.007628599999407015,
+        0.005910500000027241,
+        0.006332400000246707,
+        0.00657130000035977,
+        0.006489200000032724
+      ]
+    },
+    "python": {
+      "seconds_min": 0.01665659999980562,
+      "seconds_median": 0.017284149999341025,
+      "samples": [
+        0.01831170000059501,
+        0.02025859999957902,
+        0.01995489999990241,
+        0.018077699999594188,
+        0.01724599999943166,
+        0.017072799999368726,
+        0.017127999999502208,
+        0.01732229999925039,
+        0.01701099999991129,
+        0.01665659999980562,
+        0.01681379999990895,
+        0.018235200000162877
+      ]
+    }
+  },
+  "generated_at": "2026-03-22 10:26:34"
+}

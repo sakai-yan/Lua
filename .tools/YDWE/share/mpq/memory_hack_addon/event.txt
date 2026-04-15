@@ -1,0 +1,67 @@
+[MHAudioStartEvent_Register]
+title = "开始播放音频事件"
+description = "任意音频 开始播放"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！指代[音频]中开始播放的音频"
+category = TC_MHADDON_AUDIO
+
+[MHAudioStopEvent_Register]
+title = "停止播放音频事件"
+description = "任意音频 停止播放"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！指代[音频]中停止播放的音频"
+category = TC_MHADDON_AUDIO
+
+
+
+[MHHttpResponseEvent_Register]
+title = "Http消息事件"
+description = "收到来自服务器 ${url}:${port} 的Http/Https回复"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！url支持ip地址和域名"
+category = TC_MHADDON_HTTP
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+
+
+
+[MHWebSocketClienEvent_Register]
+title = "WebSocket客户端事件"
+description = "当连接至 ${url}:${port} 的客户端 ${event_id} 时"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！用于监测物理连接的情况"
+category = TC_MHADDON_WEBSOCKET
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = MHWebSocketClientEvent
+default = WS_CLIENT_EVENT_ID_WS_CLIENT_OPEN
+
+[MHWebSocketMessageEvent_Register]
+title = "WebSocket消息事件"
+description = "收到来自服务器 ${url}:${port} 的命名空间 ${nsp} 消息ID为 ${event_id} 消息"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！url支持ip地址和域名。命名空间空字符串也会被认为是/"
+category = TC_MHADDON_WEBSOCKET
+[[.args]]
+type = string
+default = "127.0.0.1"
+[[.args]]
+type = integer
+default = 25565
+[[.args]]
+type = string
+default = "/"
+[[.args]]
+type = string
+
+
+
+[MHFileVerifyFailedEvent_Register]
+title = "文件验证失败事件"
+description = "任意文件 验证失败"
+comment = "该事件不可注销。异步事件仅支持逆天触发器！指代jass加密中被验证的文件"
+category = TC_MHADDON_MPQ

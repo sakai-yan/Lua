@@ -1,0 +1,16 @@
+﻿name: jianxuan12
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterUnitInRangeSimple (const:356.00, var:gg_unit_nsel_0597)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_jianxuan12_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - CustomScriptCode (const:call DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()),0,0,"|cFFFFCC00岩青：|r|cFFCCFFCC你貌似受伤了?看来让你去捉拿尹月行还是太勉强了，你疗伤去吧，此时就暂且搁下吧。|r"))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))

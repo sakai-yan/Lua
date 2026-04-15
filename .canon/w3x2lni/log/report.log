@@ -1,0 +1,30 @@
+输入路径：D:/Software/魔兽地图编辑/[0]新整合编辑器/荒魂演武(不朽开源).w3x
+输出路径：D:/Software/魔兽地图编辑/[0]新整合编辑器/荒魂演武(不朽开源)
+输入格式：Mpq
+输出模式：lni
+结果：0 个错误，1 条警告
+用时：2.028 秒
+==========================
+警告 (1)
+==========================
+没有转换触发器 - 请设置YDWE关联地图
+stack traceback:
+	[C]: in function 'error'
+	.\core\slk/frontend_trg.lua:86: in method 'frontend_trg'
+	.\core\slk/frontend_wtg.lua:448: in method 'frontend_wtg'
+	.\core\slk/backend.lua:56: in function <.\core\slk/backend.lua:55>
+	[C]: in function 'xpcall'
+	.\core\slk/backend.lua:55: in upvalue 'convert_wtg'
+	.\core\slk/backend.lua:393: in method 'backend'
+	.\backend\convert.lua:141: in function 'backend.convert'
+	.\backend\cli\lni.lua:4: in function 'backend.cli.lni'
+	backend\init.lua:12: in main chunk
+	[C]: in ?
+
+==========================
+保存到wts中的文本 (1)
+==========================
+触发器里的文本长度超过299字符 - 文本保存在wts中会导致加载速度变慢: 
+|cffffff00系统每2分钟标记一次地图上区域上的物品（不包括英雄背包里），同一个物品被标记两次将自动清除（物品被拾取后清空标记）|r
+|cff00ffff游戏指令：聊天框输入“-kill”可强制杀死自己的英雄（用于遭遇卡死BUG的自我恢复）|r...
+-------------------------

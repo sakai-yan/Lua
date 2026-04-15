@@ -1,0 +1,39 @@
+﻿name: J WSDBZ
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventSpellEffect)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_J_WSDBZ_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP, call:GetUnitLoc)
+  - SetVariable (var:udg_SP2, call:PolarProjectionBJ)
+  - SetVariable (var:udg_SP3, call:PolarProjectionBJ)
+  - SetVariable (var:udg_SP4, call:PolarProjectionBJ)
+  - CreateNUnitsAtLoc (const:1, const:esen, call:GetOwningPlayer, var:udg_SP2, preset:RealUnitFacing)
+  - IssueImmediateOrder (call:GetLastCreatedUnit, const:creepthunderclap)
+  - UnitApplyTimedLifeBJ (const:1.00, preset:TimedLifeBuffCodeGeneric, call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:esen, call:GetOwningPlayer, var:udg_SP3, preset:RealUnitFacing)
+  - IssueImmediateOrder (call:GetLastCreatedUnit, const:creepthunderclap)
+  - SetUnitScalePercent (call:GetLastCreatedUnit, const:110.00, const:110.00, const:110.00)
+  - UnitApplyTimedLifeBJ (const:1.00, preset:TimedLifeBuffCodeGeneric, call:GetLastCreatedUnit)
+  - CreateNUnitsAtLoc (const:1, const:esen, call:GetOwningPlayer, var:udg_SP4, preset:RealUnitFacing)
+  - IssueImmediateOrder (call:GetLastCreatedUnit, const:creepthunderclap)
+  - SetUnitScalePercent (call:GetLastCreatedUnit, const:150.00, const:150.00, const:150.00)
+  - UnitApplyTimedLifeBJ (const:1.00, preset:TimedLifeBuffCodeGeneric, call:GetLastCreatedUnit)
+  - CustomScriptCode (const:set udg_GROUP=GetUnitsInRangeOfLocMatching(256.00,udg_SP2,Condition(function Trig_J_WSDBZ_Func016002003)))
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP,function Trig_J_WSDBZ_Func017A))
+  - CustomScriptCode (const:set udg_GROUP2=GetUnitsInRangeOfLocMatching(400.00,udg_SP3,Condition(function Trig_J_WSDBZ_Func018002003)))
+  - CustomScriptCode (const:call ForGroupBJ(udg_GROUP2,function Trig_J_WSDBZ_Func019A))
+  - CustomScriptCode (const:call DestroyGroup(udg_GROUP))
+  - CustomScriptCode (const:call DestroyGroup(udg_GROUP2))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP2))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP3))
+  - CustomScriptCode (const:call RemoveLocation(udg_SP4))
+  - CustomScriptCode (const:call GroupClear(udg_GROUP_KF[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]))

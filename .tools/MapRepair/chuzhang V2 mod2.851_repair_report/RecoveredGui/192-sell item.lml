@@ -1,0 +1,11 @@
+﻿name: sell item
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventPawnItem)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call FlushStoredMission(udg_Cache,H2S(GetSoldItem())))

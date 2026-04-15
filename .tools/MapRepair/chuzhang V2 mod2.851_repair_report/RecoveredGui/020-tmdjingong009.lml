@@ -1,0 +1,16 @@
+﻿name: tmdjingong009
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventIssued_Point_Order)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_tmdjingong009_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - SetVariable (var:udg_SP2, call:GetUnitLoc)
+  - IssuePointOrderLoc (call:GetTriggerUnit, const:attack, var:udg_SP2)
+  - CustomScriptCode (const:call RemoveLocation(udg_SP2))

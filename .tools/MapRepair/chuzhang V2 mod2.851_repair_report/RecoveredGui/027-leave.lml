@@ -1,0 +1,24 @@
+﻿name: leave
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterPlayerEventLeave (preset:Player00)
+  - TriggerRegisterPlayerEventLeave (preset:Player01)
+  - TriggerRegisterPlayerEventLeave (preset:Player02)
+  - TriggerRegisterPlayerEventLeave (preset:Player03)
+  - TriggerRegisterPlayerEventLeave (preset:Player04)
+  - TriggerRegisterPlayerEventLeave (preset:Player05)
+  - TriggerRegisterPlayerEventLeave (preset:Player06)
+  - TriggerRegisterPlayerEventLeave (preset:Player07)
+  - TriggerRegisterPlayerEventLeave (preset:Player08)
+  - TriggerRegisterPlayerEventLeave (preset:Player09)
+  - TriggerRegisterPlayerEventLeave (preset:Player10)
+  - TriggerRegisterPlayerEventLeave (preset:Player11)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:call DisplayTextToForce(GetPlayersAll(),(GetPlayerName(GetTriggerPlayer())+"|cffff0000归隐田园了|R")))
+  - CustomScriptCode (const:call RemoveUnit(udg_HERO[GetConvertedPlayerId(GetTriggerPlayer())]))
+  - CustomScriptCode (const:set udg_PLAY_NUM=(udg_PLAY_NUM-1))

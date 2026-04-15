@@ -1,0 +1,14 @@
+﻿name: shengming shuaipo2
+type: gui
+category: 0
+enabled: true
+runOnMapInit: false
+events:
+  - TriggerRegisterAnyUnitEventBJ (preset:PlayerUnitEventHeroPickUpItem)
+conditions:
+  -
+actions:
+  - CustomScriptCode (const:if not Trig_shengming_shuaipo2_Conditions() then)
+  - CustomScriptCode (const:return)
+  - CustomScriptCode (const:endif)
+  - CustomScriptCode (const:set udg_MP_shengming3[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true)

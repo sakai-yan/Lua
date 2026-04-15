@@ -1,0 +1,9 @@
+﻿Trigger: Dxxfz44
+Mode: custom-text
+Action Count: 46
+Custom Script Count: 23
+Control Flow Count: 6
+Fallback Reason: Fell back to custom-text because the reconstructed GUI trigger still depended on mixed GUI/custom-script control flow with 23 custom-script lines and 6 control-flow markers across 46 actions.
+
+Notes:
+- Fell back to custom-text because the reconstructed GUI trigger still depended on mixed GUI/custom-script control flow with 23 custom-script lines and 6 control-flow markers across 46 actions.
